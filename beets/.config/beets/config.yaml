@@ -1,0 +1,46 @@
+directory: /music
+library: /music/musiclibrary.blb
+plugins: mpdupdate lastgenre discogs fetchart scrub ftintitle permissions
+
+import:
+  # move files instead of copying
+  move: yes
+
+  # write metadata to music files
+  write: yes
+
+  # show details when trying to match
+  detail: yes
+
+  # use the release-date of the original (first) release of an album?
+  original_date: no
+
+  # on multi-disk releases, assign track numbers for the whole album.
+  # If "per disk", make sure tracknames do not collide ("paths" setting).
+  per_disc_numbering: no
+
+  # files matching these patterns are deleted from source after import
+  clutter: ["Thumbs.DB", ".DS_Store", "*.m3u", ".pls", "*.jpg"]
+
+paths:
+  default: $genre/%asciify{$albumartist}/%asciify{$album}%aunique{}/%asciify{$track-$title}
+  comp: Compilations/$genre/%asciify{$album}%aunique{}/%asciify{$track-$title}
+  singleton: Singletons/$genre/%asciify{$artist}-%asciify{$title}
+
+mpdupdate:
+  host: /run/user/1000/mpd.sock
+
+lastgenre:
+  whitelist: /music/genres.txt
+  canonical: /music/genres-tree.yml
+  fallback: genreless
+  source: artist
+
+fetchart:
+  auto: yes
+  maxwidth: 300
+  cautious: true
+  cover_names: cover folder
+
+ftintitle:
+  drop: yes

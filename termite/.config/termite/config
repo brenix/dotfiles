@@ -1,0 +1,45 @@
+[options]
+font                = Knack Nerd Font Mono 10
+allow_bold          = false
+audible_bell        = false
+browser             = google-chrome-unstable
+clickable_url       = true
+cursor_blink        = on
+cursor_shape        = block
+dynamic_title       = true
+geometry            = 900x520
+mouse_autohide      = false
+resize_grip         = false
+scroll_on_keystroke = true
+scroll_on_output    = false
+scrollback_lines    = 10000
+search_wrap         = true
+urgent_on_bell      = true visible_bell = false
+word_chars          = -A-Za-z0-9,./?%&#:_=+@~
+
+[colors]
+foreground = #C3C8D2
+background = #2E3440
+foreground_bold = #D8DEE9
+cursor = #D8DEE9
+cursor_foreground = #2E3440
+highlight = #4C566A
+
+color0  = #3B4252
+color1  = #BF616A
+color2  = #A3BE8C
+color3  = #EBCB8B
+color4  = #81A1C1
+color5  = #B48EAD
+color6  = #88C0D0
+color7  = #E5E9F0
+color8  = #4C566A
+color9  = #BF616A
+color10 = #A3BE8C
+color11 = #EBCB8B
+color12 = #81A1C1
+color13 = #B48EAD
+color14 = #8FBCBB
+color15 = #ECEFF4
+
+# vim: set ft=dosini:

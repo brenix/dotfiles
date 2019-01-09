@@ -1,0 +1,253 @@
+# ---- POLYBAR
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top    = 5
+margin-bottom = 5
+
+[colors]
+background     = #0a0b0a
+background-alt = #0a0b0a
+foreground     = #bbbbbb
+foreground-alt = #bbbbbb
+
+black          = #252525
+red            = #c05776
+green          = #a7ecb7
+yellow         = #87a1c5
+blue           = #81b38c
+magenta        = #507057
+cyan           = #7574a5
+white          = #e8e8e8
+gray           = #858585
+
+[bar/main]
+#monitor          = ${env:MONITOR:}
+monitor          = ${env:MONITOR:DVI-I-1}
+monitor-fallback = ${env:MONITOR:DVI-D-0}
+dpi              = 92
+
+height           = 24
+width            = 100%
+spacing          = 0
+
+foreground = ${colors.foreground}
+background = ${colors.background}
+
+border-bottom-color = ${colors.black}
+border-bottom-size  = 1
+
+border-top-color = ${colors.black}
+border-top-size  = 0
+
+font-0 = Terminus (TTF):style=Medium:pixelsize=10;2
+font-1 = Material Icons:size=12;4
+font-2 = Knack Nerd Font Mono:size=12;4
+font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-4 = "Wuncon Siji:pixelsize=10;1"
+
+module-margin-left  = 2
+module-margin-right = 2
+
+modules-left  = temperature cpu memory spotify mpd
+modules-center = workspaces
+modules-right = volume date time
+
+offset-x = 0
+offset-y = 0
+
+padding-left  = 1
+padding-right = 1
+
+# wm-restack = bspwm
+
+# ---- MODULES
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click   = true
+enable-scroll  = true
+
+label-active   = ""
+label-occupied = ""
+label-urgent   = ""
+label-empty    = ""
+
+label-occupied-padding = 1
+label-empty-padding    = 1
+label-urgent-padding   = 1
+label-active-padding   = 1
+
+label-active-foreground   = ${colors.foreground}
+label-occupied-foreground = ${colors.blue}
+label-urgent-foreground   = ${colors.red}
+label-empty-foreground    = ${colors.foreground}
+
+format-padding = 0
+format = <label-state>
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+inline-mode    = false
+enable-click   = true
+enable-scroll  = true
+fuzzy-match    = false
+
+format = <label-state>
+label-active   = ""
+label-occupied = ""
+label-urgent   = ""
+label-empty    = ""
+
+label-occupied-padding = 1
+label-empty-padding    = 1
+label-urgent-padding   = 1
+label-active-padding   = 1
+
+[module/spotify]
+type = custom/script
+interval = 2
+format-prefix = " SPOTIFY: "
+format = <label>
+exec = python $HOME/.config/polybar/scripts/spotify_status.py -t 60
+
+[module/mpd]
+type = internal/mpd
+host = /run/user/1000/mpd.sock
+interval = 2
+format-online = " MPD: <label-song>"
+label-offline = ""
+label-song = %title%
+
+[module/temperature]
+type = internal/temperature
+interval = 3
+thermal-zone = 0
+warn-temperature = 60
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.red}
+
+format = <label>
+format-prefix = " TEMP: "
+format-prefix-foreground = ${colors.foreground}
+format-warn = <label-warn>
+
+[module/cpu]
+type = internal/cpu
+interval = 3
+
+label = %percentage%%
+
+format-prefix = " CPU: "
+format-prefix-foreground = ${colors.foreground}
+
+[module/memory]
+type = internal/memory
+interval = 30
+
+label = %percentage_used%%
+
+format-prefix = " MEM: "
+format-prefix-foreground = ${colors.foreground}
+
+[module/download]
+type = internal/network
+interval = 1.5
+interface = enp8s0
+
+label-connected = %downspeed%
+
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground}
+
+[module/upload]
+type = internal/network
+interval = 1.5
+interface = enp8s0
+
+label-connected = %downspeed%
+
+format-connected-prefix = ""
+format-connected-prefix-foreground = ${colors.foreground}
+
+[module/volume]
+type = internal/volume
+master-mixer = Master
+
+label-volume-foreground = ${colors.foreground}
+label-volume  = %{A3:pavucontrol & disown:}%percentage%%%{A}
+
+label-muted   = " 0%"
+label-muted-foreground   = #888
+
+format-volume = <ramp-volume> <label-volume>
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+ramp-volume-0-foreground = ${colors.green}
+ramp-volume-1-foreground = ${colors.blue}
+ramp-volume-2-foreground = ${colors.foreground}
+
+[module/time]
+type = internal/date
+interval = 5
+time = %r
+
+label = %time%
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+
+[module/date]
+type = internal/date
+interval = 3600
+date = %Y-%m-%d
+
+label = %{A1:gsimplecal & disown:}%{A3:gsimplecal & disown:} %date%%{A}%{A}
+
+[module/updates]
+type = custom/script
+exec = ~/bin/getpacmanupdates
+interval = 360
+
+format-prefix = " UPDATES: "
+format-prefix-foreground = ${colors.foreground}
+
+[module/ip]
+type = custom/script
+exec = "curl ifconfig.co 2>/dev/null"
+interval = 360
+format-prefix = " IP: "
+
+[module/vpn]
+type = custom/script
+exec = "ip link show dev tun0 &>/dev/null && echo Active || echo Inactive"
+interval = 60
+format-prefix = " VPN: "
+
+[module/light]
+type = custom/script
+exec = ~/bin/lightstatus
+interval = 360
+click-left = ~/bin/light
+format-prefix = " LIGHT: "
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /
+
+label-mounted =  %mountpoint%%{F-}: %percentage_used%%
+label-unmounted =  %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+; vim:ft=dosini

@@ -1,0 +1,14 @@
+# beets
+beets/.config/beets/discogs_token.json
+beets/.config/beets/state.pickle
+
+# ncmpcpp
+ncmpcpp/.ncmpcpp/error.log
+
+# syncthing
+.stfolder
+
+# vim
+vim/.config/nvim/.netrwhist
+vim/.vim/.netrwhist
+vim/.vim/bundle/*
