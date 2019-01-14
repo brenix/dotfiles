@@ -12,3 +12,13 @@ ncmpcpp/.ncmpcpp/error.log
 vim/.config/nvim/.netrwhist
 vim/.vim/.netrwhist
 vim/.vim/bundle/*
+
+# weechat
+weechat/.weechat/*.log
+weechat/.weechat/*fifo
+weechat/.weechat/logs
+weechat/.weechat/perl
+weechat/.weechat/ruby
+weechat/.weechat/script
+weechat/.weechat/sec.conf
+weechat/.weechat/tcl
