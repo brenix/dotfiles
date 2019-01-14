@@ -122,7 +122,7 @@ host = /run/user/1000/mpd.sock
 interval = 2
 format-online = " MPD: <label-song>"
 label-offline = ""
-label-song = %title%
+label-song = %artist% - %title%
 
 [module/temperature]
 type = internal/temperature
