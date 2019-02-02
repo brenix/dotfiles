@@ -39,7 +39,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Lotion</name>
+    <name>brenix-hacker</name>
     <titleLayout>LMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -55,7 +55,7 @@
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>erus erusfont</name>
-      <size>9</size>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
