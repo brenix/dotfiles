@@ -1,6 +1,7 @@
 alias ..='cd ..'
 alias abs='asp'
 alias cp='cp -i'
+alias ctr='sudo ctr -n k8s.io'
 alias de='xrandr --output DVI-I-1 --mode 1920x1080 --rate 144 --left-of DVI-D-0'
 # alias de='xrandr --output DVI-I-1 --mode 1920x1080 --rate 144 --left-of DVI-D-0 && bspc monitor DVI-I-1 -d 1 2 && bspc monitor DVI-D-0 -d 3 4'
 alias ds='xrandr --output DVI-I-1 --off && polybar-launch'
