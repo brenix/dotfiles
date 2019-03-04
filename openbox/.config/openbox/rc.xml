@@ -446,7 +446,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>urxvtc</command>
+        <command>kitty</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -454,7 +454,7 @@
     </keybind>
     <keybind key="F4">
       <action name="Execute">
-        <command>urxvtc -e zsh -c "ssh arch"</command>
+        <command>kitty -e zsh -c "ssh arch"</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -462,7 +462,7 @@
     </keybind>
     <keybind key="F3">
       <action name="Execute">
-        <command>urxvtc -e zsh -c "ssh macbook"</command>
+        <command>kitty -e zsh -c "ssh macbook"</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
