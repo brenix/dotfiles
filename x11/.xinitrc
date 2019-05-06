@@ -40,8 +40,8 @@ xset +dpms
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 
 # -- clipboard sync
-#autocutsel -fork &
-#autocutsel -selection PRIMARY -fork &
+autocutsel -fork &
+autocutsel -selection PRIMARY -fork &
 
 # -- enable numlock
 numlockx &

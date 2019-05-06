@@ -42,7 +42,7 @@ border-bottom-size  = 1
 border-top-color = ${colors.black}
 border-top-size  = 0
 
-font-0 = Noto sans Display Medium:style=Medium:pixelsize=10;2
+font-0 = Terminus (TTF):style=Medium:pixelsize=10;2
 font-1 = Material Icons:size=12;4
 font-2 = Knack Nerd Font Mono:size=12;4
 font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
