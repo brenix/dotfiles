@@ -55,6 +55,7 @@ numlockx &
 # -- color calibration
 xcalib -o 0 -co 100 -b 3 -gc 1.05 $HOME/.colors/asus-vg248qe.icm
 xcalib -o 1 -co 100 -b 3 -gc 1.05 $HOME/.colors/asus-vg248qe.icm
+redshift -l 33.11921:-117.08642 &
 
 # -- start urxvt daemon
 urxvtd --quiet --opendisplay --fork
