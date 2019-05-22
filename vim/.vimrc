@@ -89,6 +89,19 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" ctrl+left/right
+nmap <ESC>[1;5D <C-Left>
+nmap <ESC>[1;5C <C-Right>
+cmap <ESC>[1;5D <C-Left>
+cmap <ESC>[1;5C <C-Right>
+imap <ESC>[1;5D <C-o><C-Left>
+imap <ESC>[1;5C <C-o><C-Right>
+
+" ctrl+backspace
+nmap <C-h> <C-w>
+cmap <C-h> <C-w>
+imap <C-h> <C-w>
+
 "Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
