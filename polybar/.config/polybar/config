@@ -8,10 +8,10 @@ margin-top    = 5
 margin-bottom = 5
 
 [colors]
-background     = #0a0b0a
-background-alt = #0a0b0a
-foreground     = #bbbbbb
-foreground-alt = #bbbbbb
+background     = #252933
+background-alt = #252933
+foreground     = #c5c8c6
+foreground-alt = #c5c8c6
 
 black          = #252525
 red            = #c05776

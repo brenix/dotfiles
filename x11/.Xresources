@@ -41,4 +41,5 @@ rofi.hide-scrollbar:           true
 
 ! colors
 !#include ".xcolors.d/brenix-hacker"
-#include ".xcolors.d/base16-ocean"
+#include ".xcolors.d/faded"
+!#include ".xcolors.d/base16-ocean"
