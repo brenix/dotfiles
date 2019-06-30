@@ -7,13 +7,18 @@ Xft.hintstyle:                 hintslight
 Xft.lcdfilter:                 lcddefault
 Xft.rgba:                      rgb
 
+! -- native transparency (no compositing req)
+!URxvt*inheritPixmap:           true
+!URxvt*transparent:             true
+!URxvt*shading:                 10
+
 ! -- urxvt
 URxvt*boldFont:
 URxvt*font:                   xft:Hack Nerd Font Mono:pixelsize=12:antialias=true:style=g
 !URxvt*font:                    -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
-
 URxvt*termName:                rxvt-256color
 URxvt.depth:                   32
+URxvt.background:              [90]#252933
 URxvt*lineSpace:               1
 URxvt*letterSpace:             0
 URxvt.iso14755:                false
@@ -32,10 +37,10 @@ URxvt.cursorUnderline:         1
 
 ! -- rofi
 rofi.color-enabled:            true
-rofi.color-window:             #181818, #181818, #181818
-rofi.color-normal:             #0a0b0a, #507057, #0a0b0a, #507057, #a7ecb7
-rofi.color-active:             #0a0b0a, #507057, #0a0b0a, #507057, #a7ecb7
-rofi.color-urgent:             #0a0b0a, #507057, #0a0b0a, #507057, #a7ecb7
+rofi.color-window:             #252933, #252933, #252933
+rofi.color-normal:             #252933, #4c566a, #252933, #4c566a, #e5e9f0
+rofi.color-active:             #252933, #4c566a, #252933, #4c566a, #e5e9f0
+rofi.color-urgent:             #252933, #4c566a, #252933, #4c566a, #e5e9f0
 rofi.separator-style:          none
 rofi.hide-scrollbar:           true
 

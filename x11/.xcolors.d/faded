@@ -1,6 +1,6 @@
 ! special
 *.foreground:   #e5e9f0
-*.background:   #252933
+!*.background:   #252933
 *.cursorColor:  #e5e9f0
 
 ! black

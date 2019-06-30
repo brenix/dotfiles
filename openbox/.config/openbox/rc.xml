@@ -39,7 +39,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>nord-osx</name>
+    <name>brenix-hacker</name>
     <titleLayout>LMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -178,7 +178,7 @@
     </keybind>
     <keybind key="W-space">
       <action name="Execute">
-        <command>rofi -show run -modi run -lines 10 -width 20 -line-margin 0 -line-padding 1 -separator-style none -font "hack 9" -columns 1 -bw 0 -hide-scrollbar -kb-row-select "Tab" -kb-row-tab ""</command>
+        <command>rofi -show run -modi run -lines 10 -width 20 -line-margin 0 -line-padding 1 -separator-style none -font "terminus (ttf) 9" -columns 1 -bw 0 -hide-scrollbar -kb-row-select "Tab" -kb-row-tab ""</command>
       </action>
     </keybind>
     <keybind key="W-Left">
@@ -447,14 +447,6 @@
     <keybind key="W-Return">
       <action name="Execute">
         <command>urxvtc</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-        </startupnotify>
-      </action>
-    </keybind>
-    <keybind key="F4">
-      <action name="Execute">
-        <command>urxvtc -e zsh -c "ssh arch"</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>

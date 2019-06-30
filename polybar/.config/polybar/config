@@ -8,25 +8,25 @@ margin-top    = 5
 margin-bottom = 5
 
 [colors]
-background     = #252933
-background-alt = #252933
-foreground     = #c5c8c6
-foreground-alt = #c5c8c6
-
-black          = #252525
-red            = #c05776
-green          = #a7ecb7
-yellow         = #87a1c5
-blue           = #81b38c
-magenta        = #507057
-cyan           = #7574a5
-white          = #e8e8e8
+background     = #2E3440
+foreground     = #D8DEE9
+black          = #2E3440
+red            = #b77a76
+green          = #b4bf86
+yellow         = #cbb079
+blue           = #83a2be
+magenta        = #958090
+cyan           = #7daea9
+white          = #c5c8c6
 gray           = #858585
 
+background-alt = #4c566a
+foreground-alt = #e5e9f0
+
 [bar/main]
-#monitor          = ${env:MONITOR:}
-monitor          = ${env:MONITOR:DVI-I-1}
-monitor-fallback = ${env:MONITOR:DVI-D-0}
+monitor          = ${env:MONITOR:}
+#monitor          = ${env:MONITOR:DVI-I-1}
+#monitor-fallback = ${env:MONITOR:DVI-D-0}
 dpi              = 92
 
 height           = 24
@@ -44,16 +44,15 @@ border-top-size  = 0
 
 font-0 = Terminus (TTF):style=Medium:pixelsize=10;2
 font-1 = Material Icons:size=12;4
-font-2 = Knack Nerd Font Mono:size=12;4
-font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-4 = "Wuncon Siji:pixelsize=10;1"
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = "Wuncon Siji:pixelsize=10;1"
 
 module-margin-left  = 2
 module-margin-right = 2
 
-modules-left  = temperature cpu memory spotify mpd
-modules-center = workspaces
-modules-right = volume date time
+modules-left  = bspwm
+modules-center = spotify
+modules-right = temperature cpu memory volume date time
 
 offset-x = 0
 offset-y = 0
@@ -91,23 +90,17 @@ format = <label-state>
 
 [module/bspwm]
 type = internal/bspwm
-
-pin-workspaces = true
-inline-mode    = false
-enable-click   = true
-enable-scroll  = true
-fuzzy-match    = false
-
-format = <label-state>
-label-active   = ""
-label-occupied = ""
-label-urgent   = ""
-label-empty    = ""
-
+label-focused = %name%
+label-focused-background = ${colors.background-alt}
+label-focused-padding = 1
+label-occupied = %name%
 label-occupied-padding = 1
-label-empty-padding    = 1
-label-urgent-padding   = 1
-label-active-padding   = 1
+label-urgent = %name%!
+label-urgent-background = ${colors.red}
+label-urgent-padding = 1
+label-empty = %name%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 1
 
 [module/spotify]
 type = custom/script
@@ -135,7 +128,7 @@ label-warn = %temperature-c%
 label-warn-foreground = ${colors.red}
 
 format = <label>
-format-prefix = " TEMP: "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-warn = <label-warn>
 
@@ -143,18 +136,18 @@ format-warn = <label-warn>
 type = internal/cpu
 interval = 3
 
-label = %percentage%%
+label = %percentage:2%%
 
-format-prefix = " CPU: "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 
 [module/memory]
 type = internal/memory
 interval = 30
 
-label = %percentage_used%%
+label = %gb_used%
 
-format-prefix = " MEM: "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 
 [module/download]
@@ -178,24 +171,20 @@ format-connected-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground}
 
 [module/volume]
-type = internal/volume
-master-mixer = Master
-
-label-volume-foreground = ${colors.foreground}
-label-volume  = %{A3:pavucontrol & disown:}%percentage%%%{A}
-
-label-muted   = " 0%"
-label-muted-foreground   = #888
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+use-ui-max = false
+interval = 5
 
 format-volume = <ramp-volume> <label-volume>
-
+label-volume  = %{A3:pavucontrol & disown:}%percentage%%%{A}
+label-volume-foreground = ${root.foreground}
+label-muted   = " %{F#b77a76}MUTED"
+label-muted-foreground = ${colors.foreground-alt}
+bar-volume-empty-foreground = ${colors.foreground-alt}
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-
-ramp-volume-0-foreground = ${colors.green}
-ramp-volume-1-foreground = ${colors.blue}
-ramp-volume-2-foreground = ${colors.foreground}
 
 [module/time]
 type = internal/date
@@ -219,27 +208,27 @@ type = custom/script
 exec = ~/bin/getpacmanupdates
 interval = 360
 
-format-prefix = " UPDATES: "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 
 [module/ip]
 type = custom/script
 exec = "curl ifconfig.co 2>/dev/null"
 interval = 360
-format-prefix = " IP: "
+format-prefix = " "
 
 [module/vpn]
 type = custom/script
 exec = "ip link show dev tun0 &>/dev/null && echo Active || echo Inactive"
 interval = 60
-format-prefix = " VPN: "
+format-prefix = " "
 
 [module/light]
 type = custom/script
 exec = ~/bin/lightstatus
 interval = 360
 click-left = ~/bin/light
-format-prefix = " LIGHT: "
+format-prefix = " "
 
 [module/filesystem]
 type = internal/fs
