@@ -22,3 +22,7 @@ weechat/.weechat/ruby
 weechat/.weechat/script
 weechat/.weechat/sec.conf
 weechat/.weechat/tcl
+
+# zsh
+zsh/.zsh.d/local/*
+!zsh/.zsh.d/local/.gitkeep

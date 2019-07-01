@@ -22,10 +22,10 @@ alias ssh='TERM=xterm-256color ssh'
 alias svim='sudoedit'
 alias t='todoist --color'
 alias tmux='tmux attach || tmux new-session'
-alias u='yay -Syu --editmenu'
+if [[ "$OSTYPE" == "darwin"*  ]]; then alias u='brew update -v && brew upgrade -v && brew cleanup -v'; fi
+if [[ "$OSTYPE" == "linux-gnu" ]]; then alias u='yay -Syu --editmenu'; fi
 alias virsh='/usr/bin/virsh -c qemu:///system'
 alias vm='virsh start win10 && sudo systemctl start synergy'
 alias x='startx'
 alias xrefresh='xrdb load ~/.Xresources && xrdb -merge ~/.Xresources'
 alias yay='yay --editmenu'
-if [ -x $(which nvim) ]; then alias vim='nvim'; fi

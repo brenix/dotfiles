@@ -155,7 +155,7 @@ SPACESHIP_KUBECONTEXT_SYMBOL=""
 # -- dircolors
 
 autoload -U colors && colors
-[[ -f $HOME/.dircolors ]] && eval $(dircolors -b ${HOME}/.dircolors)
+[[ -f $HOME/.dircolors ]] && eval $(/usr/local/opt/coreutils/libexec/gnubin/dircolors -b ${HOME}/.dircolors)
 
 # -- completion
 
@@ -211,6 +211,9 @@ bindkey "\e[3@" kill-line
 # -- external files
 if [ -d ${HOME}/.zsh.d ]; then
   for file in ${HOME}/.zsh.d/*.zsh; do
+    source $file
+  done
+  for file in ${HOME}/.zsh.d/local/*.zsh; do
     source $file
   done
 fi
