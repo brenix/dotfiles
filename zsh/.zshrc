@@ -155,7 +155,10 @@ SPACESHIP_KUBECONTEXT_SYMBOL=""
 # -- dircolors
 
 autoload -U colors && colors
-[[ -f $HOME/.dircolors ]] && eval $(/usr/local/opt/coreutils/libexec/gnubin/dircolors -b ${HOME}/.dircolors)
+case "$OSTYPE" in
+  "linux-gnu") eval $(dircolors -b ${HOME}/.dircolors) ;;
+  "darwin*") eval $(/usr/local/opt/coreutils/libexec/gnubin/dircolors -b ${HOME}/dircolors) ;;
+esac
 
 # -- completion
 
