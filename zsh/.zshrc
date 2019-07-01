@@ -170,6 +170,10 @@ zstyle ":completion:::*:default" menu no select
 zstyle ":completion:*" use-cache on
 zstyle ":completion:*" cache-path "${XDG_CACHE_HOME:-${HOME}/.cache}"
 
+# load bash autocompletion
+autoload bashcompinit
+bashcompinit
+
 # autocomplete style, taken from gentoo
 zstyle ":completion:*:warnings" format "%BSorry, no matches for: %d%b"
 zstyle ":completion:*:commands" rehash 1

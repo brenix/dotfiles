@@ -48,7 +48,10 @@ bspc config presel_feedback_color      "#80a1c1"
 
 # -- rules
 bspc rule -a Code desktop=^2
+bspc rule -a Slack desktop=^2
 bspc rule -a Google-chrome-unstable desktop=^3
+bspc rule -a Nitrogen state=floating
+bspc rule -a zoom state=floating
 
 # -- autostart
 polybar-launch

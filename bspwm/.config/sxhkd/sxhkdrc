@@ -67,7 +67,7 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node in the current desktop
-super + {_,shift + }c
+super + {_,shift + }x
 	bspc node -f {next,prev}.local
 
 # focus the next/previous desktop in the current monitor
@@ -160,17 +160,17 @@ super + d
 super + s
 	spotify
 
+super + shift + s
+  slack
+
 super + c
 	code
 
 super + v
 	pavucontrol
 
-super + b
+super + shift + d
 	discord
-
-super + Return
-	urxvtc
 
 super + shift + p
 	pcmanfm

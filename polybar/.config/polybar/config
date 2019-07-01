@@ -105,9 +105,10 @@ label-empty-padding = 1
 [module/spotify]
 type = custom/script
 interval = 2
-format-prefix = " SPOTIFY: "
+#format-prefix = " SPOTIFY: "
 format = <label>
 exec = python $HOME/.config/polybar/scripts/spotify_status.py -t 60
+click-left = playerctl play-pause
 
 [module/mpd]
 type = internal/mpd
@@ -135,9 +136,7 @@ format-warn = <label-warn>
 [module/cpu]
 type = internal/cpu
 interval = 3
-
 label = %percentage:2%%
-
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 

@@ -65,7 +65,7 @@ nitrogen --restore &
 
 # -- window manager
 
-compton -bCG -o 0.45 -m 0.88 --no-fading-openclose --opacity-rule "90:class_g = 'Code'"
+compton -bCG -o 0.45 -m 0.88 --no-fading-openclose --opacity-rule "90:class_g = 'Code'" --opacity-rule "90:class_g = 'Slack'"
 
 # bspwm
 exec dbus-launch bspwm &>/tmp/bspwm.log
