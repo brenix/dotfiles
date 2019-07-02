@@ -2,7 +2,7 @@
 
 # -- options
 # auto-correct commands
-setopt correctall
+#setopt correctall
 # ignore recording duplicate commands
 setopt hist_ignore_all_dups
 setopt hist_expire_dups_first
