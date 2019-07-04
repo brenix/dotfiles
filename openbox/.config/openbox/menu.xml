@@ -4,30 +4,9 @@
 
 <menu id="root-menu" label="Openbox 3">
   <separator label="-- APPLICATIONS --" />
-  <item label="TERMINAL">
-    <action name="Execute">
-      <command>urxvtc</command>
-    </action>
-  </item>
   <item label="GOOGLE CHROME">
     <action name="Execute">
       <command>google-chrome-unstable</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="VIM">
-    <action name="Execute">
-      <command>urxvtc -e zsh -c vim</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="TYPORA">
-    <action name="Execute">
-      <command>typora</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -39,11 +18,6 @@
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
-    </action>
-  </item>
-  <item label="NCMPCPP">
-    <action name="Execute">
-      <command>urxvtc -e zsh -c "ncmpcpp -t Music"</command>
     </action>
   </item>
   <item label="TMUX-NEW">
@@ -61,16 +35,6 @@
       <command>pcmanfm</command>
     </action>
   </item>
-  <item label="MUMBLE">
-    <action name="Execute">
-      <command>mumble</command>
-    </action>
-  </item>
-  <item label="VOLUME CONTROL">
-    <action name="Execute">
-      <command>pavucontrol</command>
-    </action>
-  </item>
   <item label="SLACK">
     <action name="Execute">
       <command>slack</command>
@@ -86,7 +50,7 @@
       <command>spotify</command>
     </action>
   </item>
-  <separator label="-- VIRTUALIZATION --" />
+  <separator label="-- KVM --" />
   <item label="SINGLE MONITOR">
     <action name="Execute">
       <command>xrandr --output DVI-I-1 --off</command>

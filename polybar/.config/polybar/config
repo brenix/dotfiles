@@ -50,7 +50,7 @@ font-3 = "Wuncon Siji:pixelsize=10;1"
 module-margin-left  = 2
 module-margin-right = 2
 
-modules-left  = bspwm
+modules-left  = workspaces
 modules-center = spotify
 modules-right = temperature cpu memory volume date time
 

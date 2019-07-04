@@ -176,7 +176,7 @@ super + shift + p
 	pcmanfm
 
 super + @space
-	rofi -show run -modi run -lines 10 -width 20 -dpi 92 -line-margin 0 -line-padding 1 -separator-style none -font "Hack Nerd Font Mono 10" -columns 1 -bw 0 -hide-scrollbar -kb-row-select "Tab" -kb-row-tab ""
+	rofi -show combi
 
 Print
 	flameshot gui
