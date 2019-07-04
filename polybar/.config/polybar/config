@@ -24,9 +24,9 @@ background-alt = #4c566a
 foreground-alt = #e5e9f0
 
 [bar/main]
-monitor          = ${env:MONITOR:}
-#monitor          = ${env:MONITOR:DVI-I-1}
-#monitor-fallback = ${env:MONITOR:DVI-D-0}
+#monitor          = ${env:MONITOR:}
+monitor          = ${env:MONITOR:DVI-I-1}
+monitor-fallback = ${env:MONITOR:DVI-D-0}
 dpi              = 92
 
 height           = 24

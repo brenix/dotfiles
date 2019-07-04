@@ -23,7 +23,7 @@ alias s='sudo systemctl'
 alias ssh='TERM=xterm-256color ssh'
 alias svim='sudoedit'
 alias t='todoist --color'
-alias tmux='tmux attach || tmux new-session'
+#alias tmux='tmux attach || tmux new-session'
 if [[ "$OSTYPE" == "darwin"*  ]]; then alias u='brew update && brew upgrade && brew cleanup'; fi
 if [[ "$OSTYPE" == "linux-gnu" ]]; then alias u='yay -Syu --editmenu'; fi
 alias virsh='/usr/bin/virsh -c qemu:///system'

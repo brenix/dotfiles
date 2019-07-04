@@ -39,7 +39,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>faded</name>
+    <name>nord-osx</name>
     <titleLayout>LMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -179,6 +179,11 @@
       </action>
     </keybind>
     <keybind key="W-space">
+      <action name="Execute">
+        <command>rofi -show combi -kb-row-select "Tab" -kb-row-tab ""</command>
+      </action>
+    </keybind>
+    <keybind key="A-space">
       <action name="Execute">
         <command>rofi -show combi -kb-row-select "Tab" -kb-row-tab ""</command>
       </action>
@@ -448,7 +453,15 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>urxvtc</command>
+        <command>iTerm.sh</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </keybind>
+    <keybind key="W-S-Return">
+      <action name="Execute">
+        <command>termite</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -456,7 +469,7 @@
     </keybind>
     <keybind key="F3">
       <action name="Execute">
-        <command>urxvtc -e zsh -c "ssh macbook"</command>
+        <command>termite -t work --name=work -e "zsh -c 'ssh macbook'"</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -1008,8 +1021,29 @@
 
   # end of the example
 -->
-    <!--     <application class="*">
-      <decor>no</decor>
-    </application> -->
+    <application class="iTerm">
+      <focus>yes</focus>
+      <desktop>1</desktop>
+      <size>
+        <width>1200</width>
+        <height>600</height>
+      </size>
+    </application>
+    <application class="Code">
+      <desktop>2</desktop>
+      <focus>yes</focus>
+    </application>
+    <application class="Google-chrome-unstable">
+      <desktop>3</desktop>
+      <focus>yes</focus>
+    </application>
+    <application class="Slack">
+      <desktop>3</desktop>
+      <focus>yes</focus>
+    </application>
+    <application class="Spotify">
+      <desktop>4</desktop>
+      <focus>yes</focus>
+    </application>
   </applications>
 </openbox_config>

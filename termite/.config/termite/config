@@ -1,58 +1,64 @@
 [options]
-font                = Terminus (TTF) 9
+font                = Hack Nerd Font Mono 9
 allow_bold          = false
 audible_bell        = false
 browser             = google-chrome-unstable
 clickable_url       = true
 cursor_blink        = on
-cursor_shape        = block
-dynamic_title       = true
+cursor_shape        = ibeam
+dynamic_title       = false
 mouse_autohide      = false
 resize_grip         = false
 scroll_on_keystroke = true
 scroll_on_output    = false
-scrollback_lines    = 10000
+scrollback_lines    = -1
 search_wrap         = true
-urgent_on_bell      = true visible_bell = false
+urgent_on_bell      = true
+visible_bell        = false
+hyperlinks          = true
 word_chars          = -A-Za-z0-9,./?%&#:_=+@~
 
 [colors]
+
 # special
-foreground      = #bbbbbb
-foreground_bold = #bbbbbb
-cursor          = #bbbbbb
-background      = #000000
+foreground      = #e5e9f0
+foreground_bold = #e5e9f0
+cursor          = #e5e9f0
+#background      = #252933
+background      = rgba(37, 41, 51, 0.9)
+
+highlight = #4c566a
 
 # black
-color0  = #252525
-color8  = #454545
+color0  = #2e3440
+color8  = #606778
 
 # red
-color1  = #c05776
-color9  = #c05776
+color1  = #b77a76
+color9  = #b77a76
 
 # green
-color2  = #a7ecb7
-color10 = #a7ecb7
+color2  = #b4bf86
+color10 = #b4bf86
 
 # yellow
-color3  = #87a1c5
-color11 = #87a1c5
+color3  = #cbb079
+color11 = #cbb079
 
 # blue
-color4  = #81b38c
-color12 = #81b38c
+color4  = #83a2be
+color12 = #83a2be
 
 # magenta
-color5  = #507057
-color13 = #507057
+color5  = #958090
+color13 = #958090
 
 # cyan
-color6  = #7574a5
-color14 = #7574a5
+color6  = #7daea9
+color14 = #7daea9
 
 # white
-color7  = #858585
-color15 = #e8e8e8
+color7  = #c5c8c6
+color15 = #f4f4f4
 
 # vim: set ft=dosini:

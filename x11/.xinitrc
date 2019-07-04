@@ -58,7 +58,7 @@ xcalib -o 1 -co 100 -b 1 $HOME/.colors/asus-vg248qe.icm
 #redshift -l 45.63873, -122.66149 &
 
 # -- start urxvt daemon
-urxvtd --quiet --opendisplay --fork
+#urxvtd --quiet --opendisplay --fork
 
 # -- set wallpaper
 nitrogen --restore &
