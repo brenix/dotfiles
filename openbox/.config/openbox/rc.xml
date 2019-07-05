@@ -1030,19 +1030,23 @@
       </size>
     </application>
     <application class="Code">
-      <desktop>2</desktop>
+      <desktop>3</desktop>
       <focus>yes</focus>
     </application>
     <application class="Google-chrome-unstable">
-      <desktop>3</desktop>
+      <desktop>2</desktop>
       <focus>yes</focus>
     </application>
     <application class="Slack">
-      <desktop>3</desktop>
+      <desktop>4</desktop>
       <focus>yes</focus>
     </application>
     <application class="Spotify">
       <desktop>4</desktop>
+      <focus>yes</focus>
+    </application>
+    <application class="zoom">
+      <desktop>all</desktop>
       <focus>yes</focus>
     </application>
   </applications>

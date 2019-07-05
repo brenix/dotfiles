@@ -31,3 +31,4 @@ alias vm='virsh start win10 && sudo systemctl start synergy'
 alias x='startx'
 alias xrefresh='xrdb load ~/.Xresources && xrdb -merge ~/.Xresources'
 alias yay='yay --editmenu'
+if [[ -x $(which nvim) ]]; then alias vim='nvim'; fi
