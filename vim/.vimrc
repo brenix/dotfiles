@@ -46,9 +46,8 @@ else
 endif
 
 call plug#begin('~/.vim/plugged')
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' } "also requires: pip2 install --user --upgrade neovim
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --go-completer' } "also requires: pip2 install --user --upgrade neovim
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
@@ -105,7 +104,7 @@ nmap <C-h> <C-w>
 cmap <C-h> <C-w>
 imap <C-h> <C-w>
 
-"Remove all trailing whitespace by pressing F5
+" Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 " --- plugin: lightline
