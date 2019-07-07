@@ -49,13 +49,9 @@ numlockx &
 # -- load xmodmap
 /usr/bin/xmodmap $HOME/.Xmodmap
 
-# -- load xbindkeys
-#xbindkeys
-
 # -- color calibration
 xcalib -o 0 -co 100 -b 1 $HOME/.colors/asus-vg248qe.icm
 xcalib -o 1 -co 100 -b 1 $HOME/.colors/asus-vg248qe.icm
-#redshift -l 45.63873, -122.66149 &
 
 # -- start urxvt daemon
 #urxvtd --quiet --opendisplay --fork
@@ -65,7 +61,7 @@ nitrogen --restore &
 
 # -- window manager
 
-compton -bCG -o 0.45 -m 0.88 --no-fading-openclose --opacity-rule "90:class_g = 'Code'" --opacity-rule "90:class_g = 'Slack'"
+#compton -bCG -o 0.45 -m 0.88 --no-fading-openclose --opacity-rule "90:class_g = 'Code'" --opacity-rule "90:class_g = 'Slack'"
 
 # bspwm
 #exec dbus-launch bspwm &>/tmp/bspwm.log

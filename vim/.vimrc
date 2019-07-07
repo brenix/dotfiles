@@ -46,12 +46,15 @@ else
 endif
 
 call plug#begin('~/.vim/plugged')
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' } "also requires: pip2 install --user --upgrade neovim
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'cespare/vim-toml'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
 Plug 'elzr/vim-json', {'for' : 'json'}
@@ -67,10 +70,10 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'pearofducks/ansible-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' } "also requires: pip2 install --user --upgrade neovim
 call plug#end()
 
 " --- general options
