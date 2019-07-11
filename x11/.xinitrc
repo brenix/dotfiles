@@ -50,8 +50,8 @@ numlockx &
 /usr/bin/xmodmap $HOME/.Xmodmap
 
 # -- color calibration
-xcalib -o 0 -co 100 -b 1 $HOME/.colors/asus-vg248qe.icm
-xcalib -o 1 -co 100 -b 1 $HOME/.colors/asus-vg248qe.icm
+xcalib -o 0 -b 0.9 -gc 1.05 $HOME/.colors/asus-vg248qe.icm
+xcalib -o 1 -b 0.9 -gc 1.05 $HOME/.colors/asus-vg248qe.icm
 
 # -- start urxvt daemon
 #urxvtd --quiet --opendisplay --fork

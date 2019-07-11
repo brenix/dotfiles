@@ -523,6 +523,14 @@
         </startupnotify>
       </action>
     </keybind>
+    <keybind key="W-n">
+      <action name="Execute">
+        <command>notable</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </keybind>
     <!-- Spotify Controls -->
     <keybind key="XF86AudioPlay">
       <action name="Execute">
@@ -1021,7 +1029,7 @@
 
   # end of the example
 -->
-    <application class="iTerm">
+<!--<application class="iTerm">
       <focus>yes</focus>
       <desktop>1</desktop>
       <size>
@@ -1044,7 +1052,7 @@
     <application class="Spotify">
       <desktop>4</desktop>
       <focus>yes</focus>
-    </application>
+    </application>-->
     <application class="zoom">
       <desktop>all</desktop>
       <focus>yes</focus>
