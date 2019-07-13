@@ -33,6 +33,7 @@
   amend = commit --amend -C HEAD
   c = commit
   delete-merged = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+  slog = log --pretty=oneline
 [push]
   default = simple
 [core]
@@ -44,3 +45,6 @@
   whitespace = strip
 [protocol]
 	version = 2
+[diff-so-fancy]
+	markEmptyLines = false
+	stripLeadingSymbols = false

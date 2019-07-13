@@ -13,7 +13,6 @@ alias la='ls -lah'
 alias ls='ls --color=always --group-directories-first'
 alias mkdir='mkdir -p -v'
 alias mtr='sudo TERM=linux-m mtr'
-alias podman='sudo podman'
 alias poweroff='sudo systemctl poweroff'
 alias re-source="source '$(print -P %N)'"
 alias reboot='sudo systemctl reboot'
