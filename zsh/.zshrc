@@ -1,8 +1,6 @@
 #!/bin/zsh
 
 # -- options
-# auto-correct commands
-#setopt correctall
 # ignore recording duplicate commands
 setopt hist_ignore_all_dups
 setopt hist_expire_dups_first
@@ -33,14 +31,15 @@ fi
 zplugin cdclear -q
 setopt promptsubst
 
+# oh-my-zsh
 zplugin snippet OMZ::plugins/z/z.sh
+zplugin snippet OMZ::plugins/git/git.plugin.zsh
 zplugin snippet OMZ::plugins/golang/golang.plugin.zsh
 zplugin ice wait'1' silent
 zplugin snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
 # prezto
 zplugin snippet PZT::modules/helper/init.zsh
-#zplugin snippet PZT::modules/gpg/init.zsh
 zplugin snippet PZT::modules/ssh/init.zsh
 zstyle ':prezto:module:ssh:load' identities 'id_ed25519' 'id_ed25519_vmware'
 
@@ -65,6 +64,19 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=("expand-or-complete")
 
 # complete pairing brackets
 zplugin light "hlissner/zsh-autopair"
+
+# aws-vault integration
+zplugin ice wait'1' silent
+zplugin light "blimmer/zsh-aws-vault"
+
+# git-ignore
+zplugin ice pick'init.zsh' blockf
+zplugin light "laggardkernel/git-ignore"
+alias gi="git-ignore"
+
+# tipz
+zplugin ice wait'1' silent
+zplugin light "molovo/tipz"
 
 # -- prompt
 
@@ -120,6 +132,9 @@ SPACESHIP_PROMPT_ORDER=(
   git           # Git section (git_branch + git_status)
   kubecontext   # Kubectl context section
   venv          # Python virtualenv section
+  aws           # Amazon Web Services section
+  terraform     # Terraform workspace section
+  exit_code     # Exit code section
   char          # Prompt character
 )
 
