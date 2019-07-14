@@ -1,3 +1,4 @@
+# switch-namespace
 sn() {
   local context
   local namespace
@@ -17,6 +18,7 @@ sn() {
   fi
 }
 
+# switch-context
 sc() {
   local context
   local selected
@@ -48,5 +50,17 @@ sc() {
   fi
 }
 
-alias kns=sn
-alias kn=sn
+# switch-kubeconfig
+sk() {
+  local kubeconfig
+  local selected
+  if [[ ! -x "$(which fzf 2>/dev/null)" ]]; then
+    echo "please install fzf: github.com/junegunn/fzf" >&2
+    return 1
+  fi
+
+  selected=$(find ${HOME}/.kube -maxdepth 1 -type f -exec basename {} \; | fzf -0 -1 --reverse)
+  if [[ ! -z "$selected" ]]; then
+    export KUBECONFIG="${HOME}/.kube/$selected"
+  fi
+}
