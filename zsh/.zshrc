@@ -33,6 +33,7 @@ fi
 zplugin cdclear -q
 setopt promptsubst
 
+zplugin snippet OMZ::plugins/z/z.sh
 zplugin snippet OMZ::plugins/golang/golang.plugin.zsh
 zplugin ice wait'1' silent
 zplugin snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
@@ -41,7 +42,7 @@ zplugin snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 zplugin snippet PZT::modules/helper/init.zsh
 #zplugin snippet PZT::modules/gpg/init.zsh
 zplugin snippet PZT::modules/ssh/init.zsh
-zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa_ida' 'id_rsa_core' 'id_ed25519'
+zstyle ':prezto:module:ssh:load' identities 'id_ed25519' 'id_ed25519_vmware'
 
 # syntax highlighting
 zplugin light "zdharma/fast-syntax-highlighting"
