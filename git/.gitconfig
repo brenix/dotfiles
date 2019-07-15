@@ -1,50 +1,48 @@
 [user]
-  email = brenix@gmail.com
-  name = Paul Nicholson
+	email = brenix@gmail.com
+	name = Paul Nicholson
 [includeIf "gitdir:~/work/"]
-  path = ~/work/.gitconfig
-[diff]
-  tool = /usr/bin/vimdiff
-[pager]
-  diff = diff-so-fancy | less --tabs=1,5 -RFX
-  show = diff-so-fancy | less --tabs=1,5 -RFX
-[color]
-  ui = true
-  pager = true
-  branch = auto
-  diff = auto
-  status = auto
-  interactive = auto
-[color "branch"]
-  current = cyan reverse
-  local = cyan
-  remote = blue
-[color "diff"]
-  meta = red bold
-  frag = yellow bold
-  new = magenta
-  old = magenta bold
-[color "status"]
-  added = cyan
-  changed = magenta
-  untracked = blue
-[alias]
-  tree = log --graph --pretty=oneline --decorate
-  amend = commit --amend -C HEAD
-  c = commit
-  delete-merged = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-  slog = log --pretty=oneline
+	path = ~/work/.gitconfig
 [push]
-  default = simple
+	default = simple
 [core]
-  editor = vim
-  preloadindex = true
-  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	editor = vim
+	preloadindex = true
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [apply]
-  whitespace = strip
+	whitespace = strip
 [protocol]
-	version = 2
+ version = 2
+[diff]
+	tool = /usr/bin/vimdiff
+[pager]
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	show = diff-so-fancy | less --tabs=1,5 -RFX
+[color]
+	ui = true
+	pager = true
+	branch = auto
+	diff = auto
+	status = auto
+	interactive = auto
+[color "branch"]
+	current = cyan reverse
+	local = cyan
+	remote = blue
+[color "diff"]
+	meta = red bold
+	frag = yellow bold
+	new = magenta
+	old = magenta bold
+[color "status"]
+	added = cyan
+	changed = magenta
+	untracked = blue
+[alias]
+	tree = log --graph --pretty=oneline --decorate
+  prune = !git remote prune origin
+	delete-merged = !git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d
+	delete-local = !git branch --no-merged | grep -v '\\*' | xargs -n 1 git branch -D
 [diff-so-fancy]
 	markEmptyLines = false
-	stripLeadingSymbols = false
