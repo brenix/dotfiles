@@ -1,5 +1,5 @@
 # switch-namespace
-sn() {
+kns() {
   local context
   local namespace
   local selected
@@ -51,7 +51,7 @@ sc() {
 }
 
 # switch-kubeconfig
-sk() {
+ktx() {
   local kubeconfig
   local selected
   if [[ ! -x "$(which fzf 2>/dev/null)" ]]; then

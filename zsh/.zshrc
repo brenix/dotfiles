@@ -232,11 +232,9 @@ if [ -d ${HOME}/.zsh.d ]; then
   for file in ${HOME}/.zsh.d/*.zsh; do
     source $file
   done
-  if ls ${HOME}/.zsh.d/local/\*.zsh 2>/dev/null; then
-    for file in ${HOME}/.zsh.d/local/*.zsh; do
-      source $file
-    done
-  fi
+  for file in ${HOME}/.zsh.d/local/*.zsh; do
+    source $file
+  done
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
