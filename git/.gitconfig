@@ -9,40 +9,40 @@
 	editor = vim
 	preloadindex = true
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	pager = diff-so-fancy | less --tabs=4 -RFX
 [apply]
 	whitespace = strip
+[log]
+  date = short
+[format]
+  pretty = '%C(yellow)%h%Creset %C(magenta)%cd%Creset %d %s'
+[branch]
+  autosetuprebase = always
 [protocol]
  version = 2
-[diff]
-	tool = /usr/bin/vimdiff
-[pager]
-	diff = diff-so-fancy | less --tabs=1,5 -RFX
-	show = diff-so-fancy | less --tabs=1,5 -RFX
 [color]
 	ui = true
 	pager = true
 	branch = auto
 	diff = auto
 	status = auto
+  showbranch = auto
 	interactive = auto
+  ui = true
 [color "branch"]
-	current = cyan reverse
-	local = cyan
-	remote = blue
+	current = yellow reverse
+	local = yellow
+	remote = green
 [color "diff"]
-	meta = red bold
-	frag = yellow bold
-	new = magenta
-	old = magenta bold
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
 [color "status"]
-	added = cyan
-	changed = magenta
-	untracked = blue
+	added = yellow
+	changed = green
+	untracked = cyan
 [alias]
 	tree = log --graph --pretty=oneline --decorate
   prune = !git remote prune origin
 	delete-merged = !git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d
 	delete-local = !git branch --no-merged | grep -v '\\*' | xargs -n 1 git branch -D
-[diff-so-fancy]
-	markEmptyLines = false
