@@ -41,7 +41,7 @@ zplugin snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 # prezto
 zplugin snippet PZT::modules/helper/init.zsh
 zplugin snippet PZT::modules/ssh/init.zsh
-zstyle ':prezto:module:ssh:load' identities 'id_ed25519' 'id_ed25519_vmware'
+zstyle ':prezto:module:ssh:load' identities 'id_ed25519' 'id_ed25519_vmware' 'id_ed25519_personal'
 
 # syntax highlighting
 zplugin light "zdharma/fast-syntax-highlighting"
