@@ -33,7 +33,6 @@ xset +dpms
 
 # -- load xresources
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 
 # -- clipboard sync
 autocutsel -fork &
@@ -41,9 +40,6 @@ autocutsel -selection PRIMARY -fork &
 
 # -- enable numlock
 numlockx &
-
-# -- load xmodmap
-/usr/bin/xmodmap $HOME/.Xmodmap
 
 # -- color calibration
 xcalib -o 0 -b 0.9 -gc 1.05 $HOME/.colors/asus-vg248qe.icm
@@ -55,6 +51,9 @@ nitrogen --restore &
 # -- barrier/synergy
 pgrep barriers || barriers --enable-crypto &
 
+# -- map capslock to escape
+setxkbmap -option caps:escape
+
 # -- window manager
 
 #compton -bCG -o 0.45 -m 0.88 --no-fading-openclose --opacity-rule "90:class_g = 'Code'" --opacity-rule "90:class_g = 'Slack'"
@@ -63,4 +62,4 @@ pgrep barriers || barriers --enable-crypto &
 #exec dbus-launch bspwm &>/tmp/bspwm.log
 
 # openbox
-exec dbus-launch --exit-with-session openbox-session
+exec dbus-launch openbox-session
