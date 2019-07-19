@@ -118,3 +118,7 @@ map <C-\> :NERDTreeToggle<CR>
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" --- plugin: terraform
+let g:terraform_align = 1
+let g:terraform_fmt_on_save = 1

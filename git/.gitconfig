@@ -12,11 +12,11 @@
 [apply]
 	whitespace = strip
 [log]
-  date = short
+	date = short
 [format]
-  pretty = '%C(yellow)%h%Creset %C(magenta)%cd%Creset %d %s'
+	pretty = '%C(yellow)%h%Creset %C(magenta)%cd%Creset %d %s'
 [branch]
-  autosetuprebase = always
+	autosetuprebase = always
 [protocol]
  version = 2
 [color]
@@ -25,9 +25,9 @@
 	branch = auto
 	diff = auto
 	status = auto
-  showbranch = auto
+	showbranch = auto
 	interactive = auto
-  ui = true
+	ui = true
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -39,34 +39,34 @@
 	new = green bold
 [color "status"]
 	added = green
-  changed = yellow
+	changed = yellow
 	untracked = cyan
 [alias]
-  # Display branch name
-  branch-name = "!git rev-parse --abbrev-ref HEAD"
-  # Push the current branch to the remote "origin", and set it to track
-  # the upstream branch
-  publish = "!git push -u origin $(git branch-name)"
-  # Delete the remote version of the current branch
-  unpublish = "!git push origin :$(git branch-name)"
-  # Delete a branch and recreate it from master — useful if you have, say,
-  # a development branch and a master branch and they could conceivably go
-  # out of sync
-  recreate = "!f() { [[ -n $@ ]] && git checkout \"$@\" && git unpublish && git checkout master && git branch -D \"$@\" && git checkout -b \"$@\" && git publish; }; f"
-  # Given a merge commit, find the span of commits that exist(ed) on that
-  # branch. Again, not so useful in itself, but used by other aliases.
-  merge-span = "!f() { echo $(git log -1 $2 --merges --pretty=format:%P | cut -d' ' -f1)$1$(git log -1 $2 --merges --pretty=format:%P | cut -d' ' -f2); }; f"
-  # Find the commits that were introduced by a merge
-  merge-log = "!git log `git merge-span .. $1`"
-  # Show the changes that were introduced by a merge
-  merge-diff = "!git diff `git merge-span ... $1`"
-  # Interactively rebase all the commits on the current branch
-  rebase-branch = "!git rebase -i `git merge-base master HEAD`"
-  # Unstage any files that have been added to the staging area
-  unstage = reset HEAD
-  # Show changes that have been staged
-  diffc = diff --cached
-  # Delete merged branches
-  delete-merged = "!git checkout master && git branch --no-color --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-  # One line log
+	# Display branch name
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	# Push the current branch to the remote "origin", and set it to track
+	# the upstream branch
+	publish = "!git push -u origin $(git branch-name)"
+	# Delete the remote version of the current branch
+	unpublish = "!git push origin :$(git branch-name)"
+	# Delete a branch and recreate it from master — useful if you have, say,
+	# a development branch and a master branch and they could conceivably go
+	# out of sync
+	recreate = "!f() { [[ -n $@ ]] && git checkout \"$@\" && git unpublish && git checkout master && git branch -D \"$@\" && git checkout -b \"$@\" && git publish; }; f"
+	# Given a merge commit, find the span of commits that exist(ed) on that
+	# branch. Again, not so useful in itself, but used by other aliases.
+	merge-span = "!f() { echo $(git log -1 $2 --merges --pretty=format:%P | cut -d' ' -f1)$1$(git log -1 $2 --merges --pretty=format:%P | cut -d' ' -f2); }; f"
+	# Find the commits that were introduced by a merge
+	merge-log = "!git log `git merge-span .. $1`"
+	# Show the changes that were introduced by a merge
+	merge-diff = "!git diff `git merge-span ... $1`"
+	# Interactively rebase all the commits on the current branch
+	rebase-branch = "!git rebase -i `git merge-base master HEAD`"
+	# Unstage any files that have been added to the staging area
+	unstage = reset HEAD
+	# Show changes that have been staged
+	diffc = diff --cached
+	# Delete merged branches
+	delete-merged = "!git checkout master && git branch --no-color --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	# One line log
 	tree = log --graph --pretty=oneline --decorate
