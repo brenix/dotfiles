@@ -9,11 +9,12 @@ set cursorline      " highlight current line
 set showmatch       " show matching brackets
 set ignorecase      " ignore case when searching
 set smartcase       " ignore unless captial letters
-set tabstop=2       " tab = 2 spaces
-set shiftwidth=2    " tab width
-set softtabstop=2   " tab width
+set tabstop=1       " tab = 2 spaces
+set shiftwidth=1    " tab width
+set softtabstop=0   " tab width
 set noswapfile      " dont create swap file
 set nobackup        " dont create backup files
+set nowritebackup   " dont write backup files
 set autoread        " set to auto read when a file is changed from the outside
 set expandtab       " use spaces instead of \t for tabs
 set smartindent     " smart indent
@@ -24,11 +25,12 @@ set lazyredraw      " performance
 set linebreak       " wrap full words instead of partial
 set modeline        " recognize modeline
 set backspace=2     " make backspace work like in other apps
-set nocursorline    " disable underline on current line
 set hlsearch        " highlight search results
 set nopaste         " disable paste by default
 set colorcolumn=80  " set column width
 set nojoinspaces    " use one space, not two after punctuation
+set splitbelow      " Open split panes to the right
+set splitright      " Open split panes to the bottom
 
 " --- plugin management: vim-plug (AUR: vim-plug, Manual: https://github.com/junegunn/vim-plug#vim)
 if has('nvim')
@@ -49,39 +51,41 @@ else
 endif
 
 call plug#begin('~/.vim/plugged')
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --go-completer' } "also requires: pip2 install --user --upgrade neovim
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-rooter'
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'cespare/vim-toml'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
 Plug 'elzr/vim-json', {'for' : 'json'}
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'gabrielelana/vim-markdown'
-Plug 'hashivim/vim-terraform'
-Plug 'vim-syntastic/syntastic'
+Plug 'godlygeek/tabular'
+Plug 'hashivim/vim-hashicorp-tools'
 Plug 'itchyny/calendar.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'juliosueiras/vim-terraform-completion'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'morhetz/gruvbox'
+Plug 'mzlogin/vim-markdown-toc'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'pearofducks/ansible-vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'roxma/nvim-yarp' "deoplete dep
+Plug 'roxma/vim-hug-neovim-rpc' "deoplete dep
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'terryma/vim-multiple-cursors'
-Plug 'townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'morhetz/gruvbox'
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --go-completer' } "also requires: pip2 install --user --upgrade neovim
+Plug 'vim-syntastic/syntastic' "deoplete dep
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " --- general options
@@ -170,3 +174,9 @@ call deoplete#initialize()
 " --- plugin: better-whitespace
 let g:better_whitespace_enabled = 1
 let g:strip_whitespace_on_save = 1
+
+" --- plugin: markdown-toc
+let g:vmt_list_item_char = '-'
+
+" --- plugin: go
+let g:go_fmt_command = "goimports"
