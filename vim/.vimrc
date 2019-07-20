@@ -129,6 +129,9 @@ imap <C-h> <C-w>
 " Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
+" Toggle line numbers
+nmap <F12> :set invnumber<CR>
+
 " --- plugin: lightline
 let g:lightline = {'colorscheme': 'nord'}
 
@@ -137,7 +140,11 @@ let g:lightline = {'colorscheme': 'nord'}
 " toggle nerdtree
 map <C-\> :NERDTreeToggle<CR>
 
-let g:NERDTreeWinSize=60
+" open files using spacebar
+let NERDTreeMapActivateNode='<space>'
+
+" set column size
+let g:NERDTreeWinSize=40
 
 " show hidden files
 let NERDTreeShowHidden=1
