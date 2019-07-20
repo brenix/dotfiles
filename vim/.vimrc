@@ -27,6 +27,8 @@ set backspace=2     " make backspace work like in other apps
 set nocursorline    " disable underline on current line
 set hlsearch        " highlight search results
 set nopaste         " disable paste by default
+set colorcolumn=80  " set column width
+set nojoinspaces    " use one space, not two after punctuation
 
 " --- plugin management: vim-plug (AUR: vim-plug, Manual: https://github.com/junegunn/vim-plug#vim)
 if has('nvim')
@@ -66,6 +68,7 @@ Plug 'itchyny/calendar.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'juliosueiras/vim-terraform-completion'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'pearofducks/ansible-vim'
@@ -78,6 +81,7 @@ Plug 'tpope/vim-surround'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 " --- general options
@@ -88,6 +92,9 @@ syntax enable
 
 " Change BAR cursor to BEAM cursor on insert
 autocmd InsertEnter,InsertLeave * set cul!
+
+" Wrap markdown files at 80 chars
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
 " --- keybindings
 " navigation between splits
@@ -149,7 +156,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" --- plugin: terraform-completion (requires the 'json' and 'neovim' ruby gems)
+" --- plugin: terraform-completion (run :checkHealth to validate)
 let g:terraform_completion_keys = 1
 let g:deoplete#omni_patterns = {}
 
@@ -159,3 +166,7 @@ call deoplete#custom#option('omni_patterns', {
 \})
 
 call deoplete#initialize()
+
+" --- plugin: better-whitespace
+let g:better_whitespace_enabled = 1
+let g:strip_whitespace_on_save = 1
