@@ -133,7 +133,11 @@ nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 let g:lightline = {'colorscheme': 'nord'}
 
 " --- plugin: nerdtree
+
+" toggle nerdtree
 map <C-\> :NERDTreeToggle<CR>
+
+let g:NERDTreeWinSize=60
 
 " show hidden files
 let NERDTreeShowHidden=1
@@ -183,6 +187,10 @@ let g:strip_whitespace_on_save = 1
 
 " --- plugin: markdown-toc
 let g:vmt_list_item_char = '-'
+let g:vim_markdown_folding_disabled = 1
 
 " --- plugin: go
 let g:go_fmt_command = "goimports"
+
+" --- plugin: ctrlp
+let g:ctrlp_working_path_mode = 'cra'
