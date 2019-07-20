@@ -54,6 +54,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'andrewstuart/vim-kubernetes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'cespare/vim-toml'
@@ -63,12 +64,15 @@ Plug 'elzr/vim-json', {'for' : 'json'}
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'godlygeek/tabular'
 Plug 'hashivim/vim-hashicorp-tools'
+Plug 'honza/vim-snippets'
 Plug 'itchyny/calendar.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'jiangmiao/auto-pairs'
 Plug 'juliosueiras/vim-terraform-completion'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'majutsushi/tagbar'
 Plug 'morhetz/gruvbox'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'ntpeters/vim-better-whitespace'
@@ -79,11 +83,13 @@ Plug 'roxma/vim-hug-neovim-rpc' "deoplete dep
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'SirVer/ultisnips'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py --go-completer' } "also requires: pip2 install --user --upgrade neovim
 Plug 'vim-syntastic/syntastic' "deoplete dep
+Plug 'w0rp/ale'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 call plug#end()
