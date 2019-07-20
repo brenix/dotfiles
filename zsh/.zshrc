@@ -37,11 +37,8 @@ zplugin snippet OMZ::plugins/git/git.plugin.zsh
 zplugin snippet OMZ::plugins/golang/golang.plugin.zsh
 zplugin ice wait'1' silent
 zplugin snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
-
-# prezto
-zplugin snippet PZT::modules/helper/init.zsh
-zplugin snippet PZT::modules/ssh/init.zsh
-zstyle ':prezto:module:ssh:load' identities 'id_ed25519' 'id_ed25519_vmware' 'id_ed25519_personal'
+zstyle :omz:plugins:ssh-agent identities id_ed25519 id_ed25519_work
+zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 
 # syntax highlighting
 zplugin light "zdharma/fast-syntax-highlighting"
