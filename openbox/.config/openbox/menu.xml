@@ -4,9 +4,9 @@
 
 <menu id="root-menu" label="Openbox 3">
   <separator label="-- APPLICATIONS --" />
-  <item label="FIREFOX">
+  <item label="GOOGLE CHROME">
     <action name="Execute">
-      <command>firefox</command>
+      <command>google-chrome-unstable</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>

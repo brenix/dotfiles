@@ -437,7 +437,7 @@
     </keybind>
     <keybind key="W-d">
       <action name="Execute">
-        <command>firefox</command>
+        <command>google-chrome-unstable</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -1041,7 +1041,7 @@
       <desktop>3</desktop>
       <focus>yes</focus>
     </application>
-    <application class="firefox">
+    <application class="Google-chrome-unstable">
       <desktop>2</desktop>
       <focus>yes</focus>
     </application>
