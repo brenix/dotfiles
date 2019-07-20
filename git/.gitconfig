@@ -9,6 +9,7 @@
 	editor = vim
 	preloadindex = true
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	pager = diff-so-fancy --patch-mode | less -FXRi
 [apply]
 	whitespace = strip
 [log]
