@@ -39,7 +39,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>nord-osx</name>
+    <name>faded</name>
     <titleLayout>LMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -1029,7 +1029,7 @@
 
   # end of the example
 -->
-<!--<application class="iTerm">
+    <!--<application class="iTerm">
       <focus>yes</focus>
       <desktop>1</desktop>
       <size>

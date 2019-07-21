@@ -31,6 +31,7 @@ set colorcolumn=80  " set column width
 set nojoinspaces    " use one space, not two after punctuation
 set splitbelow      " Open split panes to the right
 set splitright      " Open split panes to the bottom
+"set termguicolors   " Enable Tc
 
 " --- plugin management: vim-plug (AUR: vim-plug, Manual: https://github.com/junegunn/vim-plug#vim)
 if has('nvim')
@@ -58,6 +59,8 @@ Plug 'andrewstuart/vim-kubernetes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'cespare/vim-toml'
+Plug 'chriskempson/base16-vim'
+Plug 'cocopon/iceberg.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
 Plug 'elzr/vim-json', {'for' : 'json'}
@@ -87,7 +90,6 @@ Plug 'SirVer/ultisnips'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --go-completer' } "also requires: pip2 install --user --upgrade neovim
 Plug 'vim-syntastic/syntastic' "deoplete dep
 Plug 'w0rp/ale'
 Plug 'Xuyuanp/nerdtree-git-plugin'

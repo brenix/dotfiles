@@ -24,10 +24,7 @@ export GDK_DPI_SCALE=1.0
 xsetroot -cursor_name left_ptr &
 
 # -- load fonts
-xset +fp /usr/share/fonts/misc
-xset +fp /usr/share/fonts/local
-xset +fp /home/brenix/.fonts/ttf
-xset +fp /home/brenix/.fonts/bitmap
+xset +fp /home/brenix/.local/share/fonts/bitmap
 xset fp rehash
 xset +dpms
 

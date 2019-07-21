@@ -1,4 +1,6 @@
+! slack theme: #252933,#3B4252,#D5DFE8,#252933,#3B4252,#D8DEE9,#B4BF86,#CBB079
 ! special
+*.background:   #252933
 *.foreground:   #e5e9f0
 !*.background:   #252933
 *.cursorColor:  #e5e9f0

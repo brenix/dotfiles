@@ -9,11 +9,9 @@ Xft.rgba:                      rgb
 
 ! -- urxvt
 URxvt*boldFont:
-URxvt*font:                   xft:Hack Nerd Font Mono:pixelsize=12:antialias=true:style=g
-!URxvt*font:                    -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+URxvt*font:                    -*-dash-*-*-*-*-*-*-*-*-*-*-*-*
 URxvt*termName:                rxvt-256color
 URxvt.depth:                   32
-URxvt.background:              [90]#252933
 URxvt*lineSpace:               1
 URxvt*letterSpace:             0
 URxvt.iso14755:                false
