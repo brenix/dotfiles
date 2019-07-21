@@ -135,7 +135,16 @@ nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 nmap <F12> :set invnumber<CR>
 
 " --- plugin: lightline
-let g:lightline = {'colorscheme': 'nord'}
+let g:lightline = {
+  \ 'colorscheme': 'nord',
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'fugitive#head'
+  \ },
+  \ }
 
 " --- plugin: nerdtree
 
@@ -203,3 +212,6 @@ let g:go_fmt_command = "goimports"
 
 " --- plugin: ctrlp
 let g:ctrlp_working_path_mode = 'cra'
+
+" --- plugin: tagbar
+autocmd VimEnter * nested :TagbarOpen
