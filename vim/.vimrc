@@ -31,6 +31,7 @@ set colorcolumn=80  " set column width
 set nojoinspaces    " use one space, not two after punctuation
 set splitbelow      " Open split panes to the right
 set splitright      " Open split panes to the bottom
+set nofixendofline  " Disable automatic new line at EOF
 "set termguicolors   " Enable Tc
 
 " --- plugin management: vim-plug (AUR: vim-plug, Manual: https://github.com/junegunn/vim-plug#vim)
@@ -176,7 +177,7 @@ let g:terraform_fmt_on_save = 1
 
 " --- plugin: deoplete
 let g:deoplete#enable_at_startup = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " --- plugin: syntastic
 set statusline+=%#warningmsg#
