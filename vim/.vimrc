@@ -135,6 +135,9 @@ nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 " Toggle line numbers
 nmap <F12> :set invnumber<CR>
 
+" Un-indent using shift-tab
+inoremap <S-Tab> <C-d>
+
 " --- plugin: lightline
 let g:lightline = {
   \ 'colorscheme': 'nord',
