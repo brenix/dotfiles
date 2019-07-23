@@ -181,7 +181,7 @@ let g:terraform_fmt_on_save = 1
 
 " --- plugin: deoplete
 let g:deoplete#enable_at_startup = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " --- plugin: syntastic
 set statusline+=%#warningmsg#
