@@ -217,6 +217,3 @@ let g:go_fmt_command = "goimports"
 
 " --- plugin: ctrlp
 let g:ctrlp_working_path_mode = 'cra'
-
-" --- plugin: tagbar
-autocmd VimEnter * nested :TagbarOpen
