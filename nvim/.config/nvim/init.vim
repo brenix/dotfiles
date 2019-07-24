@@ -155,12 +155,12 @@ au BufRead,BufNewFile *.md setlocal textwidth=80
 "----------------------------------------------
 " Colors
 "----------------------------------------------
-"if (has("nvim"))
-"  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-"  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"endif
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
 
-" True color support
+"" True color support
 "if (has("termguicolors"))
 "  set termguicolors
 "endif
@@ -180,7 +180,7 @@ colorscheme nord
 
 " Override the search highlight color with a combination that is easier to
 " read.
-highlight Search guibg=DeepBlue4 guifg=White ctermbg=53 ctermfg=White
+highlight Search guibg=DeepPink4 guifg=White ctermbg=53 ctermfg=White
 
 " Toggle background with <leader>bg
 map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<cr>
