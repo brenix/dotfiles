@@ -34,7 +34,6 @@ Plug 'vim-syntastic/syntastic'     " Dependency for Shougo/deoplete
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
 Plug 'andrewstuart/vim-kubernetes'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/calendar.vim'
@@ -102,8 +101,6 @@ set completeopt-=preview          " remove the horrendous preview window
 set cursorline                    " highlight the current line for the cursor
 set encoding=utf-8                " set encoding to UTF-8
 set expandtab                     " expands tabs to spaces
-set list                          " show trailing whitespace
-set listchars=tab:\|\ ,trail:▫    " strings to use in list mode
 set linebreak                     " wrap full words instead of partial
 set nospell                       " disable spelling
 set nopaste                       " disable paste by default
@@ -220,10 +217,10 @@ cnoreabbrev Q q
 cnoreabbrev Qall qall
 
 " navigation between splits
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " ctrl+left/right
 nmap <ESC>[1;5D <C-Left>
@@ -246,13 +243,6 @@ nmap <F12> :set invnumber<CR>
 
 " Un-indent using shift-tab
 inoremap <S-Tab> <C-d>
-
-" Creating splits
-nnoremap <leader>v :vsplit<cr>
-nnoremap <leader>h :split<cr>
-
-" Closing splits
-nnoremap <leader>q :close<cr>
 
 "----------------------------------------------
 " Plugin: Shougo/deoplete.nvim
@@ -297,32 +287,13 @@ let g:lightline = {
   \ }
 
 "----------------------------------------------
-" Plugin: christoomey/vim-tmux-navigator
-"----------------------------------------------
-" Tmux will send xterm-style keys when its xterm-keys option is on.
-if &term =~ '^screen'
-    execute "set <xUp>=\e[1;*A"
-    execute "set <xDown>=\e[1;*B"
-    execute "set <xRight>=\e[1;*C"
-    execute "set <xLeft>=\e[1;*D"
-endif
-
-" Tmux vim integration
-let g:tmux_navigator_no_mappings = 1
-let g:tmux_navigator_save_on_switch = 1
-
-" Move between splits with ctrl+h,j,k,l
-nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
-
-"----------------------------------------------
 " Plugin: 'ctrlpvim/ctrlp.vim'
 "----------------------------------------------
 " Disable the CtrlP mapping, since we want to use FZF instead for <c-p>.
-let g:ctrlp_map = ''
+"let g:ctrlp_map = ''
+
+" Set working path mode
+let g:ctrlp_working_path_mode = 'cra'
 
 "----------------------------------------------
 " Plugin: 'itchyny/calendar.vim'
@@ -343,7 +314,7 @@ let g:calendar_view = "days"                  " Set days as the default view
 "----------------------------------------------
 " Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
-nnoremap <c-p> :FZF<cr>
+"nnoremap <c-p> :FZF<cr>
 
 "----------------------------------------------
 " Plugin: 'majutsushi/tagbar'
