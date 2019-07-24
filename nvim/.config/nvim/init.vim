@@ -177,7 +177,7 @@ colorscheme nord
 
 " Override the search highlight color with a combination that is easier to
 " read.
-highlight Search guibg=DeepPink4 guifg=White ctermbg=53 ctermfg=White
+highlight Search guibg=SteelBlue guifg=White ctermbg=67 ctermfg=White
 
 " Toggle background with <leader>bg
 map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<cr>
@@ -599,9 +599,9 @@ au FileType make set tabstop=2
 "----------------------------------------------
 au FileType markdown setlocal spell
 au FileType markdown set expandtab
-au FileType markdown set shiftwidth=4
-au FileType markdown set softtabstop=4
-au FileType markdown set tabstop=4
+au FileType markdown set shiftwidth=2
+au FileType markdown set softtabstop=2
+au FileType markdown set tabstop=2
 au FileType markdown set syntax=markdown
 
 "----------------------------------------------
