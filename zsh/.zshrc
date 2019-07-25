@@ -198,7 +198,7 @@ zstyle ":completion:*:commands" rehash 1
 bindkey -v
 bindkey "^A" beginning-of-line      # ctrl+a
 bindkey "^E" end-of-line            # ctrl+e
-bindkey "^K" vi-change-whole-line   # ctrl+k
+bindkey "^F" vi-change-whole-line   # ctrl+f
 bindkey "^[OF" end-of-line          # end key
 bindkey "^[OH" beginning-of-line    # home key
 bindkey "^[[2~" overwrite-mode      # insert key
