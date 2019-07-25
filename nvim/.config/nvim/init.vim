@@ -370,8 +370,9 @@ let g:vmt_list_item_char = '-'
 " Plugin: scrooloose/nerdtree
 "----------------------------------------------
 
-" toggle nerdtree
-map <C-\> :NERDTreeToggle<CR>
+" toggle nerdtree (overrides tmux navigator)
+autocmd VimEnter * noremap <C-\> :NERDTreeToggle<CR>
+"map <C-\> :NERDTreeToggle<CR>
 
 " open files using spacebar
 let NERDTreeMapActivateNode='<space>'
