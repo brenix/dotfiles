@@ -31,6 +31,11 @@ Plug 'tpope/vim-rhubarb'           " Dependency for tpope/fugitive
 Plug 'vim-syntastic/syntastic'     " Dependency for Shougo/deoplete
 
 " General plugins
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
 Plug 'andrewstuart/vim-kubernetes'
@@ -43,21 +48,17 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
+Plug 'mileszs/ack.vim'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'Yggdroot/indentLine'
 
 " Language support
 Plug 'baskerville/vim-sxhkdrc'                         " sxhkdrc syntax highlighting
@@ -527,7 +528,7 @@ let g:neomake_go_gometalinter_maker = {
 "----------------------------------------------
 " Language: Bash
 "----------------------------------------------
-au FileType sh set noexpandtab
+au FileType sh set expandtab
 au FileType sh set shiftwidth=2
 au FileType sh set softtabstop=2
 au FileType sh set tabstop=2
