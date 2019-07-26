@@ -75,6 +75,10 @@ alias gi="git-ignore"
 zplugin ice wait'1' silent
 zplugin light "molovo/tipz"
 
+# cd-gitroot
+zplugin light "mollifier/cd-gitroot"
+alias cdu="cd-gitroot"
+
 # -- prompt
 
 # spaceship
