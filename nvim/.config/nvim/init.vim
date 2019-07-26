@@ -80,14 +80,15 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}              " Go auto completion
 Plug 'zimbatm/haproxy.vim'                             " HAProxy syntax highlighting
 
 " Colorschemes
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'altercation/vim-colors-solarized'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'kaicataldo/material.vim'
 Plug 'morhetz/gruvbox'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rakr/vim-one'
+Plug 'sainnhe/vim-color-desert-night'
 
 call plug#end()
 
