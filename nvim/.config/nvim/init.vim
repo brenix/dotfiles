@@ -185,6 +185,9 @@ highlight Search guibg=SteelBlue guifg=White ctermbg=67 ctermfg=White
 " Toggle background with <leader>bg
 map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<cr>
 
+" Disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 "----------------------------------------------
 " Searching
 "----------------------------------------------
@@ -237,6 +240,9 @@ imap <ESC>[1;5C <C-o><C-Right>
 nmap <C-h> <C-w>
 cmap <C-h> <C-w>
 imap <C-h> <C-w>
+
+" Toggle paste mode
+set pastetoggle=<F2>
 
 " Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
