@@ -247,6 +247,9 @@ nmap <F12> :set invnumber<CR>
 " Un-indent using shift-tab
 inoremap <S-Tab> <C-d>
 
+" Write file
+nmap <leader>w :w<CR>
+
 "----------------------------------------------
 " Plugin: Shougo/deoplete.nvim
 "----------------------------------------------
