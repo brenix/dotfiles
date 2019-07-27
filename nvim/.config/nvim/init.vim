@@ -264,6 +264,9 @@ inoremap <S-Tab> <C-d>
 " Write file
 nmap <leader>w :w<CR>
 
+" Write and quit
+nmap <leader>W :wq<CR>
+
 " Quit
 nmap <silent> <leader>q :bd<CR>
 
@@ -328,7 +331,7 @@ let g:lightline = {
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', '#5f5f87'],
-  \ 'hl':      ['fg', 'Comment'],
+  \ 'hl':      ['fg', 'Function'],
   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
   \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
   \ 'hl+':     ['fg', 'Statement'],
