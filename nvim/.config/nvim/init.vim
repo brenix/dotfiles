@@ -2,6 +2,10 @@
 " Plugin management: vim-plug (AUR: vim-plug)
 "----------------------------------------------
 
+" Skip the check of neovim module
+let g:python3_host_skip_check = 1
+let g:python_host_skip_check = 1
+
 " Auto-install
 if has('nvim')
   if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -39,6 +43,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
 Plug 'andrewstuart/vim-kubernetes'
+Plug 'ap/vim-buftabline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -49,9 +54,11 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
+Plug 'mhinz/vim-startify'
 Plug 'mileszs/ack.vim'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'rhysd/accelerated-jk'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -100,6 +107,7 @@ set smartindent                   " enable smart indentation
 set autoread                      " reload file if the file changes on the disk
 set colorcolumn=81                " highlight the 80th column as an indicator
 set copyindent                    " copy the previous indentation on autoindent
+set completeopt=longest,menu      " make completion popup menu work like ide
 set completeopt-=preview          " remove the horrendous preview window
 set cursorline                    " highlight the current line for the cursor
 set encoding=utf-8                " set encoding to UTF-8
@@ -128,17 +136,24 @@ set softtabstop=2                 " tab width
 set tabstop=2                     " tab = 2 spaces
 set title                         " let vim set the terminal title
 set updatetime=100                " redraw the status bar often
+set backspace=2
+set backspace=indent,eol,start
+set shiftround
+set timeout ttimeout
+set cmdheight=1
+set timeoutlen=500
+set ttimeoutlen=10
+set shortmess=aFc
+set matchtime=1
+set wildignore+=*.so,*~,*/.git/*,*/.svn/*,*/.DS_Store,*/tmp/*
 
 " Enable mouse if possible
 if has('mouse')
   set mouse=a
 endif
 
-" Allow vim to set a custom font or color for a word
-syntax enable
-
 " Set the leader button
-let mapleader = ','
+let g:mapleader = "\<Space>"
 
 " Autosave buffers before leaving them
 autocmd BufLeave * silent! :wa
@@ -146,11 +161,11 @@ autocmd BufLeave * silent! :wa
 " Remove trailing white spaces on save
 autocmd BufWritePre * :%s/\s\+$//e
 
-" Center the screen quickly
-nnoremap <space> zz
-
 " Wrap markdown files at 80 chars
 au BufRead,BufNewFile *.md setlocal textwidth=80
+
+" Disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "----------------------------------------------
 " Colors
@@ -160,42 +175,30 @@ if (has("nvim"))
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 
-"" True color support
-"if (has("termguicolors"))
-"  set termguicolors
-"endif
+" Enable syntax highlighting
+syntax enable
 
+" Set dark background
 set background=dark
 
-" Material colorscheme settings
-let g:material_theme_style = 'dark'
-
-" Ayu colorscheme settings
-let ayucolor = 'dark'
-
-" One colorscheme settings
-let g:one_allow_italics = 1
-
+" Colorscheme
 colorscheme nord
 
-" Override the search highlight color with a combination that is easier to
-" read.
+" Override the search highlight color
 highlight Search guibg=SteelBlue guifg=White ctermbg=67 ctermfg=White
-
-" Toggle background with <leader>bg
-map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<cr>
-
-" Disable automatic comment insertion
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "----------------------------------------------
 " Searching
 "----------------------------------------------
-set incsearch                     " move to match as you type the search query
-set hlsearch                      " disable search result highlighting
+" Move to match as you type
+set incsearch
 
+" Highlight search results
+set hlsearch
+
+" Interactive search and replace
 if has('nvim')
-  set inccommand=split            " enables interactive search and replace
+  set inccommand=split
 endif
 
 " Clear search highlights
@@ -207,9 +210,8 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 
 "----------------------------------------------
-" Keybindings
+" Various Keybindings
 "----------------------------------------------
-
 " Fix some common typos
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
@@ -221,6 +223,12 @@ cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
+
+"smart move
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " navigation between splits
 nnoremap <C-J> <C-W><C-J>
@@ -256,8 +264,21 @@ inoremap <S-Tab> <C-d>
 " Write file
 nmap <leader>w :w<CR>
 
+" Quit
+nmap <silent> <leader>q :bd<CR>
+
+" Quit without saving
+nmap <silent> <leader>Q :bd!<CR>
+
 " Open edit line with current file path
 nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+
+" Splits
+nmap <leader>s :split<CR>
+nmap <leader>v :vsplit<CR>
+
+" Reload vimrc
+nmap <leader>r :source ~/.config/nvim/init.vim<CR>
 
 "----------------------------------------------
 " Plugin: Shougo/deoplete.nvim
@@ -268,13 +289,12 @@ if has('nvim')
 endif
 
 " Disable deoplete when in multi cursor mode
-"function! Multiple_cursors_before()
-    "let b:deoplete_disable_auto_complete = 1
-"endfunction
-
-"function! Multiple_cursors_after()
-    "let b:deoplete_disable_auto_complete = 0
-"endfunction
+function! Multiple_cursors_before()
+  let b:deoplete_disable_auto_complete = 1
+endfunction
+function! Multiple_cursors_after()
+  let b:deoplete_disable_auto_complete = 0
+endfunction
 
 let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'
 let g:deoplete#sources#go#source_importer = 1
@@ -302,6 +322,33 @@ let g:lightline = {
   \ }
 
 "----------------------------------------------
+" Plugin: 'junegunn/fzf'
+"----------------------------------------------
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', '#5f5f87'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+if executable('rg')
+  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
+  set grepprg=rg\ --vimgrep
+  command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+endif
+
+nnoremap <leader>p :Files<cr>
+
+"----------------------------------------------
 " Plugin: 'ctrlpvim/ctrlp.vim'
 "----------------------------------------------
 " Disable the CtrlP mapping, since we want to use FZF instead for <c-p>.
@@ -327,15 +374,10 @@ let g:calendar_week_number = 1                " Show week numbers
 let g:calendar_view = "days"                  " Set days as the default view
 
 "----------------------------------------------
-" Plugin: 'junegunn/fzf.vim'
-"----------------------------------------------
-"nnoremap <c-p> :FZF<cr>
-
-"----------------------------------------------
 " Plugin: 'majutsushi/tagbar'
 "----------------------------------------------
 " Add shortcut for toggling the tag bar
-nnoremap <F3> :TagbarToggle<cr>
+nnoremap <F4> :TagbarToggle<cr>
 
 " Language: Go
 " Tagbar configuration for Golang
@@ -382,10 +424,8 @@ let g:vmt_list_item_char = '-'
 "----------------------------------------------
 " Plugin: scrooloose/nerdtree
 "----------------------------------------------
-
 " toggle nerdtree (overrides tmux navigator)
 autocmd VimEnter * noremap <C-\> :NERDTreeToggle<CR>
-"map <C-\> :NERDTreeToggle<CR>
 
 " open files using spacebar
 let NERDTreeMapActivateNode='<space>'
@@ -418,13 +458,15 @@ let g:deoplete#sources#go#unimported_packages = 0
 "----------------------------------------------
 " Plugin: hashivim/vim-hashicorp-tools
 "----------------------------------------------
+" Automatic alignment as your typing
 let g:terraform_align = 1
+
+" Run terraform fmt on save
 let g:terraform_fmt_on_save = 1
 
 "----------------------------------------------
 " Plugin: juliosueiras/vim-terraform-completion
 "----------------------------------------------
-
 let g:terraform_completion_keys = 1
 let g:deoplete#omni_patterns = {}
 
@@ -440,6 +482,37 @@ call deoplete#initialize()
 "----------------------------------------------
 let g:better_whitespace_enabled = 1
 let g:strip_whitespace_on_save = 1
+
+"----------------------------------------------
+" Plugin: ap/buftabline
+"----------------------------------------------
+" Always show
+let g:buftabline_show = 2
+
+" Ordinal from left to right
+let g:buftabline_numbers = 2
+
+" Create a new buffer
+nnoremap <leader>t :enew<cr>
+
+" (Shift)Tab to switch to next open buffer
+nnoremap <Tab> :bnext<cr>
+nnoremap <S-Tab> :bprevious<cr>
+
+" Leader key twice to cycle between last two buffers
+nnoremap <leader><leader> <c-^>
+
+" Select tabs using numbers
+nmap <leader>1 <Plug>BufTabLine.Go(1)
+nmap <leader>2 <Plug>BufTabLine.Go(2)
+nmap <leader>3 <Plug>BufTabLine.Go(3)
+nmap <leader>4 <Plug>BufTabLine.Go(4)
+nmap <leader>5 <Plug>BufTabLine.Go(5)
+nmap <leader>6 <Plug>BufTabLine.Go(6)
+nmap <leader>7 <Plug>BufTabLine.Go(7)
+nmap <leader>8 <Plug>BufTabLine.Go(8)
+nmap <leader>9 <Plug>BufTabLine.Go(9)
+nmap <leader>0 <Plug>BufTabLine.Go(10)
 
 "----------------------------------------------
 " Language: Golang
@@ -621,11 +694,6 @@ au FileType markdown set tabstop=2
 au FileType markdown set syntax=markdown
 
 "----------------------------------------------
-" Language: none
-"----------------------------------------------
-au FileType none setlocal nospell
-
-"----------------------------------------------
 " Language: Python
 "----------------------------------------------
 au FileType python set expandtab
@@ -672,3 +740,4 @@ au FileType yaml set expandtab
 au FileType yaml set shiftwidth=2
 au FileType yaml set softtabstop=2
 au FileType yaml set tabstop=2
+
