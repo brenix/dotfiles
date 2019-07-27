@@ -322,6 +322,12 @@ let g:lightline = {
   \ }
 
 "----------------------------------------------
+" Plugin: ervandew/supertab
+"----------------------------------------------
+" Start tab completion from the tob to give tabnine priority
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+"----------------------------------------------
 " Plugin: 'junegunn/fzf'
 "----------------------------------------------
 " Show fzf in the same buffer
