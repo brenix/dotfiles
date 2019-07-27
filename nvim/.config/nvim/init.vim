@@ -47,15 +47,16 @@ Plug 'ap/vim-buftabline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'ervandew/supertab'
 Plug 'itchyny/calendar.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
-Plug 'jremmen/vim-ripgrep'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rhysd/accelerated-jk'
@@ -306,9 +307,6 @@ call deoplete#custom#option({
 \ 'auto_complete_delay': 0,
 \ 'auto_refresh_delay': 10,
 \})
-
-" Complete using TAB
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 "----------------------------------------------
 " Plugin: itchyny/lightline
