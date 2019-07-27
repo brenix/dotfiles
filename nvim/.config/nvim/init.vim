@@ -55,7 +55,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
-Plug 'mileszs/ack.vim'
+Plug 'jremmen/vim-ripgrep'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rhysd/accelerated-jk'
@@ -327,6 +327,9 @@ let g:lightline = {
 "----------------------------------------------
 " Plugin: 'junegunn/fzf'
 "----------------------------------------------
+" Show fzf in the same buffer
+let g:fzf_layout = { 'window': 'enew' }
+
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
@@ -351,7 +354,11 @@ else
   echom "ripgrep not installed, you should install it"
 endif
 
+" Fuzzy file search
 nnoremap <leader>p :Files<cr>
+
+" Set working root directory
+nnoremap <leader>P :call fzf#run({'source': 'find ~/work -type d -maxdepth 1', 'sink': 'lcd'})<cr>
 
 "----------------------------------------------
 " Plugin: 'ctrlpvim/ctrlp.vim'
