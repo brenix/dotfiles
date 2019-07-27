@@ -307,6 +307,8 @@ call deoplete#custom#option({
 \ 'auto_refresh_delay': 10,
 \})
 
+call deoplete#custom#source('go', 'rank', 9999)
+
 "----------------------------------------------
 " Plugin: itchyny/lightline
 "----------------------------------------------
