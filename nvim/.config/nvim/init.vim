@@ -360,7 +360,7 @@ nnoremap <leader>p :Files<cr>
 " Set list of directories to search for projects
 let g:project_dirs = ['~/work', '~/ida']
 " Set working root directory
-nnoremap <leader>P :call fzf#run({'source': 'find '. join(g:project_dirs).' -type d -maxdepth 1', 'sink': 'lcd'})<cr>
+nnoremap <C-M-p> :call fzf#run({'source': 'find '. join(g:project_dirs).' -type d -maxdepth 1', 'sink': 'lcd'})<cr>
 
 "----------------------------------------------
 " Plugin: 'ctrlpvim/ctrlp.vim'
