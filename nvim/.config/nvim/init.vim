@@ -301,7 +301,6 @@ function! Multiple_cursors_after()
 endfunction
 
 let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'
-let g:deoplete#sources#go#source_importer = 1
 
 call deoplete#custom#option({
 \ 'auto_complete_delay': 0,
@@ -581,8 +580,6 @@ let g:go_list_type = "quickfix"
 " Add the failing test name to the output of :GoTest
 let g:go_test_show_name = 1
 
-let g:go_gocode_propose_source=1
-
 " gometalinter configuration
 let g:go_metalinter_command = ""
 let g:go_metalinter_deadline = "5s"
@@ -752,4 +749,3 @@ au FileType yaml set expandtab
 au FileType yaml set shiftwidth=2
 au FileType yaml set softtabstop=2
 au FileType yaml set tabstop=2
-
