@@ -15,7 +15,7 @@
 [log]
 	date = short
 [format]
-	pretty = '%C(yellow)%h%Creset %C(magenta)%cd%Creset %d %s'
+	pretty = '%C(yellow)%h%Creset %C(magenta)%cd%Creset %d %s %C(green)%an'
 [branch]
 	autosetuprebase = always
 [protocol]

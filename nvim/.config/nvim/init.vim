@@ -256,6 +256,9 @@ inoremap <S-Tab> <C-d>
 " Write file
 nmap <leader>w :w<CR>
 
+" Open edit line with current file path
+nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+
 "----------------------------------------------
 " Plugin: Shougo/deoplete.nvim
 "----------------------------------------------
@@ -616,6 +619,11 @@ au FileType markdown set shiftwidth=2
 au FileType markdown set softtabstop=2
 au FileType markdown set tabstop=2
 au FileType markdown set syntax=markdown
+
+"----------------------------------------------
+" Language: none
+"----------------------------------------------
+au FileType none setlocal nospell
 
 "----------------------------------------------
 " Language: Python
