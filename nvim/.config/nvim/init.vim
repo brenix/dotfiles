@@ -50,7 +50,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 
 " Colorschemes
 Plug 'arcticicestudio/nord-vim'
