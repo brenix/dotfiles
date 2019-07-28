@@ -1,10 +1,4 @@
-"----------------------------------------------
-" Plugin management: vim-plug (AUR: vim-plug)
-"----------------------------------------------
-
-" Skip the check of neovim module
-let g:python3_host_skip_check = 1
-let g:python_host_skip_check = 1
+" --- Plugin Management {{{
 
 " Auto-install
 if has('nvim')
@@ -27,72 +21,39 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Dependencies
-Plug 'Shougo/neocomplcache'        " Dependency for Shougo/neosnippet
-Plug 'godlygeek/tabular'           " Dependency for plasticboy/vim-markdown
-Plug 'roxma/nvim-yarp'             " Dependency for Shougo/deoplete
-Plug 'roxma/vim-hug-neovim-rpc'    " Dependency for Shougo/deoplete
-Plug 'tpope/vim-rhubarb'           " Dependency for tpope/fugitive
-Plug 'vim-syntastic/syntastic'     " Dependency for Shougo/deoplete
+Plug 'tpope/vim-rhubarb' " Dependency for tpope/fugitive
 
 " General plugins
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
-Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
-Plug 'andrewstuart/vim-kubernetes'
 Plug 'ap/vim-buftabline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'ervandew/supertab'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/calendar.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'juliosueiras/vim-terraform-completion'
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'mzlogin/vim-markdown-toc'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'rhysd/accelerated-jk'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 
-" Language support
-Plug 'baskerville/vim-sxhkdrc'                         " sxhkdrc syntax highlighting
-Plug 'cespare/vim-toml'                                " toml syntax highlighting
-Plug 'chr4/nginx.vim'                                  " nginx syntax highlighting
-Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'} " Dockerfile syntax highlighting
-Plug 'elzr/vim-json', {'for' : 'json'}                 " JSON syntax highlighting
-Plug 'fatih/vim-go'                                    " Go support
-Plug 'fishbullet/deoplete-ruby'                        " Ruby auto completion
-Plug 'hashivim/vim-hashicorp-tools'                    " HCL/Terraform/Consul/Vault
-Plug 'juliosueiras/vim-terraform-completion'           " Terraform completion
-Plug 'lifepillar/pgsql.vim'                            " PostgreSQL syntax highlighting
-Plug 'pangloss/vim-javascript'                         " JavaScript syntax highlighting
-Plug 'pearofducks/ansible-vim'                         " Ansible support
-Plug 'plasticboy/vim-markdown'                         " Markdown syntax highlighting
-Plug 'sheerun/vim-polyglot'                            " Various language syntax highlighting
-Plug 'zchee/deoplete-go', { 'do': 'make'}              " Go auto completion
-Plug 'zimbatm/haproxy.vim'                             " HAProxy syntax highlighting
-
 " Colorschemes
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'altercation/vim-colors-solarized'
 Plug 'arcticicestudio/nord-vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'kaicataldo/material.vim'
 Plug 'morhetz/gruvbox'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rakr/vim-one'
@@ -100,77 +61,76 @@ Plug 'sainnhe/vim-color-desert-night'
 
 call plug#end()
 
-"----------------------------------------------
-" General settings
-"----------------------------------------------
-set autoindent                    " take indent for new line from previous line
-set smartindent                   " enable smart indentation
-set autoread                      " reload file if the file changes on the disk
-set colorcolumn=81                " highlight the 80th column as an indicator
-set copyindent                    " copy the previous indentation on autoindent
-set completeopt=longest,menu      " make completion popup menu work like ide
-set completeopt-=preview          " remove the horrendous preview window
-set cursorline                    " highlight the current line for the cursor
-set encoding=utf-8                " set encoding to UTF-8
-set expandtab                     " expands tabs to spaces
-set linebreak                     " wrap full words instead of partial
-set nospell                       " disable spelling
-set nopaste                       " disable paste by default
-set nojoinspaces                  " use one space, not two after punctuation
-set splitbelow                    " open horizontal panes to the bottom
-set splitright                    " open vertical panes to the right
-set nofixendofline                " disable automatic newline character
-set noswapfile                    " disable swapfile usage
-set nobackup                      " dont create backup files
-set nowritebackup                 " dont write backup files
-set nowrap                        " dont automatically wrap
-set noerrorbells                  " disable bells
-set novisualbell                  " disable visual bells
-set number                        " show number ruler
-set showmatch                     " show matching brackets
-set ignorecase                    " ignore case when searching
-set smartcase                     " ignore unless capital letters
-set smarttab                      " use shiftwidth and softtabstop
-set ruler                         " always show current positions along the bottom
-set formatoptions=tcqronj         " set vims text formatting options
-set softtabstop=2                 " tab width
-set tabstop=2                     " tab = 2 spaces
-set title                         " let vim set the terminal title
-set updatetime=100                " redraw the status bar often
-set backspace=2
-set backspace=indent,eol,start
-set shiftround
-set timeout ttimeout
-set cmdheight=1
-set timeoutlen=500
-set ttimeoutlen=10
-set shortmess=aFc
-set matchtime=1
-set wildignore+=*.so,*~,*/.git/*,*/.svn/*,*/.DS_Store,*/tmp/*
+" }}}
+
+" --- General Options {{{
+
+set autoindent                 " Take indent for new line from previous line
+set autoread                   " Reload file if the file changes on the disk
+set backspace=indent,eol,start " Allow backspacing over indentation/line breaks/insertion
+set cmdheight=2                " Set height of the cmd pane to 2
+set colorcolumn=101            " Highlight the 10th column as an indicator
+set complete-=i                " Limit the files searched for auto-completes
+set completeopt-=preview       " Remove the horrendous preview window
+set completeopt=longest,menu   " Make completion popup menu work like ide
+set copyindent                 " Copy the previous indentation on autoindent
+set cursorline                 " Highlight the current line for the cursor
+set encoding=utf-8             " Set encoding to UTF-8
+set expandtab                  " Expands tabs to spaces
+set formatoptions=tcqronj      " Set vims text formatting options
+set ignorecase                 " Ignore case when searching
+set lazyredraw                 " Don’t update screen during macro and script execution
+set linebreak                  " Avoid wrapping a line in the middle of a word
+set matchtime=1                " Reduce the time it takes to show matching brackets
+set nobackup                   " Dont create backup files
+set noerrorbells               " Disable bells
+set nofixendofline             " Disable automatic newline character
+set nojoinspaces               " Use one space, not two after punctuation
+set noswapfile                 " Disable swapfile usage
+set novisualbell               " Disable visual bells
+set nowrap                     " Dont automatically wrap
+set nowritebackup              " Dont write backup files
+set number                     " Show number ruler
+set ruler                      " Always show current positions along the bottom
+set shiftround                 " Round the indentation to the nearest multiple of shiftwidth
+set shortmess=aFc              " Avoid hit-enter prompts caused by file messages
+set showmatch                  " Show matching brackets
+set smartcase                  " Ignore unless capital letters
+set smartindent                " Enable smart indentation
+set smarttab                   " Use shiftwidth and softtabstop
+set softtabstop=2              " Tab width
+set splitbelow                 " Open horizontal panes to the bottom
+set splitright                 " Open vertical panes to the right
+set tabstop=2                  " Tab = 2 spaces
+set timeout ttimeout           " Enable timeout and ttimeout options
+set timeoutlen=500             " Time in ms to wait for a mapped sequence to complete
+set title                      " Let vim set the terminal title
+set ttimeoutlen=10             " Time in ms to wait for a key sequence to complete
+set updatetime=100             " Redraw the status bar often
 
 " Enable mouse if possible
 if has('mouse')
   set mouse=a
 endif
 
-" Set the leader button
-let g:mapleader = "\<Space>"
+" }}}
+
+" --- Formatting/Saving {{{
 
 " Autosave buffers before leaving them
 autocmd BufLeave * silent! :wa
 
-" Remove trailing white spaces on save
-autocmd BufWritePre * :%s/\s\+$//e
-
-" Wrap markdown files at 80 chars
-au BufRead,BufNewFile *.md setlocal textwidth=80
-
 " Disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-"----------------------------------------------
-" Colors
-"----------------------------------------------
+" Wrap markdown files at 80 chars
+autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
+" }}}
+
+" --- Colors {{{
+
+" Enable truecolor support in NVIM
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -179,18 +139,16 @@ endif
 " Enable syntax highlighting
 syntax enable
 
-" Set dark background
+" Use dark background
 set background=dark
 
-" Colorscheme
+" Selected colorscheme
 colorscheme nord
 
-" Override the search highlight color
-highlight Search guibg=SteelBlue guifg=White ctermbg=67 ctermfg=White
+" }}}
 
-"----------------------------------------------
-" Searching
-"----------------------------------------------
+" --- Searching {{{
+
 " Move to match as you type
 set incsearch
 
@@ -202,17 +160,103 @@ if has('nvim')
   set inccommand=split
 endif
 
+" Override the search highlight color
+highlight Search guibg=SteelBlue guifg=White ctermbg=67 ctermfg=White
+
+" Ignore specific file patterns when expanding
+set wildignore=*.o,*.obj,*~,*.exe,*.a,*.pdb,*.lib
+set wildignore+=*.so,*.dll,*.swp,*.egg,*.jar,*.class,*.pyc,*.pyo,*.bin,*.dex
+set wildignore+=*.log,*.pyc,*.sqlite,*.sqlite3,*.min.js,*.min.css,*.tags
+set wildignore+=*.zip,*.7z,*.rar,*.gz,*.tar,*.gzip,*.bz2,*.tgz,*.xz
+set wildignore+=*.png,*.jpg,*.gif,*.bmp,*.tga,*.pcx,*.ppm,*.img,*.iso
+set wildignore+=*.pdf,*.dmg,*.app,*.ipa,*.apk,*.mobi,*.epub
+set wildignore+=*.mp4,*.avi,*.flv,*.mov,*.mkv,*.swf,*.swc
+set wildignore+=*/.git/*,*/.svn/*,*.DS_Store
+set wildignore+=*/node_modules/*,*/nginx_runtime/*,*/build/*,*/logs/*,*/dist/*,*/tmp/*
+
+" }}}
+
+" --- Keybindings {{{
+
+" ----- Leader keybindings
+
+" Set leader key
+let g:mapleader = "\<Space>"
+
 " Clear search highlights
-map <leader>c :nohlsearch<cr>
+map <leader>h :nohlsearch<CR>
 
-" These mappings will make it so that going to the next one in a search will
-" center on the line it's found in.
-nnoremap n nzzzv
-nnoremap N Nzzzv
+" Close buffer
+map <leader>q :bd<CR>
 
-"----------------------------------------------
-" Various Keybindings
-"----------------------------------------------
+" Write file
+nmap <leader>w :w<CR>
+
+" Write and quit
+nmap <leader>W :wq<CR>
+
+" Quit
+nmap <silent> <leader>x :q<CR>
+
+" Quit without saving
+nmap <silent> <leader>X :q!<CR>
+
+" Open edit line with current file path
+nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+
+" Splits
+nmap <leader>s :split<CR>
+nmap <leader>v :vsplit<CR>
+
+" Reload vimrc
+nmap <leader>r :source ~/.config/nvim/init.vim<CR>
+
+" Fuzzy file search (FZF)
+nnoremap <leader>p :Files<cr>
+
+" Create a new buffer
+nnoremap <leader>t :enew<cr>
+
+" Select tabs using numbers
+nmap <leader>1 <Plug>BufTabLine.Go(1)
+nmap <leader>2 <Plug>BufTabLine.Go(2)
+nmap <leader>3 <Plug>BufTabLine.Go(3)
+nmap <leader>4 <Plug>BufTabLine.Go(4)
+nmap <leader>5 <Plug>BufTabLine.Go(5)
+nmap <leader>6 <Plug>BufTabLine.Go(6)
+nmap <leader>7 <Plug>BufTabLine.Go(7)
+nmap <leader>8 <Plug>BufTabLine.Go(8)
+nmap <leader>9 <Plug>BufTabLine.Go(9)
+nmap <leader>0 <Plug>BufTabLine.Go(10)
+
+" Toggle between last two buffers
+nnoremap <leader><leader> <c-^>
+
+" ----- Function keys
+
+" Toggle paste mode
+set pastetoggle=<F2>
+
+" Add shortcut for toggling the tag bar
+nnoremap <F4> :TagbarToggle<CR>
+
+" Remove all trailing whitespace by pressing F5
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" Toggle line numbers
+nmap <F12> :set invnumber<CR>
+
+" ----- Misc keybindings
+
+" Normal mode: switch between buffers
+nnoremap <Tab> :bnext<cr>
+nnoremap <S-Tab> :bprevious<cr>
+
+" Insert mode: Un-indent using shift-tab
+inoremap <S-Tab> <C-d>
+
+" ----- Passive keybindings
+
 " Fix some common typos
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
@@ -225,19 +269,19 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 
-"smart move
+" Smart move
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-" navigation between splits
+" Navigation between splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" ctrl+left/right
+" Standardize ctrl+left ctrl+right
 nmap <ESC>[1;5D <C-Left>
 nmap <ESC>[1;5C <C-Right>
 cmap <ESC>[1;5D <C-Left>
@@ -245,73 +289,54 @@ cmap <ESC>[1;5C <C-Right>
 imap <ESC>[1;5D <C-o><C-Left>
 imap <ESC>[1;5C <C-o><C-Right>
 
-" ctrl+backspace
+" Standardize ctrl+backspace
 nmap <C-h> <C-w>
 cmap <C-h> <C-w>
 imap <C-h> <C-w>
 
-" Toggle paste mode
-set pastetoggle=<F2>
+" Automatically center line upon searching
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
-" Remove all trailing whitespace by pressing F5
-nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+" }}}
 
-" Toggle line numbers
-nmap <F12> :set invnumber<CR>
+" --- Plugin: ap/vim-buftabline {{{
 
-" Un-indent using shift-tab
-inoremap <S-Tab> <C-d>
+" Always show
+let g:buftabline_show = 2
 
-" Write file
-nmap <leader>w :w<CR>
+" Ordinal from left to right
+let g:buftabline_numbers = 2
 
-" Write and quit
-nmap <leader>W :wq<CR>
+" }}}
 
-" Quit
-nmap <silent> <leader>q :bd<CR>
+" --- Plugin: ctrlpvim/ctrlp.vim {{{
 
-" Quit without saving
-nmap <silent> <leader>Q :bd!<CR>
+" Set working path mode
+let g:ctrlp_working_path_mode = 'cra'
 
-" Open edit line with current file path
-nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+" }}}
 
-" Splits
-nmap <leader>s :split<CR>
-nmap <leader>v :vsplit<CR>
+" --- Plugin: itchyny/calendar.vim {{{
 
-" Reload vimrc
-nmap <leader>r :source ~/.config/nvim/init.vim<CR>
+" Enable Google Calendar integration.
+let g:calendar_google_calendar = 1
 
-"----------------------------------------------
-" Plugin: Shougo/deoplete.nvim
-"----------------------------------------------
-if has('nvim')
-  " Enable deoplete on startup
-  let g:deoplete#enable_at_startup = 1
-endif
+" Enable Google Tasks integration.
+let g:calendar_google_task = 1
 
-" Disable deoplete when in multi cursor mode
-function! Multiple_cursors_before()
-  let b:deoplete_disable_auto_complete = 1
-endfunction
-function! Multiple_cursors_after()
-  let b:deoplete_disable_auto_complete = 0
-endfunction
+" Other options
+let g:calendar_first_day = "monday" " Weeks starts with Monday
+let g:calendar_date_endian = "big"  " Format: year / month / day
+let g:calendar_date_separator = "-" " Format: year - month - day
+let g:calendar_week_number = 1      " Show week numbers
+let g:calendar_view = "days"        " Set days as the default view
 
-let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'
+" }}}
 
-call deoplete#custom#option({
-\ 'auto_complete_delay': 0,
-\ 'auto_refresh_delay': 10,
-\})
+" --- Plugin: itchyny/lightline.vim {{{
 
-call deoplete#custom#source('go', 'rank', 9999)
-
-"----------------------------------------------
-" Plugin: itchyny/lightline
-"----------------------------------------------
+" Set lightline theme
 let g:lightline = {
   \ 'colorscheme': 'nord',
   \ 'active': {
@@ -323,15 +348,16 @@ let g:lightline = {
   \ },
   \ }
 
-"----------------------------------------------
-" Plugin: ervandew/supertab
-"----------------------------------------------
-" Start tab completion from the tob to give tabnine priority
-let g:SuperTabDefaultCompletionType = "<c-n>"
+" Disable background color to match with terminal
+let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
+let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'black' ] ]
+let s:palette.inactive.middle = s:palette.normal.middle
+let s:palette.tabline.middle = s:palette.normal.middle
 
-"----------------------------------------------
-" Plugin: 'junegunn/fzf'
-"----------------------------------------------
+" }}}
+
+" --- Plugin: junegunn/fzf.vim {{{
+
 " Show fzf in the same buffer
 let g:fzf_layout = { 'window': 'enew' }
 
@@ -356,81 +382,144 @@ if executable('rg')
   set grepprg=rg\ --vimgrep
   command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 else
-  echom "ripgrep not installed, you should install it"
+  echom "ripgrep not installed, you should install it now"
 endif
-
-" Fuzzy file search
-nnoremap <leader>p :Files<cr>
 
 " Set list of directories to search for projects
 let g:project_dirs = ['~/work', '~/ida']
-" Set working root directory
+
+" Change working root directory
 nnoremap <C-M-p> :call fzf#run({'source': 'find '. join(g:project_dirs).' -type d -maxdepth 1', 'sink': 'lcd'})<cr>
 
-"----------------------------------------------
-" Plugin: 'ctrlpvim/ctrlp.vim'
-"----------------------------------------------
-" Disable the CtrlP mapping, since we want to use FZF instead for <c-p>.
-"let g:ctrlp_map = ''
+" }}}
 
-" Set working path mode
-let g:ctrlp_working_path_mode = 'cra'
+" --- Plugin: majutsushi/tagbar {{{
 
-"----------------------------------------------
-" Plugin: 'itchyny/calendar.vim'
-"----------------------------------------------
-" Enable Google Calendar integration.
-let g:calendar_google_calendar = 1
-
-" Enable Google Tasks integration.
-let g:calendar_google_task = 1
-
-" Other options
-let g:calendar_first_day = "monday"           " Weeks starts with Monday
-let g:calendar_date_endian = "big"            " Format: year / month / day
-let g:calendar_date_separator = "-"           " Format: year - month - day
-let g:calendar_week_number = 1                " Show week numbers
-let g:calendar_view = "days"                  " Set days as the default view
-
-"----------------------------------------------
-" Plugin: 'majutsushi/tagbar'
-"----------------------------------------------
-" Add shortcut for toggling the tag bar
-nnoremap <F4> :TagbarToggle<cr>
-
-" Language: Go
-" Tagbar configuration for Golang
+" Go configuration
 let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
+  \ }
 
-"----------------------------------------------
-" Plugin: plasticboy/vim-markdown
-"----------------------------------------------
+" }}}
+
+" --- Plugin: neoclide/coc {{{
+
+" Use tab to rotate between completion
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
+
+" Use the following character to display errors
+let g:coc_status_error_sign = '•'
+let g:coc_status_warning_sign = '•'
+
+" Extensions
+
+let g:coc_global_extensions = [
+      \'coc-css',
+      \'coc-dictionary',
+      \'coc-emoji',
+      \'coc-git',
+      \'coc-highlight',
+      \'coc-html',
+      \'coc-json',
+      \'coc-lists',
+      \'coc-marketplace',
+      \'coc-pairs',
+      \'coc-prettier',
+      \'coc-python',
+      \'coc-snippets',
+      \'coc-syntax',
+      \'coc-tabnine',
+      \'coc-tag',
+      \'coc-template',
+      \'coc-translator',
+      \'coc-yaml',
+      \'coc-yank'
+      \]
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+
+" }}}
+
+" --- Plugin: ntpeters/vim-better-whitespace {{{
+
+" Enable
+let g:better_whitespace_enabled = 1
+
+" Strip whitespace on save
+let g:strip_whitespace_on_save = 1
+
+" }}}
+
+" --- Plugin: scrooloose/nerdtree {{{
+
+" Toggle nerdtree
+noremap <C-S-e> :NERDTreeToggle<CR>
+
+" Open files using spacebar
+let NERDTreeMapActivateNode = '<space>'
+
+" Set column size
+let g:NERDTreeWinSize = 40
+
+" Show hidden files
+let NERDTreeShowHidden = 1
+
+" }}}
+
+" --- Plugin: sheerun/vim-polyglot {{{
+
+" ----- Markdown
+
 " Disable folding
 let g:vim_markdown_folding_disabled = 1
 
@@ -440,128 +529,18 @@ let g:vim_markdown_toc_autofit = 1
 " Use - character for list items
 let g:vmt_list_item_char = '-'
 
-"----------------------------------------------
-" Plugin: scrooloose/nerdtree
-"----------------------------------------------
-" toggle nerdtree (overrides tmux navigator)
-autocmd VimEnter * noremap <C-\> :NERDTreeToggle<CR>
+" ----- Terraform
 
-" open files using spacebar
-let NERDTreeMapActivateNode='<space>'
-
-" set column size
-let g:NERDTreeWinSize=40
-
-" show hidden files
-let NERDTreeShowHidden=1
-
-" show nerdtree when opening a directory
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-
-"----------------------------------------------
-" Plugin: 'terryma/vim-multiple-cursors'
-"----------------------------------------------
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_skip_key='<C-b>'
-
-"----------------------------------------------
-" Plugin: zchee/deoplete-go
-"----------------------------------------------
-" Enable completing of go pointers
-let g:deoplete#sources#go#pointer = 1
-
-" Enable autocomplete of unimported packages
-let g:deoplete#sources#go#unimported_packages = 0
-
-"----------------------------------------------
-" Plugin: hashivim/vim-hashicorp-tools
-"----------------------------------------------
 " Automatic alignment as your typing
 let g:terraform_align = 1
 
 " Run terraform fmt on save
 let g:terraform_fmt_on_save = 1
 
-"----------------------------------------------
-" Plugin: juliosueiras/vim-terraform-completion
-"----------------------------------------------
-let g:terraform_completion_keys = 1
-let g:deoplete#omni_patterns = {}
-
-call deoplete#custom#option('omni_patterns', {
-\ 'complete_method': 'omnifunc',
-\ 'terraform': '[^ *\t"{=$]\w*',
-\})
-
-call deoplete#initialize()
-
-"----------------------------------------------
-" Plugin: ntpeters/vim-better-whitespace
-"----------------------------------------------
-let g:better_whitespace_enabled = 1
-let g:strip_whitespace_on_save = 1
-
-"----------------------------------------------
-" Plugin: ap/buftabline
-"----------------------------------------------
-" Always show
-let g:buftabline_show = 2
-
-" Ordinal from left to right
-let g:buftabline_numbers = 2
-
-" Create a new buffer
-nnoremap <leader>t :enew<cr>
-
-" (Shift)Tab to switch to next open buffer
-nnoremap <Tab> :bnext<cr>
-nnoremap <S-Tab> :bprevious<cr>
-
-" Leader key twice to cycle between last two buffers
-nnoremap <leader><leader> <c-^>
-
-" Select tabs using numbers
-nmap <leader>1 <Plug>BufTabLine.Go(1)
-nmap <leader>2 <Plug>BufTabLine.Go(2)
-nmap <leader>3 <Plug>BufTabLine.Go(3)
-nmap <leader>4 <Plug>BufTabLine.Go(4)
-nmap <leader>5 <Plug>BufTabLine.Go(5)
-nmap <leader>6 <Plug>BufTabLine.Go(6)
-nmap <leader>7 <Plug>BufTabLine.Go(7)
-nmap <leader>8 <Plug>BufTabLine.Go(8)
-nmap <leader>9 <Plug>BufTabLine.Go(9)
-nmap <leader>0 <Plug>BufTabLine.Go(10)
-
-"----------------------------------------------
-" Language: Golang
-"----------------------------------------------
-au FileType go set noexpandtab
-au FileType go set shiftwidth=4
-au FileType go set softtabstop=4
-au FileType go set tabstop=4
-
-" Mappings
-au FileType go nmap <F8> :GoMetaLinter<cr>
-au FileType go nmap <F9> :GoCoverageToggle -short<cr>
-au FileType go nmap <F10> :GoTest -short<cr>
-au FileType go nmap <F12> <Plug>(go-def)
-au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
-au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
-au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
-au FileType go nmap <leader>gt :GoDeclsDir<cr>
-au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
-au FileType go nmap <leader>gd <Plug>(go-def)
-au FileType go nmap <leader>gdv <Plug>(go-def-vertical)
-au FileType go nmap <leader>gdh <Plug>(go-def-split)
-au FileType go nmap <leader>gD <Plug>(go-doc)
-au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
+" ----- Golang
 
 " Run goimports when running gofmt
 let g:go_fmt_command = "goimports"
-
-" Set neosnippet as snippet engine
-let g:go_snippet_engine = "neosnippet"
 
 " Enable syntax highlighting per default
 let g:go_highlight_types = 1
@@ -573,63 +552,28 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
 
-" Show the progress when running :GoCoverage
-let g:go_echo_command_info = 1
-
 " Show type information
 let g:go_auto_type_info = 1
 
 " Highlight variable uses
 let g:go_auto_sameids = 1
 
-" Fix for location list when vim-go is used together with Syntastic
-let g:go_list_type = "quickfix"
-
 " Add the failing test name to the output of :GoTest
 let g:go_test_show_name = 1
 
-" gometalinter configuration
-let g:go_metalinter_command = ""
-let g:go_metalinter_deadline = "5s"
-let g:go_metalinter_enabled = [
-    \ 'deadcode',
-    \ 'gas',
-    \ 'goconst',
-    \ 'gocyclo',
-    \ 'golint',
-    \ 'gosimple',
-    \ 'ineffassign',
-    \ 'vet',
-    \ 'vetshadow'
-\]
+" }}}
 
-" Set whether the JSON tags should be snakecase or camelcase.
-let g:go_addtags_transform = "snakecase"
+" --- Plugin: terryma/vim-multiple-cursors {{{
 
-" neomake configuration for Go.
-let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
-let g:neomake_go_gometalinter_maker = {
-  \ 'args': [
-  \   '--tests',
-  \   '--enable-gc',
-  \   '--concurrency=3',
-  \   '--fast',
-  \   '-D', 'aligncheck',
-  \   '-D', 'dupl',
-  \   '-D', 'gocyclo',
-  \   '-D', 'gotype',
-  \   '-E', 'misspell',
-  \   '-E', 'unused',
-  \   '%:p:h',
-  \ ],
-  \ 'append_file': 0,
-  \ 'errorformat':
-  \   '%E%f:%l:%c:%trror: %m,' .
-  \   '%W%f:%l:%c:%tarning: %m,' .
-  \   '%E%f:%l::%trror: %m,' .
-  \   '%W%f:%l::%tarning: %m'
-  \ }
+" When pressing escape in Visual mode, quit and delete all existing cursors
+let g:multi_cursor_exit_from_visual_mode = 1
 
+" When pressing escape in Insert mode, quit and delete all existing cursors
+let g:multi_cursor_exit_from_insert_mode = 1
+
+" }}}
+
+" --- Language Formatting {{{
 "----------------------------------------------
 " Language: Bash
 "----------------------------------------------
@@ -757,3 +701,8 @@ au FileType yaml set expandtab
 au FileType yaml set shiftwidth=2
 au FileType yaml set softtabstop=2
 au FileType yaml set tabstop=2
+
+"}}}
+
+" vim:foldmethod=marker:foldlevel=0
+
