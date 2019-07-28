@@ -232,6 +232,9 @@ nmap <leader>0 <Plug>BufTabLine.Go(10)
 " Toggle between last two buffers
 nnoremap <leader><leader> <c-^>
 
+" Toggle git gutters
+nnoremap <silent> <leader>g :<C-u>CocCommand git.toggleGutters<CR>
+
 " ----- Function keys
 
 " Toggle paste mode
