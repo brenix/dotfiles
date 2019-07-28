@@ -1,0 +1,54 @@
+{
+    "suggest.triggerAfterInsertEnter": false,
+    "suggest.noselect": false,
+    "suggest.triggerCompletionWait": 100,
+    "suggest.snippetIndicator": "",
+    "diagnostic.signOffset": 9999999,
+	  "diagnostic.errorSign": "●",
+	  "diagnostic.warningSign": "●",
+    "diagnostic.displayByAle": false,
+    "diagnostic.refreshOnInsertMode": true,
+    "git.enableGutters": true,
+    "git.branchCharacter":"\uf408",
+    "git.addGlameToBufferVar": true,
+    "git.addGlameToVirtualText": true,
+    "git.addedSign.hlGroup": "GitGutterAdd",
+    "git.changedSign.hlGroup": "GitGutterChange",
+    "git.removedSign.hlGroup": "GitGutterDelete",
+    "git.topRemovedSign.hlGroup": "GitGutterDelete",
+    "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
+    "git.addedSign.text":"▎",
+    "git.changedSign.text":"▎",
+    "git.removedSign.text":"▏",
+    "git.topRemovedSign.text": "▔",
+    "git.changeRemovedSign.text": "▋",
+    "coc.preferences.snippetStatusText": "Ⓢ ",
+    "coc.preferences.formatOnSaveFiletypes": ["css","markdown"],
+    "prettier.statusItemText": "ⓟ ",
+    "prettier.eslintIntegration": true,
+    "prettier.tslintIntegration": true,
+    "prettier.stylelintIntegration": true,
+    "python.autoComplete.addBrackets": true,
+    "languageserver": {
+      "golang": {
+        "command": "gopls",
+        "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+        "filetypes": ["go"]
+      },
+      "terraform": {
+        "command": "terraform-lsp",
+        "filetypes": ["terraform"]
+      },
+      "dockerfile": {
+        "command": "docker-langserver",
+        "filetypes": ["dockerfile"],
+        "args": ["--stdio"]
+      },
+      "bash": {
+        "command": "bash-language-server",
+        "args": ["start"],
+        "filetypes": ["sh"],
+        "ignoredRootPaths": ["~"]
+      }
+    }
+}
