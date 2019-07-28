@@ -235,6 +235,9 @@ nnoremap <leader><leader> <c-^>
 " Toggle git gutters
 nnoremap <silent> <leader>g :<C-u>CocCommand git.toggleGutters<CR>
 
+" Toggle line numbers
+nnoremap <silent> <leader>n :set invnumber<CR>
+
 " ----- Function keys
 
 " Toggle paste mode
@@ -245,9 +248,6 @@ nnoremap <F4> :TagbarToggle<CR>
 
 " Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
-
-" Toggle line numbers
-nmap <F12> :set invnumber<CR>
 
 " ----- Misc keybindings
 
