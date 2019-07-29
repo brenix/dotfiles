@@ -538,6 +538,9 @@ let g:vim_markdown_toc_autofit = 1
 " Use - character for list items
 let g:vmt_list_item_char = '-'
 
+" Adjust new list item indentation to 2
+let g:vim_markdown_new_list_item_indent = 2
+
 " ----- Terraform
 
 " Automatic alignment as your typing
@@ -656,7 +659,6 @@ au FileType make set tabstop=2
 "----------------------------------------------
 " Language: Markdown
 "----------------------------------------------
-au FileType markdown setlocal spell
 au FileType markdown set expandtab
 au FileType markdown set shiftwidth=2
 au FileType markdown set softtabstop=2
