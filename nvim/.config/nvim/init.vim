@@ -52,6 +52,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 
 " Colorschemes
 Plug 'arcticicestudio/nord-vim'
@@ -74,6 +75,7 @@ set colorcolumn=101            " Highlight the 10th column as an indicator
 set complete-=i                " Limit the files searched for auto-completes
 set completeopt-=preview       " Remove the horrendous preview window
 set completeopt=longest,menu   " Make completion popup menu work like ide
+set conceallevel=0             " Disable concealed text
 set copyindent                 " Copy the previous indentation on autoindent
 set cursorline                 " Highlight the current line for the cursor
 set encoding=utf-8             " Set encoding to UTF-8
@@ -111,7 +113,7 @@ set updatetime=100             " Redraw the status bar often
 
 " Enable mouse if possible
 if has('mouse')
-  set mouse=a
+  set mouse=r
 endif
 
 " }}}
@@ -238,6 +240,9 @@ nnoremap <silent> <leader>g :<C-u>CocCommand git.toggleGutters<CR>
 
 " Toggle line numbers
 nnoremap <silent> <leader>n :set invnumber<CR>
+
+" Reveal file in NERDTree
+nnoremap <silent> <leader>f :NERDTreeFind<CR>
 
 " ----- Function keys
 
@@ -522,6 +527,9 @@ let NERDTreeShowHidden = 1
 
 " Disable folding
 let g:vim_markdown_folding_disabled = 1
+
+" Disable concealed text
+let g:vim_markdown_conceal = 0
 
 " Auto shrink the TOC, so that it won't take up 50% of the screen
 let g:vim_markdown_toc_autofit = 1
