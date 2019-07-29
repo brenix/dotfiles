@@ -229,6 +229,9 @@ bindkey "\e[3;6~" kill-line
 # urxvt
 bindkey "\e[3@" kill-line
 
+# clear screen
+bindkey "^@" clear-screen
+
 # -- external files
 if [ -d ${HOME}/.zsh.d ]; then
   for file in ${HOME}/.zsh.d/*.zsh; do

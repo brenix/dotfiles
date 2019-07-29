@@ -15,4 +15,4 @@ zz() {
 }
 
 zle -N z
-bindkey '^G' z
+bindkey '^[g' z
