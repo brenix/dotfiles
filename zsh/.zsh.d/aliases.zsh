@@ -41,4 +41,5 @@ alias vpn='sudo openconnect --protocol=gp $GP_HOST'
 alias x='startx'
 alias xrefresh='xrdb load ~/.Xresources && xrdb -merge ~/.Xresources'
 alias yay='yay --editmenu'
-if [[ -x $(which nvim) ]]; then alias vim='nvim'; alias v='nvim'; fi
+alias v='nvim'
+alias v.='nvim .'
