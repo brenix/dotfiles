@@ -39,6 +39,7 @@ zplugin ice wait'1' silent
 zplugin snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 zstyle :omz:plugins:ssh-agent identities id_ed25519 id_ed25519_work
 zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
+zplugin snippet OMZ::plugins/terraform/terraform.plugin.zsh
 
 # syntax highlighting
 zplugin light "zdharma/fast-syntax-highlighting"
