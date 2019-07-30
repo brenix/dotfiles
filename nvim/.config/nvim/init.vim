@@ -28,9 +28,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'andrewstuart/vim-kubernetes'
-Plug 'ap/vim-buftabline'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/calendar.vim'
 Plug 'itchyny/lightline.vim'
@@ -98,6 +96,7 @@ set ruler                      " Always show current positions along the bottom
 set shiftround                 " Round the indentation to the nearest multiple of shiftwidth
 set shortmess=aFc              " Avoid hit-enter prompts caused by file messages
 set showmatch                  " Show matching brackets
+set switchbuf=useopen,split    " Set behavior when switching between buffers
 set smartcase                  " Ignore unless capital letters
 set smartindent                " Enable smart indentation
 set smarttab                   " Use shiftwidth and softtabstop
@@ -120,17 +119,20 @@ endif
 
 " --- Formatting/Saving {{{
 
-" Wrap markdown files at 80 chars
-autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-
 " Highlight trailing whitespace
 match errorMsg /\s\+$/
+
+" Wrap markdown files at 80 chars
+autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
 " Disable inserting comments on new line
 autocmd FileType * set formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Automatically sort go imports on save
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
 " }}}
 
@@ -193,19 +195,16 @@ let g:mapleader = "\<Space>"
 map <leader>h :nohlsearch<CR>
 
 " Close buffer
-map <leader>q :bd<CR>
+map <leader>x :bd<CR>
+map <leader>X :bd!<CR>
 
-" Write file
+" Write
 nmap <leader>w :w<CR>
-
-" Write and quit
 nmap <leader>W :wq<CR>
 
 " Quit
-nmap <silent> <leader>x :q<CR>
-
-" Quit without saving
-nmap <silent> <leader>X :q!<CR>
+nmap <silent> <leader>q :q<CR>
+nmap <silent> <leader>Q :q!<CR>
 
 " Open edit line with current file path
 nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
@@ -218,22 +217,16 @@ nmap <leader>v :vsplit<CR>
 nmap <leader>r :source ~/.config/nvim/init.vim<CR>
 
 " Fuzzy file search (FZF)
-nnoremap <leader>p :Files<cr>
+nnoremap <leader>p :Files <C-R>=expand('%:p:h') . '/'<CR><CR>
+
+" Open file
+nnoremap <leader>o :Files<cr>
 
 " Create a new buffer
-nnoremap <leader>t :enew<cr>
+nnoremap <leader>n :enew<cr>
 
-" Select tabs using numbers
-nmap <leader>1 <Plug>BufTabLine.Go(1)
-nmap <leader>2 <Plug>BufTabLine.Go(2)
-nmap <leader>3 <Plug>BufTabLine.Go(3)
-nmap <leader>4 <Plug>BufTabLine.Go(4)
-nmap <leader>5 <Plug>BufTabLine.Go(5)
-nmap <leader>6 <Plug>BufTabLine.Go(6)
-nmap <leader>7 <Plug>BufTabLine.Go(7)
-nmap <leader>8 <Plug>BufTabLine.Go(8)
-nmap <leader>9 <Plug>BufTabLine.Go(9)
-nmap <leader>0 <Plug>BufTabLine.Go(10)
+" List buffers
+nnoremap <leader>k :Buffers<cr>
 
 " Toggle between last two buffers
 nnoremap <leader><leader> <c-^>
@@ -241,8 +234,8 @@ nnoremap <leader><leader> <c-^>
 " Toggle git gutters
 nnoremap <silent> <leader>g :<C-u>CocCommand git.toggleGutters<CR>
 
-" Toggle line numbers
-nnoremap <silent> <leader>n :set invnumber<CR>
+" Toggle nerdtree
+noremap <silent> <leader>\ :NERDTreeToggle<CR>
 
 " Reveal file in NERDTree
 nnoremap <silent> <leader>f :NERDTreeFind<CR>
@@ -258,11 +251,18 @@ nnoremap <F4> :TagbarToggle<CR>
 " Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
+" Toggle line numbers
+nnoremap <F6> :set invnumber<CR>
+
+
 " ----- Misc keybindings
 
 " Normal mode: switch between buffers
 nnoremap <Tab> :bnext<cr>
 nnoremap <S-Tab> :bprevious<cr>
+
+nnoremap  ]b :bp<CR>
+nnoremap  [b :bn<CR>
 
 " Insert mode: Un-indent using shift-tab
 inoremap <S-Tab> <C-d>
@@ -322,13 +322,6 @@ let g:buftabline_numbers = 2
 
 " }}}
 
-" --- Plugin: ctrlpvim/ctrlp.vim {{{
-
-" Set working path mode
-let g:ctrlp_working_path_mode = 'cra'
-
-" }}}
-
 " --- Plugin: itchyny/calendar.vim {{{
 
 " Enable Google Calendar integration.
@@ -353,7 +346,7 @@ let g:lightline = {
   \ 'colorscheme': 'nord',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+  \             [ 'gitbranch', 'readonly' ] ]
   \ },
   \ 'component_function': {
   \   'gitbranch': 'fugitive#head'
@@ -372,6 +365,9 @@ let s:palette.tabline.middle = s:palette.normal.middle
 
 " Show fzf in the same buffer
 let g:fzf_layout = { 'window': 'enew' }
+
+" Jump to existing window if possible
+let g:fzf_buffers_jump = 1
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -401,7 +397,7 @@ endif
 let g:project_dirs = ['~/work', '~/ida']
 
 " Change working root directory
-nnoremap <C-M-p> :call fzf#run({'source': 'find '. join(g:project_dirs).' -type d -maxdepth 1', 'sink': 'lcd'})<cr>
+nnoremap <C-p> :call fzf#run({'source': 'find '. join(g:project_dirs).' -type d -maxdepth 1', 'sink': 'lcd'})<cr>
 
 " }}}
 
@@ -499,12 +495,6 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " }}}
 
 " --- Plugin: scrooloose/nerdtree {{{
-
-" Toggle nerdtree
-noremap <C-S-e> :NERDTreeToggle<CR>
-
-" Open files using spacebar
-let NERDTreeMapActivateNode = '<space>'
 
 " Set column size
 let g:NERDTreeWinSize = 40
