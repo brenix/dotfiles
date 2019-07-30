@@ -125,9 +125,6 @@ endif
 " Highlight trailing whitespace
 match errorMsg /\s\+$/
 
-" Wrap markdown files at 80 chars
-autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -221,17 +218,17 @@ nmap <leader>r :source ~/.config/nvim/init.vim<CR>
 
 " Hacky method to get FZF to prioritize files closest to the current open file
 " See https://github.com/jonhoo/proximity-sort
-" Requires the `fd` and `proximity-sort` commands (cargo build)
+" Requires `proximity-sort` command (cargo build)
 function! s:list_cmd()
   let base = fnamemodify(expand('%'), ':h:.:S')
-  return base == '.' ? 'fd -t f' : printf('fd -t f | proximity-sort %s', expand('%'))
+  return base == '.' ? 'rg --files' : printf('rg --files | proximity-sort %s', expand('%'))
 endfunction
 
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, {'source': s:list_cmd(),
   \                               'options': '--color=dark --tiebreak=index'}, <bang>0)
 
-" Open file
+" Fuzzy open file
 nnoremap <leader>p :Files<cr>
 
 " List buffers
@@ -243,8 +240,11 @@ nnoremap <leader><leader> <c-^>
 " Toggle git gutters
 nnoremap <silent> <leader>g :<C-u>CocCommand git.toggleGutters<CR>
 
-" Toggle nerdtree
-noremap <silent> <leader>\ :NERDTreeToggle<CR>
+" Toggle NERDTree
+nnoremap <silent> <leader>\ :NERDTreeToggle<CR>
+
+" Focus NERDTree
+nnoremap <silent> <leader>n :NERDTreeFocus<CR>
 
 " Reveal file in NERDTree
 nnoremap <silent> <leader>f :NERDTreeFind<CR>
@@ -451,7 +451,6 @@ let g:coc_status_warning_sign = '•'
 let g:coc_global_extensions = [
       \'coc-css',
       \'coc-dictionary',
-      \'coc-emoji',
       \'coc-git',
       \'coc-highlight',
       \'coc-html',
@@ -655,6 +654,7 @@ au FileType markdown set shiftwidth=2
 au FileType markdown set softtabstop=2
 au FileType markdown set tabstop=2
 au FileType markdown set syntax=markdown
+au FileType markdown set conceallevel=0
 
 "----------------------------------------------
 " Language: Python
