@@ -40,6 +40,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
+Plug 'mengelbrecht/lightline-bufferline'
 Plug 'mhinz/vim-startify'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -97,6 +98,8 @@ set shiftround                 " Round the indentation to the nearest multiple o
 set shortmess=aFc              " Avoid hit-enter prompts caused by file messages
 set showmatch                  " Show matching brackets
 set switchbuf=useopen,split    " Set behavior when switching between buffers
+set showtabline=2              " Show tabline
+set guioptions-=e              " Don't use GUI tabline
 set smartcase                  " Ignore unless capital letters
 set smartindent                " Enable smart indentation
 set smarttab                   " Use shiftwidth and softtabstop
@@ -222,9 +225,6 @@ nnoremap <leader>p :Files <C-R>=expand('%:p:h') . '/'<CR><CR>
 " Open file
 nnoremap <leader>o :Files<cr>
 
-" Create a new buffer
-nnoremap <leader>n :enew<cr>
-
 " List buffers
 nnoremap <leader>k :Buffers<cr>
 
@@ -312,16 +312,6 @@ nnoremap N Nzzzv
 
 " }}}
 
-" --- Plugin: ap/vim-buftabline {{{
-
-" Always show
-let g:buftabline_show = 2
-
-" Ordinal from left to right
-let g:buftabline_numbers = 2
-
-" }}}
-
 " --- Plugin: itchyny/calendar.vim {{{
 
 " Enable Google Calendar integration.
@@ -346,7 +336,7 @@ let g:lightline = {
   \ 'colorscheme': 'nord',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'gitbranch', 'readonly' ] ]
+  \             [ 'gitbranch', 'readonly', 'filename' ] ]
   \ },
   \ 'component_function': {
   \   'gitbranch': 'fugitive#head'
@@ -358,6 +348,10 @@ let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
 let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'black' ] ]
 let s:palette.inactive.middle = s:palette.normal.middle
 let s:palette.tabline.middle = s:palette.normal.middle
+
+let g:lightline.tabline          = {'left': [['buffers']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
 
 " }}}
 
@@ -495,6 +489,12 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " }}}
 
 " --- Plugin: scrooloose/nerdtree {{{
+
+" Automatically open nerdtree
+autocmd vimenter * NERDTree | wincmd w
+
+" Close nvim if nerdtree is the only thing left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Set column size
 let g:NERDTreeWinSize = 40
