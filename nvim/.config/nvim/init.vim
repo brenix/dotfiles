@@ -219,11 +219,20 @@ nmap <leader>v :vsplit<CR>
 " Reload vimrc
 nmap <leader>r :source ~/.config/nvim/init.vim<CR>
 
-" Fuzzy file search (FZF)
-nnoremap <leader>p :Files <C-R>=expand('%:p:h') . '/'<CR><CR>
+" Hacky method to get FZF to prioritize files closest to the current open file
+" See https://github.com/jonhoo/proximity-sort
+" Requires the `fd` and `proximity-sort` commands (cargo build)
+function! s:list_cmd()
+  let base = fnamemodify(expand('%'), ':h:.:S')
+  return base == '.' ? 'fd -t f' : printf('fd -t f | proximity-sort %s', expand('%'))
+endfunction
+
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, {'source': s:list_cmd(),
+  \                               'options': '--color=dark --tiebreak=index'}, <bang>0)
 
 " Open file
-nnoremap <leader>o :Files<cr>
+nnoremap <leader>p :Files<cr>
 
 " List buffers
 nnoremap <leader>k :Buffers<cr>
