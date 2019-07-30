@@ -3,3 +3,5 @@
 # You may place a similar script in $HOME/.config/openbox/autostart
 # to run user-specific things.
 polybar main -r &
+
+$HOME/.fehbg

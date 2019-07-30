@@ -45,7 +45,6 @@ Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ntpeters/vim-better-whitespace'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -80,7 +79,7 @@ set copyindent                 " Copy the previous indentation on autoindent
 set cursorline                 " Highlight the current line for the cursor
 set encoding=utf-8             " Set encoding to UTF-8
 set expandtab                  " Expands tabs to spaces
-set formatoptions=tcqronj      " Set vims text formatting options
+set formatoptions=tqonj        " Set vims text formatting options
 set ignorecase                 " Ignore case when searching
 set lazyredraw                 " Don’t update screen during macro and script execution
 set linebreak                  " Avoid wrapping a line in the middle of a word
@@ -121,14 +120,17 @@ endif
 
 " --- Formatting/Saving {{{
 
-" Autosave buffers before leaving them
-autocmd BufLeave * silent! :wa
-
-" Disable automatic comment insertion
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
 " Wrap markdown files at 80 chars
 autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
+" Highlight trailing whitespace
+match errorMsg /\s\+$/
+
+" Remove trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
+" Disable inserting comments on new line
+autocmd FileType * set formatoptions-=c formatoptions-=r formatoptions-=o
 
 " }}}
 
@@ -493,16 +495,6 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" }}}
-
-" --- Plugin: ntpeters/vim-better-whitespace {{{
-
-" Enable
-let g:better_whitespace_enabled = 1
-
-" Strip whitespace on save
-let g:strip_whitespace_on_save = 1
 
 " }}}
 

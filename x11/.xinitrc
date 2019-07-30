@@ -42,9 +42,6 @@ numlockx &
 xcalib -o 0 -b 0.9 -gc 1.05 $HOME/.colors/asus-vg248qe.icm
 xcalib -o 1 -b 0.9 -gc 1.05 $HOME/.colors/asus-vg248qe.icm
 
-# -- set wallpaper
-~/.fehbg &
-
 # -- barrier/synergy
 pgrep barriers || barriers --enable-crypto &
 
