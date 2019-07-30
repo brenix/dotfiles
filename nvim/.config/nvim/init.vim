@@ -528,8 +528,8 @@ let g:vim_markdown_toc_autofit = 1
 " Use - character for list items
 let g:vmt_list_item_char = '-'
 
-" Adjust new list item indentation to 2
-let g:vim_markdown_new_list_item_indent = 2
+" Disable list item indentation
+let g:vim_markdown_new_list_item_indent = 0
 
 " ----- Terraform
 
