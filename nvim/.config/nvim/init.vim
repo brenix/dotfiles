@@ -222,7 +222,7 @@ nmap <leader>r :source ~/.config/nvim/init.vim<CR>
 " Requires `proximity-sort` command (cargo build)
 function! s:list_cmd()
   let base = fnamemodify(expand('%'), ':h:.:S')
-  return base == '.' ? 'rg --files' : printf('rg --files | proximity-sort %s', expand('%'))
+  return base == '.' ? 'rg --files' : printf('rg --files --hidden -g "!.git" | proximity-sort %s', expand('%'))
 endfunction
 
 command! -bang -nargs=? -complete=dir Files
