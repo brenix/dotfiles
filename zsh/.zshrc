@@ -102,37 +102,13 @@ spaceship_dir() {
   "$SPACESHIP_DIR_SUFFIX"
 }
 
-# overwrite kubecontext function
-spaceship_kubecontext() {
-  [[ $SPACESHIP_KUBECONTEXT_SHOW == false ]] && return
-
-  spaceship::exists kubectl || return
-  local kube_context=$(kubectl config current-context 2>/dev/null)
-  local kube_namespace=$(kubectl config view -o "jsonpath={.contexts[?(@.name==\"$kube_context\")].context.namespace}")
-  [[ -z $kube_context || -z $kube_namespace ]] && return
-
-  case "$kube_context" in
-    *prod*) SPACESHIP_KUBECONTEXT_COLOR="red";;
-    [aA-fF]*) SPACESHIP_KUBECONTEXT_COLOR="blue";;
-    [gG-pP]*) SPACESHIP_KUBECONTEXT_COLOR="yellow";;
-    [qQ-zZ]*) SPACESHIP_KUBECONTEXT_COLOR="green";;
-    *) SPACESHIP_KUBECONTEXT_COLOR="cyan";;
-  esac
-
-  spaceship::section \
-    "$SPACESHIP_KUBECONTEXT_COLOR" \
-    "$SPACESHIP_KUBECONTEXT_PREFIX" \
-    "$SPACESHIP_KUBECONTEXT_SYMBOL${kube_context}/${kube_namespace}" \
-    "$SPACESHIP_KUBECONTEXT_SUFFIX"
-}
-
 # spaceship configuration
 SPACESHIP_PROMPT_ORDER=(
-  user          # Username section
-  host          # Hostname section
+  #user          # Username section
+  #host          # Hostname section
+  kubecontext   # Kubectl context section
   dir           # Current directory section
   git           # Git section (git_branch + git_status)
-  kubecontext   # Kubectl context section
   venv          # Python virtualenv section
   aws           # Amazon Web Services section
   terraform     # Terraform workspace section
@@ -147,6 +123,7 @@ SPACESHIP_CHAR_SYMBOL="▶"
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
 SPACESHIP_USER_PREFIX=""
 SPACESHIP_USER_SUFFIX=""
 SPACESHIP_USER_COLOR="blue"
@@ -230,7 +207,7 @@ bindkey "\e[3;6~" kill-line
 bindkey "\e[3@" kill-line
 
 # clear screen
-bindkey "^@" clear-screen
+bindkey "^[d" clear-screen
 
 # -- external files
 if [ -d ${HOME}/.zsh.d ]; then
