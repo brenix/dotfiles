@@ -48,6 +48,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -115,7 +116,7 @@ set updatetime=100             " Redraw the status bar often
 
 " Enable mouse if possible
 if has('mouse')
-  set mouse=r
+  set mouse=a
 endif
 
 " }}}
@@ -248,6 +249,9 @@ nnoremap <silent> <leader>n :NERDTreeFocus<CR>
 
 " Reveal file in NERDTree
 nnoremap <silent> <leader>f :NERDTreeFind<CR>
+
+" Align markdown table
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
 " ----- Function keys
 
