@@ -267,18 +267,18 @@ nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 " Toggle line numbers
 nnoremap <F6> :set invnumber<CR>
 
-
 " ----- Misc keybindings
 
 " Normal mode: switch between buffers
 nnoremap <Tab> :bnext<cr>
 nnoremap <S-Tab> :bprevious<cr>
 
-nnoremap  ]b :bp<CR>
-nnoremap  [b :bn<CR>
-
 " Insert mode: Un-indent using shift-tab
-inoremap <S-Tab> <C-d>
+inoremap <S-Tab> <C-D>
+
+" Visual mode: Use tab to indent highlighted blocks
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 " ----- Passive keybindings
 
