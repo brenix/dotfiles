@@ -502,9 +502,6 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " --- Plugin: scrooloose/nerdtree {{{
 
-" Automatically open nerdtree
-autocmd vimenter * NERDTree | wincmd w
-
 " Close nvim if nerdtree is the only thing left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
