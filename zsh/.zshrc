@@ -106,24 +106,25 @@ spaceship_dir() {
 SPACESHIP_PROMPT_ORDER=(
   #user          # Username section
   #host          # Hostname section
-  kubecontext   # Kubectl context section
   dir           # Current directory section
   git           # Git section (git_branch + git_status)
   venv          # Python virtualenv section
   aws           # Amazon Web Services section
   terraform     # Terraform workspace section
+  #line_sep      # Line separator
   exit_code     # Exit code section
   char          # Prompt character
 )
 
-#SPACESHIP_RPROMPT_ORDER=(
-#)
+SPACESHIP_RPROMPT_ORDER=(
+  kubecontext
+)
 
 SPACESHIP_CHAR_SYMBOL="▶"
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=false
 SPACESHIP_USER_PREFIX=""
 SPACESHIP_USER_SUFFIX=""
 SPACESHIP_USER_COLOR="blue"
@@ -140,6 +141,8 @@ SPACESHIP_GIT_BRANCH_PREFIX=""
 SPACESHIP_GIT_BRANCH_COLOR="cyan"
 SPACESHIP_GIT_STATUS_COLOR="gray"
 SPACESHIP_KUBECONTEXT_SYMBOL=""
+SPACESHIP_KUBECONTEXT_PREFIX=""
+SPACESHIP_KUBECONTEXT_SUFFIX=" "
 
 # -- dircolors
 
