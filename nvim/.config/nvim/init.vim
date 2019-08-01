@@ -580,6 +580,12 @@ let g:multi_cursor_exit_from_insert_mode = 1
 
 " }}}
 
+" --- Plugin: suan/vim-instant-markdown {{{
+
+let g:instant_markdown_autostart = 0
+
+" }}}
+
 " --- Language Formatting {{{
 "----------------------------------------------
 " Language: Bash
