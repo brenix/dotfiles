@@ -26,6 +26,9 @@ The following packages should be installed by your local package manager
   - Place in a bin directory that is in your `PATH`
 - `instant-markdown-d` (optional) - For markdown previews
   - This requires a manual `npm install -g instant-markdown-d`
+- `terraform-lsp` (optional) - For terraform autocompletion
+- `docker-langserver` (optional) - For dockerfile autocompletion
+- `bash-language-server` (optional) - For bash autocompletion
 
 ## Keybindings
 
@@ -35,35 +38,35 @@ Most keybindings are centered around the "leader" key: `<spacebar>`
 
 First, type the leader key (`<spacebar>`), then the following key to activate the function listed
 
-| Keybinding | Function |
-| ---------- | -------- |
-| `h`          | Clear search highlights                             |
-| `x`          | Close current buffer                                |
-| `X`          | Close current buffer without saving                 |
-| `w`          | Write current file                                  |
-| `W`          | Write current file and quit                         |
-| `q`          | Quit                                                |
-| `Q`          | Quit without saving                                 |
-| `e`          | Edit a new file (relative to the current file path) |
-| `s`          | Open a new buffer split horizontally                |
-| `v`          | Open a new buffer split vertically                  |
-| `r`          | Reload the nvim configuration                       |
-| `p`          | Fuzzy file search (Highly recommended)              |
-| `k`          | Fuzzy buffer search                                 |
-| `<spacebar>` | Switch between two most recent buffers              |
-| `g`          | Toggle git gutters                                  |
-| `\`          | Open file tree view (nerdtree)                      |
-| `n`          | Focus file tree view (nerdtree)                     |
-| `f`          | Focus the current file in the tree view (nerdtree)  |
-| `cu`         | Comment line                                        |
-| `uc`         | Un-comment line                                     |
-| `c<space>`   | Toggle comment                                      |
-| `|`          | Align markdown tables                               |
+| Keybinding                           | Function                                            |
+| ------------------------------------ | --------------------------------------------------- |
+| `h`                                  | Clear search highlights                             |
+| `x`                                  | Close current buffer                                |
+| `X`                                  | Close current buffer without saving                 |
+| `w`                                  | Write current file                                  |
+| `W`                                  | Write current file and quit                         |
+| `q`                                  | Quit                                                |
+| `Q`                                  | Quit without saving                                 |
+| `e`                                  | Edit a new file (relative to the current file path) |
+| `s`                                  | Open a new buffer split horizontally                |
+| `v`                                  | Open a new buffer split vertically                  |
+| `r`                                  | Reload the nvim configuration                       |
+| `p`                                  | Fuzzy file search (Highly recommended)              |
+| `k`                                  | Fuzzy buffer search                                 |
+| `<spacebar>`                         | Switch between two most recent buffers              |
+| `g`                                  | Toggle git gutters                                  |
+| `\` | Open file tree view (nerdtree) |
+| `n`                                  | Focus file tree view (nerdtree)                     |
+| `f`                                  | Focus the current file in the tree view (nerdtree)  |
+| `cu`                                 | Comment line                                        |
+| `uc`                                 | Un-comment line                                     |
+| `c<space>`                           | Toggle comment                                      |
+| `|`                                  | Align markdown tables                               |
 
 ### Function keybindings
 
-| Keybinding | Function |
-| ---------- | -------- |
+| Keybinding | Function                   |
+| ---------- | -------------------------- |
 | `F2`       | Toggle paste mode          |
 | `F4`       | Toggle tagbar              |
 | `F5`       | Remove trailing whitespace |
@@ -71,7 +74,7 @@ First, type the leader key (`<spacebar>`), then the following key to activate th
 
 ### Other keybindings
 
-|Keybinding|Function|
-|----------|--------|
-| `Ctrl+P` | Fuzzy project switcher (see dirs to search in config) |
-| `Ctrl+N` | Toggle multiple cursors                               |
+| Keybinding | Function                                              |
+| ---------- | ----------------------------------------------------- |
+| `Ctrl+P`   | Fuzzy project switcher (see dirs to search in config) |
+| `Ctrl+N`   | Toggle multiple cursors                               |
