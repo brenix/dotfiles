@@ -251,6 +251,9 @@ nnoremap <silent> <leader>n :NERDTreeFocus<CR>
 " Reveal file in NERDTree
 nnoremap <silent> <leader>f :NERDTreeFind<CR>
 
+" Reveal file in NERDTree
+nnoremap <silent> <leader>/ :Rg<space>
+
 " Align markdown table
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
