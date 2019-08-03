@@ -20,20 +20,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" Autoupdate
-function! OnVimEnter() abort
-  " Run PlugUpdate every week automatically when entering Vim.
-  if exists('g:plug_home')
-    let l:filename = printf('%s/.vim_plug_update_%s', g:plug_home, strftime('%Y_%V'))
-    if filereadable(l:filename) == 0
-      call execute('PlugUpdate')
-      call system(printf('touch %s', l:filename))
-    endif
-  endif
-endfunction
-
-autocmd VimEnter * call OnVimEnter()
-
 " Dependencies
 Plug 'tpope/vim-rhubarb' " Dependency for tpope/fugitive
 
@@ -76,6 +62,20 @@ Plug 'rakr/vim-one'
 Plug 'sainnhe/vim-color-desert-night'
 
 call plug#end()
+
+" Autoupdate
+function! OnVimEnter() abort
+  " Run PlugUpdate every week automatically when entering Vim.
+  if exists('g:plug_home')
+    let l:filename = printf('%s/.vim_plug_update_%s', g:plug_home, strftime('%Y_%V'))
+    if filereadable(l:filename) == 0
+      call execute('PlugUpdate')
+      call system(printf('touch %s', l:filename))
+    endif
+  endif
+endfunction
+
+autocmd VimEnter * call OnVimEnter()
 
 " }}}
 
@@ -212,8 +212,8 @@ let g:mapleader = "\<Space>"
 map <leader>h :nohlsearch<CR>
 
 " Close buffer
-map <leader>x :bd<CR>
-map <leader>X :bd!<CR>
+map <leader>x :bp<bar>sp<bar>bn<bar>bd<CR>
+map <leader>x :bp<bar>sp<bar>bn<bar>bd!<CR>
 
 " Write
 nmap <leader>w :w<CR>
@@ -524,11 +524,31 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Close nvim if nerdtree is the only thing left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" Automatically highlight file on open
+autocmd BufEnter * if &modifiable && filereadable(@%) && exists("g:NERDTree") && g:NERDTree.IsOpen() | NERDTreeFind | wincmd p | endif
+
+" Dont collapse dirs on same line
+let g:NERDTreeCascadeSingleChildDir = 0
+
 " Set column size
-let g:NERDTreeWinSize = 40
+let g:NERDTreeWinSize = 35
 
 " Show hidden files
 let NERDTreeShowHidden = 1
+
+" Icons
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "",
+    \ "Staged"    : "+",
+    \ "Untracked" : "",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "",
+    \ "Deleted"   : "",
+    \ "Dirty"     : "",
+    \ "Clean"     : "",
+    \ "Ignored"   : "﬒",
+    \ "Unknown"   : ""
+    \ }
 
 " }}}
 

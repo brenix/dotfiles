@@ -43,10 +43,10 @@ rofi.window-format: {c}
 rofi.combi-hide-mode-prefix: true
 rofi.hide-scrollbar: true
 rofi.separator-style: none
-rofi.color-active: #252933, #4c566a, #252933, #4c566a, #e5e9f0
+rofi.color-active: #252933, #4c566a, #252933, #2e3440, #e5e9f0
 rofi.color-enabled: true
-rofi.color-normal: #252933, #4c566a, #252933, #4c566a, #e5e9f0
-rofi.color-urgent: #252933, #4c566a, #252933, #4c566a, #e5e9f0
+rofi.color-normal: #252933, #4c566a, #252933, #2e3440, #e5e9f0
+rofi.color-urgent: #252933, #4c566a, #252933, #2e3440, #e5e9f0
 rofi.color-window: #252933, #252933, #252933
 
 ! -- colors
