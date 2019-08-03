@@ -20,6 +20,20 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" Autoupdate
+function! OnVimEnter() abort
+  " Run PlugUpdate every week automatically when entering Vim.
+  if exists('g:plug_home')
+    let l:filename = printf('%s/.vim_plug_update_%s', g:plug_home, strftime('%Y_%V'))
+    if filereadable(l:filename) == 0
+      call execute('PlugUpdate')
+      call system(printf('touch %s', l:filename))
+    endif
+  endif
+endfunction
+
+autocmd VimEnter * call OnVimEnter()
+
 " Dependencies
 Plug 'tpope/vim-rhubarb' " Dependency for tpope/fugitive
 
