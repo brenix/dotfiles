@@ -89,6 +89,7 @@ set nobackup                   " Dont create backup files
 set noerrorbells               " Disable bells
 set nofixendofline             " Disable automatic newline character
 set nojoinspaces               " Use one space, not two after punctuation
+set hidden                     " Ensure closing a buffer doesnt exit
 set nospell                    " Disable spell checking
 set noswapfile                 " Disable swapfile usage
 set novisualbell               " Disable visual bells

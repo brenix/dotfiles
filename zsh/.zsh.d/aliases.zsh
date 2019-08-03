@@ -36,7 +36,7 @@ alias tw='terraform workspace'
 if [[ "$OSTYPE" == "darwin"*  ]]; then alias u='brew update && brew upgrade && brew cleanup'; fi
 if [[ "$OSTYPE" == "linux-gnu" ]]; then alias u='yay -Syu --editmenu'; fi
 alias virsh='/usr/bin/virsh -c qemu:///system'
-alias vm='virsh start win10 && sudo systemctl start synergy'
+alias vm='virsh start win10'
 alias vpn='sudo openconnect --protocol=gp $GP_HOST'
 alias x='startx'
 alias xrefresh='xrdb load ~/.Xresources && xrdb -merge ~/.Xresources'
