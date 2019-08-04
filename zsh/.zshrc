@@ -116,9 +116,8 @@ SPACESHIP_PROMPT_ORDER=(
   char          # Prompt character
 )
 
-SPACESHIP_RPROMPT_ORDER=(
-  kubecontext
-)
+#SPACESHIP_RPROMPT_ORDER=(
+#)
 
 SPACESHIP_CHAR_SYMBOL="▶"
 SPACESHIP_CHAR_SUFFIX=" "

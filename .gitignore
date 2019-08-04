@@ -23,6 +23,9 @@ weechat/.weechat/script
 weechat/.weechat/sec.conf
 weechat/.weechat/tcl
 
+# tmux
+tmux/.tmux/plugins
+
 # zsh
 zsh/.zsh.d/local/*
 !zsh/.zsh.d/local/.gitkeep
