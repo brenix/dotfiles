@@ -533,7 +533,7 @@ let g:NERDTreeColorMapCustom = {
     \ "Modified"  : "#cbb079",
     \ "Staged"    : "#b4bf86",
     \ "Untracked" : "#83a2be",
-    \ "Dirty"     : "#cbb079",
+    \ "Dirty"     : "#d3eaff",
     \ "Clean"     : "#87939A",
     \ "Ignored"   : "#808080"
     \ }
