@@ -42,6 +42,16 @@
 	added = green
 	changed = yellow
 	untracked = cyan
+[merge]
+  tool = vimdiff
+[mergetool]
+  prompt = true
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[difftool]
+  prompt = false
+[diff]
+  tool = vimdiff
 [alias]
 	# Display branch name
 	branch-name = "!git rev-parse --abbrev-ref HEAD"

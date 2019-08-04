@@ -9,9 +9,9 @@ ncmpcpp/.ncmpcpp/error.log
 .stfolder
 
 # vim
-vim/.config/nvim/.netrwhist
-vim/.vim/.netrwhist
-vim/.vim/bundle/*
+nvim/.config/nvim/autoload/plug.vim
+nvim/.config/nvim/plugged
+nvim/.config/nvim/sessions
 
 # weechat
 weechat/.weechat/*.log
