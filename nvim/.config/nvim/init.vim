@@ -265,7 +265,7 @@ nnoremap <silent> <leader>\ :NERDTreeToggle<CR>
 nnoremap <silent> <leader>n :NERDTreeFocus<CR>
 
 " Reveal file in NERDTree
-nnoremap <silent> <leader>f :Rg<space>
+nnoremap <leader>f :Rg<space>
 
 " Align markdown table
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
