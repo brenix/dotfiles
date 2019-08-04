@@ -531,9 +531,9 @@ let g:webdevicons_enable = 0
 
 let g:NERDTreeColorMapCustom = {
     \ "Modified"  : "#cbb079",
-    \ "Staged"    : "#b4bf86",
-    \ "Untracked" : "#83a2be",
-    \ "Dirty"     : "#d3eaff",
+    \ "Staged"    : "#8ec07c",
+    \ "Untracked" : "#b4bf86",
+    \ "Dirty"     : "#cbb079",
     \ "Clean"     : "#87939A",
     \ "Ignored"   : "#808080"
     \ }
