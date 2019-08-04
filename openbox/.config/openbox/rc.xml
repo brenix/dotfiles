@@ -461,7 +461,7 @@
     </keybind>
     <keybind key="W-S-Return">
       <action name="Execute">
-        <command>termite</command>
+        <command>alacritty</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -469,7 +469,7 @@
     </keybind>
     <keybind key="F3">
       <action name="Execute">
-        <command>termite -t work --name=work --class=work -e "zsh -c 'ssh macbook'"</command>
+        <command>alacritty -t work --class=work -e zsh -c 'ssh macbook'</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>

@@ -24,7 +24,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-rhubarb' " Dependency for tpope/fugitive
 
 " General plugins
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'andrewstuart/vim-kubernetes'
@@ -53,6 +52,7 @@ Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tsony-tsonev/nerdtree-git-plugin'
 
 " Colorschemes
 Plug 'arcticicestudio/nord-vim'
@@ -159,6 +159,7 @@ autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeIm
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  set termguicolors
 endif
 
 " Enable syntax highlighting
@@ -365,7 +366,7 @@ let g:calendar_view = "days"        " Set days as the default view
 
 " Set lightline theme
 let g:lightline = {
-  \ 'colorscheme': 'nord',
+  \ 'colorscheme': 'faded',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'gitbranch', 'readonly', 'filename' ] ]
@@ -374,12 +375,6 @@ let g:lightline = {
   \   'gitbranch': 'fugitive#head'
   \ },
   \ }
-
-" Disable background color to match with terminal
-let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
-let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'black' ] ]
-let s:palette.inactive.middle = s:palette.normal.middle
-let s:palette.tabline.middle = s:palette.normal.middle
 
 let g:lightline.tabline          = {'left': [['buffers']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
@@ -536,18 +531,27 @@ let g:NERDTreeWinSize = 35
 " Show hidden files
 let NERDTreeShowHidden = 1
 
-" Icons
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "",
-    \ "Staged"    : "+",
-    \ "Untracked" : "",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "",
-    \ "Deleted"   : "",
-    \ "Dirty"     : "",
-    \ "Clean"     : "",
-    \ "Ignored"   : "﬒",
-    \ "Unknown"   : ""
+" Icons/colors
+let g:NERDTreeDisableExactMatchHighlight = 1
+let g:NERDTreeDisablePatternMatchHighlight = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeGitStatusNodeColorization = 1
+let g:NERDTreeGitStatusWithFlags = 0
+let g:NERDTreeHighlightFolders = 0
+let g:NERDTreeHighlightFoldersFullName = 0
+let g:NERDTreePatternMatchHighlightFullName = 1
+let g:NERDTreeSyntaxDisableDefaultExtensions = 1
+let g:NERDTreeSyntaxEnabledExtensions = ['go', 'js', 'css', 'py', 'sh']
+let g:webdevicons_enable = 0
+
+let g:NERDTreeColorMapCustom = {
+    \ "Modified"  : "#cbb079",
+    \ "Staged"    : "#b4bf86",
+    \ "Untracked" : "#83a2be",
+    \ "Dirty"     : "#cbb079",
+    \ "Clean"     : "#87939A",
+    \ "Ignored"   : "#808080"
     \ }
 
 " }}}

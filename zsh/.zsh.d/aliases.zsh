@@ -32,7 +32,7 @@ alias ts='terraform show'
 alias tst='terraform state'
 alias tv='terraform validate'
 alias tw='terraform workspace'
-#alias tmux='tmux attach || tmux new-session'
+alias tmux='tmux -2'
 if [[ "$OSTYPE" == "darwin"*  ]]; then alias u='brew update && brew upgrade && brew cleanup'; fi
 if [[ "$OSTYPE" == "linux-gnu" ]]; then alias u='yay -Syu --editmenu'; fi
 alias virsh='/usr/bin/virsh -c qemu:///system'
