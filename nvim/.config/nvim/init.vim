@@ -234,6 +234,9 @@ nmap <leader>v :vsplit<CR>
 " Reload vimrc
 nmap <leader>r :source ~/.config/nvim/init.vim<CR>
 
+" Switch windows
+nmap zz <C-W><C-W>
+
 " Hacky method to get FZF to prioritize files closest to the current open file
 " See https://github.com/jonhoo/proximity-sort
 " Requires `proximity-sort` command (cargo build)
