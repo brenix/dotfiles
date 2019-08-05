@@ -79,5 +79,7 @@
 	diffc = diff --cached
 	# Delete merged branches
 	delete-merged = "!git checkout master && git branch --no-color --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	# Delete local branches
+	delete-all-local = "!git checkout master && git branch --no-color | grep -v 'master' | xargs -n 1 git branch -D"
 	# One line log
 	tree = log --graph --pretty=oneline --decorate

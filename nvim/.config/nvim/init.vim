@@ -642,6 +642,14 @@ au FileType gitconfig set softtabstop=2
 au FileType gitconfig set tabstop=2
 
 "----------------------------------------------
+" Language: Golang
+"----------------------------------------------
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
+
+"----------------------------------------------
 " Language: HTML
 "----------------------------------------------
 au FileType html set expandtab
