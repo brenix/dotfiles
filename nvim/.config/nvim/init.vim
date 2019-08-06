@@ -42,6 +42,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'mhinz/vim-startify'
+Plug 'moll/vim-bbye'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
@@ -107,7 +108,6 @@ set hidden                     " Ensure closing a buffer doesnt exit
 set nospell                    " Disable spell checking
 set noswapfile                 " Disable swapfile usage
 set novisualbell               " Disable visual bells
-set nowrap                     " Dont automatically wrap
 set nowritebackup              " Dont write backup files
 set number                     " Show number ruler
 set ruler                      " Always show current positions along the bottom
@@ -213,8 +213,10 @@ let g:mapleader = "\<Space>"
 map <leader>h :nohlsearch<CR>
 
 " Close buffer
-map <leader>x :bp<bar>sp<bar>bn<bar>bd<CR>
-map <leader>x :bp<bar>sp<bar>bn<bar>bd!<CR>
+"map <leader>x :bp<bar>sp<bar>bn<bar>bd<CR>
+"map <leader>x :bp<bar>sp<bar>bn<bar>bd!<CR>
+map <leader>x :Bwipeout<CR>
+map <leader>x :Bwipeout!<CR>
 
 " Write
 nmap <leader>w :w<CR>
@@ -696,8 +698,9 @@ au FileType markdown set expandtab
 au FileType markdown set shiftwidth=2
 au FileType markdown set softtabstop=2
 au FileType markdown set tabstop=2
-au FileType markdown set syntax=markdown
 au FileType markdown set conceallevel=0
+au FileType markdown set colorcolumn=81
+au FileType markdown set textwidth=80
 
 "----------------------------------------------
 " Language: Python
