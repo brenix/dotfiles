@@ -96,6 +96,8 @@ set cursorline                 " Highlight the current line for the cursor
 set encoding=utf-8             " Set encoding to UTF-8
 set expandtab                  " Expands tabs to spaces
 set formatoptions=tqonj        " Set vims text formatting options
+set guioptions-=e              " Don't use GUI tabline
+set hidden                     " Ensure closing a buffer doesnt exit
 set ignorecase                 " Ignore case when searching
 set lazyredraw                 " Don’t update screen during macro and script execution
 set linebreak                  " Avoid wrapping a line in the middle of a word
@@ -104,25 +106,24 @@ set nobackup                   " Dont create backup files
 set noerrorbells               " Disable bells
 set nofixendofline             " Disable automatic newline character
 set nojoinspaces               " Use one space, not two after punctuation
-set hidden                     " Ensure closing a buffer doesnt exit
 set nospell                    " Disable spell checking
 set noswapfile                 " Disable swapfile usage
 set novisualbell               " Disable visual bells
+set nowrap                     " Disable automatic wrapping
 set nowritebackup              " Dont write backup files
 set number                     " Show number ruler
 set ruler                      " Always show current positions along the bottom
 set shiftround                 " Round the indentation to the nearest multiple of shiftwidth
 set shortmess=aFc              " Avoid hit-enter prompts caused by file messages
 set showmatch                  " Show matching brackets
-set switchbuf=useopen,split    " Set behavior when switching between buffers
 set showtabline=2              " Show tabline
-set guioptions-=e              " Don't use GUI tabline
 set smartcase                  " Ignore unless capital letters
 set smartindent                " Enable smart indentation
 set smarttab                   " Use shiftwidth and softtabstop
 set softtabstop=2              " Tab width
 set splitbelow                 " Open horizontal panes to the bottom
 set splitright                 " Open vertical panes to the right
+set switchbuf=useopen,split    " Set behavior when switching between buffers
 set tabstop=2                  " Tab = 2 spaces
 set timeout ttimeout           " Enable timeout and ttimeout options
 set timeoutlen=500             " Time in ms to wait for a mapped sequence to complete
@@ -704,6 +705,7 @@ au FileType markdown set tabstop=2
 au FileType markdown set conceallevel=0
 au FileType markdown set colorcolumn=81
 au FileType markdown set textwidth=80
+au FileType markdown set wrap
 
 "----------------------------------------------
 " Language: Python
