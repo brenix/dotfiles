@@ -38,30 +38,32 @@ Most keybindings are centered around the "leader" key: `<spacebar>`
 
 First, type the leader key (`<spacebar>`), then the following key to activate the function listed
 
-| Keybinding                           | Function                                            |
-| ------------------------------------ | --------------------------------------------------- |
-| `h`                                  | Clear search highlights                             |
-| `x`                                  | Close current buffer                                |
-| `X`                                  | Close current buffer without saving                 |
-| `w`                                  | Write current file                                  |
-| `W`                                  | Write current file and quit                         |
-| `q`                                  | Quit                                                |
-| `Q`                                  | Quit without saving                                 |
-| `e`                                  | Edit a new file (relative to the current file path) |
-| `s`                                  | Open a new buffer split horizontally                |
-| `v`                                  | Open a new buffer split vertically                  |
-| `r`                                  | Reload the nvim configuration                       |
-| `p`                                  | Fuzzy file search (Highly recommended)              |
-| `k`                                  | Fuzzy buffer search                                 |
-| `<spacebar>`                         | Switch between two most recent buffers              |
-| `g`                                  | Toggle git gutters                                  |
-| `\` | Open file tree view (nerdtree) |
-| `n`                                  | Focus file tree view (nerdtree)                     |
-| `f`                                  | Focus the current file in the tree view (nerdtree)  |
-| `cu`                                 | Comment line                                        |
-| `uc`                                 | Un-comment line                                     |
-| `c<space>`                           | Toggle comment                                      |
-| `|`                                  | Align markdown tables                               |
+| Keybinding   | Function                                            |
+| ------------ | --------------------------------------------------- |
+| `h`          | Clear search highlights                             |
+| `x`          | Close current buffer                                |
+| `X`          | Close current buffer without saving                 |
+| `w`          | Write current file                                  |
+| `W`          | Write current file and quit                         |
+| `q`          | Quit                                                |
+| `Q`          | Quit without saving                                 |
+| `e`          | Edit a new file (relative to the current file path) |
+| `s`          | Open a new buffer split horizontally                |
+| `v`          | Open a new buffer split vertically                  |
+| `r`          | Reload the nvim configuration                       |
+| `p`          | Fuzzy file search (Highly recommended)              |
+| `k`          | Fuzzy buffer search                                 |
+| `l`          | Toggle line numbers                                 |
+| `i`          | Toggle indent lines                                 |
+| `<spacebar>` | Switch between two most recent buffers              |
+| `g`          | Toggle git gutters                                  |
+| `\\`         | Open file tree view (nerdtree)                      |
+| `n`          | Focus file tree view (nerdtree)                     |
+| `f`          | Find a string across files (ripgrep)                |
+| `cu`         | Comment line                                        |
+| `uc`         | Un-comment line                                     |
+| `c<space>`   | Toggle comment                                      |
+| `\|`         | Align markdown tables                               |
 
 ### Function keybindings
 
@@ -70,7 +72,6 @@ First, type the leader key (`<spacebar>`), then the following key to activate th
 | `F2`       | Toggle paste mode          |
 | `F4`       | Toggle tagbar              |
 | `F5`       | Remove trailing whitespace |
-| `F6`       | Toggle line numbers        |
 
 ### Other keybindings
 

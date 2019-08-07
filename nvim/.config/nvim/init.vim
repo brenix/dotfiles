@@ -275,6 +275,12 @@ nnoremap <leader>f :Rg<space>
 " Align markdown table
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
+" Toggle line numbers
+nnoremap <leader>l :set invnumber<CR>
+
+" Toggle indentLine
+nnoremap <leader>i :IndentLinesToggle<CR>
+
 " ----- Function keys
 
 " Toggle paste mode
@@ -285,9 +291,6 @@ nnoremap <F4> :TagbarToggle<CR>
 
 " Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
-
-" Toggle line numbers
-nnoremap <F6> :set invnumber<CR>
 
 " ----- Misc keybindings
 
