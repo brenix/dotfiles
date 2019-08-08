@@ -25,6 +25,7 @@ let s:nord12_gui = "#D08770"
 let s:nord13_gui = "#CBB079"
 let s:nord14_gui = "#B4BF86"
 let s:nord15_gui = "#958090"
+let s:nord16_gui = "#6D7585"
 
 let s:nord1_term = "0"
 let s:nord3_term = "8"
@@ -39,30 +40,6 @@ let s:nord12_term = "11"
 let s:nord13_term = "3"
 let s:nord14_term = "2"
 let s:nord15_term = "5"
-
-let s:nord3_gui_brightened = [
-  \ s:nord3_gui,
-  \ "#4e586d",
-  \ "#505b70",
-  \ "#525d73",
-  \ "#556076",
-  \ "#576279",
-  \ "#59647c",
-  \ "#5b677f",
-  \ "#5d6982",
-  \ "#5f6c85",
-  \ "#616e88",
-  \ "#63718b",
-  \ "#66738e",
-  \ "#687591",
-  \ "#6a7894",
-  \ "#6d7a96",
-  \ "#6f7d98",
-  \ "#72809a",
-  \ "#75829c",
-  \ "#78859e",
-  \ "#7b88a1",
-\ ]
 
 if !exists("g:nord_italic")
   if has("gui_running") || $TERM_ITALICS == "true"
@@ -215,7 +192,7 @@ call s:hi("VertSplit", s:nord2_gui, s:nord1_gui, s:nord3_term, s:nord1_term, "NO
 "+----------------------+
 call s:hi("Boolean", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("Character", s:nord14_gui, "", s:nord14_term, "", "", "")
-call s:hi("Comment", s:nord3_gui_brightened[g:nord_comment_brightness], "", s:nord3_term, "", s:italicize_comments, "")
+call s:hi("Comment", s:nord16_gui, "", "NONE", "", s:italicize_comments, "")
 call s:hi("Conditional", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("Constant", s:nord4_gui, "", "NONE", "", "", "")
 call s:hi("Define", s:nord9_gui, "", s:nord9_term, "", "", "")
