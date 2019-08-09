@@ -217,7 +217,7 @@ map <leader>h :nohlsearch<CR>
 "map <leader>x :bp<bar>sp<bar>bn<bar>bd<CR>
 "map <leader>x :bp<bar>sp<bar>bn<bar>bd!<CR>
 map <leader>x :Bwipeout<CR>
-map <leader>x :Bwipeout!<CR>
+map <leader>X :Bwipeout!<CR>
 
 " Write
 nmap <leader>w :w<CR>
