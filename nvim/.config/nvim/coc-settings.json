@@ -11,6 +11,7 @@
     "diagnostic.virtualText": true,
     "diagnostic.refreshOnInsertMode": true,
     "git.enableGutters": true,
+    "git.realtimeGutters": false,
     "git.branchCharacter":"\uf408",
     "git.addGlameToBufferVar": true,
     "git.addGlameToVirtualText": true,
