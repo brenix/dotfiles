@@ -85,7 +85,7 @@ autocmd VimEnter * call OnVimEnter()
 set autoindent                 " Take indent for new line from previous line
 set autoread                   " Reload file if the file changes on the disk
 set backspace=indent,eol,start " Allow backspacing over indentation/line breaks/insertion
-set cmdheight=2                " Set height of the cmd pane to 2
+set cmdheight=1                " Set height of the cmd pane to 1
 set colorcolumn=101            " Highlight the 10th column as an indicator
 set complete-=i                " Limit the files searched for auto-completes
 set completeopt-=preview       " Remove the horrendous preview window
