@@ -32,7 +32,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/calendar.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'jiangmiao/auto-pairs'
 Plug 'jremmen/vim-ripgrep'
 Plug 'juliosueiras/vim-terraform-completion'
 Plug 'juliosueiras/vim-terraform-snippets'
