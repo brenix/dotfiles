@@ -188,6 +188,11 @@
         <command>rofi -show combi -kb-row-select "Tab" -kb-row-tab ""</command>
       </action>
     </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <command>rofi -show calc -modi calc -no-show-match -no-sort -lines 2</command>
+      </action>
+    </keybind>
     <keybind key="W-Left">
       <action name="GoToDesktop">
         <to>left</to>

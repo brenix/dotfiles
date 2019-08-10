@@ -234,6 +234,10 @@ nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 nmap <leader>s :split<CR>
 nmap <leader>v :vsplit<CR>
 
+" Add newline characters
+nmap <Enter> o<ESC>
+nmap <S-Enter> O<ESC>
+
 " Reload vimrc
 nmap <leader>r :source ~/.config/nvim/init.vim<CR>
 
