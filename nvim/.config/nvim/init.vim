@@ -18,7 +18,7 @@ if has('nvim')
   endif
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.cache/nvim/plugged')
 
 " Dependencies
 Plug 'tpope/vim-rhubarb' " Dependency for tpope/fugitive

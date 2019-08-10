@@ -1,53 +1,55 @@
 ! -- xft
-Xft.dpi:                       92
-Xft.antialias:                 true
-Xft.autohint:                  false
-Xft.hinting:                   true
-Xft.hintstyle:                 hintslight
-Xft.lcdfilter:                 lcddefault
-Xft.rgba:                      rgb
+Xft.dpi:                     92
+Xft.antialias:               true
+Xft.autohint:                false
+Xft.hinting:                 true
+Xft.hintstyle:               hintslight
+Xft.lcdfilter:               lcddefault
+Xft.rgba:                    rgb
 
 ! -- urxvt
 URxvt*boldFont:
-URxvt*font:                    -*-dash-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt*termName:                rxvt-256color
-URxvt.depth:                   32
-URxvt*lineSpace:               1
-URxvt*letterSpace:             0
-URxvt.iso14755:                false
-URxvt.iso14755_52:             false
-URxvt.scrollBar:               false
-URxvt*loginShell:              true
-URxvt.internalBorder:          0
-URxvt*geometry:                150x35
-URxvt.clipboard.autocopy:      true
-URxvt.perl-ext-common:         default,matcher
-URxvt.url-launcher:            /usr/bin/google-chrome-unstable
-URxvt.matcher.button:          1
-URxvt.matcher.rend.0:          Uline Bold fg12
-URxvt.cursorBlink:             1
-URxvt.cursorUnderline:         1
+URxvt*font:                  -*-dash-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*termName:              rxvt-256color
+URxvt.depth:                 32
+URxvt*lineSpace:             1
+URxvt*letterSpace:           0
+URxvt.iso14755:              false
+URxvt.iso14755_52:           false
+URxvt.scrollBar:             false
+URxvt*loginShell:            true
+URxvt.internalBorder:        0
+URxvt*geometry:              150x35
+URxvt.clipboard.autocopy:    true
+URxvt.perl-ext-common:       default,matcher
+URxvt.url-launcher:          /usr/bin/google-chrome-unstable
+URxvt.matcher.button:        1
+URxvt.matcher.rend.0:        Uline Bold fg12
+URxvt.cursorBlink:           1
+URxvt.cursorUnderline:       1
 
 ! -- rofi
-rofi.modi: window,run
-rofi.width: 20
-rofi.lines: 10
-rofi.font: Hack Nerd Font Mono 10
-rofi.bw: 0
-rofi.padding: 0
-rofi.terminal: urxvtc
-rofi.combi-modi: window,run
-rofi.line-margin: 0
-rofi.dpi: 92
-rofi.window-format: {c}
+rofi.bw:                     2
+rofi.color-enabled:          true
 rofi.combi-hide-mode-prefix: true
-rofi.hide-scrollbar: true
-rofi.separator-style: none
-rofi.color-active: #252933, #4c566a, #252933, #2e3440, #e5e9f0
-rofi.color-enabled: true
-rofi.color-normal: #252933, #4c566a, #252933, #2e3440, #e5e9f0
-rofi.color-urgent: #252933, #4c566a, #252933, #2e3440, #e5e9f0
-rofi.color-window: #252933, #252933, #252933
+rofi.combi-modi:             window,run
+rofi.dpi:                    92
+rofi.font:                   Hack Nerd Font Mono 9
+rofi.hide-scrollbar:         true
+rofi.line-margin:            1
+rofi.lines:                  10
+rofi.modi:                   window,run
+rofi.padding:                1
+rofi.separator-style:        solid
+rofi.terminal:               alacritty
+rofi.width:                  20
+rofi.window-format:          {c}
+
+! State:                    'bg',     'fg',    'bgalt', 'hlbg',  'hlfg'
+rofi.color-active:           #252933, #606778, #252933, #4c566a, #e5e9f0
+rofi.color-normal:           #252933, #606778, #252933, #4c566a, #e5e9f0
+rofi.color-urgent:           #252933, #606778, #252933, #4c566a, #e5e9f0
+rofi.color-window:           #252933, #606778
 
 ! -- colors
 #include ".xcolors.d/faded"
