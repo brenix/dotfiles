@@ -1,5 +1,6 @@
 alias ..='cd ..'
 alias abs='asp'
+alias ack='rg'
 alias cp='cp -i'
 alias ctr='sudo ctr -n k8s.io'
 #alias de='xrandr --output DVI-I-1 --mode 1920x1080 --rate 144 --left-of DVI-D-0 && bspc desktop 1 -m DVI-I-1 && bspc desktop 2 -m DVI-I-1 && bspc desktop Desktop -r'
