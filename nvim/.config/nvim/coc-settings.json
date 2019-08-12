@@ -53,5 +53,7 @@
         "filetypes": ["sh"],
         "ignoredRootPaths": ["~"]
       }
-    }
+    },
+    "yaml.format.enable": true,
+    "yaml.completion": true
 }
