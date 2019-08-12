@@ -235,8 +235,8 @@ nmap <leader>s :split<CR>
 nmap <leader>v :vsplit<CR>
 
 " Add newline characters
-nmap <Enter> o<ESC>
-nmap <S-Enter> O<ESC>
+nnoremap <leader>o o<ESC>
+nnoremap <leader>O O<ESC>
 
 " Reload vimrc
 nmap <leader>r :source ~/.config/nvim/init.vim<CR>
@@ -676,6 +676,14 @@ au FileType go set noexpandtab
 au FileType go set shiftwidth=4
 au FileType go set softtabstop=4
 au FileType go set tabstop=4
+
+"----------------------------------------------
+" Language: HCL
+"----------------------------------------------
+au FileType hcl set expandtab
+au FileType hcl set shiftwidth=2
+au FileType hcl set softtabstop=2
+au FileType hcl set tabstop=2
 
 "----------------------------------------------
 " Language: HTML
