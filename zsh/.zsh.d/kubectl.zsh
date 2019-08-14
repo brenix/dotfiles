@@ -59,7 +59,7 @@ ktx() {
     return 1
   fi
 
-  selected=$(find ${HOME}/.kube -maxdepth 1 -type f -exec basename {} \; | fzf -0 -1 --reverse)
+  selected=$(find ${HOME}/.kube -maxdepth 1 \( -type f -o -type l \) -exec basename {} \; | fzf -0 -1 --reverse)
   if [[ ! -z "$selected" ]]; then
     export KUBECONFIG="${HOME}/.kube/$selected"
   fi
