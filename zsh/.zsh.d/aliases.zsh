@@ -46,3 +46,6 @@ alias v='nvim'
 alias vim='nvim'
 alias v.='nvim .'
 alias vv='nvim ~/.dotfiles/nvim/.config/nvim/init.vim'
+alias pa='eval $(fc -ln -1 | sed "s/plan/apply/g")'
+alias pa='eval $(fc -ln -1 | sed "s/apply/plan/g")'
+findd() { find . -type d -name "*$1*" }
