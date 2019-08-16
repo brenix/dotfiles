@@ -12,7 +12,6 @@ export LOCALE=en_US.UTF-8
 export MOZ_DISABLE_PANGO=1
 export PAGER="less -iMR"
 export VISUAL=nvim
-export WORKON_HOME=~/.virtualenvs
 export XDG_CONFIG_HOME=~/.config
 export XDG_DESKTOP_DIR="/tmp/desktop"
 export XDG_DOCUMENTS_DIR="/tmp/docs"

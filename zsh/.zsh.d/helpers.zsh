@@ -1,3 +1,14 @@
+# --- findd: find directories in current path
+findd() {
+  find . -type d -name "*$1*"
+}
+
+# --- replace: find and replace text in current path
+replace() {
+  rg -l "$1" | xargs gsed -i "s/$1/$2/g"
+}
+
+# --- z (override)
 unalias z
 z() {
   zle .accept-line
