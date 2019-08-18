@@ -34,7 +34,7 @@ rofi.color-enabled:          true
 rofi.combi-hide-mode-prefix: true
 rofi.combi-modi:             window,run
 rofi.dpi:                    92
-rofi.font:                   Hack Nerd Font Mono 9
+rofi.font:                   Terminus (TTF) 9
 rofi.hide-scrollbar:         true
 rofi.line-margin:            1
 rofi.lines:                  10
