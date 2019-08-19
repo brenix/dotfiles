@@ -105,7 +105,7 @@ set linebreak                  " Avoid wrapping a line in the middle of a word
 set matchtime=1                " Reduce the time it takes to show matching brackets
 set nobackup                   " Dont create backup files
 set noerrorbells               " Disable bells
-set nofixendofline             " Disable automatic newline character
+"set nofixendofline             " Disable automatic newline character
 set nojoinspaces               " Use one space, not two after punctuation
 set nospell                    " Disable spell checking
 set noswapfile                 " Disable swapfile usage
