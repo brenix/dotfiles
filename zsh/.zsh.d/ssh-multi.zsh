@@ -10,7 +10,7 @@ ssh-multi() {
     fi
   fi
 
-  first="${hosts[1]}"
+  tmux new-window "ssh ${hosts[1]}"
   hosts=(${hosts:1})
 
   for i in "${hosts[@]}"; do
@@ -20,6 +20,4 @@ ssh-multi() {
 
   tmux select-pane -t 0
   tmux set-window-option synchronize-panes on > /dev/null
-
-  ssh $first
 }
