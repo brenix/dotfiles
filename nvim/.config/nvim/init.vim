@@ -28,6 +28,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'andrewstuart/vim-kubernetes'
 Plug 'ap/vim-css-color'
+Plug 'brenix/lightline-bufferline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/calendar.vim'
@@ -39,18 +40,16 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
-"Plug 'mengelbrecht/lightline-bufferline'
-Plug 'brenix/lightline-bufferline'
 Plug 'mhinz/vim-startify'
 Plug 'moll/vim-bbye'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tsony-tsonev/nerdtree-git-plugin'
@@ -105,7 +104,6 @@ set linebreak                  " Avoid wrapping a line in the middle of a word
 set matchtime=1                " Reduce the time it takes to show matching brackets
 set nobackup                   " Dont create backup files
 set noerrorbells               " Disable bells
-"set nofixendofline             " Disable automatic newline character
 set nojoinspaces               " Use one space, not two after punctuation
 set nospell                    " Disable spell checking
 set noswapfile                 " Disable swapfile usage
@@ -286,6 +284,10 @@ nnoremap <leader>l :set invnumber<CR>
 
 " Toggle indentLine
 nnoremap <leader>i :IndentLinesToggle<CR>
+
+" Comment/Un-comment
+nnoremap <leader>' :Commentary<CR>
+vnoremap <leader>' :Commentary<CR>
 
 " ----- Function keys
 
