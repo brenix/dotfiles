@@ -151,6 +151,9 @@ autocmd FileType * set formatoptions-=c formatoptions-=r formatoptions-=o
 " Automatically sort go imports on save
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
+" Automatically format shell scripts on save
+autocmd BufWritePre *.sh :normal migg=G`i
+
 " }}}
 
 " --- Colors {{{
@@ -778,9 +781,9 @@ au FileType toml set tabstop=2
 " Language: vimscript
 "----------------------------------------------
 au FileType vim set expandtab
-au FileType vim set shiftwidth=4
-au FileType vim set softtabstop=4
-au FileType vim set tabstop=4
+au FileType vim set shiftwidth=2
+au FileType vim set softtabstop=2
+au FileType vim set tabstop=2
 
 "----------------------------------------------
 " Language: YAML
@@ -789,6 +792,14 @@ au FileType yaml set expandtab
 au FileType yaml set shiftwidth=2
 au FileType yaml set softtabstop=2
 au FileType yaml set tabstop=2
+
+"----------------------------------------------
+" Language: zsh
+"----------------------------------------------
+au FileType zsh set expandtab
+au FileType zsh set shiftwidth=2
+au FileType zsh set softtabstop=2
+au FileType zsh set tabstop=2
 
 "}}}
 
