@@ -80,17 +80,6 @@ zplugin light "molovo/tipz"
 zplugin light "mollifier/cd-gitroot"
 alias cdu="cd-gitroot"
 
-# On OSX, you might need to install coreutils from homebrew and use the
-# g-prefix – gsed, gdircolors
-zplugin ice wait"0c" lucid \
-    atclone"local PFX=${${(M)OSTYPE:#*darwin*}:+g}
-            git reset --hard; \${PFX}sed -i \
-            '/DIR/c\DIR                   38;5;63;1' LS_COLORS; \
-            \${PFX}dircolors -b LS_COLORS > c.zsh" \
-            atpull'%atclone' pick"c.zsh" nocompile'!' \
-            atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
-zplugin light trapd00r/LS_COLORS
-
 # -- prompt
 
 # spaceship
