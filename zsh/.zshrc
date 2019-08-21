@@ -1,20 +1,18 @@
 #!/bin/zsh
 
 # -- options
-# ignore recording duplicate commands
-setopt hist_ignore_all_dups
-setopt hist_expire_dups_first
-# ignore recording commands prefixed with a space
-setopt hist_ignore_space
-# allow reg-ex style matching
-setopt extendedglob
-# tab completion tweaks
-setopt menucomplete
-setopt noalwayslastprompt
-# allow files to be clobbered
-setopt clobber
-# enable comments on the command line
-setopt interactivecomments
+
+setopt append_history         # allow multiple sessions to append to history
+setopt clobber                # allow files to be clobbered
+setopt extendedglob           # allow reg-ex style matching
+setopt hist_expire_dups_first # ignore recording duplicate commands
+setopt hist_ignore_all_dups   # ignore recording duplicate commands
+setopt hist_ignore_space      # ignore recording commands prefixed with a space
+setopt interactivecomments    # enable comments on the command line
+setopt menucomplete           # tab completion tweaks
+setopt noalwayslastprompt     # tab completion tweaks
+setopt noflowcontrol          # no c-s/c-q output freezing
+setopt prompt_subst           # allow expansion in prompts
 
 # -- plugin framework
 
@@ -43,7 +41,8 @@ zplugin snippet OMZ::plugins/gpg-agent/gpg-agent.plugin.zsh
 zplugin snippet OMZ::plugins/terraform/terraform.plugin.zsh
 
 # syntax highlighting
-zplugin light "zdharma/fast-syntax-highlighting"
+zplugin ice wait"1" lucid atinit"ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
+zplugin light zdharma/fast-syntax-highlighting
 
 # completions
 zplugin light "zsh-users/zsh-completions"
@@ -55,8 +54,8 @@ zplugin snippet "https://raw.githubusercontent.com/junegunn/fzf/master/shell/key
 
 # fish-like style autocompletion
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=48
-#export ZSH_AUTOSUGGEST_USE_ASYNC=true
 export ZSH_AUTOSUGGEST_STRATEGY=history
+export ZSH_AUTOSUGGEST_USE_ASYNC=true
 zplugin ice wait'1' silent atload'_zsh_autosuggest_start'
 zplugin light "zsh-users/zsh-autosuggestions"
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=("expand-or-complete")
@@ -80,6 +79,17 @@ zplugin light "molovo/tipz"
 # cd-gitroot
 zplugin light "mollifier/cd-gitroot"
 alias cdu="cd-gitroot"
+
+# On OSX, you might need to install coreutils from homebrew and use the
+# g-prefix – gsed, gdircolors
+zplugin ice wait"0c" lucid \
+    atclone"local PFX=${${(M)OSTYPE:#*darwin*}:+g}
+            git reset --hard; \${PFX}sed -i \
+            '/DIR/c\DIR                   38;5;63;1' LS_COLORS; \
+            \${PFX}dircolors -b LS_COLORS > c.zsh" \
+            atpull'%atclone' pick"c.zsh" nocompile'!' \
+            atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
+zplugin light trapd00r/LS_COLORS
 
 # -- prompt
 
@@ -105,14 +115,14 @@ spaceship_dir() {
 
 # spaceship configuration
 SPACESHIP_PROMPT_ORDER=(
-  #user          # Username section
-  #host          # Hostname section
+  # user          # Username section
+  # host          # Hostname section
   dir           # Current directory section
   git           # Git section (git_branch + git_status)
   venv          # Python virtualenv section
   aws           # Amazon Web Services section
   terraform     # Terraform workspace section
-  #line_sep      # Line separator
+  # line_sep      # Line separator
   exit_code     # Exit code section
   char          # Prompt character
 )
@@ -144,18 +154,10 @@ SPACESHIP_KUBECONTEXT_SYMBOL=""
 SPACESHIP_KUBECONTEXT_PREFIX=""
 SPACESHIP_KUBECONTEXT_SUFFIX=" "
 
-# -- dircolors
-
-autoload -U colors && colors
-case "$OSTYPE" in
-  "linux-gnu") eval $(dircolors -b ${HOME}/.dircolors) ;;
-  "darwin*") eval $(/usr/local/opt/coreutils/libexec/gnubin/dircolors -b ${HOME}/dircolors) ;;
-esac
-
 # -- completion
 
 autoload -Uz compinit
-for dump in ~/.zcompdump(N.mh+24); do
+for dump in ${HOME}/.cache/zsh/.zcompdump(N.mh+24); do
   compinit
 done
 compinit -C
