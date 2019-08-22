@@ -27,6 +27,7 @@
     "git.changeRemovedSign.text": "▋",
     "coc.preferences.snippetStatusText": "Ⓢ ",
     "coc.preferences.formatOnSaveFiletypes": ["css","markdown"],
+    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
     "prettier.statusItemText": "ⓟ ",
     "prettier.eslintIntegration": true,
     "prettier.tslintIntegration": true,

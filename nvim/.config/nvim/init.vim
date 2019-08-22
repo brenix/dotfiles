@@ -222,7 +222,7 @@ map <leader>x :Bwipeout<CR>
 map <leader>X :Bwipeout!<CR>
 
 " Write
-nmap <leader>w :w<CR>
+nmap <leader>w :w<CR><CR>
 nmap <leader>W :wq<CR>
 
 " Quit
@@ -380,15 +380,22 @@ let g:calendar_view = "days"        " Set days as the default view
 
 " --- Plugin: itchyny/lightline.vim {{{
 
-" Set lightline theme
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+endfunction
+
+
+" Set lightline config
 let g:lightline = {
   \ 'colorscheme': 'faded',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'gitbranch', 'readonly', 'filename' ] ]
+  \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
   \ },
   \ 'component_function': {
-  \   'gitbranch': 'fugitive#head'
+  \   'gitbranch': 'fugitive#head',
+  \   'cocstatus': 'coc#status',
+  \   'currentfunction': 'CocCurrentFunction'
   \ },
   \ }
 
