@@ -3,7 +3,7 @@
     "suggest.noselect": false,
     "suggest.triggerCompletionWait": 100,
     "suggest.snippetIndicator": "",
-    "diagnostic.enable": false,
+    "diagnostic.enable": true,
     "diagnostic.signOffset": 9999999,
 	  "diagnostic.errorSign": "●",
 	  "diagnostic.warningSign": "●",
