@@ -25,10 +25,10 @@ Plug 'tpope/vim-rhubarb' " Dependency for tpope/fugitive
 
 " General plugins
 Plug 'Yggdroot/indentLine'
+Plug 'aesophor/base16-faded'
 Plug 'airblade/vim-rooter'
 Plug 'andrewstuart/vim-kubernetes'
 Plug 'ap/vim-css-color'
-Plug 'mengelbrecht/lightline-bufferline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/calendar.vim'
@@ -40,6 +40,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
+Plug 'mengelbrecht/lightline-bufferline'
 Plug 'mhinz/vim-startify'
 Plug 'moll/vim-bbye'
 Plug 'mzlogin/vim-markdown-toc'
@@ -146,20 +147,20 @@ let g:netrw_fastbrowse = 0
 " Highlight trailing whitespace
 match errorMsg /\s\+$/
 
-" Remove trailing whitespace on save
-autocmd BufWritePre * %s/\s\+$//e
+augroup mygroup
+  autocmd!
+  " Remove trailing whitespace on save
+  autocmd BufWritePre * %s/\s\+$//e
 
-" Disable inserting comments on new line
-autocmd FileType * set formatoptions-=c formatoptions-=r formatoptions-=o
+  " Disable inserting comments on new line
+  autocmd FileType * set formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Automatically sort go imports on save
-" autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 
-" Update signature help on jump placeholder
-autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-
-" Automatically format shell scripts on save
-autocmd BufWritePre *.sh :normal migg=G`i
+  " Automatically format shell scripts on save
+  autocmd BufWritePre *.sh :normal migg=G`i
+augroup end
 
 " }}}
 
