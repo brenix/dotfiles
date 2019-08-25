@@ -135,6 +135,10 @@ if has('mouse')
   set mouse=a
 endif
 
+" Close netrw buffer after opening file
+let g:netrw_fastbrowse = 0
+
+
 " }}}
 
 " --- Formatting/Saving {{{
@@ -288,6 +292,9 @@ vnoremap <leader>' :Commentary<CR>
 
 " Show diagnostics
 nnoremap <leader>d :<C-u>CocList diagnostics<CR>
+
+" Toggle tagbar
+nnoremap <leader>t :TagbarToggle<CR>
 
 " ----- Function keys
 
@@ -522,11 +529,6 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-nmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
