@@ -43,7 +43,7 @@ xcalib -o 0 -b 0.9 -gc 1.05 $HOME/.colors/asus-vg248qe.icm
 xcalib -o 1 -b 0.9 -gc 1.05 $HOME/.colors/asus-vg248qe.icm
 
 # -- barrier/synergy
-pgrep barriers || barriers --enable-crypto &
+pgrep barriers || barriers --enable-crypto -c ~/.local/share/barrier/barrier-macbook.conf &
 
 # -- map capslock to escape
 setxkbmap -option caps:escape

@@ -20,14 +20,14 @@ font:
   italic:
     family: Hack Nerd Font Mono
     style: Italic
-  size: 10.0
+  size: 10.5
   offset:
     x: 0
     y: 0
   glyph_offset:
     x: 0
     y: 0
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 draw_bold_text_with_bright_colors: false
 
@@ -80,6 +80,12 @@ selection:
   save_to_clipboard: false
 
 dynamic_title: false
+
+window:
+  padding:
+    x: 10
+    y: 10
+  dynamic_padding: true
 
 cursor:
   style: Block
