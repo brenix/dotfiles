@@ -273,15 +273,6 @@ nnoremap <leader><leader> <c-^>
 " Toggle git gutters
 nnoremap <silent> <leader>g :<C-u>CocCommand git.toggleGutters<CR>
 
-" Toggle NERDTree
-nnoremap <silent> <leader>\ :NERDTreeToggle<CR>
-
-" Focus NERDTree
-nnoremap <silent> <leader>n :NERDTreeFocus<CR>
-
-" Reveal file in NERDTree
-nnoremap <leader>f :Rg<space>
-
 " Align markdown table
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
