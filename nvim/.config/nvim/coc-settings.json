@@ -41,7 +41,8 @@
       },
       "terraform": {
         "command": "terraform-lsp",
-        "filetypes": ["terraform"]
+        "filetypes": ["terraform"],
+        "disableDiagnostics": true
       },
       "dockerfile": {
         "command": "docker-langserver",

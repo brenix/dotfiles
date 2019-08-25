@@ -86,7 +86,7 @@ set autoindent                 " Take indent for new line from previous line
 set autoread                   " Reload file if the file changes on the disk
 set backspace=indent,eol,start " Allow backspacing over indentation/line breaks/insertion
 set breakindent                " Wrap long lines of text with initial indentation
-set cmdheight=1                " Set height of the cmd pane to 1
+set cmdheight=2                " Set height of the cmd pane to 1
 set colorcolumn=101            " Highlight the 10th column as an indicator
 set complete-=i                " Limit the files searched for auto-completes
 set completeopt-=preview       " Remove the horrendous preview window
@@ -117,6 +117,7 @@ set shiftround                 " Round the indentation to the nearest multiple o
 set shortmess=aFc              " Avoid hit-enter prompts caused by file messages
 set showmatch                  " Show matching brackets
 set showtabline=2              " Show tabline
+set signcolumn=yes             " always show signcolumns
 set smartcase                  " Ignore unless capital letters
 set smartindent                " Enable smart indentation
 set smarttab                   " Use shiftwidth and softtabstop
@@ -129,7 +130,7 @@ set timeout ttimeout           " Enable timeout and ttimeout options
 set timeoutlen=500             " Time in ms to wait for a mapped sequence to complete
 set title                      " Let vim set the terminal title
 set ttimeoutlen=10             " Time in ms to wait for a key sequence to complete
-set updatetime=100             " Redraw the status bar often
+set updatetime=300             " Redraw the status bar often
 
 " Enable mouse if possible
 if has('mouse')
@@ -151,6 +152,9 @@ autocmd FileType * set formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Automatically sort go imports on save
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+
+" Update signature help on jump placeholder
+autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 
 " Automatically format shell scripts on save
 autocmd BufWritePre *.sh :normal migg=G`i
@@ -292,6 +296,9 @@ nnoremap <leader>i :IndentLinesToggle<CR>
 " Comment/Un-comment
 nnoremap <leader>' :Commentary<CR>
 vnoremap <leader>' :Commentary<CR>
+
+" Show diagnostics
+nnoremap <leader>d :<C-u>CocList diagnostics<CR>
 
 " ----- Function keys
 
@@ -527,6 +534,7 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
@@ -537,6 +545,14 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
+nmap <silent> <TAB> <Plug>(coc-range-select)
+xmap <silent> <TAB> <Plug>(coc-range-select)
+xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
+
+" Use `:Format` to format current buffer
+command! -nargs=0 Format :call CocAction('format')
 
 " }}}
 
@@ -651,6 +667,14 @@ let g:multi_cursor_exit_from_insert_mode = 1
 " --- Plugin: suan/vim-instant-markdown {{{
 
 let g:instant_markdown_autostart = 0
+
+" }}}
+
+" --- Plugin: fatih/vim-go {{{
+
+" disable vim-go :GoDef short cut (gd)
+" this is handled by LanguageClient [LC]
+let g:go_def_mapping_enabled = 0
 
 " }}}
 
