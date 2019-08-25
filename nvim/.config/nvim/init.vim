@@ -613,9 +613,6 @@ let g:instant_markdown_autostart = 0
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
 
-" disable format on save (handled by coc)
-let g:go_fmt_autosave = 0
-
 " }}}
 
 " --- Language Formatting {{{
