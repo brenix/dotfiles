@@ -12,6 +12,7 @@ ncmpcpp/.ncmpcpp/error.log
 nvim/.config/nvim/autoload/plug.vim
 nvim/.config/nvim/plugged
 nvim/.config/nvim/sessions
+nvim/.config/nvim/.netrwhist
 
 # weechat
 weechat/.weechat/*.log

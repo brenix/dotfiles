@@ -28,7 +28,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'andrewstuart/vim-kubernetes'
 Plug 'ap/vim-css-color'
-Plug 'brenix/lightline-bufferline'
+Plug 'mengelbrecht/lightline-bufferline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/calendar.vim'
@@ -46,14 +46,13 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'tsony-tsonev/nerdtree-git-plugin'
+Plug 'tpope/vim-vinegar'
 
 " Colorschemes
 Plug 'arcticicestudio/nord-vim'
@@ -99,7 +98,6 @@ set expandtab                  " Expands tabs to spaces
 set formatoptions=tqonj        " Set vims text formatting options
 set guioptions-=e              " Don't use GUI tabline
 set hidden                     " Ensure closing a buffer doesnt exit
-set ignorecase                 " Ignore case when searching
 set lazyredraw                 " Don’t update screen during macro and script execution
 set linebreak                  " Avoid wrapping a line in the middle of a word
 set matchtime=1                " Reduce the time it takes to show matching brackets
@@ -151,7 +149,7 @@ autocmd BufWritePre * %s/\s\+$//e
 autocmd FileType * set formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Automatically sort go imports on save
-autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+" autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
 " Update signature help on jump placeholder
 autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
@@ -407,7 +405,7 @@ let g:lightline = {
   \ },
   \ }
 
-let g:lightline.tabline          = {'left': [['buffers']]}
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type   = {'buffers': 'tabsel'}
 
@@ -416,18 +414,6 @@ let g:lightline#bufferline#enable_devicons = 1
 
 " Enable unicode symbols
 let g:lightline#bufferline#unicode_symbols = 1
-
-" Select buffers by number
-nmap <Leader>1 <Plug>lightline#bufferline#go(1)
-nmap <Leader>2 <Plug>lightline#bufferline#go(2)
-nmap <Leader>3 <Plug>lightline#bufferline#go(3)
-nmap <Leader>4 <Plug>lightline#bufferline#go(4)
-nmap <Leader>5 <Plug>lightline#bufferline#go(5)
-nmap <Leader>6 <Plug>lightline#bufferline#go(6)
-nmap <Leader>7 <Plug>lightline#bufferline#go(7)
-nmap <Leader>8 <Plug>lightline#bufferline#go(8)
-nmap <Leader>9 <Plug>lightline#bufferline#go(9)
-nmap <Leader>0 <Plug>lightline#bufferline#go(10)
 
 " }}}
 
@@ -556,48 +542,6 @@ command! -nargs=0 Format :call CocAction('format')
 
 " }}}
 
-" --- Plugin: scrooloose/nerdtree {{{
-
-" Close nvim if nerdtree is the only thing left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Automatically highlight file on open
-autocmd BufEnter * if &modifiable && filereadable(@%) && exists("g:NERDTree") && g:NERDTree.IsOpen() | NERDTreeFind | wincmd p | endif
-
-" Dont collapse dirs on same line
-let g:NERDTreeCascadeSingleChildDir = 0
-
-" Set column size
-let g:NERDTreeWinSize = 35
-
-" Show hidden files
-let NERDTreeShowHidden = 1
-
-" Icons/colors
-let g:NERDTreeDisableExactMatchHighlight = 1
-let g:NERDTreeDisablePatternMatchHighlight = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeGitStatusNodeColorization = 1
-let g:NERDTreeGitStatusWithFlags = 0
-let g:NERDTreeHighlightFolders = 0
-let g:NERDTreeHighlightFoldersFullName = 0
-let g:NERDTreePatternMatchHighlightFullName = 1
-let g:NERDTreeSyntaxDisableDefaultExtensions = 1
-let g:NERDTreeSyntaxEnabledExtensions = ['go', 'js', 'css', 'py', 'sh']
-let g:webdevicons_enable = 0
-
-let g:NERDTreeColorMapCustom = {
-    \ "Modified"  : "#cbb079",
-    \ "Staged"    : "#8ec07c",
-    \ "Untracked" : "#b4bf86",
-    \ "Dirty"     : "#cbb079",
-    \ "Clean"     : "#87939A",
-    \ "Ignored"   : "#808080"
-    \ }
-
-" }}}
-
 " --- Plugin: sheerun/vim-polyglot {{{
 
 " ----- Markdown
@@ -675,6 +619,9 @@ let g:instant_markdown_autostart = 0
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
+
+" disable format on save (handled by coc)
+let g:go_fmt_autosave = 0
 
 " }}}
 
