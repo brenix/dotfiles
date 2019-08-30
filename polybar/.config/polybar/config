@@ -51,7 +51,7 @@ module-margin-left  = 2
 module-margin-right = 2
 
 modules-left  = workspaces
-modules-center = spotify
+modules-center = spotify mpd
 modules-right = temperature cpu memory volume date time
 
 offset-x = 0

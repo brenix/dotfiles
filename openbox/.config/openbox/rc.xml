@@ -472,7 +472,7 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="F3">
+    <keybind key="W-m">
       <action name="Execute">
         <command>alacritty -t work --class=work -e zsh -c 'ssh macbook'</command>
         <startupnotify>
