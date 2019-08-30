@@ -164,6 +164,16 @@ bashcompinit
 zstyle ":completion:*:warnings" format "%BSorry, no matches for: %d%b"
 zstyle ":completion:*:commands" rehash 1
 
+# Keep directories and files separated
+zstyle ':completion:*' list-dirs-first true
+
+# Don't try parent path completion if the directories exist
+zstyle ':completion:*' accept-exact-dirs true
+
+# verbose completion results
+zstyle ':completion:*' verbose true
+
+
 # -- key bindings
 bindkey -v
 bindkey "^A" beginning-of-line      # ctrl+a
