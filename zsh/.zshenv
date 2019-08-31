@@ -5,6 +5,7 @@ export EDITOR=nvim
 export GOPATH=~/go
 export GREP_COLOR="1;31"
 export HISTFILE=~/.zhistory
+export HISTSIZE='10000'
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_COLLATE="C"
