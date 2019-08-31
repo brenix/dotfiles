@@ -130,6 +130,8 @@ set timeoutlen=500             " Time in ms to wait for a mapped sequence to com
 set title                      " Let vim set the terminal title
 set ttimeoutlen=10             " Time in ms to wait for a key sequence to complete
 set updatetime=300             " Redraw the status bar often
+set wildmenu                   " Enable wildmenu comand line completion
+set wildmode=longest,list,full " Bash-like tab completion in command bar
 
 " Enable mouse if possible
 if has('mouse')
@@ -296,6 +298,9 @@ nnoremap <leader>d :<C-u>CocList diagnostics<CR>
 
 " Toggle tagbar
 nnoremap <leader>t :TagbarToggle<CR>
+
+" Show GoDoc
+nnoremap <leader>g :GoDoc<CR>
 
 " ----- Function keys
 
