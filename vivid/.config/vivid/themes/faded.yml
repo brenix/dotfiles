@@ -1,0 +1,63 @@
+colors:
+  bg:        "252933"
+  black:     "2e3440"
+  gray:      "606778"
+  red:       "b77a76"
+  green:     "b4bf86"
+  yellow:    "cbb079"
+  blue:      "83a2be"
+  magenta:   "958090"
+  cyan:      "7daea9"
+  lightgrey: "c5c8c6"
+  white:     "f4f4f4"
+core:
+  regular_file: {}
+  directory:
+    foreground: blue
+  executable_file:
+    foreground: green
+  symlink:
+    foreground: magenta
+  broken_symlink:
+    foreground: white
+    background: red
+  fifo:
+    foreground: gray
+  socket:
+    foreground: gray
+  character_device:
+    foreground: red
+  block_device:
+    foreground: red
+  normal_text:
+    {}
+text:
+  special:
+    foreground: lightgrey
+  todo:
+    foreground: lightgrey
+  licenses:
+    foreground: lightgrey
+  configuration:
+    foreground: lightgrey
+  other:
+    foreground: lightgrey
+markup:
+  foreground: lightgrey
+programming:
+  source:
+    foreground: cyan
+  tooling:
+    foreground: cyan
+    continuous-integration:
+      foreground: cyan
+media:
+  foreground: cyan
+office:
+  foreground: cyan
+archives:
+  foreground: cyan
+executable:
+  foreground: cyan
+unimportant:
+  foreground: cyan

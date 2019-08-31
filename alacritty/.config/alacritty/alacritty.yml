@@ -31,32 +31,59 @@ font:
 
 draw_bold_text_with_bright_colors: false
 
-colors:
-  primary:
-    background: '0x252933'
-    foreground: '0xe5e9f0'
-  cursor:
-    text: '0x2E3440'
-    cursor: '0xD8DEE9'
-  normal:
-    black:   '0x2e3440'
-    red:     '0xb77a76'
-    green:   '0xb4bf86'
-    yellow:  '0xcbb079'
-    blue:    '0x83a2be'
-    magenta: '0x958090'
+schemes:
+  faded: &faded
+    primary:
+      background: '0x252933'
+      foreground: '0xe5e9f0'
+    cursor:
+      text: '0x2E3440'
+      cursor: '0xD8DEE9'
+    normal:
+      black:   '0x2e3440'
+      red:     '0xb77a76'
+      green:   '0xb4bf86'
+      yellow:  '0xcbb079'
+      blue:    '0x83a2be'
+      magenta: '0x958090'
 
-    cyan:    '0x7daea9'
-    white:   '0xc5c8c6'
-  bright:
-    black:   '0x606778'
-    red:     '0xb77a76'
-    green:   '0xb4bf86'
-    yellow:  '0xcbb079'
-    blue:    '0x83a2be'
-    magenta: '0x958090'
-    cyan:    '0x7daea9'
-    white:   '0xf4f4f4'
+      cyan:    '0x7daea9'
+      white:   '0xc5c8c6'
+    bright:
+      black:   '0x606778'
+      red:     '0xb77a76'
+      green:   '0xb4bf86'
+      yellow:  '0xcbb079'
+      blue:    '0x83a2be'
+      magenta: '0x958090'
+      cyan:    '0x7daea9'
+      white:   '0xf4f4f4'
+  gruvbox: &gruvbox
+    primary:
+      # hard contrast: background = '0x1d2021'
+      background: '0x282828'
+      # soft contrast: background = '0x32302f'
+      foreground: '0xd5c4a1'
+    normal:
+      black:   '0x32302f'
+      red:     '0xfb4934'
+      green:   '0xb8bb26'
+      yellow:  '0xfabd2f'
+      blue:    '0x83a598'
+      magenta: '0xd3869b'
+      cyan:    '0x8ec07c'
+      white:   '0xebdbb2'
+    bright:
+      black:   '0x928374'
+      red:     '0xfb4934'
+      green:   '0xb8bb26'
+      yellow:  '0xfabd2f'
+      blue:    '0x83a598'
+      magenta: '0xd3869b'
+      cyan:    '0x8ec07c'
+      white:   '0xebdbb2'
+
+colors: *faded
 
 visual_bell:
   animation: EaseOutExpo

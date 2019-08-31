@@ -1,12 +1,13 @@
 typeset -U path
 path=(
-  ~/bin
-  ~/go/bin
-  ~/.local/bin
+  $HOME/.cargo/bin
+  $HOME/.krew/bin
+  $HOME/.local/bin
+  $HOME/bin
+  $HOME/go/bin
   /usr/local/opt/ruby/bin
   /usr/local/bin
   /usr/local/sbin
-  ~/.krew/bin
   $path[@]
 )
 
