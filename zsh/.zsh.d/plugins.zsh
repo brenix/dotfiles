@@ -30,7 +30,6 @@ zplugin ice wait lucid
 zplugin snippet OMZ::plugins/terraform/terraform.plugin.zsh
 
 # z
-zplugin ice wait lucid
 zplugin snippet OMZ::plugins/z/z.sh
 
 # kubectl
