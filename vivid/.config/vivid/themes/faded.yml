@@ -39,7 +39,7 @@ text:
   licenses:
     foreground: lightgrey
   configuration:
-    foreground: lightgrey
+    foreground: yellow
   other:
     foreground: lightgrey
 markup:
