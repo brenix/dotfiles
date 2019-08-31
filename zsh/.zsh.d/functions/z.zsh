@@ -1,4 +1,5 @@
 # z
+unalias z
 z() {
   zle .accept-line
   if [[ -z "$*" ]]; then
