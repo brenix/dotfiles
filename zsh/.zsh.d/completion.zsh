@@ -1,25 +1,38 @@
 # load completion
-autoload -Uz compinit
-for dump in ${HOME}/.cache/zsh/.zcompdump(N.mh+24); do
-  compinit
-done
-compinit -C
+autoload -Uz compinit && compinit -u -d ${HOME}/.zcompdump-$ZSH_VERSION
+zplugin cdreplay -q
 
-# configure completion
-zstyle ":completion:*" cache-path "${XDG_CACHE_HOME:-${HOME}/.cache}"
+# allow completion of sudo commands
+zstyle ':completion::complete:*' gain-privileges 1
+
+# automatically 'rehash' completion for new executables added in the $PATH
+zstyle ':completion:*' rehash true
+
+# allow one error for every three characters typed in approximate completer
+zstyle ':completion:*:approximate:' max-errors 'reply=( $((($#PREFIX+$#SUFFIX)/3 )) numeric )'
+
+# activate color-completion
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# enable completion options
 zstyle ":completion:*" completer _complete _correct _ignored _approximate
-zstyle ":completion:*" rehash true
-zstyle ":completion:*" use-cache on
-zstyle ":completion:*:commands" rehash 1
-zstyle ":completion:*:warnings" format "%BSorry, no matches for: %d%b"
+
+# bash-like completion
 zstyle ":completion:::*:default" menu no select
 
+# completion cache
+zstyle ':completion::complete:*' use-cache 1
+zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
+
+# ignore case in directory/file auto-completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' menu select
+
 # load bash completion support
-autoload bashcompinit
+autoload -Uz bashcompinit
 bashcompinit
 
 # complete aliases
-compdef _infractl i=infractl
 compdef _kubectl k=kubectl
 compdef _systemctl s=systemctl
 compdef _terraform t=terraform

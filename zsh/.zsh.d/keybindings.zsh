@@ -1,4 +1,7 @@
+# enable vim mode
 bindkey -v
+
+# cursor
 bindkey "^A" beginning-of-line      # ctrl+a
 bindkey "^E" end-of-line            # ctrl+e
 bindkey "^F" vi-change-whole-line   # ctrl+f
