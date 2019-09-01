@@ -11,7 +11,7 @@ setopt histignorealldups   # ignore recording duplicate commands
 setopt histignorespace     # ignore recording commands prefixed with a space
 setopt interactivecomments # enable comments on the command line
 setopt menucomplete        # show menu completions
-#setopt noautomenu          # bash-like completion
+setopt noautomenu          # bash-like completion
 setopt nobeep              # avoid beeping
 setopt noflowcontrol       # no c-s/c-q output freezing
 setopt nohup               # dont send SIGHUP to background processes when exiting

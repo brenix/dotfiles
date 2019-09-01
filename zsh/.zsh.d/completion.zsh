@@ -19,7 +19,7 @@ zstyle ":completion:*" completer _expand _complete _ignored _approximate
 zstyle ":completion:*" insert-unambiguous true
 
 # bash-like completion
-# zstyle ":completion:::*:default" menu no select
+zstyle ":completion:::*:default" menu no select
 
 # completion cache
 zstyle ':completion::complete:*' use-cache 1
