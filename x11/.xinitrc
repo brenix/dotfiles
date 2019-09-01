@@ -48,6 +48,9 @@ pgrep barriers || barriers --enable-crypto -c ~/.local/share/barrier/barrier-mac
 # -- map capslock to escape
 setxkbmap -option caps:escape
 
+# -- urxvt
+urxvtd -q -o -f
+
 # -- window manager
 
 #compton -bCG -o 0.45 -m 0.88 --no-fading-openclose --opacity-rule "90:class_g = 'Code'" --opacity-rule "90:class_g = 'Slack'"

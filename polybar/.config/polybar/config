@@ -24,6 +24,8 @@ background-alt = #4c566a
 foreground-alt = #e5e9f0
 
 [bar/main]
+bottom = true
+
 #monitor          = ${env:MONITOR:}
 monitor          = ${env:MONITOR:DVI-I-1}
 monitor-fallback = ${env:MONITOR:DVI-D-0}
