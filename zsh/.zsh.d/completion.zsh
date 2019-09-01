@@ -15,19 +15,15 @@ zstyle ':completion:*:approximate:' max-errors 'reply=( $((($#PREFIX+$#SUFFIX)/3
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # enable completion options
-zstyle ":completion:*" completer _expand _complete _match _correct _ignored _approximate _prefix
+zstyle ":completion:*" completer _expand _complete _ignored _approximate
 zstyle ":completion:*" insert-unambiguous true
 
 # bash-like completion
-zstyle ":completion:::*:default" menu no select
+# zstyle ":completion:::*:default" menu no select
 
 # completion cache
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
-
-# ignore case in directory/file auto-completion
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*' menu select=1
 
 # load bash completion support
 autoload -Uz bashcompinit
