@@ -244,7 +244,9 @@ nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 
 " Splits
 nmap <leader>s :split<CR>
+nmap <leader>S :new<CR>
 nmap <leader>v :vsplit<CR>
+nmap <leader>V :vnew<CR>
 
 " Add newline characters
 nnoremap <leader>o o<ESC>
