@@ -464,9 +464,25 @@
         </startupnotify>
       </action>
     </keybind>
+    <!-- <keybind key="W-S-Return"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <command>urxvtc</command> -->
+    <!--     <startupnotify> -->
+    <!--       <enabled>yes</enabled> -->
+    <!--     </startupnotify> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="W-m"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <command>urxvtc -title work -name work -e zsh -c 'TERM=xterm-256color ssh macbook'</command> -->
+    <!--     <startupnotify> -->
+    <!--       <enabled>yes</enabled> -->
+    <!--     </startupnotify> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
     <keybind key="W-S-Return">
       <action name="Execute">
-        <command>urxvtc</command>
+        <command>alacritty</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -474,7 +490,7 @@
     </keybind>
     <keybind key="W-m">
       <action name="Execute">
-        <command>urxvtc -title work -name work -e zsh -c 'TERM=xterm-256color ssh macbook'</command>
+        <command>alacritty -t work --class=work -e zsh -c 'ssh macbook'</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>

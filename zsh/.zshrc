@@ -18,3 +18,5 @@ if [ -d ${HOME}/.zsh.d ]; then
     source $f
   done
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

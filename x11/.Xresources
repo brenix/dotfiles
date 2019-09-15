@@ -1,5 +1,5 @@
 ! -- xft
-Xft.dpi:                     92
+Xft.dpi:                     100
 Xft.antialias:               true
 Xft.autohint:                false
 Xft.hinting:                 true

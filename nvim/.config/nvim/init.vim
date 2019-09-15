@@ -252,6 +252,9 @@ nmap <leader>V :vnew<CR>
 nnoremap <leader>o o<ESC>
 nnoremap <leader>O O<ESC>
 
+" Find in files
+nmap <leader>f :Rg<space>
+
 " Reload vimrc
 nmap <leader>r :source ~/.config/nvim/init.vim<CR>
 
