@@ -12,13 +12,13 @@ tabspaces: 4
 
 font:
   normal:
-    family: MonacoB Nerd Font Mono
+    family: Hack Nerd Font Mono
     style: Regular
   bold:
-    family: MonacoB Nerd Font Mono
+    family: Hack Nerd Font Mono
     style: Regular
   italic:
-    family: MonacoB Nerd Font Mono
+    family: Hack Nerd Font Mono
     style: Italic
   size: 10
   offset:
