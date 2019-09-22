@@ -42,6 +42,7 @@ rofi.modi:                   window,run
 rofi.padding:                1
 rofi.separator-style:        solid
 rofi.terminal:               alacritty
+rofi.theme:                  gruvbox-dark-soft
 rofi.width:                  20
 rofi.window-format:          {c}
 

@@ -59,6 +59,7 @@ Plug 'morhetz/gruvbox'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rakr/vim-one'
 Plug 'sainnhe/vim-color-desert-night'
+Plug 'sainnhe/gruvbox-material'
 
 call plug#end()
 
@@ -180,7 +181,7 @@ syntax enable
 set background=dark
 
 " Selected colorscheme
-colorscheme faded
+colorscheme gruvbox-material
 
 " }}}
 
@@ -400,7 +401,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'faded',
+  \ 'colorscheme': 'gruvbox_material',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]

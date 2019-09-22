@@ -8,20 +8,36 @@ margin-top    = 5
 margin-bottom = 5
 
 [colors]
-background     = #252933
-foreground     = #D8DEE9
-black          = #2E3440
-red            = #b77a76
-green          = #b4bf86
-yellow         = #cbb079
-blue           = #83a2be
-magenta        = #958090
-cyan           = #7daea9
-white          = #c5c8c6
-gray           = #858585
+;; faded
+; background     = #252933
+; foreground     = #D8DEE9
+; black          = #2E3440
+; red            = #b77a76
+; green          = #b4bf86
+; yellow         = #cbb079
+; blue           = #83a2be
+; magenta        = #958090
+; cyan           = #7daea9
+; white          = #c5c8c6
+; gray           = #858585
 
-background-alt = #4c566a
-foreground-alt = #e5e9f0
+; background-alt = #4c566a
+; foreground-alt = #e5e9f0
+
+background     = #282828
+foreground     = #d5c4a1
+black          = #282828
+red            = #cc241d
+green          = #98971a
+yellow         = #fabd2f
+blue           = #458588
+magenta        = #b16286
+cyan           = #689d6a
+white          = #a89984
+gray           = #ebdbb2
+
+background-alt = #282828
+foreground-alt = #fbf1c7
 
 [bar/main]
 bottom = true
