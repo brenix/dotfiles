@@ -1,5 +1,5 @@
 ! -- xft
-Xft.dpi:                     100
+Xft.dpi:                     200
 Xft.antialias:               true
 Xft.autohint:                false
 Xft.hinting:                 true
@@ -33,8 +33,8 @@ rofi.bw:                     2
 rofi.color-enabled:          true
 rofi.combi-hide-mode-prefix: true
 rofi.combi-modi:             window,run
-rofi.dpi:                    92
-rofi.font:                   Terminus (TTF) 9
+rofi.dpi:                    200
+rofi.font:                   Terminus (TTF) 8
 rofi.hide-scrollbar:         true
 rofi.line-margin:            1
 rofi.lines:                  10
@@ -42,7 +42,7 @@ rofi.modi:                   window,run
 rofi.padding:                1
 rofi.separator-style:        solid
 rofi.terminal:               alacritty
-rofi.theme:                  gruvbox-dark-soft
+/* rofi.theme:                  gruvbox-dark-soft */
 rofi.width:                  20
 rofi.window-format:          {c}
 

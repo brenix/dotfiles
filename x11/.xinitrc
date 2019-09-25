@@ -17,8 +17,8 @@ fi
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # -- scale gtk elements and fonts
-export GDK_SCALE=0.0
-export GDK_DPI_SCALE=1.0
+export GDK_SCALE=1
+export GDK_DPI_SCALE=0.5
 
 # -- set cursor
 xsetroot -cursor_name left_ptr &

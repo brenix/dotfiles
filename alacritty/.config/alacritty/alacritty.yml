@@ -1,6 +1,5 @@
 env:
   TERM: xterm-256color
-  WINIT_HIDPI_FACTOR: "1"
 
 scrolling:
   history: 10000
@@ -93,23 +92,25 @@ schemes:
       black:   '0x32302f'
       red:     '0xea6962'
       green:   '0xa9b665'
-      yellow:  '0xe78a4e'
+      # yellow:  '0xe78a4e'
+      yellow:  '0xd79921'
       blue:    '0x7daea3'
       magenta: '0xd3869b'
       cyan:    '0x89b482'
-      white:   '0xdfbf8e'
+      white:   '0xdfcaa9'
 
     bright:
       black:   '0x928374'
       red:     '0xea6962'
       green:   '0xa9b665'
-      yellow:  '0xe3a84e'
+      #yellow:  '0xe3a84e'
+      yellow:  '0xfabd2f'
       blue:    '0x7daea3'
       magenta: '0xd3869b'
       cyan:    '0x89b482'
-      white:   '0xdfbf8e'
+      white:   '0xdfcaa9'
 
-colors: *gruvbox-material
+colors: *faded
 
 visual_bell:
   animation: EaseOutExpo

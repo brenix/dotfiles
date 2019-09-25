@@ -9,45 +9,44 @@ margin-bottom = 5
 
 [colors]
 ;; faded
-; background     = #252933
-; foreground     = #D8DEE9
-; black          = #2E3440
-; red            = #b77a76
-; green          = #b4bf86
-; yellow         = #cbb079
-; blue           = #83a2be
-; magenta        = #958090
-; cyan           = #7daea9
-; white          = #c5c8c6
-; gray           = #858585
+background     = #252933
+foreground     = #D8DEE9
+black          = #2E3440
+red            = #b77a76
+green          = #b4bf86
+yellow         = #cbb079
+blue           = #83a2be
+magenta        = #958090
+cyan           = #7daea9
+white          = #c5c8c6
+gray           = #858585
+background-alt = #4c566a
+foreground-alt = #e5e9f0
 
-; background-alt = #4c566a
-; foreground-alt = #e5e9f0
-
-background     = #282828
-foreground     = #d5c4a1
-black          = #282828
-red            = #cc241d
-green          = #98971a
-yellow         = #fabd2f
-blue           = #458588
-magenta        = #b16286
-cyan           = #689d6a
-white          = #a89984
-gray           = #ebdbb2
-
-background-alt = #282828
-foreground-alt = #fbf1c7
+;; gruvbox
+; background     = #282828
+; foreground     = #d5c4a1
+; black          = #282828
+; red            = #cc241d
+; green          = #98971a
+; yellow         = #fabd2f
+; blue           = #458588
+; magenta        = #b16286
+; cyan           = #689d6a
+; white          = #a89984
+; gray           = #ebdbb2
+; background-alt = #282828
+; foreground-alt = #fbf1c7
 
 [bar/main]
 bottom = true
 
-#monitor          = ${env:MONITOR:}
-monitor          = ${env:MONITOR:DVI-I-1}
-monitor-fallback = ${env:MONITOR:DVI-D-0}
-dpi              = 92
+monitor          = ${env:MONITOR:DP-1}
+; monitor          = ${env:MONITOR:DVI-I-1}
+; monitor-fallback = ${env:MONITOR:DVI-D-0}
+dpi              = 200
 
-height           = 24
+height           = 50
 width            = 100%
 spacing          = 0
 
@@ -60,10 +59,10 @@ border-bottom-size  = 1
 border-top-color = ${colors.black}
 border-top-size  = 0
 
-font-0 = Terminus (TTF):style=Medium:pixelsize=10;2
-font-1 = Material Icons:size=12;4
+font-0 = Roboto Condensed:style=Medium:pixelsize=10;2
+font-1 = Material Icons:size=9;4
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-3 = "Wuncon Siji:pixelsize=10;1"
+font-3 = "Wuncon Siji:pixelsize=9;1"
 
 module-margin-left  = 2
 module-margin-right = 2
