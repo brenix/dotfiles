@@ -31,7 +31,7 @@
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is, 'Primary' - only on the primary monitor -->
-    <primaryMonitor>2</primaryMonitor>
+    <primaryMonitor>1</primaryMonitor>
     <!-- The monitor where Openbox should place popup dialogs such as the
        focus cycling popup, or the desktop switch popup.  It can be an index
        from 1, specifying a particular monitor.  Or it can be one of the
@@ -506,7 +506,7 @@
     </keybind>
     <keybind key="W-s">
       <action name="Execute">
-        <command>spotify</command>
+        <command>spotify --force-device-scale-factor=1.5</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -514,7 +514,7 @@
     </keybind>
     <keybind key="W-S-s">
       <action name="Execute">
-        <command>slack</command>
+        <command>slack --force-device-scale-factor=2</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -530,7 +530,7 @@
     </keybind>
     <keybind key="W-S-d">
       <action name="Execute">
-        <command>discord</command>
+        <command>discord --force-device-scale-factor=2</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -538,15 +538,7 @@
     </keybind>
     <keybind key="W-c">
       <action name="Execute">
-        <command>code</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-        </startupnotify>
-      </action>
-    </keybind>
-    <keybind key="W-n">
-      <action name="Execute">
-        <command>notable</command>
+        <command>code --force-device-scale-factor=2</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>

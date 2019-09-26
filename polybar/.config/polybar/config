@@ -44,7 +44,7 @@ bottom = true
 monitor          = ${env:MONITOR:DP-1}
 ; monitor          = ${env:MONITOR:DVI-I-1}
 ; monitor-fallback = ${env:MONITOR:DVI-D-0}
-dpi              = 200
+dpi              = 163
 
 height           = 50
 width            = 100%
@@ -59,9 +59,9 @@ border-bottom-size  = 1
 border-top-color = ${colors.black}
 border-top-size  = 0
 
-font-0 = Roboto Condensed:style=Medium:pixelsize=10;2
-font-1 = Material Icons:size=9;4
-font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-0 = Roboto Condensed:style=Medium:pixelsize=12;2
+font-1 = Material Icons:size=12;4
+font-2 = unifont:fontformat=truetype:size=9:antialias=false;0
 font-3 = "Wuncon Siji:pixelsize=9;1"
 
 module-margin-left  = 2

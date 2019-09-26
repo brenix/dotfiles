@@ -14,7 +14,7 @@
   </item>
   <item label="CODE">
     <action name="Execute">
-      <command>code</command>
+      <command>code --force-device-scale-factor=2</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -27,30 +27,20 @@
   </item>
   <item label="SLACK">
     <action name="Execute">
-      <command>slack</command>
+      <command>slack --force-device-scale-factor=2</command>
     </action>
   </item>
   <item label="DISCORD">
     <action name="Execute">
-      <command>discord</command>
+      <command>discord --force-device-scale-factor=2</command>
     </action>
   </item>
   <item label="SPOTIFY">
     <action name="Execute">
-      <command>spotify</command>
+      <command>spotify --force-device-scale-factor=1.5</command>
     </action>
   </item>
   <separator label="-- KVM --" />
-  <item label="SINGLE MONITOR">
-    <action name="Execute">
-      <command>xrandr --output DVI-I-1 --off</command>
-    </action>
-  </item>
-  <item label="DUAL MONITOR">
-    <action name="Execute">
-      <command>xrandr --output DVI-I-1 --mode 1920x1080 --rate 144 --left-of DVI-D-0</command>
-    </action>
-  </item>
   <item label="VIRT MANAGER">
     <action name="Execute">
       <command>virt-manager</command>
@@ -66,12 +56,6 @@
   <item label="OBCONF">
     <action name="Execute">
       <command>obconf</command>
-      <startupnotify><enabled>yes</enabled></startupnotify>
-    </action>
-  </item>
-  <item label="WALLPAPER">
-    <action name="Execute">
-      <command>nitrogen</command>
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>

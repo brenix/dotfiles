@@ -16,9 +16,10 @@ fi
 # -- ensure that gtk themes are applied uniformly in the desktop environment
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
-# -- scale gtk elements and fonts
-export GDK_SCALE=1
+# -- hidpi
+export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
+export QT_SCALE_FACTOR=1.5
 
 # -- set cursor
 xsetroot -cursor_name left_ptr &
@@ -39,11 +40,10 @@ autocutsel -selection PRIMARY -fork &
 numlockx &
 
 # -- color calibration
-xcalib -o 0 -b 0.9 -gc 1.05 $HOME/.colors/asus-vg248qe.icm
-xcalib -o 1 -b 0.9 -gc 1.05 $HOME/.colors/asus-vg248qe.icm
+xcalib -o 0 -b 0 -gc 0.8 $HOME/.colors/asus-vg248qe.icm
 
 # -- barrier/synergy
-pgrep barriers || barriers --enable-crypto -c ~/.local/share/barrier/barrier-macbook.conf &
+pgrep barriers || barriers --enable-crypto &
 
 # -- map capslock to escape
 setxkbmap -option caps:escape

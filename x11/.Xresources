@@ -1,11 +1,16 @@
 ! -- xft
-Xft.dpi:                     200
+Xft.dpi:                     163
 Xft.antialias:               true
 Xft.autohint:                false
 Xft.hinting:                 true
 Xft.hintstyle:               hintslight
 Xft.lcdfilter:               lcddefault
 Xft.rgba:                    rgb
+
+! -- cursor
+!Xcursor.size:                64
+Xcursor.theme:               capitaine-cursors
+
 
 ! -- urxvt
 URxvt*boldFont:
@@ -33,7 +38,7 @@ rofi.bw:                     2
 rofi.color-enabled:          true
 rofi.combi-hide-mode-prefix: true
 rofi.combi-modi:             window,run
-rofi.dpi:                    200
+rofi.dpi:                    163
 rofi.font:                   Terminus (TTF) 8
 rofi.hide-scrollbar:         true
 rofi.line-margin:            1
