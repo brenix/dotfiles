@@ -181,7 +181,7 @@ syntax enable
 set background=dark
 
 " Selected colorscheme
-colorscheme faded
+colorscheme niceberg
 
 " }}}
 
@@ -401,7 +401,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'faded',
+  \ 'colorscheme': 'niceberg',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
