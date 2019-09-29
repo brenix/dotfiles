@@ -111,10 +111,10 @@ schemes:
       white:   '0xdfcaa9'
   niceberg: &niceberg
     primary:
-      background: '0x171820'
+      background: '0x161821'
       foreground: '0xc5c8c6'
     normal:
-      black:   '0x15171d'
+      black:   '0x20252d'
       red:     '0xe27878'
       green:   '0xb4be82'
       yellow:  '0xcbb079'
@@ -123,7 +123,7 @@ schemes:
       cyan:    '0x89b8c2'
       white:   '0xc6c8d1'
     bright:
-      black:   '0x757989'
+      black:   '0x555863'
       red:     '0xe98989'
       green:   '0xc0ca8e'
       yellow:  '0xd9bc81'

@@ -52,10 +52,10 @@ rofi.width:                  20
 rofi.window-format:          {c}
 
 ! State:                    'bg',     'fg',    'bgalt', 'hlbg',  'hlfg'
-rofi.color-active:           #252933, #606778, #252933, #4c566a, #e5e9f0
-rofi.color-normal:           #252933, #606778, #252933, #4c566a, #e5e9f0
-rofi.color-urgent:           #252933, #606778, #252933, #4c566a, #e5e9f0
-rofi.color-window:           #252933, #606778
+rofi.color-active:           #161821, #c6c8d1, #161821, #1b1f27, #d2d4de
+rofi.color-normal:           #161821, #c6c8d1, #161821, #1b1f27, #d2d4de
+rofi.color-urgent:           #161821, #c6c8d1, #161821, #1b1f27, #d2d4de
+rofi.color-window:           #161821, #c6c8d1
 
 ! -- colors
 #include ".xcolors.d/faded"

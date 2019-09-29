@@ -9,19 +9,19 @@ margin-bottom = 5
 
 [colors]
 ;; faded
-background     = #252933
-foreground     = #D8DEE9
-black          = #2E3440
-red            = #b77a76
-green          = #b4bf86
-yellow         = #cbb079
-blue           = #83a2be
-magenta        = #958090
-cyan           = #7daea9
-white          = #c5c8c6
-gray           = #858585
-background-alt = #4c566a
-foreground-alt = #e5e9f0
+; background     = #252933
+; foreground     = #D8DEE9
+; black          = #2E3440
+; red            = #b77a76
+; green          = #b4bf86
+; yellow         = #cbb079
+; blue           = #83a2be
+; magenta        = #958090
+; cyan           = #7daea9
+; white          = #c5c8c6
+; gray           = #858585
+; background-alt = #4c566a
+; foreground-alt = #e5e9f0
 
 ;; gruvbox
 ; background     = #282828
@@ -37,6 +37,21 @@ foreground-alt = #e5e9f0
 ; gray           = #ebdbb2
 ; background-alt = #282828
 ; foreground-alt = #fbf1c7
+
+;; niceberg
+background     = #161821
+foreground     = #c5c8c6
+black          = #20252d
+red            = #e27878
+green          = #b4be82
+yellow         = #cbb079
+blue           = #84a0c6
+magenta        = #978fb2
+cyan           = #89b8c2
+white          = #c6c8d1
+gray           = #555863
+background-alt = #4c566a
+foreground-alt = #d2d4de
 
 [bar/main]
 bottom = true

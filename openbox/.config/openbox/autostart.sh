@@ -4,5 +4,5 @@
 # to run user-specific things.
 polybar main -r &
 
-#$HOME/.fehbg
-xsetroot -solid "#3B4252"
+$HOME/.fehbg
+# xsetroot -solid "#3B4252"
