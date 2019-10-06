@@ -30,7 +30,6 @@ Plug 'airblade/vim-rooter'
 Plug 'andrewstuart/vim-kubernetes'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'itchyny/calendar.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'juliosueiras/vim-terraform-completion'
@@ -140,7 +139,6 @@ endif
 " Close netrw buffer after opening file
 let g:netrw_fastbrowse = 0
 
-
 " }}}
 
 " --- Formatting/Saving {{{
@@ -225,8 +223,6 @@ let g:mapleader = "\<Space>"
 map <leader>h :nohlsearch<CR>
 
 " Close buffer
-"map <leader>x :bp<bar>sp<bar>bn<bar>bd<CR>
-"map <leader>x :bp<bar>sp<bar>bn<bar>bd!<CR>
 map <leader>x :Bwipeout<CR>
 map <leader>X :Bwipeout!<CR>
 
@@ -303,9 +299,6 @@ nnoremap <leader>d :<C-u>CocList diagnostics<CR>
 " Toggle tagbar
 nnoremap <leader>t :TagbarToggle<CR>
 
-" Show GoDoc
-nnoremap <leader>g :GoDoc<CR>
-
 " ----- Function keys
 
 " Toggle paste mode
@@ -375,29 +368,11 @@ nnoremap N Nzzzv
 
 " }}}
 
-" --- Plugin: itchyny/calendar.vim {{{
-
-" Enable Google Calendar integration.
-let g:calendar_google_calendar = 1
-
-" Enable Google Tasks integration.
-let g:calendar_google_task = 1
-
-" Other options
-let g:calendar_first_day = "monday" " Weeks starts with Monday
-let g:calendar_date_endian = "big"  " Format: year / month / day
-let g:calendar_date_separator = "-" " Format: year - month - day
-let g:calendar_week_number = 1      " Show week numbers
-let g:calendar_view = "days"        " Set days as the default view
-
-" }}}
-
 " --- Plugin: itchyny/lightline.vim {{{
 
 function! CocCurrentFunction()
     return get(b:, 'coc_current_function', '')
 endfunction
-
 
 " Set lightline config
 let g:lightline = {
@@ -622,6 +597,9 @@ let g:instant_markdown_autostart = 0
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
+
+" disable autocompletion
+let g:go_code_completion_enabled = 0
 
 " }}}
 
