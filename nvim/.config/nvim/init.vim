@@ -518,6 +518,9 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
 
+"Insert newline with matching brackets
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "<C-g>u<CR><c-r>=coc#on_enter()<CR>"
+
 " }}}
 
 " --- Plugin: sheerun/vim-polyglot {{{

@@ -14,7 +14,7 @@
   </item>
   <item label="CODE">
     <action name="Execute">
-      <command>code --force-device-scale-factor=2</command>
+      <command>code</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
