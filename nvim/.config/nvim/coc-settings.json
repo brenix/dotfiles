@@ -28,7 +28,7 @@
     "git.changeRemovedSign.text": "▋",
     "coc.preferences.snippetStatusText": "Ⓢ ",
     "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnSaveFiletypes": ["go", "yaml", "json", "css", "markdown"],
+    "coc.preferences.formatOnSaveFiletypes": ["go", "json", "css", "markdown"],
     "coc.preferences.currentFunctionSymbolAutoUpdate": true,
     "codeLens.enable": true,
     "prettier.statusItemText": "ⓟ ",
