@@ -66,7 +66,7 @@ zplugin snippet "https://raw.githubusercontent.com/junegunn/fzf/master/shell/key
 # autosuggestions
 
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=48
-ZSH_AUTOSUGGEST_STRATEGY=history
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=("expand-or-complete")
 
