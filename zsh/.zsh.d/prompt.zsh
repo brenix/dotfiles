@@ -1,13 +1,13 @@
 # spaceship configuration
 SPACESHIP_PROMPT_ORDER=(
-  user      # Username section
-  host      # Hostname section
+  # user      # Username section
+  # host      # Hostname section
   dir       # Current directory section
   git       # Git section (git_branch + git_status)
   venv      # Python virtualenv section
   aws       # Amazon Web Services section
   terraform # Terraform workspace section
-  line_sep  # Line separator
+  # line_sep  # Line separator
   exit_code # Exit code section
   char      # Prompt character
 )
@@ -18,7 +18,7 @@ SPACESHIP_PROMPT_ORDER=(
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_CHAR_SYMBOL="▶"
 
-SPACESHIP_DIR_COLOR="green"
+SPACESHIP_DIR_COLOR="blue"
 SPACESHIP_DIR_PREFIX=""
 SPACESHIP_DIR_SUFFIX=" "
 
@@ -34,7 +34,7 @@ SPACESHIP_HOST_SHOW="true"
 
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=false
-SPACESHIP_PROMPT_SEPARATE_LINE=true
+SPACESHIP_PROMPT_SEPARATE_LINE=false
 
 SPACESHIP_USER_COLOR="blue"
 SPACESHIP_USER_PREFIX=""
