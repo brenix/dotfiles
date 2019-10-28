@@ -37,7 +37,13 @@ zplugin ice wait'1' silent
 zplugin snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
 # ssh
-zstyle :omz:plugins:ssh-agent identities id_ed25519 id_ed25519_work
+identities=()
+for f in $HOME/.ssh/*; do
+  if [[ ${f##*/} == id_* && ${f##*/} != *.pub ]]; then
+    identities+=${f##*/}
+  fi
+done
+zstyle :omz:plugins:ssh-agent identities ${identities[@]}
 zplugin ice wait lucid
 zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 
