@@ -146,10 +146,18 @@ let g:netrw_fastbrowse = 0
 " Highlight trailing whitespace
 match errorMsg /\s\+$/
 
+function! StripTrailingWhitespace()
+  " Dont strip on these filetypes
+  if &ft =~ 'markdown'
+    return
+  endif
+  %s/\s\+$//e
+endfunction
+
 augroup mygroup
   autocmd!
   " Remove trailing whitespace on save
-  autocmd BufWritePre * %s/\s\+$//e
+  autocmd BufWritePre * call StripTrailingWhitespace()
 
   " Disable inserting comments on new line
   autocmd FileType * set formatoptions-=c formatoptions-=r formatoptions-=o
