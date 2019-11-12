@@ -50,6 +50,10 @@ setxkbmap -option caps:escape
 # -- urxvt
 urxvtd -q -o -f
 
+# -- webcam
+
+[ -e /dev/video0 ] && v4l2-ctl -c focus_auto=0
+
 # -- window manager
 
 #compton -bCG -o 0.45 -m 0.88 --no-fading-openclose --opacity-rule "90:class_g = 'Code'" --opacity-rule "90:class_g = 'Slack'"

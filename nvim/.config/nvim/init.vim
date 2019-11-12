@@ -146,10 +146,18 @@ let g:netrw_fastbrowse = 0
 " Highlight trailing whitespace
 match errorMsg /\s\+$/
 
+function! StripTrailingWhitespace()
+  " Dont strip on these filetypes
+  if &ft =~ 'markdown'
+    return
+  endif
+  %s/\s\+$//e
+endfunction
+
 augroup mygroup
   autocmd!
   " Remove trailing whitespace on save
-  autocmd BufWritePre * %s/\s\+$//e
+  autocmd BufWritePre * call StripTrailingWhitespace()
 
   " Disable inserting comments on new line
   autocmd FileType * set formatoptions-=c formatoptions-=r formatoptions-=o
@@ -301,8 +309,8 @@ nnoremap <leader>t :TagbarToggle<CR>
 
 " ----- Function keys
 
-" Toggle paste mode
-set pastetoggle=<F2>
+" Rename function
+nnoremap <F2> <Plug>(coc-rename)
 
 " Add shortcut for toggling the tag bar
 nnoremap <F4> :TagbarToggle<CR>
@@ -322,6 +330,9 @@ inoremap <S-Tab> <C-D>
 " Visual mode: Use tab to indent highlighted blocks
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+
+" Show documentation
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " ----- Passive keybindings
 
