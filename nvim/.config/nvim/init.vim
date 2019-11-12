@@ -331,9 +331,6 @@ inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
-" Show documentation
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
 " ----- Passive keybindings
 
 " Fix some common typos
