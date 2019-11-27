@@ -40,5 +40,5 @@ alias vv='nvim ~/.dotfiles/nvim/.config/nvim/init.vim'
 alias x='startx'
 alias xrefresh='xrdb load ~/.Xresources && xrdb -merge ~/.Xresources'
 alias yay='yay --editmenu'
-if [[ "$OSTYPE" == "darwin"*  ]]; then alias u='brew update && brew upgrade && brew cleanup'; fi
+if [[ "$OSTYPE" == "darwin"*  ]]; then alias u='brew update && brew upgrade && brew cleanup && brew cask upgrade'; fi
 if [[ "$OSTYPE" == "linux-gnu" ]]; then alias u='yay -Syu --editmenu'; fi
