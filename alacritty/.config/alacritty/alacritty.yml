@@ -18,7 +18,7 @@ font:
   italic:
     family: Hack Nerd Font Mono
     style: Italic
-  size: 7
+  size: 7.5
   offset:
     x: 0
     y: 0
@@ -108,30 +108,39 @@ schemes:
       magenta: '0xd3869b'
       cyan:    '0x89b482'
       white:   '0xdfcaa9'
-  niceberg: &niceberg
+  grayscale: &grayscale
+    # Default colors
     primary:
-      background: '0x161821'
-      foreground: '0xc5c8c6'
-    normal:
-      black:   '0x20252d'
-      red:     '0xe27878'
-      green:   '0xb4be82'
-      yellow:  '0xcbb079'
-      blue:    '0x84a0c6'
-      magenta: '0x978fb2'
-      cyan:    '0x89b8c2'
-      white:   '0xc6c8d1'
-    bright:
-      black:   '0x555863'
-      red:     '0xe98989'
-      green:   '0xc0ca8e'
-      yellow:  '0xd9bc81'
-      blue:    '0x91acd1'
-      magenta: '0xa59dc3'
-      cyan:    '0x95c4ce'
-      white:   '0xd2d4de'
+      background: '0x101010'
+      foreground: '0xb9b9b9'
 
-colors: *faded
+    # Normal colors
+    normal:
+      black:   '0x101010'
+      #red:     '0x7c7c7c'
+      #green:   '0x8e8e8e'
+      red:     '0xc05776'
+      green:   '0xa7ecb7'
+      yellow:  '0xa0a0a0'
+      blue:    '0x686868'
+      magenta: '0x747474'
+      cyan:    '0x868686'
+      white:   '0xb9b9b9'
+
+    # Bright colors
+    bright:
+      black:   '0x525252'
+      #red:     '0x7c7c7c'
+      #green:   '0x8e8e8e'
+      red:     '0xc05776'
+      green:   '0xa7ecb7'
+      yellow:  '0xa0a0a0'
+      blue:    '0x686868'
+      magenta: '0x747474'
+      cyan:    '0x868686'
+      white:   '0xf7f7f7'
+
+colors: *grayscale
 
 visual_bell:
   animation: EaseOutExpo
