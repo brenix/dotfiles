@@ -8,21 +8,6 @@ margin-top    = 5
 margin-bottom = 5
 
 [colors]
-;; brenix-hacker-v2
-background     = #101010
-foreground     = #848484
-black          = #1c1c1c
-red            = #994858
-green          = #8fc79a
-yellow         = #888888
-blue           = #618c6c
-magenta        = #507057
-cyan           = #8aa18c
-white          = #616161
-gray           = #505050
-background-alt = #121212
-foreground-alt = #858585
-
 ;; faded
 ; background     = #252933
 ; foreground     = #D8DEE9
@@ -39,19 +24,19 @@ foreground-alt = #858585
 ; foreground-alt = #e5e9f0
 
 ;; gruvbox
-; background     = #282828
-; foreground     = #d5c4a1
-; black          = #282828
-; red            = #cc241d
-; green          = #98971a
-; yellow         = #fabd2f
-; blue           = #458588
-; magenta        = #b16286
-; cyan           = #689d6a
-; white          = #a89984
-; gray           = #ebdbb2
-; background-alt = #282828
-; foreground-alt = #fbf1c7
+background     = #282828
+foreground     = #d5c4a1
+black          = #282828
+red            = #cc241d
+green          = #98971a
+yellow         = #fabd2f
+blue           = #458588
+magenta        = #b16286
+cyan           = #689d6a
+white          = #a89984
+gray           = #ebdbb2
+background-alt = #282828
+foreground-alt = #fbf1c7
 
 ;; niceberg
 ; background     = #161821

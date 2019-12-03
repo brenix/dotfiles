@@ -187,6 +187,7 @@ syntax enable
 set background=dark
 
 " Selected colorscheme
+let g:gruvbox_material_background = 'hard'
 colorscheme gruvbox-material
 
 " }}}
