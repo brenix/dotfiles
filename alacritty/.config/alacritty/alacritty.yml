@@ -59,7 +59,8 @@ schemes:
   gruvbox: &gruvbox
     primary:
       # hard contrast: background = '0x1d2021'
-      background: '0x282828'
+      #background: '0x282828'
+      background: '0x1d2021'
       # soft contrast: background = '0x32302f'
       foreground: '0xd5c4a1'
     normal:
@@ -82,10 +83,10 @@ schemes:
       white:   '0xebdbb2'
   gruvbox-material: &gruvbox-material
     primary:
-      background: '0x282828'
+      #background: '0x282828'
+      background: '0x1d2021'
       #foreground: '0xdfbf8e'
       foreground: '0xd5c4a1'
-
     normal:
       # black:   '0x665c54'
       black:   '0x32302f'
@@ -97,7 +98,6 @@ schemes:
       magenta: '0xd3869b'
       cyan:    '0x89b482'
       white:   '0xdfcaa9'
-
     bright:
       black:   '0x928374'
       red:     '0xea6962'
@@ -109,12 +109,9 @@ schemes:
       cyan:    '0x89b482'
       white:   '0xdfcaa9'
   grayscale: &grayscale
-    # Default colors
     primary:
       background: '0x101010'
       foreground: '0xb9b9b9'
-
-    # Normal colors
     normal:
       black:   '0x101010'
       #red:     '0x7c7c7c'
@@ -126,8 +123,6 @@ schemes:
       magenta: '0x747474'
       cyan:    '0x868686'
       white:   '0xb9b9b9'
-
-    # Bright colors
     bright:
       black:   '0x525252'
       #red:     '0x7c7c7c'
@@ -140,7 +135,7 @@ schemes:
       cyan:    '0x868686'
       white:   '0xf7f7f7'
 
-colors: *grayscale
+colors: *gruvbox-material
 
 visual_bell:
   animation: EaseOutExpo

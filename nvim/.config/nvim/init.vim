@@ -187,7 +187,7 @@ syntax enable
 set background=dark
 
 " Selected colorscheme
-colorscheme lessthan
+colorscheme gruvbox-material
 
 " }}}
 
@@ -384,7 +384,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'grayscale',
+  \ 'colorscheme': 'gruvbox_material',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
