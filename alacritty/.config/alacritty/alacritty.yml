@@ -134,8 +134,30 @@ schemes:
       magenta: '0x747474'
       cyan:    '0x868686'
       white:   '0xf7f7f7'
+  brenix-hacker-v2: &brenix-hacker-v2
+    primary:
+      background: '0x090909'
+      foreground: '0xb0b0b0'
+    normal:
+      black:   '0x202020'
+      red:     '0xc05776'
+      green:   '0x94d4a9'
+      yellow:  '0x7d94ab'
+      blue:    '0x70997a'
+      magenta: '0x507057'
+      cyan:    '0x7574a5'
+      white:   '0x696969'
+    bright:
+      black:   '0x454545'
+      red:     '0xc05776'
+      green:   '0xa7ecb7'
+      yellow:  '0x89a7c4'
+      blue:    '0x81b38c'
+      magenta: '0x5f8a6a'
+      cyan:    '0x7574a5'
+      white:   '0xcdcdcd'
 
-colors: *gruvbox-material
+colors: *faded
 
 visual_bell:
   animation: EaseOutExpo

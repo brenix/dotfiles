@@ -2,10 +2,6 @@
 # wm independent hotkeys
 #
 
-# terminal emulator
-super + Return
-	urxvtc
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -23,7 +19,7 @@ super + {_,shift + }w
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
-super + m
+super + t
 	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
@@ -47,7 +43,7 @@ super + f
 	bspc node -t floating
 
 # set fullscreen
-super + m
+super + shift + f
 	bspc node -t fullscreen
 
 # set the node flags
@@ -154,23 +150,27 @@ XF86AudioStop
 #
 # shortcuts
 #
+
+super + Return
+  urxvtc
+
 super + d
 	google-chrome-unstable
 
 super + s
-	spotify
+	spotify --force-device-scale-factor=1.5
 
 super + shift + s
-  slack
+  slack --force-device-scale-factor=2
 
 super + c
-	code
+	code --force-device-scale-factor=1.5
 
 super + v
 	pavucontrol
 
 super + shift + d
-	discord
+	discord --force-device-scale-factor=2
 
 super + shift + p
 	pcmanfm
@@ -181,5 +181,6 @@ super + @space
 Print
 	flameshot gui
 
-F3
-	urxvtc -e zsh -c "ssh macbook"
+super + m
+  urxvtc -title work -name work -e "zsh" -c "ssh macbook"
+	#alacritty -t work --clas=work -e zsh -c "ssh macbook"

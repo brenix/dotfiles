@@ -11,10 +11,9 @@ Xft.rgba:                    rgb
 !Xcursor.size:                64
 Xcursor.theme:               capitaine-cursors
 
-
 ! -- urxvt
 URxvt*boldFont:
-URxvt*font:                  -*-dash-*-*-*-*-*-*-*-*-*-*-*-*,xft:Hack Nerd Font Mono:pixelsize=12
+URxvt*font:                  xft:Hack Nerd Font Mono:pixelsize=16
 URxvt*termName:              rxvt-256color
 URxvt.depth:                 32
 URxvt*lineSpace:             1
@@ -32,35 +31,6 @@ URxvt.matcher.button:        1
 URxvt.matcher.rend.0:        Uline Bold fg12
 URxvt.cursorBlink:           1
 URxvt.cursorUnderline:       1
-
-! -- rofi
-rofi.bw:                     2
-rofi.color-enabled:          true
-rofi.combi-hide-mode-prefix: true
-rofi.combi-modi:             window,run
-rofi.dpi:                    163
-rofi.font:                   Terminus (TTF) 8
-rofi.hide-scrollbar:         true
-rofi.line-margin:            1
-rofi.lines:                  10
-rofi.modi:                   window,run
-rofi.padding:                1
-rofi.separator-style:        solid
-rofi.terminal:               alacritty
-rofi.width:                  20
-rofi.window-format:          {c}
-
-! State:                    'bg',     'fg',    'bgalt', 'hlbg',  'hlfg'
-!rofi.color-active:           #252933, #606778, #252933, #4c566a, #e5e9f0
-!rofi.color-normal:           #252933, #606778, #252933, #4c566a, #e5e9f0
-!rofi.color-urgent:           #252933, #606778, #252933, #4c566a, #e5e9f0
-!rofi.color-window:           #252933, #606778
-
-! State:                    'bg',     'fg',    'bgalt', 'hlbg',  'hlfg'
-rofi.color-active:           #1d2021, #d5c4a1, #1d2021, #3a3633, #fbf1c7
-rofi.color-normal:           #1d2021, #d5c4a1, #1d2021, #3a3633, #fbf1c7
-rofi.color-urgent:           #1d2021, #d5c4a1, #1d2021, #3a3633, #fbf1c7
-rofi.color-window:           #1d2021, #d5c4a1
 
 ! -- colors
 #include ".xcolors.d/faded"

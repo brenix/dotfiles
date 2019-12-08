@@ -8,6 +8,23 @@ margin-top    = 5
 margin-bottom = 5
 
 [colors]
+;; wal
+background     = ${xrdb:color0:#222}
+foreground     = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color7:#222}
+primary        = ${xrdb:color1:#222}
+secondary      = ${xrdb:color2:#222}
+alert          = ${xrdb:color3:#222}
+black          = ${xrdb:color0:#222}
+red            = ${xrdb:color1:#222}
+green          = ${xrdb:color2:#222}
+yellow         = ${xrdb:color3:#222}
+blue           = ${xrdb:color4:#222}
+magenta        = ${xrdb:color5:#222}
+cyan           = ${xrdb:color6:#222}
+white          = ${xrdb:color15:#222}
+gray           = ${xrdb:color7:#222}
+
 ;; faded
 ; background     = #252933
 ; foreground     = #D8DEE9
@@ -23,45 +40,15 @@ margin-bottom = 5
 ; background-alt = #4c566a
 ; foreground-alt = #e5e9f0
 
-;; gruvbox
-background     = #282828
-foreground     = #d5c4a1
-black          = #282828
-red            = #cc241d
-green          = #98971a
-yellow         = #fabd2f
-blue           = #458588
-magenta        = #b16286
-cyan           = #689d6a
-white          = #a89984
-gray           = #ebdbb2
-background-alt = #282828
-foreground-alt = #fbf1c7
-
-;; niceberg
-; background     = #161821
-; foreground     = #c5c8c6
-; black          = #20252d
-; red            = #e27878
-; green          = #b4be82
-; yellow         = #cbb079
-; blue           = #84a0c6
-; magenta        = #978fb2
-; cyan           = #89b8c2
-; white          = #c6c8d1
-; gray           = #555863
-; background-alt = #4c566a
-; foreground-alt = #d2d4de
-
 [bar/main]
-bottom = true
+top = true
 
 monitor          = ${env:MONITOR:DP-1}
 ; monitor          = ${env:MONITOR:DVI-I-1}
 ; monitor-fallback = ${env:MONITOR:DVI-D-0}
 dpi              = 163
 
-height           = 50
+height           = 32
 width            = 100%
 spacing          = 0
 
@@ -74,7 +61,7 @@ border-bottom-size  = 1
 border-top-color = ${colors.black}
 border-top-size  = 0
 
-font-0 = Roboto Condensed:style=Medium:pixelsize=12;2
+font-0 = Roboto Condensed:style=Medium:pixelsize=10;2
 font-1 = Material Icons:size=12;4
 font-2 = unifont:fontformat=truetype:size=9:antialias=false;0
 font-3 = "Wuncon Siji:pixelsize=9;1"
@@ -83,7 +70,7 @@ module-margin-left  = 2
 module-margin-right = 2
 
 modules-left  = workspaces
-modules-center = spotify mpd
+modules-center = spotify
 modules-right = temperature cpu memory volume date time
 
 offset-x = 0
@@ -91,8 +78,6 @@ offset-y = 0
 
 padding-left  = 1
 padding-right = 1
-
-# wm-restack = bspwm
 
 # ---- MODULES
 

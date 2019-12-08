@@ -1,5 +1,5 @@
 [options]
-font                = Hack Nerd Font Mono 11
+font                = Hack Nerd Font Mono 10
 allow_bold          = false
 audible_bell        = false
 browser             = google-chrome-unstable

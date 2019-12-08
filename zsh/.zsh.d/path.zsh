@@ -5,7 +5,6 @@ typeset -U path PATH cdpath CDPATH fpath FPATH manpath MANPATH
 path=(
   $HOME/.cargo/bin
   $HOME/.krew/bin
-  $HOME/.local/bin
   $HOME/bin
   $HOME/go/bin
   /usr/local/opt/ruby/bin
