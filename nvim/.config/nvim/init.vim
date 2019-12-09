@@ -86,13 +86,13 @@ set autoread                   " Reload file if the file changes on the disk
 set backspace=indent,eol,start " Allow backspacing over indentation/line breaks/insertion
 set breakindent                " Wrap long lines of text with initial indentation
 set cmdheight=2                " Set height of the cmd pane to 1
-"set colorcolumn=101            " Highlight the 10th column as an indicator
+set colorcolumn=101            " Highlight the 10th column as an indicator
 set complete-=i                " Limit the files searched for auto-completes
 set completeopt-=preview       " Remove the horrendous preview window
 set completeopt=longest,menu   " Make completion popup menu work like ide
 set conceallevel=0             " Disable concealed text
 set copyindent                 " Copy the previous indentation on autoindent
-"set cursorline                 " Highlight the current line for the cursor
+set cursorline                 " Highlight the current line for the cursor
 set encoding=utf-8             " Set encoding to UTF-8
 set expandtab                  " Expands tabs to spaces
 set formatoptions=tqonj        " Set vims text formatting options
@@ -175,11 +175,11 @@ augroup end
 " --- Colors {{{
 
 " Enable truecolor support in NVIM
-"if (has("nvim"))
-"  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-"  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"  set termguicolors
-"endif
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  set termguicolors
+endif
 
 " Enable syntax highlighting
 syntax enable
@@ -188,8 +188,7 @@ syntax enable
 set background=dark
 
 " Selected colorscheme
-let g:gruvbox_material_background = 'hard'
-colorscheme wal
+colorscheme faded
 
 " }}}
 
@@ -386,7 +385,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'wal',
+  \ 'colorscheme': 'faded',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]

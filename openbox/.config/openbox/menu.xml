@@ -27,17 +27,17 @@
   </item>
   <item label="SLACK">
     <action name="Execute">
-      <command>slack --force-device-scale-factor=2</command>
+      <command>slack</command>
     </action>
   </item>
   <item label="DISCORD">
     <action name="Execute">
-      <command>discord --force-device-scale-factor=2</command>
+      <command>discord</command>
     </action>
   </item>
   <item label="SPOTIFY">
     <action name="Execute">
-      <command>spotify --force-device-scale-factor=1.5</command>
+      <command>spotify</command>
     </action>
   </item>
   <separator label="-- KVM --" />

@@ -4,8 +4,8 @@
 # to run user-specific things.
 polybar main -r &
 
-#$HOME/.fehbg
+$HOME/.fehbg
 #xsetroot -solid "#3B4252"
 
 # restore wal settings
-wal -R
+#wal -R

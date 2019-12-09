@@ -39,7 +39,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>brenix-hacker</name>
+    <name>faded</name>
     <titleLayout>LMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -51,11 +51,11 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
   -->
-    <keepBorder>yes</keepBorder>
+    <keepBorder>no</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>Roboto Condensed,</name>
-      <size>9</size>
+      <name>Verdana-AllCaps</name>
+      <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -63,8 +63,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Roboto Condensed,</name>
-      <size>9</size>
+      <name>Verdana-AllCaps</name>
+      <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -72,8 +72,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Roboto Condensed,</name>
-      <size>9</size>
+      <name>Verdana-AllCaps</name>
+      <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -81,8 +81,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Roboto Condensed,</name>
-      <size>9</size>
+      <name>Verdana-AllCaps</name>
+      <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -90,8 +90,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Roboto Condensed,</name>
-      <size>9</size>
+      <name>Verdana-AllCaps</name>
+      <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -99,8 +99,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Roboto Condensed,</name>
-      <size>9</size>
+      <name>Verdana-AllCaps</name>
+      <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -506,7 +506,7 @@
     </keybind>
     <keybind key="W-s">
       <action name="Execute">
-        <command>spotify --force-device-scale-factor=1.5</command>
+        <command>spotify</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -514,7 +514,7 @@
     </keybind>
     <keybind key="W-S-s">
       <action name="Execute">
-        <command>slack --force-device-scale-factor=2</command>
+        <command>slack</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -530,7 +530,7 @@
     </keybind>
     <keybind key="W-S-d">
       <action name="Execute">
-        <command>discord --force-device-scale-factor=2</command>
+        <command>discord</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -538,7 +538,7 @@
     </keybind>
     <keybind key="W-c">
       <action name="Execute">
-        <command>code --force-device-scale-factor=1.5</command>
+        <command>code</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>

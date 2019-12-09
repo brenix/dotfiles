@@ -1,14 +1,14 @@
 configuration {
-	bw: 2;
+	bw: 0;
 	combi-hide-mode-prefix: true;
 	combi-modi: "window,run";
-	dpi: 163;
-	font: "Terminus (TTF) 8";
+	dpi: 92;
+	font: "Terminus 9";
 	hide-scrollbar: true;
 	line-margin: 1;
 	lines: 10;
 	modi: "window,run";
-	padding: 1;
+	padding: 0;
 	separator-style: "solid";
 	terminal: "alacritty";
 	width: 20;

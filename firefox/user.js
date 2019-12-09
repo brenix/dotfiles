@@ -221,5 +221,5 @@ user_pref("browser.tabs.drawInTitlebar", true);
 user_pref("gfx.webrender.all", true);
 
 // Set DPI to 163px
-user_pref("layout.css.dpi", 163);
+user_pref("layout.css.dpi", 92);
 user_pref("layout.css.devPixelsPerpx", 1);

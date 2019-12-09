@@ -1,5 +1,5 @@
 ! -- xft
-Xft.dpi:                     163
+Xft.dpi:                     92
 Xft.antialias:               true
 Xft.autohint:                false
 Xft.hinting:                 true
@@ -8,16 +8,16 @@ Xft.lcdfilter:               lcddefault
 Xft.rgba:                    rgb
 
 ! -- cursor
-!Xcursor.size:                64
 Xcursor.theme:               capitaine-cursors
 
 ! -- urxvt
 URxvt*boldFont:
-URxvt*font:                  xft:Hack Nerd Font Mono:pixelsize=16
+URxvt*font:                  xft:Hack Nerd Font Mono:pixelsize=12
+!URxvt*font:                  -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 URxvt*termName:              rxvt-256color
 URxvt.depth:                 32
-URxvt*lineSpace:             1
-URxvt*letterSpace:           0
+URxvt*lineSpace:             -1
+URxvt*letterSpace:           -2
 URxvt.iso14755:              false
 URxvt.iso14755_52:           false
 URxvt.scrollBar:             false
@@ -34,3 +34,4 @@ URxvt.cursorUnderline:       1
 
 ! -- colors
 #include ".xcolors.d/faded"
+!#include "/home/brenix/.cache/wal/colors.Xresources"
