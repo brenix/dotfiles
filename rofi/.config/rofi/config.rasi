@@ -13,8 +13,8 @@ configuration {
 	terminal: "alacritty";
 	width: 20;
 	window-format: "{c}";
-  color-active: "#252933, #606778, #252933, #4c566a, #e5e9f0";
-  color-normal: "#252933, #606778, #252933, #4c566a, #e5e9f0";
-  color-urgent: "#252933, #606778, #252933, #4c566a, #e5e9f0";
-  color-window: "#252933, #606778";
+	color-active: "#252933, #606778, #252933, #4c566a, #e5e9f0";
+	color-normal: "#252933, #606778, #252933, #4c566a, #e5e9f0";
+	color-urgent: "#252933, #606778, #252933, #4c566a, #e5e9f0";
+	color-window: "#252933, #606778";
 }
