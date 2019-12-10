@@ -4,8 +4,8 @@
 screenchange-reload = true
 
 [global/wm]
-margin-top    = 5
-margin-bottom = 5
+margin-top    = 1
+margin-bottom = 1
 
 [colors]
 ;; wal
@@ -48,7 +48,7 @@ monitor          = ${env:MONITOR:DVI-I-1}
 monitor-fallback = ${env:MONITOR:DVI-D-0}
 dpi              = 92
 
-height           = 32
+height           = 20
 width            = 100%
 spacing          = 0
 
