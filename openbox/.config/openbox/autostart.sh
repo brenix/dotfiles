@@ -4,8 +4,12 @@
 # to run user-specific things.
 polybar main -r &
 
-$HOME/.fehbg
+#$HOME/.fehbg
 #xsetroot -solid "#3B4252"
+hashwall -f '#3b4252' -b '#2e3440' -s 12
 
 # restore wal settings
 #wal -R
+
+# fun with hacker sounds
+buckle -p ~/.bucklespring &

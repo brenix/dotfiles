@@ -31,10 +31,6 @@ xset +dpms
 # -- load xresources
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
-# -- clipboard sync
-autocutsel -fork &
-autocutsel -selection PRIMARY -fork &
-
 # -- enable numlock
 numlockx &
 
@@ -56,8 +52,6 @@ setxkbmap -option caps:escape
 [ -e /dev/video0 ] && v4l2-ctl -c focus_auto=0
 
 # -- window manager
-
-#picom -bCG -o 0.45 -m 0.88 --no-fading-openclose --opacity-rule "90:class_g = 'Code'" --opacity-rule "90:class_g = 'Slack'"
 
 # bspwm
 #exec dbus-launch bspwm &>/tmp/bspwm.log
