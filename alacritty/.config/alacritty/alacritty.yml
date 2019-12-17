@@ -10,18 +10,18 @@ tabspaces: 4
 
 font:
   normal:
-    family: Iosevka Nerd Font Mono
+    family: Hack Nerd Font Mono
     style: Regular
   bold:
-    family: Iosevka Nerd Font Mono
+    family: Hack Nerd Font Mono
     style: Regular
   italic:
-    family: Iosevka Nerd Font Mono
+    family: Hack Nerd Font Mono
     style: Italic
   size: 9.5
   offset:
     x: 0
-    y: 0
+    y: -1
   glyph_offset:
     x: 0
     y: 0
@@ -185,7 +185,7 @@ dynamic_title: false
 window:
   padding:
     x: 10
-    y: 10
+    y: 5
   dynamic_padding: true
 
 cursor:

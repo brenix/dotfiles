@@ -12,4 +12,4 @@ hashwall -f '#3b4252' -b '#2e3440' -s 12
 #wal -R
 
 # fun with hacker sounds
-buckle -p ~/.bucklespring &
+#buckle -p ~/.bucklespring &
