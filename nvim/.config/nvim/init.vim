@@ -59,7 +59,6 @@ Plug 'morhetz/gruvbox'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rakr/vim-one'
 Plug 'sainnhe/gruvbox-material'
-Plug 'sainnhe/vim-color-desert-night'
 
 call plug#end()
 
