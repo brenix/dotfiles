@@ -2,8 +2,8 @@ alias ..='cd ..'
 alias abs='asp'
 alias cdu="cd-gitroot"
 alias cp='cp -i'
-alias de='xrandr --output DVI-D-1 --mode 1920x1080 --rate 144 --right-of DVI-I-1'
-alias ds='xrandr --output DVI-D-1 --off'
+alias de='xrandr -s 0'
+alias ds='xrandr -s 1'
 alias gi="git-ignore"
 alias k='kubectl'
 alias l='ls -lhg'
@@ -39,6 +39,5 @@ alias vm='virsh start win10'
 alias vv='nvim ~/.dotfiles/nvim/.config/nvim/init.vim'
 alias x='startx'
 alias xrefresh='xrdb load ~/.Xresources && xrdb -merge ~/.Xresources'
-alias yay='yay --editmenu'
 if [[ "$OSTYPE" == "darwin"*  ]]; then alias u='brew update && brew upgrade && brew cleanup && brew cask upgrade'; fi
-if [[ "$OSTYPE" == "linux-gnu" ]]; then alias u='yay -Syu --editmenu'; fi
+if [[ "$OSTYPE" == "linux-gnu" ]]; then alias u='yay -Syu'; fi
