@@ -1,0 +1,10 @@
+.include /etc/pulse/default.pa
+
+# Prevent popping noise
+unload-module module-suspend-on-idle
+
+# Enable echo/noise cancellation
+load-module module-echo-cancel use_master_format=1 aec_method=webrtc aec_args="analog_gain_control=0 digital_gain_control=1 experimental_agc=1" source_name=echoCancel_source sink_name=echoCancel_sink
+
+# set default sink
+set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo
