@@ -19,9 +19,12 @@ dn() {
   find "${NOTEDIR}/work/daily -type d -empty -delete" &>/dev/null
   find "${NOTEDIR}/work/daily -type f -size 0 -delete" &>/dev/null
 
-  pushd "${NOTEDIR}"
-  git add "${note}"
-  git commit -m "${msg}"
-  git push origin master
-  popd
+  pushd "${NOTEDIR}" >/dev/null
+  if [[ -f "${note}" ]]; then
+    git add "${note}"
+    git commit -m "${msg}"
+    git push origin master
+  fi
+  popd >/dev/null
+
 }
