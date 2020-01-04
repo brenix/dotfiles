@@ -39,7 +39,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>faded</name>
+    <name>grayscale</name>
     <titleLayout>LMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.

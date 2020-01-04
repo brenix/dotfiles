@@ -59,6 +59,8 @@ Plug 'morhetz/gruvbox'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rakr/vim-one'
 Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/edge'
+Plug 'niklas-8/vim-darkspace'
 
 call plug#end()
 
@@ -85,7 +87,7 @@ set autoread                   " Reload file if the file changes on the disk
 set backspace=indent,eol,start " Allow backspacing over indentation/line breaks/insertion
 set breakindent                " Wrap long lines of text with initial indentation
 set cmdheight=2                " Set height of the cmd pane to 1
-set colorcolumn=101            " Highlight the 10th column as an indicator
+"set colorcolumn=101            " Highlight the 10th column as an indicator
 set complete-=i                " Limit the files searched for auto-completes
 set completeopt-=preview       " Remove the horrendous preview window
 set completeopt=longest,menu   " Make completion popup menu work like ide
@@ -187,7 +189,7 @@ syntax enable
 set background=dark
 
 " Selected colorscheme
-colorscheme faded
+colorscheme darkspace
 
 " }}}
 
@@ -384,7 +386,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'faded',
+  \ 'colorscheme': 'simpleblack',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]

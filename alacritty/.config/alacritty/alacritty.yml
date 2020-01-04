@@ -30,6 +30,31 @@ font:
 draw_bold_text_with_bright_colors: false
 
 schemes:
+  darkspace: &darkspace
+    primary:
+      background: '0x000000'
+      foreground: '0xd5d8d6'
+    cursor:
+      text: '0x000000'
+      cursor: '0xd5d8d6'
+    normal:
+      black:   '0x000000'
+      red:     '0xe96356'
+      green:   '0x8dd9a9'
+      yellow:  '0xdadc8c'
+      blue:    '0x8aa4f0'
+      magenta: '0xc271cc'
+      cyan:    '0x76cdd7'
+      white:   '0xd5d8d6'
+    bright:
+      black:   '0x444444'
+      red:     '0xff8376'
+      green:   '0xadf9c9'
+      yellow:  '0xfafcac'
+      blue:    '0xaac4ff'
+      magenta: '0xe291ec'
+      cyan:    '0x96edf7'
+      white:   '0xffffff'
   faded: &faded
     primary:
       background: '0x252933'
@@ -157,7 +182,7 @@ schemes:
       cyan:    '0x7574a5'
       white:   '0xcdcdcd'
 
-colors: *faded
+colors: *darkspace
 
 visual_bell:
   animation: EaseOutExpo
