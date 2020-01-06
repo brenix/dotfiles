@@ -26,9 +26,10 @@ margin-bottom = 1
 ; gray           = ${xrdb:color7:#222}
 
 ;; faded
-;background     = #252933
-background = #111
-foreground     = #D8DEE9
+; background     = #252933
+background     = #1d2021
+; foreground     = #D8DEE9
+foreground     = #c5c4a1
 black          = #2E3440
 red            = #b77a76
 green          = #b4bf86

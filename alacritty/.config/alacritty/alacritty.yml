@@ -30,31 +30,6 @@ font:
 draw_bold_text_with_bright_colors: false
 
 schemes:
-  darkspace: &darkspace
-    primary:
-      background: '0x000000'
-      foreground: '0xd5d8d6'
-    cursor:
-      text: '0x000000'
-      cursor: '0xd5d8d6'
-    normal:
-      black:   '0x000000'
-      red:     '0xe96356'
-      green:   '0x8dd9a9'
-      yellow:  '0xdadc8c'
-      blue:    '0x8aa4f0'
-      magenta: '0xc271cc'
-      cyan:    '0x76cdd7'
-      white:   '0xd5d8d6'
-    bright:
-      black:   '0x444444'
-      red:     '0xff8376'
-      green:   '0xadf9c9'
-      yellow:  '0xfafcac'
-      blue:    '0xaac4ff'
-      magenta: '0xe291ec'
-      cyan:    '0x96edf7'
-      white:   '0xffffff'
   faded: &faded
     primary:
       background: '0x252933'
@@ -81,31 +56,6 @@ schemes:
       magenta: '0x958090'
       cyan:    '0x7daea9'
       white:   '0xf4f4f4'
-  gruvbox: &gruvbox
-    primary:
-      # hard contrast: background = '0x1d2021'
-      #background: '0x282828'
-      background: '0x1d2021'
-      # soft contrast: background = '0x32302f'
-      foreground: '0xd5c4a1'
-    normal:
-      black:   '0x32302f'
-      red:     '0xfb4934'
-      green:   '0xb8bb26'
-      yellow:  '0xfabd2f'
-      blue:    '0x83a598'
-      magenta: '0xd3869b'
-      cyan:    '0x8ec07c'
-      white:   '0xebdbb2'
-    bright:
-      black:   '0x928374'
-      red:     '0xfb4934'
-      green:   '0xb8bb26'
-      yellow:  '0xfabd2f'
-      blue:    '0x83a598'
-      magenta: '0xd3869b'
-      cyan:    '0x8ec07c'
-      white:   '0xebdbb2'
   gruvbox-material: &gruvbox-material
     primary:
       #background: '0x282828'
@@ -159,30 +109,8 @@ schemes:
       magenta: '0x747474'
       cyan:    '0x868686'
       white:   '0xf7f7f7'
-  brenix-hacker-v2: &brenix-hacker-v2
-    primary:
-      background: '0x090909'
-      foreground: '0xb0b0b0'
-    normal:
-      black:   '0x202020'
-      red:     '0xc05776'
-      green:   '0x94d4a9'
-      yellow:  '0x7d94ab'
-      blue:    '0x70997a'
-      magenta: '0x507057'
-      cyan:    '0x7574a5'
-      white:   '0x696969'
-    bright:
-      black:   '0x454545'
-      red:     '0xc05776'
-      green:   '0xa7ecb7'
-      yellow:  '0x89a7c4'
-      blue:    '0x81b38c'
-      magenta: '0x5f8a6a'
-      cyan:    '0x7574a5'
-      white:   '0xcdcdcd'
 
-colors: *darkspace
+colors: *gruvbox-material
 
 visual_bell:
   animation: EaseOutExpo
