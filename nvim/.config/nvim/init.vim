@@ -206,9 +206,6 @@ if has('nvim')
   set inccommand=split
 endif
 
-" Override the search highlight color
-highlight Search guibg=SteelBlue guifg=White ctermbg=67 ctermfg=White
-
 " Ignore specific file patterns when expanding
 set wildignore=*.o,*.obj,*~,*.exe,*.a,*.pdb,*.lib
 set wildignore+=*.so,*.dll,*.swp,*.egg,*.jar,*.class,*.pyc,*.pyo,*.bin,*.dex
