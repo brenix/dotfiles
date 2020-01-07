@@ -27,20 +27,33 @@ margin-bottom = 1
 
 ;; faded
 ; background     = #252933
-background     = #1d2021
 ; foreground     = #D8DEE9
-foreground     = #c5c4a1
-black          = #2E3440
-red            = #b77a76
-green          = #b4bf86
-yellow         = #cbb079
-blue           = #83a2be
-magenta        = #958090
-cyan           = #7daea9
-white          = #c5c8c6
-gray           = #858585
-background-alt = #4c566a
-foreground-alt = #e5e9f0
+; black          = #2E3440
+; red            = #b77a76
+; green          = #b4bf86
+; yellow         = #cbb079
+; blue           = #83a2be
+; magenta        = #958090
+; cyan           = #7daea9
+; white          = #c5c8c6
+; gray           = #858585
+; background-alt = #4c566a
+; foreground-alt = #e5e9f0
+
+;; drk
+background     = #0f1113
+foreground     = #d0d3d3
+black          = #1a1d1d
+red            = #bb6b6b
+green          = #85ba87
+yellow         = #cfd189
+blue           = #719eba
+magenta        = #a59aba
+cyan           = #78baba
+white          = #d0d3d3
+gray           = #7e8080
+background-alt = #0f1113
+foreground-alt = #d0d3d3
 
 [bar/main]
 top = true

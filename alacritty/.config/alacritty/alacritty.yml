@@ -30,6 +30,31 @@ font:
 draw_bold_text_with_bright_colors: false
 
 schemes:
+  drk: &drk
+    primary:
+      background: '0x0f1113'
+      foreground: '0xd0d3d3'
+    cursor:
+      text: '0xd0d3d3'
+      cursor: '0xD8DEE9'
+    normal:
+      black:   '0x1a1d1d'
+      red:     '0xbb6b6b'
+      green:   '0x85ba87'
+      yellow:  '0x97aed0'
+      blue:    '0x719eba'
+      magenta: '0xa59aba'
+      cyan:    '0x78baba'
+      white:   '0x7e8080'
+    bright:
+      black:   '0x282d2d'
+      red:     '0xdd7e7e'
+      green:   '0x9edda1'
+      yellow:  '0xcfd189'
+      blue:    '0x87bcde'
+      magenta: '0xc4b7dd'
+      cyan:    '0x8fdddd'
+      white:   '0xd0d3d3'
   faded: &faded
     primary:
       background: '0x252933'
@@ -110,7 +135,7 @@ schemes:
       cyan:    '0x868686'
       white:   '0xf7f7f7'
 
-colors: *gruvbox-material
+colors: *drk
 
 visual_bell:
   animation: EaseOutExpo

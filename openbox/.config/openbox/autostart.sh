@@ -5,5 +5,6 @@
 polybar main -r &
 
 $HOME/.fehbg
+picom -b
 #xsetroot -solid "#3B4252"
 #hashwall -f '#3b4252' -b '#2e3440' -s 12

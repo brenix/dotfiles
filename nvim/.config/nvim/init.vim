@@ -36,6 +36,7 @@ Plug 'juliosueiras/vim-terraform-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'lifepillar/vim-colortemplate'
 Plug 'majutsushi/tagbar'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'mhinz/vim-startify'
@@ -57,10 +58,8 @@ Plug 'dylanaraps/wal.vim'
 Plug 'morhetz/gruvbox'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rakr/vim-one'
-Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/edge'
-Plug 'niklas-8/vim-darkspace'
-Plug 'cocopon/iceberg.vim'
+Plug 'sainnhe/gruvbox-material'
 
 call plug#end()
 
@@ -189,7 +188,7 @@ set background=dark
 
 " Selected colorscheme
 let g:gruvbox_material_background = 'hard'
-colorscheme gruvbox-material
+colorscheme drk
 
 " }}}
 
@@ -383,7 +382,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'gruvbox_material',
+  \ 'colorscheme': 'drk',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
