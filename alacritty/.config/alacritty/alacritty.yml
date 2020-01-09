@@ -135,7 +135,7 @@ schemes:
       cyan:    '0x868686'
       white:   '0xf7f7f7'
 
-colors: *drk
+colors: *gruvbox-material
 
 visual_bell:
   animation: EaseOutExpo
