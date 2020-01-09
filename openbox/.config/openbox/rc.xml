@@ -442,7 +442,7 @@
     </keybind>
     <keybind key="W-d">
       <action name="Execute">
-        <command>google-chrome-unstable</command>
+        <command>firefox</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>

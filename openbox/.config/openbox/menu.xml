@@ -6,7 +6,7 @@
   <separator label="-- APPLICATIONS --" />
   <item label="GOOGLE CHROME">
     <action name="Execute">
-      <command>google-chrome-unstable</command>
+      <command>firefox</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -40,10 +40,9 @@
       <command>spotify</command>
     </action>
   </item>
-  <separator label="-- KVM --" />
-  <item label="VIRT MANAGER">
+  <item label="QBITTORRENT">
     <action name="Execute">
-      <command>virt-manager</command>
+      <command>qbittorrent</command>
     </action>
   </item>
   <separator label="-- SYSTEM --" />
@@ -53,6 +52,12 @@
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
+  <item label="VOLUME CONTROL">
+    <action name="Execute">
+      <command>pavucontrol</command>
+    </action>
+  </item>
+  <separator />
   <item label="OBCONF">
     <action name="Execute">
       <command>obconf</command>
