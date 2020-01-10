@@ -4,7 +4,7 @@
 
 <menu id="root-menu" label="Openbox 3">
   <separator label="-- APPLICATIONS --" />
-  <item label="GOOGLE CHROME">
+  <item label="FIREFOX">
     <action name="Execute">
       <command>firefox</command>
       <startupnotify>

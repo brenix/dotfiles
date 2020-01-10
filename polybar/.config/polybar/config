@@ -8,52 +8,22 @@ margin-top    = 1
 margin-bottom = 1
 
 [colors]
-;; wal
-; background     = ${xrdb:color0:#222}
-; foreground     = ${xrdb:color7:#222}
-; foreground-alt = ${xrdb:color7:#222}
-; primary        = ${xrdb:color1:#222}
-; secondary      = ${xrdb:color2:#222}
-; alert          = ${xrdb:color3:#222}
-; black          = ${xrdb:color0:#222}
-; red            = ${xrdb:color1:#222}
-; green          = ${xrdb:color2:#222}
-; yellow         = ${xrdb:color3:#222}
-; blue           = ${xrdb:color4:#222}
-; magenta        = ${xrdb:color5:#222}
-; cyan           = ${xrdb:color6:#222}
-; white          = ${xrdb:color15:#222}
-; gray           = ${xrdb:color7:#222}
-
-;; faded
-; background     = #252933
-; foreground     = #D8DEE9
-; black          = #2E3440
-; red            = #b77a76
-; green          = #b4bf86
-; yellow         = #cbb079
-; blue           = #83a2be
-; magenta        = #958090
-; cyan           = #7daea9
-; white          = #c5c8c6
-; gray           = #858585
-; background-alt = #4c566a
-; foreground-alt = #e5e9f0
-
-;; drk
-background     = #0f1113
-foreground     = #d0d3d3
-black          = #1a1d1d
-red            = #bb6b6b
-green          = #85ba87
-yellow         = #cfd189
-blue           = #719eba
-magenta        = #a59aba
-cyan           = #78baba
-white          = #d0d3d3
-gray           = #7e8080
-background-alt = #0f1113
-foreground-alt = #d0d3d3
+background     = ${xrdb:color0:#191b22}
+#foreground     = ${xrdb:color7:#d6dbe4}
+foreground     = #d6dbe4
+foreground-alt = ${xrdb:color7:#d6dbe4}
+primary        = ${xrdb:color1:#bb6b6b}
+secondary      = ${xrdb:color2:#85ba87}
+alert          = ${xrdb:color3:#cbb079}
+black          = ${xrdb:color0:#1b1e25}
+red            = ${xrdb:color1:#bb6b6b}
+green          = ${xrdb:color2:#85ba87}
+yellow         = ${xrdb:color3:#cbb079}
+blue           = ${xrdb:color4:#83a2be}
+magenta        = ${xrdb:color5:#958090}
+cyan           = ${xrdb:color6:#7daea9}
+white          = ${xrdb:color15:#d6dbe4}
+gray           = ${xrdb:color7:#8f9496}
 
 [bar/main]
 top = true

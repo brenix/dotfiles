@@ -55,6 +55,31 @@ schemes:
       magenta: '0xc4b7dd'
       cyan:    '0x8fdddd'
       white:   '0xd0d3d3'
+  faded-v2: &faded-v2
+    primary:
+      background: '0x191b22'
+      foreground: '0xd6dbe4'
+    cursor:
+      text: '0x191b22'
+      cursor: '0xd6dbe4'
+    normal:
+      black:   '0x22252e'
+      red:     '0xbb6b6b'
+      green:   '0x85ba87'
+      yellow:  '0xcbb079'
+      blue:    '0x83a2be'
+      magenta: '0x958090'
+      cyan:    '0x7daea9'
+      white:   '0x8f9496'
+    bright:
+      black:   '0x383b45'
+      red:     '0xbb6b6b'
+      green:   '0x85ba87'
+      yellow:  '0xcbb079'
+      blue:    '0x83a2be'
+      magenta: '0x958090'
+      cyan:    '0x7daea9'
+      white:   '0xd6dbe4'
   faded: &faded
     primary:
       background: '0x252933'
@@ -135,7 +160,7 @@ schemes:
       cyan:    '0x868686'
       white:   '0xf7f7f7'
 
-colors: *gruvbox-material
+colors: *faded-v2
 
 visual_bell:
   animation: EaseOutExpo

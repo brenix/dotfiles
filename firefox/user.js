@@ -220,6 +220,12 @@ user_pref("browser.tabs.drawInTitlebar", true);
 // Enable WebRender (Fixes font rendering for some reason)
 user_pref("gfx.webrender.all", true);
 
-// Set DPI to 163px
+// Set DPI
 user_pref("layout.css.dpi", 92);
 user_pref("layout.css.devPixelsPerpx", 1);
+
+// Set refresh rate
+user_pref("layout.frame_rate", 144);
+
+// Allow using fontconfig replacement rules
+user_pref("gfx.font_rendering.fontconfig.max_generic_substitutions", 127);
