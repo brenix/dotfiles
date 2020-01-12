@@ -181,6 +181,9 @@ user_pref("browser.cache.disk.smart_size.enabled", false);
 user_pref("browser.cache.disk.smart_size.first_run", false);
 user_pref("browser.cache.disk_cache_ssl", false);
 
+// Enable HTTP/3
+user_pref("network.http.http3.enabled", true);
+
 ////////////////////////////////////////////////////
 //   Misc
 ////////////////////////////////////////////////////
@@ -220,6 +223,9 @@ user_pref("browser.tabs.drawInTitlebar", true);
 // Enable WebRender (Fixes font rendering for some reason)
 user_pref("gfx.webrender.all", true);
 
+// Disable unnecessary animations
+user_pref("toolkit.cosmeticAnimations.enabled", false);
+
 // Set DPI
 user_pref("layout.css.dpi", 92);
 user_pref("layout.css.devPixelsPerpx", 1);
@@ -229,3 +235,4 @@ user_pref("layout.frame_rate", 144);
 
 // Allow using fontconfig replacement rules
 user_pref("gfx.font_rendering.fontconfig.max_generic_substitutions", 127);
+
