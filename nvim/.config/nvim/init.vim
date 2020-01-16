@@ -188,7 +188,7 @@ set background=dark
 
 " Selected colorscheme
 let g:gruvbox_material_background = 'hard'
-colorscheme nord
+colorscheme faded
 
 " }}}
 
@@ -382,7 +382,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'nord',
+  \ 'colorscheme': 'faded',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -635,6 +635,7 @@ augroup langindentation
 	autocmd Filetype c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 	autocmd Filetype cpp setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 	autocmd Filetype css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+	autocmd Filetype dockerfile setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 	autocmd Filetype gitcommit setlocal spell textwidth=80
 	autocmd Filetype gitconfig setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
 	autocmd Filetype golang setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4

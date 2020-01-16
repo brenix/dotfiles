@@ -185,7 +185,7 @@ schemes:
       cyan:    '0x868686'
       white:   '0xf7f7f7'
 
-colors: *nord
+colors: *faded
 
 visual_bell:
   animation: EaseOutExpo
