@@ -630,30 +630,159 @@ let g:go_highlight_variable_declarations = 1
 
 " --- Language Formatting {{{
 
-augroup langindentation
-	autocmd Filetype bash setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype cpp setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype dockerfile setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype gitcommit setlocal spell textwidth=80
-	autocmd Filetype gitconfig setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype golang setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
-	autocmd Filetype hcl setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype json setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype json setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype less setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype make setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype markdown setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2 conceallevel=0 colorcolumn=81 textwidth=80 wrap
-	autocmd Filetype php setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype scss setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype toml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype vim setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-	autocmd Filetype zsh setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-augroup END
+"----------------------------------------------
+" Language: Bash
+"----------------------------------------------
+au FileType sh set expandtab
+au FileType sh set shiftwidth=2
+au FileType sh set softtabstop=2
+au FileType sh set tabstop=2
+
+"----------------------------------------------
+" Language: CSS
+"----------------------------------------------
+au FileType css set expandtab
+au FileType css set shiftwidth=2
+au FileType css set softtabstop=2
+au FileType css set tabstop=2
+
+"----------------------------------------------
+" Language: gitcommit
+"----------------------------------------------
+au FileType gitcommit setlocal spell
+au FileType gitcommit setlocal textwidth=80
+
+"----------------------------------------------
+" Language: gitconfig
+"----------------------------------------------
+au FileType gitconfig set noexpandtab
+au FileType gitconfig set shiftwidth=2
+au FileType gitconfig set softtabstop=2
+au FileType gitconfig set tabstop=2
+
+"----------------------------------------------
+" Language: Golang
+"----------------------------------------------
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
+
+"----------------------------------------------
+" Language: HCL
+"----------------------------------------------
+au FileType hcl set expandtab
+au FileType hcl set shiftwidth=2
+au FileType hcl set softtabstop=2
+au FileType hcl set tabstop=2
+
+"----------------------------------------------
+" Language: HTML
+"----------------------------------------------
+au FileType html set expandtab
+au FileType html set shiftwidth=2
+au FileType html set softtabstop=2
+au FileType html set tabstop=2
+
+"----------------------------------------------
+" Language: JavaScript
+"----------------------------------------------
+au FileType javascript set expandtab
+au FileType javascript set shiftwidth=2
+au FileType javascript set softtabstop=2
+au FileType javascript set tabstop=2
+
+"----------------------------------------------
+" Language: JSON
+"----------------------------------------------
+au FileType json set expandtab
+au FileType json set shiftwidth=2
+au FileType json set softtabstop=2
+au FileType json set tabstop=2
+
+"----------------------------------------------
+" Language: LESS
+"----------------------------------------------
+au FileType less set expandtab
+au FileType less set shiftwidth=2
+au FileType less set softtabstop=2
+au FileType less set tabstop=2
+
+"----------------------------------------------
+" Language: Make
+"----------------------------------------------
+au FileType make set noexpandtab
+au FileType make set shiftwidth=2
+au FileType make set softtabstop=2
+au FileType make set tabstop=2
+
+"----------------------------------------------
+" Language: Markdown
+"----------------------------------------------
+au FileType markdown set expandtab
+au FileType markdown set shiftwidth=2
+au FileType markdown set softtabstop=2
+au FileType markdown set tabstop=2
+au FileType markdown set conceallevel=0
+au FileType markdown set colorcolumn=81
+au FileType markdown set textwidth=80
+au FileType markdown set wrap
+
+"----------------------------------------------
+" Language: Python
+"----------------------------------------------
+au FileType python set expandtab
+au FileType python set shiftwidth=4
+au FileType python set softtabstop=4
+au FileType python set tabstop=4
+
+"----------------------------------------------
+" Language: Ruby
+"----------------------------------------------
+au FileType ruby set expandtab
+au FileType ruby set shiftwidth=2
+au FileType ruby set softtabstop=2
+au FileType ruby set tabstop=2
+
+"----------------------------------------------
+" Language: SQL
+"----------------------------------------------
+au FileType sql set expandtab
+au FileType sql set shiftwidth=2
+au FileType sql set softtabstop=2
+au FileType sql set tabstop=2
+
+"----------------------------------------------
+" Language: TOML
+"----------------------------------------------
+au FileType toml set expandtab
+au FileType toml set shiftwidth=2
+au FileType toml set softtabstop=2
+au FileType toml set tabstop=2
+
+"----------------------------------------------
+" Language: vimscript
+"----------------------------------------------
+au FileType vim set expandtab
+au FileType vim set shiftwidth=2
+au FileType vim set softtabstop=2
+au FileType vim set tabstop=2
+
+"----------------------------------------------
+" Language: YAML
+"----------------------------------------------
+au FileType yaml set expandtab
+au FileType yaml set shiftwidth=2
+au FileType yaml set softtabstop=2
+au FileType yaml set tabstop=2
+
+"----------------------------------------------
+" Language: zsh
+"----------------------------------------------
+au FileType zsh set expandtab
+au FileType zsh set shiftwidth=2
+au FileType zsh set softtabstop=2
+au FileType zsh set tabstop=2
 
 "}}}
 
