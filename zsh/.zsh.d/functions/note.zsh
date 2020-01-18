@@ -10,7 +10,9 @@ dn() {
   local note="${NOTEDIR}/work/daily/$year/$month/$day.md"
 
   test -f "${note}" && \
-    local msg="Updated daily work notes" || local msg="Added daily work notes"
+    local msg="Updated daily work notes" || \
+    echo -e "### ${year}-${month}-${day}\n\n" > "${note}" && \
+    local msg="Added daily work notes"
 
   # edit file
   $EDITOR "${note}"
