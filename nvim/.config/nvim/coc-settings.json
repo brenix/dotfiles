@@ -11,6 +11,10 @@
     "diagnostic.displayByAle": false,
     "diagnostic.virtualText": true,
     "diagnostic.refreshOnInsertMode": true,
+    "go.enable": true,
+    "go.goplsOptions": {
+        "completeUnimported": true
+     },
     "git.enableGutters": true,
     "git.realtimeGutters": false,
     "git.branchCharacter":"\uf408",
