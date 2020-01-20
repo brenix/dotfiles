@@ -48,7 +48,7 @@ zplugin ice wait lucid
 zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 
 # syntax highlighting
-zplugin ice wait"1" lucid atinit"ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
+# zplugin ice wait"1" lucid atinit"ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
 zplugin light zdharma/fast-syntax-highlighting
 
 # completions
