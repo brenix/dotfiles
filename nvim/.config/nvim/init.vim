@@ -478,7 +478,6 @@ let g:coc_global_extensions = [
       \'coc-css',
       \'coc-dictionary',
       \'coc-git',
-      \'coc-go',
       \'coc-highlight',
       \'coc-html',
       \'coc-json',
@@ -604,10 +603,6 @@ let g:instant_markdown_autostart = 0
 " }}}
 
 " --- Plugin: fatih/vim-go {{{
-
-" disable gopls - this is handled by coc-go
-let g:go_gopls_enabled = 0
-let g:go_info_mode = 'gocode'
 
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
