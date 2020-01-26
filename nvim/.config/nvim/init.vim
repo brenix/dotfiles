@@ -28,6 +28,7 @@ Plug 'aesophor/base16-faded'
 Plug 'airblade/vim-rooter'
 Plug 'andrewstuart/vim-kubernetes'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'jremmen/vim-ripgrep'
