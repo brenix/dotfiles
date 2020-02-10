@@ -34,7 +34,6 @@ let s:palette = {
       \ 'golden':     ['#d8caac',   '223',  'White'],
       \ 'fg':         ['#909090',   '223',  'White'],
       \ 'red':        ['#c05776',   '167',  'Red'],
-      \ 'orange':     ['#e3a184',   '208',  'Red'],
       \ 'yellow':     ['#87a1c5',   '214',  'Yellow'],
       \ 'green':      ['#a7ecb7',   '142',  'Green'],
       \ 'cyan':       ['#7574a5',   '108',   'Cyan'],
@@ -210,12 +209,12 @@ else
   call s:HL('Statement', s:palette.red, s:palette.none)
 endif
 call s:HL('Error', s:palette.red, s:palette.none)
-call s:HL('StorageClass', s:palette.orange, s:palette.none)
-call s:HL('Tag', s:palette.orange, s:palette.none)
-call s:HL('Label', s:palette.orange, s:palette.none)
-call s:HL('Structure', s:palette.orange, s:palette.none)
-call s:HL('Operator', s:palette.orange, s:palette.none)
-call s:HL('Title', s:palette.orange, s:palette.none, 'bold')
+call s:HL('StorageClass', s:palette.purple, s:palette.none)
+call s:HL('Tag', s:palette.purple, s:palette.none)
+call s:HL('Label', s:palette.purple, s:palette.none)
+call s:HL('Structure', s:palette.purple, s:palette.none)
+call s:HL('Operator', s:palette.purple, s:palette.none)
+call s:HL('Title', s:palette.purple, s:palette.none, 'bold')
 call s:HL('Special', s:palette.yellow, s:palette.none)
 call s:HL('SpecialChar', s:palette.yellow, s:palette.none)
 call s:HL('Type', s:palette.yellow, s:palette.none)
@@ -246,21 +245,21 @@ call s:HL('Yellow', s:palette.yellow, s:palette.none)
 call s:HL('Blue', s:palette.blue, s:palette.none)
 if s:configuration.enable_italic
   call s:HL('RedItalic', s:palette.red, s:palette.none, 'italic')
-  call s:HL('OrangeItalic', s:palette.orange, s:palette.none, 'italic')
+  call s:HL('OrangeItalic', s:palette.purple, s:palette.none, 'italic')
   call s:HL('PurpleItalic', s:palette.purple, s:palette.none, 'italic')
 else
   call s:HL('RedItalic', s:palette.red, s:palette.none)
-  call s:HL('OrangeItalic', s:palette.orange, s:palette.none)
+  call s:HL('OrangeItalic', s:palette.purple, s:palette.none)
   call s:HL('PurpleItalic', s:palette.purple, s:palette.none)
 endif
 call s:HL('Red', s:palette.red, s:palette.none)
-call s:HL('Orange', s:palette.orange, s:palette.none)
+call s:HL('Orange', s:palette.purple, s:palette.none)
 call s:HL('Purple', s:palette.purple, s:palette.none)
 call s:HL('Green', s:palette.green, s:palette.none)
 call s:HL('Cyan', s:palette.cyan, s:palette.none)
 if s:configuration.transparent_background
   call s:HL('RedSign', s:palette.red, s:palette.none)
-  call s:HL('OrangeSign', s:palette.orange, s:palette.none)
+  call s:HL('OrangeSign', s:palette.purple, s:palette.none)
   call s:HL('YellowSign', s:palette.yellow, s:palette.none)
   call s:HL('GreenSign', s:palette.green, s:palette.none)
   call s:HL('CyanSign', s:palette.cyan, s:palette.none)
@@ -268,7 +267,7 @@ if s:configuration.transparent_background
   call s:HL('PurpleSign', s:palette.purple, s:palette.none)
 else
   call s:HL('RedSign', s:palette.red, s:palette.bg1)
-  call s:HL('OrangeSign', s:palette.orange, s:palette.bg1)
+  call s:HL('OrangeSign', s:palette.purple, s:palette.bg1)
   call s:HL('YellowSign', s:palette.yellow, s:palette.bg1)
   call s:HL('GreenSign', s:palette.green, s:palette.bg1)
   call s:HL('CyanSign', s:palette.cyan, s:palette.bg1)
@@ -281,7 +280,7 @@ endif
 " Markdown: {{{
 " builtin: {{{
 call s:HL('markdownH1', s:palette.red, s:palette.none, 'bold')
-call s:HL('markdownH2', s:palette.orange, s:palette.none, 'bold')
+call s:HL('markdownH2', s:palette.purple, s:palette.none, 'bold')
 call s:HL('markdownH3', s:palette.yellow, s:palette.none, 'bold')
 call s:HL('markdownH4', s:palette.green, s:palette.none, 'bold')
 call s:HL('markdownH5', s:palette.blue, s:palette.none, 'bold')
@@ -346,7 +345,7 @@ highlight! link texDocTypeArgs Orange
 " Html: {{{
 " builtin: https://notabug.org/jorgesumle/vim-html-syntax{{{
 call s:HL('htmlH1', s:palette.red, s:palette.none, 'bold')
-call s:HL('htmlH2', s:palette.orange, s:palette.none, 'bold')
+call s:HL('htmlH2', s:palette.purple, s:palette.none, 'bold')
 call s:HL('htmlH3', s:palette.yellow, s:palette.none, 'bold')
 call s:HL('htmlH4', s:palette.green, s:palette.none, 'bold')
 call s:HL('htmlH5', s:palette.blue, s:palette.none, 'bold')
@@ -1352,7 +1351,7 @@ highlight! link diffIndexLine Purple
 " Help: {{{
 call s:HL('helpNote', s:palette.purple, s:palette.none, 'bold')
 call s:HL('helpHeadline', s:palette.red, s:palette.none, 'bold')
-call s:HL('helpHeader', s:palette.orange, s:palette.none, 'bold')
+call s:HL('helpHeader', s:palette.purple, s:palette.none, 'bold')
 call s:HL('helpURL', s:palette.green, s:palette.none, 'underline')
 call s:HL('helpHyperTextEntry', s:palette.yellow, s:palette.none, 'bold')
 highlight! link helpHyperTextJump Yellow
@@ -1364,7 +1363,7 @@ highlight! link helpSectionDelim Grey
 " }}}
 " Plugins: {{{
 " junegunn/vim-plug{{{
-call s:HL('plug1', s:palette.orange, s:palette.none, 'bold')
+call s:HL('plug1', s:palette.purple, s:palette.none, 'bold')
 call s:HL('plugNumber', s:palette.yellow, s:palette.none, 'bold')
 highlight! link plug2 Green
 highlight! link plugBracket Grey
@@ -1465,7 +1464,7 @@ call s:HL('Lf_hl_match0', s:palette.green, s:palette.none, 'bold')
 call s:HL('Lf_hl_match1', s:palette.cyan, s:palette.none, 'bold')
 call s:HL('Lf_hl_match2', s:palette.blue, s:palette.none, 'bold')
 call s:HL('Lf_hl_match3', s:palette.purple, s:palette.none, 'bold')
-call s:HL('Lf_hl_match4', s:palette.orange, s:palette.none, 'bold')
+call s:HL('Lf_hl_match4', s:palette.purple, s:palette.none, 'bold')
 call s:HL('Lf_hl_matchRefine', s:palette.red, s:palette.none, 'bold')
 highlight! link Lf_hl_cursorline Fg
 highlight! link Lf_hl_selection DiffAdd
@@ -1614,10 +1613,10 @@ endif
 " luochen1990/rainbow{{{
 if !exists('g:rbpt_colorpairs')
   let g:rbpt_colorpairs = [['blue', s:palette.blue[0]], ['magenta', s:palette.purple[0]],
-        \ ['red', s:palette.red[0]], ['166', s:palette.orange[0]]]
+        \ ['red', s:palette.red[0]], ['166', s:palette.purple[0]]]
 endif
 
-let g:rainbow_guifgs = [ s:palette.orange[0], s:palette.red[0], s:palette.purple[0], s:palette.blue[0] ]
+let g:rainbow_guifgs = [ s:palette.purple[0], s:palette.red[0], s:palette.purple[0], s:palette.blue[0] ]
 let g:rainbow_ctermfgs = [ '166', 'red', 'magenta', 'blue' ]
 
 if !exists('g:rainbow_conf')
