@@ -30,56 +30,28 @@ font:
 draw_bold_text_with_bright_colors: false
 
 schemes:
-  drk: &drk
+  brenix-hacker: &brenix-hacker
     primary:
-      background: '0x0f1113'
-      foreground: '0xd0d3d3'
-    cursor:
-      text: '0xd0d3d3'
-      cursor: '0xD8DEE9'
+      background: '0x030303'
+      foreground: '0x909090'
     normal:
-      black:   '0x1a1d1d'
-      red:     '0xbb6b6b'
-      green:   '0x85ba87'
-      yellow:  '0x97aed0'
-      blue:    '0x719eba'
-      magenta: '0xa59aba'
-      cyan:    '0x78baba'
-      white:   '0x7e8080'
+      black:   '0x111111'
+      red:     '0xc05776'
+      green:   '0xa7ecb7'
+      yellow:  '0x87a1c5'
+      blue:    '0x81b38c'
+      magenta: '0x507057'
+      cyan:    '0x7574a5'
+      white:   '0x959595'
     bright:
-      black:   '0x282d2d'
-      red:     '0xdd7e7e'
-      green:   '0x9edda1'
-      yellow:  '0xcfd189'
-      blue:    '0x87bcde'
-      magenta: '0xc4b7dd'
-      cyan:    '0x8fdddd'
-      white:   '0xd0d3d3'
-  faded-v2: &faded-v2
-    primary:
-      background: '0x191b22'
-      foreground: '0xd6dbe4'
-    cursor:
-      text: '0x191b22'
-      cursor: '0xd6dbe4'
-    normal:
-      black:   '0x22252e'
-      red:     '0xbb6b6b'
-      green:   '0x85ba87'
-      yellow:  '0xcbb079'
-      blue:    '0x83a2be'
-      magenta: '0x958090'
-      cyan:    '0x7daea9'
-      white:   '0x8f9496'
-    bright:
-      black:   '0x383b45'
-      red:     '0xbb6b6b'
-      green:   '0x85ba87'
-      yellow:  '0xcbb079'
-      blue:    '0x83a2be'
-      magenta: '0x958090'
-      cyan:    '0x7daea9'
-      white:   '0xd6dbe4'
+      black:   '0x222222'
+      red:     '0xc05776'
+      green:   '0xa7ecb7'
+      yellow:  '0x87a1c5'
+      blue:    '0x81b38c'
+      magenta: '0x507057'
+      cyan:    '0x7574a5'
+      white:   '0xbebebe'
   faded: &faded
     primary:
       background: '0x252933'
@@ -185,7 +157,7 @@ schemes:
       cyan:    '0x868686'
       white:   '0xf7f7f7'
 
-colors: *faded
+colors: *brenix-hacker
 
 visual_bell:
   animation: EaseOutExpo

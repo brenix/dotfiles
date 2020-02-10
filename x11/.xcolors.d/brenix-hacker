@@ -1,13 +1,13 @@
-! slack theme: #0a0b0a,#252525,#253025,#aae3b7,#3b3b3b,#adadad,#A7ECB7,#c05776
+! slack theme: #030303,#252525,#152015,#A7ECB7,#222222,#909090,#A7ECB7,#c05776
 
 ! special
-*.foreground:   #bebebe
-*.background:   #0a0b0a
-*.cursorColor:  #bbbbbb
+*.foreground:   #909090
+*.background:   #030303
+*.cursorColor:  #909090
 
 ! black
-*.color0:       #252525
-*.color8:       #454545
+*.color0:       #111111
+*.color8:       #222222
 
 ! red
 *.color1:       #c05776
@@ -34,5 +34,6 @@
 *.color14:      #7574a5
 
 ! white
-*.color7:       #858585
-*.color15:      #e8e8e8
+*.color7:       #959595
+*.color15:      #bebebe
+

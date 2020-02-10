@@ -189,7 +189,7 @@ set background=dark
 
 " Selected colorscheme
 let g:gruvbox_material_background = 'hard'
-colorscheme faded
+colorscheme brenix-hacker
 
 " }}}
 
@@ -383,7 +383,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'faded',
+  \ 'colorscheme': 'simpleblack',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
