@@ -8,8 +8,8 @@ margin-top    = 1
 margin-bottom = 1
 
 [colors]
-#background     = ${xrdb:color0:#191b22}
-background     = ${xrdb:color0:#090909}
+background     = #202020
+; background     = ${xrdb:color0:#090909}
 #foreground     = ${xrdb:color7:#d6dbe4}
 foreground     = #d6dbe4
 foreground-alt = ${xrdb:color7:#d6dbe4}
