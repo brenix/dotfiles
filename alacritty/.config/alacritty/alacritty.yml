@@ -179,7 +179,7 @@ schemes:
       cyan:    '0x73cef4'
       white:   '0xfeffff'
 
-colors: *tender
+colors: *faded
 
 visual_bell:
   animation: EaseOutExpo
