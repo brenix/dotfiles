@@ -30,3 +30,4 @@ export XDG_PUBLICSHARE_DIR="/tmp/public"
 export XDG_TEMPLATES_DIR="/tmp/templates"
 export XDG_VIDEOS_DIR="/tmp/videos"
 export ZSH_CACHE_DIR=$HOME/.cache
+export INFRACTL_CHECK_VERSION=false
