@@ -30,3 +30,16 @@ dn() {
   popd >/dev/null
 
 }
+
+dnc() {
+  local year=$(date +%Y)
+  local month=$(date +%m)
+  local day=$(date +%d)
+  local note="${NOTEDIR}/work/daily/$year/$month/$day.md"
+
+  case "$OSTYPE" in
+    linux*) cat "${note}" | xclip ;;
+    darwin*) cat "${note}" | pbcopy ;;
+    *) echo "Unknown OS" ;;
+  esac
+}
