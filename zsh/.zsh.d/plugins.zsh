@@ -1,40 +1,47 @@
-# install/source zplugin
+# install/source zinit
 
-if [[ -f "${HOME}/.zplugin/bin/zplugin.zsh" ]]; then
-  autoload -Uz _zplugin
-  (( ${+_comps} )) && _comps[zplugin]=_zplugin
-  source "${HOME}/.zplugin/bin/zplugin.zsh"
+if [[ -f "${HOME}/.zinit/bin/zinit.zsh" ]]; then
+  autoload -Uz _zinit
+  (( ${+_comps} )) && _comps[zinit]=_zinit
+  source "${HOME}/.zinit/bin/zinit.zsh"
 else
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
-  source "${HOME}/.zplugin/bin/zplugin.zsh"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+  source "${HOME}/.zinit/bin/zinit.zsh"
 fi
 
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-bin-gem-node
+
 # git library
-zplugin ice wait lucid
-zplugin snippet OMZ::lib/git.zsh
+zinit ice wait lucid
+zinit snippet OMZ::lib/git.zsh
 
 # git plugin
-zplugin ice wait lucid
-zplugin snippet OMZ::plugins/git/git.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 # golang
-zplugin ice wait lucid
-zplugin snippet OMZ::plugins/golang/golang.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/golang/golang.plugin.zsh
 
 # gpg
-zplugin ice wait lucid
-zplugin snippet OMZ::plugins/gpg-agent/gpg-agent.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/gpg-agent/gpg-agent.plugin.zsh
 
 # terraform
-zplugin ice wait lucid
-zplugin snippet OMZ::plugins/terraform/terraform.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/terraform/terraform.plugin.zsh
 
 # z
-zplugin snippet OMZ::plugins/z/z.sh
+zinit snippet OMZ::plugins/z/z.sh
 
 # kubectl
-zplugin ice wait'1' silent
-zplugin snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
+zinit ice wait'1' silent
+zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
 # ssh
 identities=()
@@ -44,30 +51,30 @@ for f in $HOME/.ssh/*; do
   fi
 done
 zstyle :omz:plugins:ssh-agent identities ${identities[@]}
-zplugin ice wait lucid
-zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 
 # syntax highlighting
-# zplugin ice wait"1" lucid atinit"ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
-zplugin light zdharma/fast-syntax-highlighting
+# zinit ice wait"1" lucid atinit"ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
+zinit light zdharma/fast-syntax-highlighting
 
 # completions
-zplugin ice wait lucid
-zplugin light "zsh-users/zsh-completions"
+zinit ice wait lucid
+zinit light "zsh-users/zsh-completions"
 
 # history
-zplugin ice wait lucid
-zplugin snippet PZT::modules/history/init.zsh
+zinit ice wait lucid
+zinit snippet PZT::modules/history/init.zsh
 
 # fzf
-zplugin ice from"gh-r" as"program"
-zplugin load junegunn/fzf-bin
+zinit ice from"gh-r" as"program"
+zinit load junegunn/fzf-bin
 
-zplugin ice wait lucid
-zplugin snippet "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh"
+zinit ice wait lucid
+zinit snippet "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh"
 
-zplugin ice wait lucid
-zplugin snippet "https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh"
+zinit ice wait lucid
+zinit snippet "https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh"
 
 # autosuggestions
 
@@ -76,28 +83,28 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=("expand-or-complete")
 
-zplugin ice wait'1' silent atload'_zsh_autosuggest_start'
-zplugin light "zsh-users/zsh-autosuggestions"
+zinit ice wait'1' silent atload'_zsh_autosuggest_start'
+zinit light "zsh-users/zsh-autosuggestions"
 
 # complete pairing brackets
-zplugin ice wait lucid
-zplugin light "hlissner/zsh-autopair"
+zinit ice wait lucid
+zinit light "hlissner/zsh-autopair"
 
 # aws-vault integration
-zplugin ice wait silent
-zplugin light "blimmer/zsh-aws-vault"
+zinit ice wait silent
+zinit light "blimmer/zsh-aws-vault"
 
 # git-ignore
-zplugin ice wait lucid pick'init.zsh' blockf
-zplugin light "laggardkernel/git-ignore"
+zinit ice wait lucid pick'init.zsh' blockf
+zinit light "laggardkernel/git-ignore"
 
 # tipz
-zplugin ice wait lucid
-zplugin light "molovo/tipz"
+zinit ice wait lucid
+zinit light "molovo/tipz"
 
 # cd-gitroot
-zplugin ice wait lucid
-zplugin light "mollifier/cd-gitroot"
+zinit ice wait lucid
+zinit light "mollifier/cd-gitroot"
 
 # spaceship
-zplugin light "denysdovhan/spaceship-prompt"
+zinit light "denysdovhan/spaceship-prompt"
