@@ -84,8 +84,7 @@ brew "starship"
 brew "stern"
 brew "stow"
 brew "terraform-docs"
-brew "terraform@0.11", link: true
-brew "tfenv", link: false
+brew "tfenv"
 brew "tflint"
 brew "tmux"
 brew "topgrade"
