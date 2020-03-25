@@ -83,3 +83,5 @@
 	delete-all-local = "!git checkout master && git branch --no-color | grep -v 'master' | xargs -n 1 git branch -D"
 	# One line log
 	tree = log --graph --pretty=oneline --decorate
+[diff "sopsdiffer"]
+	textconv = sops -d
