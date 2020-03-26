@@ -5,6 +5,8 @@ dn() {
   local month=$(date +%m)
   local day=$(date +%d)
 
+  pushd ${NOTEDIR} &>/dev/null && git pull && popd &>/dev/null
+
   # create dir
   mkdir -p "${NOTEDIR}/work/daily/$year/$month" &>/dev/null
   local note="${NOTEDIR}/work/daily/$year/$month/$day.md"
