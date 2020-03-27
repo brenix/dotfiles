@@ -1,11 +1,13 @@
 .include /etc/pulse/default.pa
 
-# Prevent popping noise
+# -- Prevent popping noise
 unload-module module-suspend-on-idle
 
-# Enable echo/noise cancellation
-load-module module-echo-cancel use_master_format=1 aec_method=webrtc aec_args="analog_gain_control=0 digital_gain_control=1 experimental_agc=1" source_name=echoCancel_source sink_name=echoCancel_sink
+# -- Enable echo/noise cancellation
+# load-module module-echo-cancel use_master_format=1 aec_method=webrtc aec_args="analog_gain_control=0 digital_gain_control=1 experimental_agc=1" source_name=echoCancel_source sink_name=echoCancel_sink
+# set-default-source echoCancel_source
+# set-default-sink echoCancel_sink
 
-# set default sink
-#set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo
+# -- Set default sink
+# set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo
 set-default-sink alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo
