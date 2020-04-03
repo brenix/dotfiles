@@ -102,9 +102,9 @@ schemes:
       white: '0xECEFF4'
   gruvbox-material: &gruvbox-material
     primary:
-      #background: '0x282828'
+      # background: '0x282828'
       background: '0x1d2021'
-      #foreground: '0xdfbf8e'
+      # foreground: '0xdfbf8e'
       foreground: '0xd5c4a1'
     normal:
       # black:   '0x665c54'
@@ -176,7 +176,7 @@ schemes:
       cyan:    '0x73cef4'
       white:   '0xfeffff'
 
-colors: *faded
+colors: *gruvbox-material
 
 visual_bell:
   animation: EaseOutExpo

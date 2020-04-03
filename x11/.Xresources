@@ -33,5 +33,6 @@ URxvt.cursorBlink:           1
 URxvt.cursorUnderline:       1
 
 ! -- colors
-#include ".xcolors.d/faded"
+!#include ".xcolors.d/faded"
+#include ".xcolors.d/gruvbox-dark"
 !#include "/home/brenix/.cache/wal/colors.Xresources"
