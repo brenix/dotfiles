@@ -34,5 +34,5 @@ URxvt.cursorUnderline:       1
 
 ! -- colors
 !#include ".xcolors.d/faded"
-#include ".xcolors.d/gruvbox-dark"
+#include ".xcolors.d/brenix-hacker"
 !#include "/home/brenix/.cache/wal/colors.Xresources"

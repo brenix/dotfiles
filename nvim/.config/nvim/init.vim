@@ -62,6 +62,7 @@ Plug 'rakr/vim-one'
 Plug 'sainnhe/edge'
 Plug 'sainnhe/gruvbox-material'
 Plug 'jacoborus/tender.vim'
+Plug 'habamax/vim-colors-lessthan'
 
 call plug#end()
 
@@ -189,7 +190,7 @@ set background=dark
 
 " Selected colorscheme
 let g:gruvbox_material_background = 'hard'
-colorscheme gruvbox-material
+colorscheme lessthan
 
 " }}}
 
@@ -383,7 +384,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'gruvbox_material',
+  \ 'colorscheme': 'drk',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
