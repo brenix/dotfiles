@@ -4,7 +4,6 @@
 
 - Intellisense and completion for many languages (coc.vim)
 - Fuzzy file switching (fzf) with file proximity sorting (proximity-sort)
-- Tree browser (Nerdtree)
 - Snippets (coc.vim, kubernetes, terraform)
 - Statusline (lightline) and tabline (lightline-bufferline)
 - Fast text searching (ripgrep)
@@ -57,8 +56,6 @@ First, type the leader key (`<spacebar>`), then the following key to activate th
 | `i`          | Toggle indent lines                                 |
 | `<spacebar>` | Switch between two most recent buffers              |
 | `g`          | Toggle git gutters                                  |
-| `\\`         | Open file tree view (nerdtree)                      |
-| `n`          | Focus file tree view (nerdtree)                     |
 | `f`          | Find a string across files (ripgrep)                |
 | `cu`         | Comment line                                        |
 | `uc`         | Un-comment line                                     |

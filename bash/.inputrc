@@ -1,23 +1,30 @@
-### ctrl+arrows
+# --- CTRL+ARROWS
 # works in most terminals: xterm, gnome-terminal, terminator, st, sakura, termit, …
+
 "\e[1;5C": forward-word
 "\e[1;5D": backward-word
 # urxvt
 "\eOc": forward-word
 "\eOd": backward-word
 
-### ctrl+delete
+# --- CTRL+DELETE
+
 "\e[3;5~": kill-word
+
 # in this case, st misbehaves (even with tmux)
 "\e[M": kill-word
+
 # and of course, urxvt must be always special
 "\e[3^": kill-word
 
-### ctrl+backspace
+# --- CTRL+BACKSPACE
+
 "\C-h": backward-kill-word
 
-### ctrl+shift+delete
+# --- CTRL+SHIFT+DELETE
+
 "\e[3;6~": kill-line
+
 # URxvt note: you have to disable Ctrl+Shift popup in ~/.Xresources:
 # URxvt.iso14755: true
 # URxvt.iso14755_52: false
