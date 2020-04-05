@@ -2,6 +2,8 @@
 
 COLOR tty
 
+TERM alacritty
+TERM alacritty-direct
 TERM ansi
 TERM *color*
 TERM con[0-9]*x[0-9]*
@@ -50,7 +52,7 @@ RESET                 0
 
 FILE                  00
 DIR                   01;34
-LINK                  35
+LINK                  36
 MULTIHARDLINK         04;36
 
 FIFO                  04;01;36
@@ -62,7 +64,7 @@ CHR                   33
 ORPHAN                31
 MISSING               01;37;41
 
-EXEC                  01;32
+EXEC                  01;36
 
 SETUID                01;04;37
 SETGID                01;04;37
@@ -225,15 +227,26 @@ STICKY                04;37;44
 .z                 31
 .zip               31
 # temp files 32
-.bak               30
-.git               30
-.lock              30
-.log               30
-.orig              30
-.pid               30
-.swp               30
-.tmp               30
-*package-lock.json 30
+*package-lock.json 02;37
+*~                 02;37
+.BAK               02;37
+.OLD               02;37
+.ORIG              02;37
+.bak               02;37
+.bak               02;37
+.git               02;37
+.lock              02;37
+.log               02;37
+.log               02;37
+.log               02;37
+.old               02;37
+.orig              02;37
+.orig              02;37
+.pid               02;37
+.swo               02;37
+.swp               02;37
+.swp               02;37
+.tmp               02;37
 
 # programming languages
 .applescript       36

@@ -55,14 +55,15 @@ Plug 'tpope/vim-vinegar'
 
 " Colorschemes
 Plug 'arcticicestudio/nord-vim'
+Plug 'cormacrelf/vim-colors-github'
 Plug 'dylanaraps/wal.vim'
+Plug 'habamax/vim-colors-lessthan'
+Plug 'jacoborus/tender.vim'
 Plug 'morhetz/gruvbox'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rakr/vim-one'
 Plug 'sainnhe/edge'
 Plug 'sainnhe/gruvbox-material'
-Plug 'jacoborus/tender.vim'
-Plug 'habamax/vim-colors-lessthan'
 
 call plug#end()
 
@@ -190,7 +191,7 @@ set background=dark
 
 " Selected colorscheme
 let g:gruvbox_material_background = 'hard'
-colorscheme lessthan
+colorscheme nord
 
 " }}}
 
@@ -384,7 +385,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'drk',
+  \ 'colorscheme': 'nord',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]

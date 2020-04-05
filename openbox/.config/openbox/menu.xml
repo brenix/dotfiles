@@ -14,7 +14,7 @@
   </item>
   <item label="GOOGLE-CHROME">
     <action name="Execute">
-      <command>google-chrome-unstable</command>
+      <command>google-chrome-beta</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>

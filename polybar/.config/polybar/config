@@ -45,12 +45,12 @@ border-bottom-size  = 1
 border-top-color = ${colors.black}
 border-top-size  = 0
 
-font-0 = Terminus:pixelsize=14;2
+font-0 = Roboto:pixelsize=10;2
 font-1 = Material Icons:size=12;4
 font-2 = unifont:fontformat=truetype:size=9:antialias=false;0
 font-3 = "Wuncon Siji:pixelsize=9;1"
 
-module-margin-left  = 0.5
+module-margin-left  = 1
 module-margin-right = 1
 
 modules-left  = workspaces
@@ -60,8 +60,8 @@ modules-right = temperature cpu memory volume date time
 offset-x = 0
 offset-y = 0
 
-padding-left  = 1
-padding-right = 1
+padding-left  = 2
+padding-right = 2
 
 # ---- MODULES
 

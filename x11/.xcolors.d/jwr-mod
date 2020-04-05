@@ -1,0 +1,39 @@
+! slack theme: #101014,#252525,#262626,#F0F0F0,#222222,#9DA1AD,#70A6A6,#C07A8F
+
+! special
+*.foreground:   #a4a9b2
+*.background:   #000000
+*.cursorColor:  #a4a9b2
+
+! black
+*.color0:       #101014
+*.color8:       #4e5056
+
+! red
+*.color1:       #8c5c71
+*.color9:       #c07a8f
+
+! green
+*.color2:       #4f7373
+*.color10:      #70a6a6
+
+! yellow
+*.color3:       #6f6f99
+*.color11:      #9e9ecb
+
+! blue
+*.color4:       #506781
+*.color12:      #7496bc
+
+! magenta
+*.color5:       #635b73
+*.color13:      #968aae
+
+! cyan
+*.color6:       #5b7d8c
+*.color14:      #80a9bb
+
+! white
+*.color7:       #787b84
+*.color15:      #9da1ad
+
