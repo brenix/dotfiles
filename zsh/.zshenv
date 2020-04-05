@@ -31,3 +31,4 @@ export XDG_TEMPLATES_DIR="/tmp/templates"
 export XDG_VIDEOS_DIR="/tmp/videos"
 export ZSH_CACHE_DIR=$HOME/.cache
 export INFRACTL_CHECK_VERSION=false
+export FZF_DEFAULT_OPTS='--color fg:#D8DEE9,bg:#2E3440,hl:#A3BE8C,fg+:#D8DEE9,bg+:#434C5E,hl+:#A3BE8C --color pointer:#BF616A,info:#4C566A,spinner:#4C566A,header:#4C566A,prompt:#81A1C1,marker:#EBCB8B'
