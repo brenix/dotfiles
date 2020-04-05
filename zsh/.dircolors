@@ -109,6 +109,9 @@ STICKY                04;37;44
 
 # configs
 
+*Dockerfile        33
+*passwd            33
+*shadow            33
 .cfg               33
 .conf              33
 .config            33
@@ -116,16 +119,13 @@ STICKY                04;37;44
 .json              33
 .tml               33
 .toml              33
-*Dockerfile        33
-*passwd            33
-*shadow            33
 
 # terraform/kubernetes
 
-.yaml              35
-.yml               35
 .tf                35
 .tfvars            35
+.yaml              35
+.yml               35
 
 # encryption
 
@@ -146,23 +146,23 @@ STICKY                04;37;44
 
 # git
 
-.gitignore         31
-.gitmodules        31
-.gitattributes     31
-.gitconfig         31
-.cmake             31
 *CMakeLists.txt    31
-.cmake.in          31
+*MANIFEST.in       31
 *Makefile          31
-.make              31
 *Makefile.am       31
 *configure         31
 *configure.ac      31
 *requirements.txt  31
-*MANIFEST.in       31
 *setup.py          31
-.gemspec           31
+.cmake             31
+.cmake.in          31
 .flake8            31
+.gemspec           31
+.gitattributes     31
+.gitconfig         31
+.gitignore         31
+.gitmodules        31
+.make              31
 .travis.yml        31
 
 # temp files
@@ -201,6 +201,7 @@ STICKY                04;37;44
 .cpp               36
 .cr                36
 .cs                36
+.css               36
 .csx               36
 .cxx               36
 .d                 36
@@ -283,11 +284,11 @@ STICKY                04;37;44
 .vb                36
 .vim               36
 .zsh               36
-.css               36
 
 # archives
 
 .7z                01;32
+.Z                 01;32
 .ace               01;32
 .alz               01;32
 .arc               01;32
@@ -326,7 +327,6 @@ STICKY                04;37;44
 .war               01;32
 .xz                01;32
 .z                 01;32
-.Z                 01;32
 .zip               01;32
 .zoo               01;32
 .zst               01;32
@@ -370,6 +370,8 @@ STICKY                04;37;44
 
 # images
 
+.JPG               32
+.PNG               32
 .bmp               32
 .cgm               32
 .dl                32
@@ -379,13 +381,11 @@ STICKY                04;37;44
 .gif               32
 .jpeg              32
 .jpg               32
-.JPG               32
 .mng               32
 .pbm               32
 .pcx               32
 .pgm               32
 .png               32
-.PNG               32
 .ppm               32
 .pps               32
 .ppsx              32
@@ -404,6 +404,7 @@ STICKY                04;37;44
 
 # video
 
+.MOV               32
 .anx               32
 .asf               32
 .avi               32
@@ -416,7 +417,6 @@ STICKY                04;37;44
 .m4v               32
 .mkv               32
 .mov               32
-.MOV               32
 .mp4               32
 .mpeg              32
 .mpg               32
