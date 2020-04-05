@@ -109,16 +109,17 @@ STICKY                04;37;44
 
 # configs
 
-*Dockerfile        33
-*passwd            33
-*shadow            33
-.cfg               33
-.conf              33
-.config            33
-.ini               33
-.json              33
-.tml               33
-.toml              33
+*Dockerfile         33
+*kustomization.yaml 33
+*passwd             33
+*shadow             33
+.cfg                33
+.conf               33
+.config             33
+.ini                33
+.json               33
+.tml                33
+.toml               33
 
 # terraform/kubernetes
 
