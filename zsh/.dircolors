@@ -78,6 +78,17 @@ STICKY                04;37;44
 
 # text/markup
 
+.csv               37
+.htm               37
+.html              37
+.markdown          37
+.md                37
+.mdown             37
+.rst               37
+.shtml             37
+.txt               37
+.xhtml             37
+.xml               37
 *CONTRIBUTORS      37
 *CONTRIBUTORS.md   37
 *CONTRIBUTORS.txt  37
@@ -95,22 +106,10 @@ STICKY                04;37;44
 *TODO              37
 *TODO.md           37
 *TODO.txt          37
-.csv               37
-.htm               37
-.html              37
-.markdown          37
-.md                37
-.mdown             37
-.rst               37
-.shtml             37
-.txt               37
-.xhtml             37
-.xml               37
 
 # configs
 
 *Dockerfile         33
-*kustomization.yaml 33
 *passwd             33
 *shadow             33
 .cfg                33
@@ -127,6 +126,7 @@ STICKY                04;37;44
 .tfvars            35
 .yaml              35
 .yml               35
+*kustomization.yaml 33
 
 # encryption
 
@@ -147,14 +147,6 @@ STICKY                04;37;44
 
 # git
 
-*CMakeLists.txt    31
-*MANIFEST.in       31
-*Makefile          31
-*Makefile.am       31
-*configure         31
-*configure.ac      31
-*requirements.txt  31
-*setup.py          31
 .cmake             31
 .cmake.in          31
 .flake8            31
@@ -165,11 +157,17 @@ STICKY                04;37;44
 .gitmodules        31
 .make              31
 .travis.yml        31
+*CMakeLists.txt    31
+*MANIFEST.in       31
+*Makefile          31
+*Makefile.am       31
+*configure         31
+*configure.ac      31
+*requirements.txt  31
+*setup.py          31
 
 # temp files
 
-*package-lock.json 02;37
-*~                 02;37
 .BAK               02;37
 .OLD               02;37
 .ORIG              02;37
@@ -183,6 +181,8 @@ STICKY                04;37;44
 .swo               02;37
 .swp               02;37
 .tmp               02;37
+*package-lock.json 02;37
+*~                 02;37
 
 # programming languages
 
