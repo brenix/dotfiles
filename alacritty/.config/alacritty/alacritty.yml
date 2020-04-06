@@ -7,18 +7,18 @@ scrolling:
 
 font:
   normal:
-    family: Hack Nerd Font Mono
+    family: PragmataPro
     style: Regular
   bold:
-    family: Hack Nerd Font Mono
+    family: PragmataPro
     style: Regular
   italic:
-    family: Hack Nerd Font Mono
+    family: PragmataPro
     style: Italic
   size: 9.5
   offset:
     x: 0
-    y: -1
+    y: 0
   glyph_offset:
     x: 0
     y: 0
@@ -199,7 +199,7 @@ dynamic_title: false
 window:
   padding:
     x: 10
-    y: 5
+    y: 7
   dynamic_padding: true
 
 cursor:
