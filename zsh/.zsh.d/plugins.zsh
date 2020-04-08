@@ -24,6 +24,10 @@ zinit snippet OMZ::lib/git.zsh
 zinit ice wait lucid
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 
+# git-open plugin
+zinit ice wait lucid
+zinit light "paulirish/git-open"
+
 # golang
 zinit ice wait lucid
 zinit snippet OMZ::plugins/golang/golang.plugin.zsh
