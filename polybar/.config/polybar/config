@@ -31,7 +31,7 @@ top = true
 #monitor          = ${env:MONITOR:DP-1}
 monitor          = ${env:MONITOR:DVI-I-1}
 monitor-fallback = ${env:MONITOR:DVI-D-0}
-dpi              = 92
+dpi              = 93
 
 height           = 21
 width            = 100%
@@ -46,13 +46,11 @@ border-bottom-size  = 1
 border-top-color = ${colors.black}
 border-top-size  = 0
 
-font-0 = Verdana\-AllCaps:pixelsize=8;antialias=false;2
+font-0 = DejaVu Sans:pixelsize=10;2
 font-1 = Material Icons:size=12;4
-font-2 = unifont:fontformat=truetype:size=9:antialias=false;0
-font-3 = "Wuncon Siji:pixelsize=9;1"
 
-module-margin-left  = 1.5
-module-margin-right = 1.5
+module-margin-left  = 2
+module-margin-right = 2
 
 modules-left  = workspaces
 modules-center = spotify mpd

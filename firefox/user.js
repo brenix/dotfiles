@@ -227,7 +227,7 @@ user_pref("gfx.webrender.all", true);
 user_pref("toolkit.cosmeticAnimations.enabled", false);
 
 // Set DPI
-user_pref("layout.css.dpi", 92);
+user_pref("layout.css.dpi", 91);
 user_pref("layout.css.devPixelsPerpx", 1);
 
 // Set refresh rate
