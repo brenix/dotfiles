@@ -36,6 +36,7 @@
     "prettier.tslintIntegration": true,
     "prettier.stylelintIntegration": true,
     "python.autoComplete.addBrackets": true,
+    "sh.enable": false,
     "languageserver": {
       "golang": {
         "command": "gopls",
