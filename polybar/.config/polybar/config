@@ -46,14 +46,14 @@ border-bottom-size  = 1
 border-top-color = ${colors.black}
 border-top-size  = 0
 
-font-0 = DejaVu Sans:pixelsize=10;2
+font-0 = Verdana\-AllCaps:pixelsize=9;2
 font-1 = Material Icons:size=12;4
 
-module-margin-left  = 2
-module-margin-right = 2
+module-margin-left  = 1
+module-margin-right = 1
 
 modules-left  = workspaces
-modules-center = spotify mpd
+modules-center = music
 modules-right = temperature cpu memory volume date time
 
 offset-x = 0
@@ -102,21 +102,13 @@ label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
-[module/spotify]
+[module/music]
 type = custom/script
-interval = 2
-format-prefix = " "
+interval = 10
+format-prefix = "  "
 format = <label>
-exec = python $HOME/.config/polybar/scripts/spotify_status.py -t 60
-click-left = playerctl play-pause
-
-[module/mpd]
-type = internal/mpd
-host = /run/user/1000/mpd.sock
-interval = 2
-format-online = " MPD: <label-song>"
-label-offline = ""
-label-song = %artist% - %title%
+exec = playerctl metadata --format "{{ playerName }}: {{ artist }} - {{ title }}"
+click-left = playerctl --all-players play-pause
 
 [module/temperature]
 type = internal/temperature
