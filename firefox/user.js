@@ -22,6 +22,9 @@ user_pref("browser.fixup.alternate.enabled", false);
 // Don't trim HTTP/HTTPS off of URLs in the address bar
 user_pref("browser.urlbar.trimURLs", false);
 
+// Disable the ugly 'big bar' when focused
+user_pref("browser.urlbar.update1", false);
+
 ////////////////////////////////////////////////////
 //   Reading
 ////////////////////////////////////////////////////
@@ -183,6 +186,10 @@ user_pref("browser.cache.disk_cache_ssl", false);
 
 // Enable HTTP/3
 user_pref("network.http.http3.enabled", true);
+
+// DNS Caching
+user_pref("network.dnsCacheEntries", 10000);
+user_pref("network.dnsCacheExpiration", 3600);
 
 ////////////////////////////////////////////////////
 //   Misc

@@ -55,7 +55,7 @@
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>Verdana-AllCaps</name>
-      <size>8</size>
+      <size>9</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -64,7 +64,7 @@
     </font>
     <font place="InactiveWindow">
       <name>Verdana-AllCaps</name>
-      <size>8</size>
+      <size>9</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -73,7 +73,7 @@
     </font>
     <font place="MenuHeader">
       <name>Verdana-AllCaps</name>
-      <size>8</size>
+      <size>9</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -82,7 +82,7 @@
     </font>
     <font place="MenuItem">
       <name>Verdana-AllCaps</name>
-      <size>8</size>
+      <size>9</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -91,7 +91,7 @@
     </font>
     <font place="ActiveOnScreenDisplay">
       <name>Verdana-AllCaps</name>
-      <size>8</size>
+      <size>9</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -100,7 +100,7 @@
     </font>
     <font place="InactiveOnScreenDisplay">
       <name>Verdana-AllCaps</name>
-      <size>8</size>
+      <size>9</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->

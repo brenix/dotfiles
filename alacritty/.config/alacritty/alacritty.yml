@@ -7,13 +7,13 @@ scrolling:
 
 font:
   normal:
-    family: DejaVuSansMono Nerd Font Mono
+    family: DejaVuSansMono Nerd Font
     style: Regular
   bold:
-    family: DejaVuSansMono Nerd Font Mono
+    family: DejaVuSansMono Nerd Font
     style: Regular
   italic:
-    family: DejaVuSansMono Nerd Font Mono
+    family: DejaVuSansMono Nerd Font
     style: Italic
   size: 10.5
   offset:

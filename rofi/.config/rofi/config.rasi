@@ -2,8 +2,8 @@ configuration {
 	bw: 0;
 	combi-hide-mode-prefix: true;
 	combi-modi: "window,run";
-	dpi: 92;
-	font: "Terminus 9";
+	dpi: 91;
+	font: "Ubuntu 11";
 	hide-scrollbar: true;
 	line-margin: 1;
 	lines: 10;
