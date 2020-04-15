@@ -124,7 +124,7 @@ user_pref("extensions.getAddons.showPane", false);
 user_pref("browser.onboarding.enabled", false);
 
 // Disable geolocation
-user_pref("geo.enabled", false);
+// user_pref("geo.enabled", false);
 
 // Disable WebGL
 user_pref("webgl.disabled", true);
@@ -189,7 +189,6 @@ user_pref("network.http.http3.enabled", true);
 
 // DNS Caching
 user_pref("network.dnsCacheEntries", 10000);
-user_pref("network.dnsCacheExpiration", 3600);
 
 ////////////////////////////////////////////////////
 //   Misc
