@@ -45,7 +45,7 @@ zinit ice wait lucid
 zinit snippet OMZ::plugins/terraform/terraform.plugin.zsh
 
 # z
-zinit snippet OMZ::plugins/z/z.sh
+zinit light "rupa/z"
 
 # kubectl
 zinit ice wait'1' silent
