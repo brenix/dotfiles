@@ -4,14 +4,6 @@
 
 <menu id="root-menu" label="Openbox 3">
   <separator label="-- APPLICATIONS --" />
-  <item label="FIREFOX">
-    <action name="Execute">
-      <command>firefox</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
   <item label="GOOGLE-CHROME">
     <action name="Execute">
       <command>google-chrome-beta</command>

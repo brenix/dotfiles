@@ -123,12 +123,6 @@ user_pref("extensions.getAddons.showPane", false);
 // Hide onboarding tour (uses Google Analytics)
 user_pref("browser.onboarding.enabled", false);
 
-// Disable geolocation
-// user_pref("geo.enabled", false);
-
-// Disable WebGL
-user_pref("webgl.disabled", true);
-
 // Disable WebRTC
 user_pref("media.peerconnection.enabled", false);
 user_pref("media.peerconnection.video.enabled", false);
@@ -141,10 +135,6 @@ user_pref("network.proxy.socks_remote_dns", true);
 
 // Turn on cryptomining protection
 user_pref("privacy.trackingprotection.cryptomining.enabled", true);
-
-// Turn on resist fingerprinting
-user_pref("privacy.resistFingerprinting", true);
-user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
 
 // Do not use the host PC's certificates, instead, use Firefox's built-in certificate list
 user_pref("security.enterprise_roots.enabled", false);
@@ -204,10 +194,6 @@ user_pref("browser.backspace_action", 0);
 // Disable check for default browser
 user_pref("browser.shell.checkDefaultBrowser", false);
 
-// Disable notifications
-//user_pref("dom.webnotifications.enabled", false);
-//user_pref("dom.webnotifications.serviceworker.enabled", false);
-
 // Enable loading userChrome.css and userContent.css
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 
@@ -226,8 +212,8 @@ user_pref("plugins.click_to_play", true);
 // Put tabs in the title bar (saves space)
 user_pref("browser.tabs.drawInTitlebar", true);
 
-// Enable WebRender (Fixes font rendering for some reason)
-user_pref("gfx.webrender.all", true);
+// Enable WebRender
+// user_pref("gfx.webrender.all", true);
 
 // Disable unnecessary animations
 user_pref("toolkit.cosmeticAnimations.enabled", false);
@@ -241,4 +227,3 @@ user_pref("layout.frame_rate", 144);
 
 // Allow using fontconfig replacement rules
 user_pref("gfx.font_rendering.fontconfig.max_generic_substitutions", 127);
-
