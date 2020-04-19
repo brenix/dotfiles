@@ -3,10 +3,10 @@
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
 <menu id="root-menu" label="Openbox 3">
-  <separator label="-- APPLICATIONS --" />
-  <item label="GOOGLE-CHROME">
+  <separator label="APPLICATIONS" />
+  <item label="CHROME">
     <action name="Execute">
-      <command>google-chrome-beta</command>
+      <command>google-chrome-stable</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -45,7 +45,26 @@
       <command>qbittorrent</command>
     </action>
   </item>
-  <separator label="-- SYSTEM --" />
+  <separator label="VIRTUALIZATION" />
+  <item label="SINGLE-MONITOR">
+    <action name="Execute">
+      <command>xrandr -s 1</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="DUAL-MONITOR">
+    <action name="Execute">
+      <command>xrandr -s 0</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="START-WIN10">
+    <action name="Execute">
+      <command>virsh start win10</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <separator label="SYSTEM" />
   <item label="LXAPPEARANCE">
     <action name="Execute">
       <command>lxappearance</command>
@@ -57,7 +76,7 @@
       <command>pavucontrol</command>
     </action>
   </item>
-  <separator />
+  <separator label="OPENBOX" />
   <item label="OBCONF">
     <action name="Execute">
       <command>obconf</command>

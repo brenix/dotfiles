@@ -36,8 +36,4 @@ pgrep barriers || barriers --enable-crypto &
 setxkbmap -option caps:escape
 
 # -- window manager
-# bspwm
-#exec dbus-launch bspwm &>/tmp/bspwm.log
-
-# openbox
 exec openbox-session

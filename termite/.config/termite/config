@@ -2,7 +2,7 @@
 font                = Hack Nerd Font Mono 9
 allow_bold          = false
 audible_bell        = false
-browser             = google-chrome-unstable
+browser             = google-chrome-stable
 clickable_url       = true
 cursor_blink        = on
 cursor_shape        = block
@@ -43,7 +43,7 @@ color14 = #7daea9
 color7  = #c5c8c6
 color15 = #f4f4f4
 
-# --- HACKER
+# --- BRENIX HACKER
 # [colors]
 # foreground      = #bebebe
 # foreground_bold = #bebebe

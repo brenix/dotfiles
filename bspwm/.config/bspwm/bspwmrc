@@ -1,8 +1,5 @@
 #!/bin/zsh
 
-# -- LOAD COLORS
-. "${HOME}/.cache/wal/colors.sh"
-
 # -- KILL
 killall sxhkd
 killall polybar
@@ -53,7 +50,7 @@ bspc config presel_feedback_color "#1e2132"
 # -- RULES
 bspc rule -a Code desktop=^2
 bspc rule -a Slack desktop=^2
-bspc rule -a Google-chrome-unstable desktop=^3
+bspc rule -a Google-chrome-stable desktop=^3
 bspc rule -a Firefox desktop=^3
 bspc rule -a Nitrogen state=floating
 bspc rule -a zoom state=floating

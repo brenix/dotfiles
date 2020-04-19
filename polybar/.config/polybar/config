@@ -28,7 +28,6 @@ gray           = ${xrdb:color7:#8f9496}
 [bar/main]
 top = true
 
-#monitor          = ${env:MONITOR:DP-1}
 monitor          = ${env:MONITOR:DVI-I-1}
 monitor-fallback = ${env:MONITOR:DVI-D-0}
 dpi              = 93
@@ -230,4 +229,4 @@ label-mounted =  %mountpoint%%{F-}: %percentage_used%%
 label-unmounted =  %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-; vim:ft=dosini
+# vim: set ft=dosini

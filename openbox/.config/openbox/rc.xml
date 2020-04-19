@@ -442,7 +442,7 @@
     </keybind>
     <keybind key="W-d">
       <action name="Execute">
-        <command>google-chrome-beta</command>
+        <command>google-chrome-stable</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>

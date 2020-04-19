@@ -148,28 +148,6 @@ schemes:
       magenta: "0x747474"
       cyan: "0x868686"
       white: "0xf7f7f7"
-  jwr-mod: &jwr-mod
-    primary:
-      background: '0x000000'
-      foreground: '0xa4a9b2'
-    normal:
-      black:   '0x101014'
-      red:     '0x8c5c71'
-      green:   '0x4f7373'
-      yellow:  '0x6f6f99'
-      blue:    '0x506781'
-      magenta: '0x635b73'
-      cyan:    '0x5b7d8c'
-      white:   '0x787b84'
-    bright:
-      black:   '0x4e5056'
-      red:     '0xc07a8f'
-      green:   '0x70a6a6'
-      yellow:  '0x9e9ecb'
-      blue:    '0x7496bc'
-      magenta: '0x968aae'
-      cyan:    '0x80a9bb'
-      white:   '0x9da1ad'
 
 colors: *nord
 

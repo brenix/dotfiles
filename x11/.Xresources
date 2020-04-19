@@ -13,7 +13,6 @@ Xcursor.theme:               capitaine-cursors
 ! -- urxvt
 URxvt*boldFont:
 URxvt*font:                  xft:Hack Nerd Font Mono:pixelsize=12
-!URxvt*font:                  -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 URxvt*termName:              rxvt-256color
 URxvt.depth:                 32
 URxvt*lineSpace:             -2
@@ -33,6 +32,4 @@ URxvt.cursorBlink:           1
 URxvt.cursorUnderline:       1
 
 ! -- colors
-!#include ".xcolors.d/faded"
 #include ".xcolors.d/nord"
-!#include "/home/brenix/.cache/wal/colors.Xresources"

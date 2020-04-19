@@ -1,60 +1,75 @@
 {
-    "suggest.triggerAfterInsertEnter": false,
-    "suggest.noselect": false,
-    "suggest.triggerCompletionWait": 100,
-    "suggest.snippetIndicator": "",
-    "diagnostic.enable": true,
-    "diagnostic.checkCurrentLine": true,
-    "diagnostic.signOffset": 9999999,
-	  "diagnostic.errorSign": "",
-	  "diagnostic.warningSign": "",
-    "diagnostic.displayByAle": false,
-    "diagnostic.virtualText": true,
-    "diagnostic.refreshOnInsertMode": true,
-    "git.enableGutters": true,
-    "git.realtimeGutters": false,
-    "git.branchCharacter":"\uf408",
-    "git.addGBlameToBufferVar": true,
-    "git.addGBlameToVirtualText": true,
-    "git.addedSign.hlGroup": "GitGutterAdd",
-    "git.changedSign.hlGroup": "GitGutterChange",
-    "git.removedSign.hlGroup": "GitGutterDelete",
-    "git.topRemovedSign.hlGroup": "GitGutterDelete",
-    "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
-    "git.addedSign.text":"+",
-    "git.changedSign.text":"~",
-    "git.removedSign.text":"-",
-    "git.topRemovedSign.text": "▔",
-    "git.changeRemovedSign.text": "▋",
-    "coc.preferences.snippetStatusText": "Ⓢ ",
-    "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnSaveFiletypes": ["go", "json", "css", "markdown"],
-    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-    "codeLens.enable": true,
-    "prettier.statusItemText": "ⓟ ",
-    "prettier.eslintIntegration": true,
-    "prettier.tslintIntegration": true,
-    "prettier.stylelintIntegration": true,
-    "python.autoComplete.addBrackets": true,
-    "sh.enable": true,
-    "languageserver": {
-      "golang": {
-        "command": "gopls",
-        "rootPatterns": ["go.mod"],
-        "filetypes": ["go"]
-      },
-      "terraform": {
-        "command": "terraform-lsp",
-        "filetypes": ["terraform"],
-        "initializationOptions": {},
-        "disableDiagnostics": true
-      },
-      "dockerfile": {
-        "command": "docker-langserver",
-        "filetypes": ["dockerfile"],
-        "args": ["--stdio"]
-      }
+  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "go",
+    "json",
+    "css",
+    "markdown"
+  ],
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.snippetStatusText": "Ⓢ ",
+  "codeLens.enable": true,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.displayByAle": false,
+  "diagnostic.enable": true,
+  "diagnostic.errorSign": "",
+  "diagnostic.refreshOnInsertMode": true,
+  "diagnostic.signOffset": 9999999,
+  "diagnostic.virtualText": true,
+  "diagnostic.warningSign": "",
+  "git.addGBlameToBufferVar": true,
+  "git.addGBlameToVirtualText": true,
+  "git.addedSign.hlGroup": "GitGutterAdd",
+  "git.addedSign.text": "+",
+  "git.branchCharacter": "",
+  "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
+  "git.changeRemovedSign.text": "▋",
+  "git.changedSign.hlGroup": "GitGutterChange",
+  "git.changedSign.text": "~",
+  "git.enableGutters": true,
+  "git.realtimeGutters": false,
+  "git.removedSign.hlGroup": "GitGutterDelete",
+  "git.removedSign.text": "-",
+  "git.topRemovedSign.hlGroup": "GitGutterDelete",
+  "git.topRemovedSign.text": "▔",
+  "languageserver": {
+    "dockerfile": {
+      "args": [
+        "--stdio"
+      ],
+      "command": "docker-langserver",
+      "filetypes": [
+        "dockerfile"
+      ]
     },
-    "yaml.format.enable": true,
-    "yaml.completion": true
+    "golang": {
+      "command": "gopls",
+      "filetypes": [
+        "go"
+      ],
+      "rootPatterns": [
+        "go.mod"
+      ]
+    },
+    "terraform": {
+      "command": "terraform-lsp",
+      "disableDiagnostics": true,
+      "filetypes": [
+        "terraform"
+      ],
+      "initializationOptions": {}
+    }
+  },
+  "prettier.eslintIntegration": true,
+  "prettier.statusItemText": "ⓟ ",
+  "prettier.stylelintIntegration": true,
+  "prettier.tslintIntegration": true,
+  "python.autoComplete.addBrackets": true,
+  "sh.enable": true,
+  "suggest.noselect": false,
+  "suggest.snippetIndicator": "",
+  "suggest.triggerAfterInsertEnter": false,
+  "suggest.triggerCompletionWait": 100,
+  "yaml.completion": true,
+  "yaml.format.enable": true
 }
