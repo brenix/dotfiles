@@ -2,6 +2,7 @@ setopt alwaystoend         # Move cursor to end of word if completed in-word
 setopt appendhistory       # allow multiple sessions to append to history
 setopt autocd              # if a command cant be executed, cd into the dir
 setopt autopushd           # make cd push the old dir onto the dir stack
+setopt bashrematch         # enable bash regex matching
 setopt clobber             # allow files to be clobbered
 setopt completeinword      # not just at the end
 setopt extendedglob        # allow reg-ex style matching
