@@ -8,7 +8,6 @@ margin-top    = 1
 margin-bottom = 1
 
 [colors]
-#background     = ${xrdb:color0:#252933}
 background     = #252933
 foreground     = ${xrdb:color7:#d6dbe4}
 foreground-alt = ${xrdb:color7:#d6dbe4}
@@ -47,13 +46,14 @@ border-top-size  = 0
 
 font-0 = Verdana\-AllCaps:pixelsize=10;2
 font-1 = Material Icons:size=12;4
+font-2 = Weather Icons:size=10;2
 
 module-margin-left  = 2
 module-margin-right = 2
 
 modules-left  = workspaces
 modules-center = music
-modules-right = temperature cpu memory volume date time
+modules-right = weather cpu temperature memory volume date time
 
 offset-x = 0
 offset-y = 0
@@ -228,5 +228,13 @@ mount-0 = /
 label-mounted =  %mountpoint%%{F-}: %percentage_used%%
 label-unmounted =  %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/weather]
+type = custom/script
+exec = ~/.config/polybar/scripts/openweathermap-simple.sh
+exec-if = ping openweathermap.org -c 1
+interval = 600
+label-font = 3
+click-left = xdg-open "https://www.google.com/search?q=weather"
 
 # vim: set ft=dosini
