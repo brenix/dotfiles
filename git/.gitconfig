@@ -9,7 +9,7 @@
 	editor = vim
 	preloadindex = true
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	pager = diff-so-fancy --patch-mode | less -FXRi
+	pager = delta --theme="Nord" --minus-color="#52383A" --minus-emph-color="#BF616A" --plus-color="#2E4430" --plus-emph-color="#A3BE8C"
 [apply]
 	whitespace = strip
 [log]
@@ -85,3 +85,6 @@
 	tree = log --graph --pretty=oneline --decorate
 [diff "sopsdiffer"]
 	textconv = sops -d
+[interactive]
+	diffFilter = delta --color-only --theme="Nord" --minus-color="#52383A" --minus-emph-color="#BF616A" --plus-color="#2E4430" --plus-emph-color="#A3BE8C"
+
