@@ -29,7 +29,7 @@ top = true
 
 monitor          = ${env:MONITOR:DVI-I-1}
 monitor-fallback = ${env:MONITOR:DVI-D-0}
-dpi              = 93
+dpi              = 91
 
 height           = 21
 width            = 100%

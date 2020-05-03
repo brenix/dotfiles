@@ -40,7 +40,8 @@ nvidia-settings -a InitialPixmapPlacement=2 \
   -a GlyphCache=1 \
   -a SyncToVBlank=0 \
   -a AllowFlipping=0 \
-  -a OpenGLImageSettings=3
+  -a OpenGLImageSettings=3 \
+  -a GpuPowerMizerMode=1
 
 # -- window manager
 exec openbox-session
