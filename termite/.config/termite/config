@@ -1,5 +1,5 @@
 [options]
-font                = Hack Nerd Font Mono 9
+font                = DejaVuSansMono Nerd Font Mono 10.5
 allow_bold          = false
 audible_bell        = false
 browser             = google-chrome-stable
@@ -17,53 +17,36 @@ urgent_on_bell      = true
 visible_bell        = false
 hyperlinks          = true
 word_chars          = -A-Za-z0-9,./?%&#:_=+@~
+cell_height_scale   = 1
+cell_width_scale    = 1
 
-# --- FADED
 [colors]
-foreground      = #e5e9f0
-foreground_bold = #e5e9f0
-cursor          = #e5e9f0
-#background      = #252933
-background      = rgba(37, 41, 51, 0.9)
-highlight = #4c566a
-color0  = #2e3440
-color8  = #606778
-color1  = #b77a76
-color9  = #b77a76
-color2  = #b4bf86
-color10 = #b4bf86
-color3  = #cbb079
-color11 = #cbb079
-color4  = #83a2be
-color12 = #83a2be
-color5  = #958090
-color13 = #958090
-color6  = #7daea9
-color14 = #7daea9
-color7  = #c5c8c6
-color15 = #f4f4f4
+cursor              = #d8dee9
+cursor_foreground   = #2e3440
+foreground          = #d8dee9
+foreground_bold     = #d8dee9
+background          = #2e3440
+highlight           = #4c566a
+color0              = #3b4252
+color1              = #bf616a
+color2              = #a3be8c
+color3              = #ebcb8b
+color4              = #81a1c1
+color5              = #b48ead
+color6              = #88c0d0
+color7              = #e5e9f0
+color8              = #4c566a
+color9              = #bf616a
+color10             = #a3be8c
+color11             = #ebcb8b
+color12             = #81a1c1
+color13             = #b48ead
+color14             = #8fbcbb
+color15             = #eceff4
 
-# --- BRENIX HACKER
-# [colors]
-# foreground      = #bebebe
-# foreground_bold = #bebebe
-# cursor          = #bebebe
-# background      = #0a0b0a
-# color0  = #252525
-# color8  = #454545
-# color1  = #c05776
-# color9  = #c05776
-# color2  = #a7ecb7
-# color10 = #a7ecb7
-# color3  = #87a1c5
-# color11 = #87a1c5
-# color4  = #81b38c
-# color12 = #81b38c
-# color5  = #507057
-# color13 = #507057
-# color6  = #7574a5
-# color14 = #7574a5
-# color7  = #858585
-# color15 = #e8e8e8
+[hints]
+font                = DejaVuSansMono Nerd Font Mono 10.5
+foreground          = #d8dee9
+background          = #2e3440
 
 # vim: set ft=dosini:

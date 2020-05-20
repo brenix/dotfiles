@@ -5,7 +5,7 @@ unload-module module-suspend-on-idle
 
 # -- Noise suppression
 load-module module-null-sink sink_name=mic_denoised_out
-load-module module-ladspa-sink sink_name=mic_raw_in sink_master=mic_denoised_out label=noise_suppressor_mono plugin=/home/brenix/noise-suppression/bin/ladspa/librnnoise_ladspa.so control=50
+load-module module-ladspa-sink sink_name=mic_raw_in sink_master=mic_denoised_out label=noise_suppressor_mono plugin=/home/brenix/.config/pulse/plugins/librnnoise_ladspa.so control=50
 load-module module-loopback source=alsa_input.usb-Kingston_HyperX_Cloud_Flight_Wireless_Headset-00.mono-fallback sink=mic_raw_in channels=1
 
 # -- Set default sink

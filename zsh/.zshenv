@@ -1,6 +1,7 @@
 export CLICOLOR=1
 export CORRECT_IGNORE_FILE='.*'
 export EDITOR=nvim
+export FZF_DEFAULT_COMMAND='fd'
 export FZF_DEFAULT_OPTS='--color fg:#D8DEE9,bg:#2E3440,hl:#A3BE8C,fg+:#D8DEE9,bg+:#434C5E,hl+:#A3BE8C --color pointer:#BF616A,info:#4C566A,spinner:#4C566A,header:#4C566A,prompt:#81A1C1,marker:#EBCB8B'
 export GOPATH=~/go
 export GREP_COLOR="1;31"
