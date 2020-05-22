@@ -7,7 +7,7 @@
 polybar main -r &
 
 # -- compositor
-picom -b
+# picom -b
 
 # -- wallpaper
 $HOME/.fehbg

@@ -44,12 +44,12 @@ border-bottom-size  = 1
 border-top-color = ${colors.black}
 border-top-size  = 0
 
-font-0 = Verdana\-AllCaps:pixelsize=10;2
+font-0 = xos4 Terminus:pixelsize=14;2
 font-1 = Material Icons:size=12;4
 font-2 = Weather Icons:size=10;2
 
-module-margin-left  = 2
-module-margin-right = 2
+module-margin-left  = 1
+module-margin-right = 1
 
 modules-left  = workspaces
 modules-center = music
@@ -74,10 +74,10 @@ label-occupied = ""
 label-urgent   = ""
 label-empty    = ""
 
-label-occupied-padding = 1
-label-empty-padding    = 1
-label-urgent-padding   = 1
-label-active-padding   = 1
+label-occupied-padding = 0.5
+label-empty-padding    = 0.5
+label-urgent-padding   = 0.5
+label-active-padding   = 0.5
 
 label-active-foreground   = ${colors.foreground}
 label-occupied-foreground = ${colors.blue}

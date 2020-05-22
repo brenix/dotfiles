@@ -7,15 +7,15 @@ scrolling:
 
 font:
   normal:
-    family: DejaVuSansMono Nerd Font
+    family: xos4 Terminus
     style: Regular
   bold:
-    family: DejaVuSansMono Nerd Font
+    family: xos4 Terminus
     style: Regular
   italic:
-    family: DejaVuSansMono Nerd Font
+    family: xos4 Terminus
     style: Italic
-  size: 10.5
+  size: 11
   offset:
     x: 0
     y: -1
