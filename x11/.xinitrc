@@ -30,7 +30,7 @@ xcalib -o 0 -b 0 -gc 0.8 $HOME/.colors/asus-vg248qe.icm
 xcalib -o 1 -b 0 -gc 0.8 $HOME/.colors/asus-vg248qe.icm
 
 # -- barrier/synergy
-pgrep barriers || barriers --enable-crypto &
+pgrep barriers || barriers &
 
 # -- map capslock to escape
 setxkbmap -option caps:escape
@@ -38,8 +38,6 @@ setxkbmap -option caps:escape
 # load nvidia settings
 nvidia-settings -a InitialPixmapPlacement=2 \
   -a GlyphCache=1 \
-  -a SyncToVBlank=0 \
-  -a AllowFlipping=0 \
   -a OpenGLImageSettings=3 \
   -a GpuPowerMizerMode=1
 

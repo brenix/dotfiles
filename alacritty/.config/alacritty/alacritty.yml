@@ -176,8 +176,8 @@ dynamic_title: false
 
 window:
   padding:
-    x: 10
-    y: 7
+    x: 0
+    y: 0
   dynamic_padding: true
 
 cursor:

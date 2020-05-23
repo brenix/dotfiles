@@ -3,7 +3,7 @@ configuration {
 	combi-hide-mode-prefix: true;
 	combi-modi: "window,run";
 	dpi: 91;
-	font: "Ubuntu 11";
+	font: "Terminus 11";
 	hide-scrollbar: true;
 	line-margin: 1;
 	lines: 10;

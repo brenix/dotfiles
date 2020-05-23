@@ -9,6 +9,9 @@ polybar main -r &
 # -- compositor
 # picom -b
 
+# -- urxvtd
+# urxvtd -q -o -f
+
 # -- wallpaper
 $HOME/.fehbg
 #hsetroot -solid "#3B4252"
