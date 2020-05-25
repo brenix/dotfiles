@@ -9,6 +9,9 @@ polybar main -r &
 # -- compositor
 # picom -b
 
+# -- notifcation daemon
+dunst &
+
 # -- urxvtd
 # urxvtd -q -o -f
 

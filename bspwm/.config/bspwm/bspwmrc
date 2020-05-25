@@ -1,22 +1,11 @@
 #!/bin/zsh
 
-# -- KILL
-killall sxhkd
-killall polybar
+sxhkd &
 
-# -- MULTI-MONITOR
+# -- DESKTOPS
 
-for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-  MONITOR=$m polybar main &
-done
-
-if [ "$(hostname)" = "archx" ]; then
-  bspc monitor DVI-I-1 -d 1 2
-  bspc monitor DVI-D-0 -d 3 4
-else
-  bspc monitor -d 1 2 3 4
-fi
-
+bspc monitor DVI-I-1 -d 1 2
+bspc monitor DVI-D-0 -d 3 4
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 bspc config merge_overlapping_monitors true
@@ -32,7 +21,7 @@ bspc config initial_polarity first_child
 bspc config split_ratio 0.52
 bspc config borderless_monocle true
 bspc config single_monocle true
-bspc config gapless_monocle true
+bspc config gapless_monocle false
 bspc config top_padding 20
 
 # -- POINTER
@@ -44,7 +33,7 @@ bspc config pointer_action2 resize_side
 
 # -- COLORS
 bspc config normal_border_color "#161821"
-bspc config focused_border_color "#84A0C6"
+bspc config focused_border_color "#81a1c1"
 bspc config presel_feedback_color "#1e2132"
 
 # -- RULES
@@ -56,6 +45,7 @@ bspc rule -a Nitrogen state=floating
 bspc rule -a zoom state=floating
 
 # -- AUTOSTART
-sxhkd &
-picom -b
+$HOME/bin/polybar-launch
 $HOME/.fehbg
+dunst &
+picom -b

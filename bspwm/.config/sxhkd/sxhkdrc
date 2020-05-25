@@ -152,25 +152,25 @@ XF86AudioStop
 #
 
 super + Return
-  urxvtc
+  alacritty
 
 super + d
-	google-chrome-unstable
+	google-chrome-stable
 
 super + s
-	spotify --force-device-scale-factor=1.5
+	spotify
 
 super + shift + s
-  slack --force-device-scale-factor=2
+  slack
 
 super + c
-	code --force-device-scale-factor=1.5
+	code
 
 super + v
 	pavucontrol
 
 super + shift + d
-	discord --force-device-scale-factor=2
+	discord
 
 super + shift + p
 	pcmanfm
@@ -182,5 +182,4 @@ Print
 	flameshot gui
 
 super + m
-  urxvtc -title work -name work -e "zsh" -c "ssh macbook"
-	#alacritty -t work --clas=work -e zsh -c "ssh macbook"
+	alacritty -t work --class=work -e zsh -c "ssh macbook"
