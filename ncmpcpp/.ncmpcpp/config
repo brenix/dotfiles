@@ -20,7 +20,6 @@ statusbar_visibility = "no"
 visualizer_color = cyan
 titles_visibility = "no"
 enable_window_title = "yes"
-execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
 state_flags_color = cyan
 main_window_color = white
 current_item_prefix = $(white)$r

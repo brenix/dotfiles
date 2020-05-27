@@ -4,62 +4,52 @@
 screenchange-reload = true
 
 [global/wm]
-margin-top    = 1
+margin-top = 1
 margin-bottom = 1
 
 [colors]
-background     = #252933
-foreground     = ${xrdb:color7:#d6dbe4}
+background = #252933
+foreground = ${xrdb:color7:#d6dbe4}
 foreground-alt = ${xrdb:color7:#d6dbe4}
-primary        = ${xrdb:color1:#bb6b6b}
-secondary      = ${xrdb:color2:#85ba87}
-alert          = ${xrdb:color3:#cbb079}
-black          = ${xrdb:color0:#1b1e25}
-red            = ${xrdb:color1:#bb6b6b}
-green          = ${xrdb:color2:#85ba87}
-yellow         = ${xrdb:color3:#cbb079}
-blue           = ${xrdb:color4:#83a2be}
-magenta        = ${xrdb:color5:#958090}
-cyan           = ${xrdb:color6:#7daea9}
-white          = ${xrdb:color15:#d6dbe4}
-gray           = ${xrdb:color7:#8f9496}
+primary = ${xrdb:color1:#bb6b6b}
+secondary = ${xrdb:color2:#85ba87}
+alert = ${xrdb:color3:#cbb079}
+black = ${xrdb:color0:#1b1e25}
+red = ${xrdb:color1:#bb6b6b}
+green = ${xrdb:color2:#85ba87}
+yellow = ${xrdb:color3:#cbb079}
+blue = ${xrdb:color4:#83a2be}
+magenta = ${xrdb:color5:#958090}
+cyan = ${xrdb:color6:#7daea9}
+white = ${xrdb:color15:#d6dbe4}
+gray = ${xrdb:color7:#8f9496}
 
 [bar/main]
 top = true
-
-monitor          = ${env:MONITOR:DVI-I-1}
+monitor = ${env:MONITOR:DVI-I-1}
 monitor-fallback = ${env:MONITOR:DVI-D-0}
-dpi              = 91
-
-height           = 21
-width            = 100%
-spacing          = 0
-separator        = |
-
+dpi = 91
+height = 21
+width = 100%
+spacing = 0
+separator = |
 foreground = ${colors.foreground}
 background = ${colors.background}
-
 border-bottom-color = ${colors.black}
-border-bottom-size  = 1
-
+border-bottom-size = 1
 border-top-color = ${colors.black}
-border-top-size  = 0
-
+border-top-size = 0
 font-0 = xos4 Terminus:pixelsize=14;2
 font-1 = Material Icons:size=12;4
 font-2 = Weather Icons:size=10;2
-
-module-margin-left  = 1
+module-margin-left = 1
 module-margin-right = 1
-
-modules-left  = workspaces
-modules-center = music
+modules-left = workspaces
+modules-center = spotify mpd
 modules-right = weather cpu temperature memory volume date time
-
 offset-x = 0
 offset-y = 0
-
-padding-left  = 1
+padding-left = 1
 padding-right = 1
 
 # ---- MODULES
@@ -67,59 +57,38 @@ padding-right = 1
 [module/workspaces]
 type = internal/xworkspaces
 pin-workspaces = false
-enable-click   = true
-enable-scroll  = true
-
-label-active   = ""
-label-occupied = ""
-label-urgent   = ""
-label-empty    = ""
-
-label-occupied-padding = 0.5
-label-empty-padding    = 0.5
-label-urgent-padding   = 0.5
-label-active-padding   = 0.5
-
-label-active-foreground   = ${colors.foreground}
-label-occupied-foreground = ${colors.blue}
-label-urgent-foreground   = ${colors.red}
-label-empty-foreground    = ${colors.foreground}
-
+enable-click = true
+enable-scroll = true
+label-active-foreground = ${colors.foreground}
+label-active-background = ${colors.blue}
 format-padding = 0
 format = <label-state>
 
-[module/bspwm]
-type = internal/bspwm
-label-focused = %name%
-label-focused-background = ${colors.background-alt}
-label-focused-padding = 1
-label-occupied = %name%
-label-occupied-padding = 1
-label-urgent = %name%!
-label-urgent-background = ${colors.red}
-label-urgent-padding = 1
-label-empty = %name%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 1
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+interval = 5
+label-song =  MPD: %title%
+click-left = "mpc -q toggle"
 
-[module/music]
+[module/spotify]
 type = custom/script
-interval = 10
-format-prefix = "  "
+interval = 5
+format-prefix = " Spotify: "
 format = <label>
-exec = playerctl metadata --format "{{ playerName }}: {{ artist }} - {{ title }}"
-click-left = playerctl --all-players play-pause
+exec = "python $HOME/.config/polybar/scripts/spotify_status.py -f '{artist} - {song}'"
+click-left = "playerctl play-pause"
+click-right = "pkill spotify"
 
 [module/temperature]
 type = internal/temperature
 interval = 3
 thermal-zone = 0
 warn-temperature = 60
-
 label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.red}
-
 format = <label>
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
@@ -135,42 +104,19 @@ format-prefix-foreground = ${colors.foreground}
 [module/memory]
 type = internal/memory
 interval = 30
-
 label = %gb_used%
-
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-
-[module/download]
-type = internal/network
-interval = 1.5
-interface = enp8s0
-
-label-connected = %downspeed%
-
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground}
-
-[module/upload]
-type = internal/network
-interval = 1.5
-interface = enp8s0
-
-label-connected = %downspeed%
-
-format-connected-prefix = ""
-format-connected-prefix-foreground = ${colors.foreground}
 
 [module/volume]
 type = internal/pulseaudio
 sink = alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo
 use-ui-max = false
 interval = 5
-
 format-volume = <ramp-volume> <label-volume>
-label-volume  = %{A3:pavucontrol & disown:}%percentage%%%{A}
+label-volume = %{A3:pavucontrol & disown:}%percentage%%%{A}
 label-volume-foreground = ${root.foreground}
-label-muted   = " %{F#b77a76}MUTED"
+label-muted = " %{F#b77a76}MUTED"
 label-muted-foreground = ${colors.foreground-alt}
 bar-volume-empty-foreground = ${colors.foreground-alt}
 ramp-volume-0 = 
@@ -181,9 +127,7 @@ ramp-volume-2 = 
 type = internal/date
 interval = 5
 time = %r
-
 label = %time%
-
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 
@@ -191,44 +135,7 @@ format-prefix-foreground = ${colors.foreground}
 type = internal/date
 interval = 3600
 date = %Y-%m-%d
-
 label = %{A1:gsimplecal & disown:}%{A3:gsimplecal & disown:} %date%%{A}%{A}
-
-[module/updates]
-type = custom/script
-exec = ~/bin/getpacmanupdates
-interval = 360
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-
-[module/ip]
-type = custom/script
-exec = "curl ifconfig.co 2>/dev/null"
-interval = 360
-format-prefix = " "
-
-[module/vpn]
-type = custom/script
-exec = "ip link show dev tun0 &>/dev/null && echo Active || echo Inactive"
-interval = 60
-format-prefix = " "
-
-[module/light]
-type = custom/script
-exec = ~/bin/lightstatus
-interval = 360
-click-left = ~/bin/light
-format-prefix = " "
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-mount-0 = /
-
-label-mounted =  %mountpoint%%{F-}: %percentage_used%%
-label-unmounted =  %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/weather]
 type = custom/script
@@ -236,6 +143,6 @@ exec = ~/.config/polybar/scripts/openweathermap-simple.sh
 exec-if = ping openweathermap.org -c 1
 interval = 600
 label-font = 3
-click-left = xdg-open "https://www.google.com/search?q=weather"
+click-left = "xdg-open 'https://www.google.com/search?q=weather'"
 
 # vim: set ft=dosini
