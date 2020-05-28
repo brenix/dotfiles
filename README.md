@@ -1,39 +1,44 @@
 # dotfiles
 
-## Installation
+My configuration files for mostly Linux (Archlinux) and OSX.
 
-Install GNU Stow symlinking package manager.
+Current linux setup:
 
-    # Archlinux
-    sudo pacman -Syy stow
-    # Fedora/RHEL
-    sudo dnf install -y stow
-    # Debian
-    sudo apt-get install stow
+- **Window manager**: [openbox](openbox/.config/openbox)
+- **Bar**: [polybar](polybar/.config/polybar)
+- **Terminal**: st
+- **Colorsheme**: [Nord](https://www.nordtheme.com/)
+- **Shell**: [zsh](zsh), [tmux](tmux)
+- **Launcher**: [rofi](rofi)
+- **Editor**: [nvim](nvim/.config/nvim)
+- **Music Player**: spotify, [mpd](mpd/.config/mpd), [ncmcpp](ncmcpp/.ncmcpp)
 
 ## Usage
 
-Clone the dotfiles Stow directory:
+The dotfiles are managed through [GNU stow](https://www.gnu.org/software/stow/)
 
-    git clone git@github.com:brenix/dotfiles.git ~/.dotfiles
+Install the `stow` package using your local package manager:
 
-Install stow packages.
+```sh
+# Archlinux
+sudo pacman -Syy stow
 
-    cd ~/.dotfiles
-    make stow
+# OSX
+brew install stow
+```
 
-## Stow Basics
+Then, from within the repo you can symlink any one of the directories (stow packages):
 
-Install one or more stow packages into the parent target directory:
+```sh
+stow -v nvim # symlink nvim configuration
+stow -v zsh  # symlink zsh configuration
+```
 
-    cd ~/.dotfiles
-    stow -v PACKAGE          # install a package
-    stow -S PACKAGE PACKAGE  # install multiple packages
+> Note: Some directories simply contain configuration and are not meant to be
+> symlinked.
 
-Useful options and commands:
+To remove symlinks for a package:
 
-    -d  # specify a custom Stow directory, default is cwd
-    -t  # specify a custom target directory, default is parent of cwd
-    stow -D PACKAGE  # delete the package from the target directory
-    stow -R PACKAGE  # unstow and restow to prune old symlinks
-    stow --simulate -v PACKAGE # show what actions would be performed
+```sh
+stow -D nvim
+```

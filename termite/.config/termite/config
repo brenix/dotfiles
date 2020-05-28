@@ -1,5 +1,5 @@
 [options]
-font                = DejaVuSansMono Nerd Font Mono 10.5
+font                = Terminus 11
 allow_bold          = false
 audible_bell        = false
 browser             = google-chrome-stable
@@ -45,7 +45,7 @@ color14             = #8fbcbb
 color15             = #eceff4
 
 [hints]
-font                = DejaVuSansMono Nerd Font Mono 10.5
+font                = Terminus 11
 foreground          = #d8dee9
 background          = #2e3440
 

@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-sxhkd &
+# -- KEYBINDINGS
+sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 
 # -- DESKTOPS
-
 bspc monitor DVI-I-1 -d 1 2
 bspc monitor DVI-D-0 -d 3 4
 bspc config remove_disabled_monitors true
@@ -45,7 +45,9 @@ bspc rule -a Nitrogen state=floating
 bspc rule -a zoom state=floating
 
 # -- AUTOSTART
-$HOME/bin/polybar-launch
-$HOME/.fehbg
+
+polybar main -r &
 dunst &
-picom -b
+$HOME/.fehbg
+
+# vim: set ft=sh:

@@ -5,9 +5,6 @@ beets/.config/beets/state.pickle
 # ncmpcpp
 ncmpcpp/.ncmpcpp/error.log
 
-# syncthing
-.stfolder
-
 # vim
 nvim/.config/nvim/autoload/plug.vim
 nvim/.config/nvim/plugged
