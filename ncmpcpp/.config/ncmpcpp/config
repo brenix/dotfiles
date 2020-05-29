@@ -1,0 +1,55 @@
+song_status_format = "{%a - %t}"
+song_list_format = "{%a - %t} $R {%l}"
+song_window_title_format = "{%a - }{%t}|{%f}"
+
+ncmpcpp_directory = "~/.config/ncmpcpp/"
+mpd_music_dir = "/music"
+external_editor = "nvim"
+user_interface = "classic"
+playlist_display_mode = "classic"
+
+message_delay_time = "1"
+playlist_disable_highlight_delay = 1
+
+now_playing_prefix = "$(8)"
+now_playing_suffix = "$0"
+selected_item_prefix = "$(15)"
+current_item_prefix = "$(15)$r"
+browser_playlist_prefix = "» "
+
+colors_enabled = "yes"
+cyclic_scrolling = "no"
+use_console_editor = "yes"
+discard_colors_if_item_is_selected = "yes"
+
+header_visibility = "no"
+titles_visibility = "no"
+statusbar_visibility = "yes"
+display_remaining_time = "no"
+
+volume_color = "2"
+statusbar_color = "5"
+header_window_color = "4"
+main_window_color = "white"
+empty_tag_color = "5"
+
+color1 = "cyan"
+color2 = "cyan"
+state_line_color = "white"
+state_flags_color = "cyan"
+window_border_color = "white"
+active_window_border = "cyan"
+alternative_ui_separator_color = "black"
+
+progressbar_color = "black"
+progressbar_look = "━━━"
+progressbar_elapsed_color = "cyan"
+
+volume_change_step = 5
+mouse_support = yes
+
+ask_before_clearing_playlists = "no"
+autocenter_mode = "yes"
+centered_cursor = "yes"
+
+# vim: set ft=dosini:

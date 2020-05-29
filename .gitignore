@@ -3,7 +3,7 @@ beets/.config/beets/discogs_token.json
 beets/.config/beets/state.pickle
 
 # ncmpcpp
-ncmpcpp/.ncmpcpp/error.log
+ncmpcpp/.config/ncmpcpp/error.log
 
 # vim
 nvim/.config/nvim/autoload/plug.vim

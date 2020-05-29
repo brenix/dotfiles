@@ -27,6 +27,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'aesophor/base16-faded'
 Plug 'airblade/vim-rooter'
 Plug 'andrewstuart/vim-kubernetes'
+Plug 'baskerville/vim-sxhkdrc'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }

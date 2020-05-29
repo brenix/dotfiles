@@ -43,4 +43,4 @@ nvidia-settings -a InitialPixmapPlacement=2 \
 
 # -- window manager
 exec openbox-session
-# exec berry
+#exec bspwm

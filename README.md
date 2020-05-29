@@ -4,14 +4,14 @@ My configuration files for mostly Linux (Archlinux) and OSX.
 
 Current linux setup:
 
-- **Window manager**: [openbox](openbox/.config/openbox)
-- **Bar**: [polybar](polybar/.config/polybar)
+- **Window manager**: bspwm
+- **Bar**: polybar
 - **Terminal**: st
 - **Colorsheme**: [Nord](https://www.nordtheme.com/)
-- **Shell**: [zsh](zsh), [tmux](tmux)
-- **Launcher**: [rofi](rofi)
-- **Editor**: [nvim](nvim/.config/nvim)
-- **Music Player**: spotify, [mpd](mpd/.config/mpd), [ncmcpp](ncmcpp/.ncmcpp)
+- **Shell**: zsh, tmux
+- **Launcher**: rofi
+- **Editor**: nvim
+- **Music Player**: spotify, mpd, ncmcpp
 
 ## Usage
 
