@@ -42,5 +42,5 @@ nvidia-settings -a InitialPixmapPlacement=2 \
   -a GpuPowerMizerMode=1
 
 # -- window manager
-exec openbox-session
-#exec bspwm
+#exec openbox-session
+exec bspwm

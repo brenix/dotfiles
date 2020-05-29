@@ -93,8 +93,8 @@ super + Return
   st -g 125x40 -f "xos4 Terminus:pixelsize=14:antialias=true:autohint:false"
 
 # terminal (standalone)
-#super + shift + Return
-#  st -g 125x40 -f "xos4 Terminus:pixelsize=14:antialias=true:autohint:false"
+super + shift + Return
+  st -g 125x40 -f "xos4 Terminus:pixelsize=14:antialias=true:autohint:false"
 
 # terminal (work)
 super + m
