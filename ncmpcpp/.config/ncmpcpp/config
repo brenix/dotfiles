@@ -45,7 +45,6 @@ progressbar_color = "black"
 progressbar_look = "━━━"
 progressbar_elapsed_color = "cyan"
 
-volume_change_step = 5
 mouse_support = yes
 
 ask_before_clearing_playlists = "no"

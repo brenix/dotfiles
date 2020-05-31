@@ -1,1 +1,12 @@
+/* Remove color line above tabs */
 #TabsToolbar .tabbrowser-tab .tab-line { display: none !important; }
+
+/* Autohide Bookmarks Bar */
+#PersonalToolbar {
+    visibility: collapse !important;
+}
+
+#navigator-toolbox:hover > #PersonalToolbar {
+    visibility: visible !important;
+}
+

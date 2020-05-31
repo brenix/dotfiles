@@ -47,6 +47,9 @@ user_pref("layout.spellcheckDefault", 2);
 user_pref("browser.startup.page", 0);
 user_pref("browser.startup.homepage", "about:blank");
 
+// Disable error pages
+user_pref("browser.xul.error_pages.enabled", false);
+
 // Disable new tab page ads and preload
 user_pref("browser.newtabpage.enabled", false);
 user_pref("browser.newtab.preload", false);
@@ -162,23 +165,33 @@ user_pref("extensions.formautofill.heuristics.enabled", false);
 user_pref("browser.sessionstore.interval", 60000);
 
 // Enable memory cache and set size
-user_pref("browser.cache.memory.enable", true);
-user_pref("browser.cache.memory.capacity", 1048576);   // 1GB
-user_pref("browser.cache.memory.max_entry_size", -1);  // Default=5120
+// user_pref("browser.cache.memory.enable", true);
+// user_pref("browser.cache.memory.capacity", 1048576);   // 1GB
+// user_pref("browser.cache.memory.max_entry_size", -1);  // Default=5120
+
+// Move disk cache to RAM - Preserves cache between Firefox runs
+user_pref("browser.cache.disk.parent_directory", "/run/user/1000/firefox");
 
 // Disable disk cache
-user_pref("browser.cache.disk.enable", false);
-user_pref("browser.cache.disk.capacity", 0);
-user_pref("browser.cache.disk.max_entry_size", 0);
-user_pref("browser.cache.disk.smart_size.enabled", false);
-user_pref("browser.cache.disk.smart_size.first_run", false);
-user_pref("browser.cache.disk_cache_ssl", false);
+// user_pref("browser.cache.disk.enable", false);
+// user_pref("browser.cache.disk.capacity", 0);
+// user_pref("browser.cache.disk.max_entry_size", 0);
+// user_pref("browser.cache.disk.smart_size.enabled", false);
+// user_pref("browser.cache.disk.smart_size.first_run", false);
+// user_pref("browser.cache.disk_cache_ssl", false);
 
 // Enable HTTP/3
 user_pref("network.http.http3.enabled", true);
 
 // DNS Caching
 user_pref("network.dnsCacheEntries", 10000);
+
+// Disable IPv6
+user_pref("network.dns.disableIPv6", true);
+
+// Enable accelerated azure canvas
+user_pref("gfx.canvas.azure.accelerated", true);
+
 
 ////////////////////////////////////////////////////
 //   Misc
@@ -213,7 +226,10 @@ user_pref("plugins.click_to_play", true);
 user_pref("browser.tabs.drawInTitlebar", true);
 
 // Enable WebRender
-// user_pref("gfx.webrender.all", true);
+user_pref("gfx.webrender.all", true);
+
+// Enable WebGPU/Vulkan
+user_pref("dom.webgpu.enabled", true);
 
 // Disable unnecessary animations
 user_pref("toolkit.cosmeticAnimations.enabled", false);
