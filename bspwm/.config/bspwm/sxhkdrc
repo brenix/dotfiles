@@ -39,12 +39,12 @@ super + {p,b,comma,period}
   bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node in the current desktop
-super + {_,shift + }c
+{super,alt} + {_,shift + }Tab
   bspc node -f {next,prev}.local
 
-# focus the last node/desktop
-super + {grave,Tab}
-  bspc {node,desktop} -f last
+# focus the last desktop
+{super,alt} + grave
+  bspc desktop -f last
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}

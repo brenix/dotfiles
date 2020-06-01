@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/brenix/.wallpapers/photo-1566678463023-77aef4425ea4.jpeg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#1b1e23",
+        "foreground": "#d1dbd9",
+        "cursor": "#d1dbd9"
+    },
+    "colors": {
+        "color0": "#1b1e23",
+        "color1": "#83979C",
+        "color2": "#8CA09F",
+        "color3": "#889DA2",
+        "color4": "#93A8AB",
+        "color5": "#A5BAB8",
+        "color6": "#ACC1BE",
+        "color7": "#d1dbd9",
+        "color8": "#929997",
+        "color9": "#83979C",
+        "color10": "#8CA09F",
+        "color11": "#889DA2",
+        "color12": "#93A8AB",
+        "color13": "#A5BAB8",
+        "color14": "#ACC1BE",
+        "color15": "#d1dbd9"
+    }
+}
