@@ -7,7 +7,7 @@ configuration {
 	hide-scrollbar: true;
 	line-margin: 1;
 	lines: 10;
-	modi: "window,run";
+	modi: "window,run,combi,calc";
 	padding: 0;
 	separator-style: "solid";
 	terminal: "st";

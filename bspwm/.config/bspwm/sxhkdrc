@@ -101,8 +101,12 @@ super + m
   st -g 125x40 -f "xos4 Terminus:pixelsize=14:antialias=true:autohint:false" -t work -c work zsh -c 'TERM=xterm-256color ssh macbook'
 
 # launcher
-{super, alt} + @space
+super + space
   rofi -show combi -kb-row-select "Tab" -kb-row-tab ""
+
+# calculator
+super + F1
+  rofi -show calc
 
 # files
 super + shift + p
