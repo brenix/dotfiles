@@ -60,11 +60,13 @@ Plug 'cormacrelf/vim-colors-github'
 Plug 'dylanaraps/wal.vim'
 Plug 'habamax/vim-colors-lessthan'
 Plug 'jacoborus/tender.vim'
+Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'morhetz/gruvbox'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rakr/vim-one'
 Plug 'sainnhe/edge'
 Plug 'sainnhe/gruvbox-material'
+Plug 'jsit/disco.vim'
 
 call plug#end()
 
@@ -96,7 +98,7 @@ set completeopt-=preview       " Remove the horrendous preview window
 set completeopt=longest,menu   " Make completion popup menu work like ide
 set conceallevel=0             " Disable concealed text
 set copyindent                 " Copy the previous indentation on autoindent
-set cursorline                 " Highlight the current line for the cursor
+" set cursorline                 " Highlight the current line for the cursor
 set encoding=utf-8             " Set encoding to UTF-8
 set expandtab                  " Expands tabs to spaces
 set formatoptions=tqonj        " Set vims text formatting options
@@ -179,10 +181,10 @@ augroup end
 " --- Colors {{{
 
 " Enable truecolor support in NVIM
-if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  set termguicolors
-endif
+" if (has("nvim"))
+"   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"   set termguicolors
+" endif
 
 " Enable syntax highlighting
 syntax enable
@@ -192,7 +194,11 @@ set background=dark
 
 " Selected colorscheme
 let g:gruvbox_material_background = 'hard'
-colorscheme nord
+colorscheme wal
+
+" Tweak some colors
+" highlight CursorLine ctermbg=NONE cterm=NONE
+" highlight SignColumn ctermbg=NONE
 
 " }}}
 
@@ -386,7 +392,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'nord',
+  \ 'colorscheme': 'wal',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]

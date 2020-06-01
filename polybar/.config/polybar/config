@@ -8,21 +8,21 @@ margin-top = 1
 margin-bottom = 1
 
 [colors]
-background = #2e3440
-foreground = ${xrdb:color7:#d6dbe4}
-foreground-alt = ${xrdb:color7:#d6dbe4}
-primary = ${xrdb:color1:#bb6b6b}
-secondary = ${xrdb:color2:#85ba87}
-alert = ${xrdb:color3:#cbb079}
-black = ${xrdb:color0:#1b1e25}
-red = ${xrdb:color1:#bb6b6b}
-green = ${xrdb:color2:#85ba87}
-yellow = ${xrdb:color3:#cbb079}
-blue = ${xrdb:color4:#83a2be}
-magenta = ${xrdb:color5:#958090}
-cyan = ${xrdb:color6:#7daea9}
-white = ${xrdb:color15:#d6dbe4}
-gray = ${xrdb:color7:#8f9496}
+background     = ${xrdb:color0}
+foreground     = ${xrdb:color7}
+foreground-alt = ${xrdb:color7}
+primary        = ${xrdb:color1}
+secondary      = ${xrdb:color2}
+alert          = ${xrdb:color3}
+black          = ${xrdb:color0}
+red            = ${xrdb:color1}
+green          = ${xrdb:color2}
+yellow         = ${xrdb:color3}
+blue           = ${xrdb:color4}
+magenta        = ${xrdb:color5}
+cyan           = ${xrdb:color6}
+white          = ${xrdb:color15}
+gray           = ${xrdb:color7}
 
 [bar/main]
 top = true

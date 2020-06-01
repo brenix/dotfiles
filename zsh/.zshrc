@@ -20,3 +20,4 @@ if [ -d ${HOME}/.zsh.d ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.cache/wal/colors.sh ] && source ~/.cache/wal/colors.sh
