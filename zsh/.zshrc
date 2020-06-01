@@ -9,6 +9,7 @@ source $HOME/.zsh.d/keybindings.zsh
 source $HOME/.zsh.d/aliases.zsh
 source $HOME/.zsh.d/dircolors.zsh
 source $HOME/.zsh.d/direnv.zsh
+source $HOME/.zsh.d/wal.zsh
 
 if [ -d ${HOME}/.zsh.d ]; then
   for f in $(find ${HOME}/.zsh.d/functions -type f -name '*.zsh'); do
@@ -20,4 +21,3 @@ if [ -d ${HOME}/.zsh.d ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.cache/wal/colors.sh ] && source ~/.cache/wal/colors.sh
