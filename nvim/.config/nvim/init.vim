@@ -196,10 +196,6 @@ set background=dark
 let g:gruvbox_material_background = 'hard'
 colorscheme wal
 
-" Tweak some colors
-" highlight CursorLine ctermbg=NONE cterm=NONE
-" highlight SignColumn ctermbg=NONE
-
 " }}}
 
 " --- Searching {{{
@@ -392,7 +388,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'wal',
+  \ 'colorscheme': 'xresources',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
