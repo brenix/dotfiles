@@ -87,3 +87,5 @@
 	textconv = sops -d
 [interactive]
 	diffFilter = delta --color-only --theme="none" --minus-emph-color="#BF616A" --plus-emph-color="#A3BE8C"
+[pull]
+	rebase = true
