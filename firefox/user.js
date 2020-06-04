@@ -181,7 +181,7 @@ user_pref("browser.cache.disk.parent_directory", "/run/user/1000/firefox");
 // user_pref("browser.cache.disk_cache_ssl", false);
 
 // Enable HTTP/3
-user_pref("network.http.http3.enabled", true);
+// user_pref("network.http.http3.enabled", true);
 
 // DNS Caching
 user_pref("network.dnsCacheEntries", 10000);
@@ -192,6 +192,11 @@ user_pref("network.dns.disableIPv6", true);
 // Enable accelerated azure canvas
 user_pref("gfx.canvas.azure.accelerated", true);
 
+// Enable TCP fastopen
+user_pref("network.tcp.tcp_fastopen_enable", true);
+
+// Lower TCP keepalive
+user_pref("network.tcp.keepalive.idle_time", 300);
 
 ////////////////////////////////////////////////////
 //   Misc

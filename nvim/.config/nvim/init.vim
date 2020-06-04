@@ -98,7 +98,7 @@ set completeopt-=preview       " Remove the horrendous preview window
 set completeopt=longest,menu   " Make completion popup menu work like ide
 set conceallevel=0             " Disable concealed text
 set copyindent                 " Copy the previous indentation on autoindent
-" set cursorline                 " Highlight the current line for the cursor
+set cursorline                 " Highlight the current line for the cursor
 set encoding=utf-8             " Set encoding to UTF-8
 set expandtab                  " Expands tabs to spaces
 set formatoptions=tqonj        " Set vims text formatting options
@@ -181,10 +181,10 @@ augroup end
 " --- Colors {{{
 
 " Enable truecolor support in NVIM
-" if (has("nvim"))
-"   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"   set termguicolors
-" endif
+if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  set termguicolors
+endif
 
 " Enable syntax highlighting
 syntax enable
@@ -193,8 +193,7 @@ syntax enable
 set background=dark
 
 " Selected colorscheme
-let g:gruvbox_material_background = 'hard'
-colorscheme wal
+colorscheme nord
 
 " }}}
 
@@ -388,7 +387,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'xresources',
+  \ 'colorscheme': 'nord',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]

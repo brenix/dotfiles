@@ -1,1 +1,0 @@
-{background},{color0},{foreground},{background},{color0},{color7},{color10},{color9},{color0},{color7}

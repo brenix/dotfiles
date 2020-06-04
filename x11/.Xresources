@@ -33,4 +33,4 @@ URxvt.cursorBlink:        1
 URxvt.cursorUnderline:    1
 
 ! -- colors
-#include ".cache/wal/colors.Xresources"
+#include ".xcolors.d/nord"

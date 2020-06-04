@@ -90,22 +90,22 @@ super + {Left,Down,Up,Right}
 
 # terminal (tmux)
 super + Return
-  st -g 125x40 -f "xos4 Terminus:pixelsize=14:antialias=true:autohint:false"
+  st -g 125x40 -f "Misc Dash:pixelsize=10"
 
-# terminal (standalone)
+# terminal (floating)
 super + shift + Return
-  st -g 125x40 -f "xos4 Terminus:pixelsize=14:antialias=true:autohint:false"
+  bspc rule -a \* -o state=floating && st -g 125x40 -f "Misc Dash:pixelsize=10"
 
 # terminal (work)
 super + m
-  st -g 125x40 -f "xos4 Terminus:pixelsize=14:antialias=true:autohint:false" -t work -c work zsh -c 'TERM=xterm-256color ssh macbook'
+  st -g 125x40 -f "Misc Dash:pixelsize=10" -t work -c work zsh -c 'TERM=xterm-256color ssh macbook'
 
 # launcher
-super + space
+{super,alt} + space
   rofi -show combi -kb-row-select "Tab" -kb-row-tab ""
 
 # calculator
-super + F1
+F1
   rofi -show calc
 
 # files
@@ -125,7 +125,7 @@ super + shift + s
   slack
 
 # vscode
-super + shift + c
+super + c
   code
 
 # discord

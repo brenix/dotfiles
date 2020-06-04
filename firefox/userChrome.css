@@ -1,12 +1,47 @@
+/* ---- TABS
+
 /* Remove color line above tabs */
 #TabsToolbar .tabbrowser-tab .tab-line { display: none !important; }
 
-/* Autohide Bookmarks Bar */
-#PersonalToolbar {
-    visibility: collapse !important;
+/* ---- TOOLBAR
+
+/* Hide back/forward buttons */
+#back-button, #forward-button { display:none!important; }
+
+/* Remove Page Actions Menu */
+#pageActionButton
+{
+  display: none !important;
 }
 
-#navigator-toolbox:hover > #PersonalToolbar {
-    visibility: visible !important;
+/* ---- MEGABAR
+
+/* Disable Megabar Animation */
+#urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-background {
+  animation-name: none !important;
+  animation: none !important;
 }
 
+/* Prevent URL bar from changing size */
+#urlbar[breakout][breakout-extend]:not([open]) {
+  top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+  left: 0 !important;
+  width: 100% !important;
+}
+
+#urlbar[breakout][breakout-extend]:not([open]) > #urlbar-input-container {
+  height: var(--urlbar-height) !important;
+  padding-block: 0px !important;
+  padding-inline: 0px !important;
+}
+
+#urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-background {
+  animation-name: none !important;
+}
+
+#urlbar[breakout][breakout-extend]:not([open]) > #urlbar-background {
+  box-shadow: none !important;
+}
+
+/* Reduce spacing in urlbar results */
+.urlbarView-row-inner{ padding-block: 0px !important; }
