@@ -70,7 +70,7 @@ type = internal/mpd
 host = 127.0.0.1
 port = 6600
 interval = 5
-label-song =  MPD: %title%
+label-song =  MPD: %artist% - %title%
 click-left = "mpc -q toggle"
 
 [module/spotify]

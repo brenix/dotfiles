@@ -1,9 +1,11 @@
-/* ---- TABS
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+
+/* ---- TABS ---- */
 
 /* Remove color line above tabs */
 #TabsToolbar .tabbrowser-tab .tab-line { display: none !important; }
 
-/* ---- TOOLBAR
+/* ---- TOOLBAR ---- */
 
 /* Hide back/forward buttons */
 #back-button, #forward-button { display:none!important; }
@@ -14,7 +16,7 @@
   display: none !important;
 }
 
-/* ---- MEGABAR
+/* ---- MEGABAR ---- */
 
 /* Disable Megabar Animation */
 #urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-background {

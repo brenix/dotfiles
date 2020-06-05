@@ -132,6 +132,10 @@ super + c
 super + shift + d
   discord
 
+# flameshot
+Print
+  flameshot gui
+
 # -- volume control
 
 # pavucontrol
