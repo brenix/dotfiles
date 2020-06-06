@@ -61,12 +61,12 @@ Plug 'dylanaraps/wal.vim'
 Plug 'habamax/vim-colors-lessthan'
 Plug 'jacoborus/tender.vim'
 Plug 'jeffkreeftmeijer/vim-dim'
+Plug 'jsit/disco.vim'
 Plug 'morhetz/gruvbox'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rakr/vim-one'
-Plug 'sainnhe/edge'
 Plug 'sainnhe/gruvbox-material'
-Plug 'jsit/disco.vim'
+Plug 'sainnhe/sonokai'
 
 call plug#end()
 
