@@ -23,7 +23,7 @@ paths:
   singleton: Singletons/$genre/%asciify{$artist}-%asciify{$title}
 
 mpdupdate:
-  host: /run/user/1000/mpd.sock
+  host: 127.0.0.1
 
 lastgenre:
   whitelist: /music/genres.txt

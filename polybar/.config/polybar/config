@@ -39,9 +39,9 @@ border-bottom-color = ${colors.black}
 border-bottom-size = 1
 border-top-color = ${colors.black}
 border-top-size = 0
-font-0 = Misc Dash:pixelsize=10;2
-font-1 = Material Icons:size=12;3
-font-2 = Hack Nerd Font Mono:size=12;3
+font-0 = xos4 Terminus:pixelsize=10;2
+font-1 = Material Icons:size=10;3
+font-2 = Hack Nerd Font Mono:size=10;3
 font-3 = Weather Icons:size=10;2
 module-margin-left = 0
 module-margin-right = 2
