@@ -9,6 +9,7 @@ bindkey "^[OF" end-of-line        # end key
 bindkey "^[OH" beginning-of-line  # home key
 bindkey "^[[2~" overwrite-mode    # insert key
 bindkey "^[[3~" delete-char       # del key
+bindkey "^[[P" delete-char        # del key (st)
 
 # -- ctrl+arrows
 bindkey "\e[1;5C" forward-word
