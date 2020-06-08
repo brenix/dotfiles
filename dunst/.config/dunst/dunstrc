@@ -46,17 +46,17 @@ context = ctrl+shift+period
 
 [urgency_low]
 foreground = "#d8dee9"
-background = "#2e3440"
+background = "#161821"
 timeout = 4
 
 [urgency_normal]
 foreground = "#d8dee9"
-background = "#2e3440"
+background = "#161821"
 timeout = 6
 
 [urgency_critical]
 foreground = "#bf616a"
-background = "#2e3440"
+background = "#161821"
 timeout = 8
 
 # vim: set ft=dosini:
