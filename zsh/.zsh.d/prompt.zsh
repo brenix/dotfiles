@@ -1,7 +1,7 @@
 # spaceship configuration
 SPACESHIP_PROMPT_ORDER=(
-  # user      # Username section
-  # host      # Hostname section
+  user      # Username section
+  host      # Hostname section
   dir       # Current directory section
   git       # Git section (git_branch + git_status)
   venv      # Python virtualenv section
