@@ -56,6 +56,7 @@ Plug 'tpope/vim-vinegar'
 
 " Colorschemes
 Plug 'arcticicestudio/nord-vim'
+Plug 'cocopon/iceberg.vim'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'dylanaraps/wal.vim'
 Plug 'habamax/vim-colors-lessthan'
@@ -181,10 +182,10 @@ augroup end
 " --- Colors {{{
 
 " Enable truecolor support in NVIM
-if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  set termguicolors
-endif
+" if (has("nvim"))
+"   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"   set termguicolors
+" endif
 
 " Enable syntax highlighting
 syntax enable
@@ -193,7 +194,7 @@ syntax enable
 set background=dark
 
 " Selected colorscheme
-colorscheme nord
+colorscheme iceberg
 
 " }}}
 
@@ -387,10 +388,9 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'nord',
+  \ 'colorscheme': 'xresources',
   \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+  \   'left': [ [ 'cocstatus', 'currentfunction', 'filename', 'gitbranch', 'readonly', 'modified' ] ]
   \ },
   \ 'component_function': {
   \   'gitbranch': 'fugitive#head',
