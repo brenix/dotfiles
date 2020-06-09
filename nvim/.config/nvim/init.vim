@@ -196,6 +196,9 @@ set background=dark
 " Selected colorscheme
 colorscheme iceberg
 
+" Set colorcolumn color
+hi ColorColumn ctermbg=0
+
 " }}}
 
 " --- Searching {{{
