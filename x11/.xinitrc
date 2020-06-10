@@ -43,3 +43,8 @@ nvidia-settings -a InitialPixmapPlacement=2 \
 
 # -- window manager
 exec bspwm
+
+# dunst &
+# picom -b
+# $HOME/.fehbg
+# exec dwm

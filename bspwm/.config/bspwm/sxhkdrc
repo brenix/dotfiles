@@ -90,15 +90,15 @@ super + {Left,Down,Up,Right}
 
 # terminal (tmux)
 super + Return
-  st -g 125x40 -f "xos4 Terminus:pixelsize=10"
+  st -g 125x40 -f "xos4 Terminus:pixelsize=14"
 
 # terminal (floating)
 super + shift + Return
-  bspc rule -a \* -o state=floating && st -g 125x40 -f "xos4 Terminus:pixelsize=10"
+  bspc rule -a \* -o state=floating && st -g 125x40 -f "xos4 Terminus:pixelsize=14"
 
 # terminal (work)
 super + m
-  st -g 125x40 -f "xos4 Terminus:pixelsize=10" zsh -c 'TERM=xterm-256color ssh macbook'
+  st -g 125x40 -f "xos4 Terminus:pixelsize=14" zsh -c 'TERM=xterm-256color ssh macbook'
 
 # launcher
 {super,alt} + space
