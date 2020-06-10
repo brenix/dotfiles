@@ -5,9 +5,13 @@ bindkey -v
 bindkey "^A" beginning-of-line    # ctrl+a
 bindkey "^E" end-of-line          # ctrl+e
 bindkey "^F" vi-change-whole-line # ctrl+f
+
 bindkey "^[OF" end-of-line        # end key
+bindkey "^[[4~" end-of-line       # end key (st)
 bindkey "^[OH" beginning-of-line  # home key
+bindkey "^[[H" beginning-of-line  # home key (st)
 bindkey "^[[2~" overwrite-mode    # insert key
+bindkey "^[[4h" overwrite-mode    # insert key (st)
 bindkey "^[[3~" delete-char       # del key
 bindkey "^[[P" delete-char        # del key (st)
 
