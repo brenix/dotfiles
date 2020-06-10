@@ -501,7 +501,7 @@
     <!-- </keybind> -->
     <keybind key="W-S-Return">
       <action name="Execute">
-        <command>st -g 125x40 -f "xos4 Terminus:pixelsize=14:antialias=true:autohint:false"</command>
+        <command>st</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -509,7 +509,7 @@
     </keybind>
     <keybind key="W-m">
       <action name="Execute">
-        <command>st -g 125x40 -f "xos4 Terminus:pixelsize=14:antialias=true:autohint:false" -t work -c work zsh -c 'TERM=xterm-256color ssh macbook'</command>
+        <command>st -t work -c work -e zsh -c 'TERM=xterm-256color ssh macbook'</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
