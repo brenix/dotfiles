@@ -6,8 +6,8 @@ Current linux setup:
 
 - **Window manager**: bspwm
 - **Bar**: polybar
-- **Terminal**: st
-- **Colorsheme**: [Nord](https://www.nordtheme.com/)
+- **Terminal**: [st](https://github.com/brenix/st)
+- **Colorsheme**: [Iceberg](https://cocopon.github.io/iceberg.vim/)
 - **Shell**: zsh, tmux
 - **Launcher**: rofi
 - **Editor**: nvim
