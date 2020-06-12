@@ -7,16 +7,20 @@ else
 --allow-insecure-localhost \\
 --disable-breakpad \\
 --disable-device-discovery \\
---disable-features=TabHoverCardImages,TabHoverCards \\
 --disable-logging \\
 --disable-smooth-scrolling \\
 --disable-speech-input \\
---enable-features=brotli-encoding,LazyFrameLoading,FontCacheScaling,NoStatePrefetch,SpeculativeResourcePrefetching,SpeculativePreconnect,ProactiveTabFreezeAndDiscard,SimplifyHttpsIndicator,EnableTLS13EarlyData,BackForwardCache,DecodeJpeg420ImagesToYUV,DecodeLossyWebPImagesToYUV,DynamicTcmallocTuning,HeavyAdIntervention,LazyImageLoading,Vulkan \\
+--enable-fast-unload \\
+--enable-gpu-rasterization \\
 --enable-lcd-text \\
+--enable-oop-rasterization \\
 --enable-precache \\
 --enable-quic \\
 --enable-stale-while-revalidate \\
+--enable-surfaces-for-videos \\
 --enable-tcp-fastopen \\
+--enable-zero-copy \\
+--force-gpu-rasterization \\
 --ignore-gpu-blacklist \\
 --no-default-browser-check \\
 --origin-to-force-quic-on=accounts.google.com:443 \\
@@ -25,5 +29,6 @@ else
 --origin-to-force-quic-on=www.google.com:443 \\
 --reduced-referrer-granularity \\
 --use-simple-cache-backend \\
+--use-skia-deferred-display-list \\
 --wm-window-animations-disabled"
 end if
