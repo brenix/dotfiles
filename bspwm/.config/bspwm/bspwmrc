@@ -44,6 +44,7 @@ bspc config presel_feedback_color "#22262e"
 bspc rule -a Authy state=floating follow=on focus=on
 bspc rule -a Discord desktop=^3
 bspc rule -a Nightly desktop=^4 follow=on
+bspc rule -a google-chrome-unstable desktop=^4 follow=on
 bspc rule -a Pavucontrol state=floating
 bspc rule -a Slack desktop=^2
 bspc rule -a zoom state=floating
