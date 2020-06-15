@@ -197,7 +197,7 @@ set background=dark
 colorscheme iceberg
 
 " Set colorcolumn color
-hi ColorColumn ctermbg=0
+hi ColorColumn ctermbg=0 ctermfg=7
 
 " }}}
 
