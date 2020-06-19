@@ -1,11 +1,6 @@
 {
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "go",
-    "json",
-    "css",
-    "markdown"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": ["go", "json", "css", "markdown"],
   "coc.preferences.formatOnType": true,
   "coc.preferences.snippetStatusText": "Ⓢ ",
   "codeLens.enable": true,
@@ -34,35 +29,25 @@
   "git.topRemovedSign.text": "▔",
   "languageserver": {
     "dockerfile": {
-      "args": [
-        "--stdio"
-      ],
+      "args": ["--stdio"],
       "command": "docker-langserver",
-      "filetypes": [
-        "dockerfile"
-      ]
+      "filetypes": ["dockerfile"]
     },
     "golang": {
       "command": "gopls",
-      "filetypes": [
-        "go"
-      ],
-      "rootPatterns": [
-        "go.mod"
-      ]
+      "filetypes": ["go"],
+      "rootPatterns": ["go.mod"]
     },
     "terraform": {
       "command": "terraform-lsp",
       "disableDiagnostics": true,
-      "filetypes": [
-        "terraform"
-      ],
+      "filetypes": ["terraform"],
       "initializationOptions": {}
     }
   },
   "prettier.eslintIntegration": true,
   "prettier.statusItemText": "ⓟ ",
-  "prettier.stylelintIntegration": true,
+  "prettier.stylelintIntegration": false,
   "prettier.tslintIntegration": true,
   "python.autoComplete.addBrackets": true,
   "sh.enable": true,
