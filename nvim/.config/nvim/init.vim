@@ -41,7 +41,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'lifepillar/vim-colortemplate'
 Plug 'majutsushi/tagbar'
 Plug 'mengelbrecht/lightline-bufferline'
-Plug 'mhinz/vim-startify'
 Plug 'moll/vim-bbye'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
