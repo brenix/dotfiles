@@ -12,7 +12,7 @@ Current linux setup:
 - **Launcher**: rofi
 - **Editor**: nvim
 - **Music Player**: spotify, mpd, ncmcpp
-- **Browser**: google-chrome-unstable
+- **Browser**: firefox-nightly
 
 ## Usage
 
