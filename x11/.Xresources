@@ -26,7 +26,7 @@ URxvt.internalBorder:     0
 URxvt*geometry:           100x40
 URxvt.clipboard.autocopy: true
 URxvt.perl-ext-common:    default,matcher
-URxvt.url-launcher:       /usr/bin/firefox-nightly
+URxvt.url-launcher:       /usr/bin/firefox
 URxvt.matcher.button:     1
 URxvt.matcher.rend.0:     Uline Bold fg12
 URxvt.cursorBlink:        1
