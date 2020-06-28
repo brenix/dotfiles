@@ -198,9 +198,22 @@ user_pref("network.tcp.tcp_fastopen_enable", true);
 // Lower TCP keepalive
 user_pref("network.tcp.keepalive.idle_time", 300);
 
+// Increase max persistent connections
+user_pref("network.http.max-persistent-connections-per-server", 32);
+
+// Increase max urgent start excessive connections
+user_pref("network.http.max-urgent-start-excessive-connections-per-host", 6);
+
 ////////////////////////////////////////////////////
 //   Misc
 ////////////////////////////////////////////////////
+
+// Disable reader
+user_pref("reader.parse-on-load.enabled", false);
+user_pref("reader.parse-on-load.force-enabled", false);
+
+// Disable loop
+user_pref("loop.enabled", false);
 
 // Disable Pocket
 user_pref("browser.pocket.enabled", false);
