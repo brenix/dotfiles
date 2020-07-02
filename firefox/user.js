@@ -182,6 +182,8 @@ user_pref("browser.cache.disk.parent_directory", "/run/user/1000/firefox");
 
 // Enable HTTP/3
 user_pref("network.http.http3.enabled", true);
+// Temporary fix for pages not loading
+user_pref("network.http.http3.default-qpack-table-size", 4096);
 
 // DNS Caching
 user_pref("network.dnsCacheEntries", 10000);

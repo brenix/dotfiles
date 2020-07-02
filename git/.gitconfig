@@ -9,7 +9,7 @@
 	editor = nvim
 	preloadindex = true
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	pager = delta --theme="none" --minus-emph-color="#BF616A" --plus-emph-color="#628147"
+	pager = delta --color-only
 [apply]
 	whitespace = strip
 [log]
@@ -86,6 +86,10 @@
 [diff "sopsdiffer"]
 	textconv = sops -d
 [interactive]
-	diffFilter = delta --color-only --theme="none" --minus-emph-color="#BF616A" --plus-emph-color="#A3BE8C"
+	diffFilter = delta --color-only
 [pull]
 	rebase = true
+[delta]
+	minus-emph-style = "auto #BF616A"
+	plus-emph-style = "auto #628147"
+	syntax-theme = "none"
