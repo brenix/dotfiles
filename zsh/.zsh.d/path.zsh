@@ -8,7 +8,7 @@ path=(
   $HOME/bin
   $HOME/go/bin
   /usr/local/opt/ruby/bin
-  /usr/local/lib/ruby/gems/2.7.0
+  /usr/local/lib/ruby/gems/2.7.0/bin
   /usr/local/bin
   /usr/local/sbin
   $path[@]
