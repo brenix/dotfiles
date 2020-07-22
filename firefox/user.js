@@ -181,7 +181,7 @@ user_pref("browser.cache.disk.parent_directory", "/run/user/1000/firefox");
 // user_pref("browser.cache.disk_cache_ssl", false);
 
 // Enable HTTP/3
-user_pref("network.http.http3.enabled", true);
+user_pref("network.http.http3.enabled", false);
 // Temporary fix for pages not loading
 user_pref("network.http.http3.default-qpack-table-size", 4096);
 
