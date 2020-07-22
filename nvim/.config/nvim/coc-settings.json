@@ -39,8 +39,9 @@
       "rootPatterns": ["go.mod"]
     },
     "terraform": {
-      "command": "terraform-lsp",
-      "disableDiagnostics": true,
+      "args": ["serve"],
+      "command": "terraform-ls",
+      "disableDiagnostics": false,
       "filetypes": ["terraform"],
       "initializationOptions": {}
     }
