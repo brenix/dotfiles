@@ -3,6 +3,7 @@ alias abs='asp'
 alias cdu="cd-gitroot"
 alias cp='cp -i'
 alias gi="git-ignore"
+alias grep='grep --color=auto'
 alias k='kubectl'
 alias l='ls -lhg'
 alias la='ls -lah'
