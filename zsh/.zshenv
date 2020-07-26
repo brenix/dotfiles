@@ -13,7 +13,7 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_COLLATE="C"
 export LESS=" -R"
-export LESSOPEN="| /usr/bin/highlight %s --out-format xterm256 --force --style=nord"
+export LESSOPEN="| highlight %s --out-format xterm256 --force --style=nord"
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
 export LESS_TERMCAP_me=$'\E[0m'
