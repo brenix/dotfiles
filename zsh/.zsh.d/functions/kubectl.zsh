@@ -2,6 +2,16 @@ find $HOME/.kube -maxdepth 1 \( -type f -o -type l \) -print | while read -r lin
   export KUBECONFIG="$KUBECONFIG:$line"
 done
 
+# execute command against all contexts
+kall() {
+  local contexts=($(kubectl config get-contexts -o name))
+  for context in ${contexts[@]}; do
+    printf "\e[1;34m#### %-6s ####\e[m\n" ${context}
+    bash -c "kubectl --context ${context} $*"
+    printf "\n\n"
+  done
+}
+
 # switch-namespace
 kns() {
   local context
