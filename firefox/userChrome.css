@@ -1,49 +1,98 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+#toolbar-menubar:not([autohide="true"])
+  + #TabsToolbar
+  .tabbrowser-tab
+  > .tab-stack
+  > .tab-background,
+:root:not([tabsintitlebar]) .tab-background,
+:root[extradragspace] .tab-background {
+  border-top: 0 !important;
+}
 
-/* ---- TABS ---- */
+.tab-line {
+  height: 0 !important;
+}
 
-/* Remove color line above tabs */
-#TabsToolbar .tabbrowser-tab .tab-line { display: none !important; }
+.tab-bottom-line {
+  height: 0 !important;
+}
 
-/* ---- TOOLBAR ---- */
+/* Bookmarked icon grayscale */
 
-/* Hide back/forward buttons */
-#back-button, #forward-button { display:none!important; }
+#star-button[starred] {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
 
-/* Remove Page Actions Menu */
-#pageActionButton
+/* Identity box grayscale */
+
+#tracking-protection-icon-container,
+#identity-box {
+  filter: grayscale(100%);
+}
+
+#identity-box {
+  padding-inline-start: 4px !important;
+  border-inline-end: 0px !important;
+  padding-inline-end: 4px !important;
+  margin-inline-end: 4px !important;
+}
+
+/* Hide extra icons in address bar */
+
+#page-action-buttons > *:not(#star-button-box),
+.urlbar-history-dropmarker {
+  opacity: 0 !important;
+}
+
+#back-button,
+#forward-button {
+  display: none !important;
+}
+
+/* Show extra icons on hover */
+
+#urlbar:hover #page-action-buttons > *,
+#urlbar:hover .urlbar-history-dropmarker {
+  opacity: 1 !important;
+}
+
+/* Hide notification about web page saved in library (after bookmared) */
+
+#confirmation-hint {
+  display: none !important;
+}
+
+/* Hide new tab icon */
+
+.tabbrowser-tab[image="chrome://branding/content/icon32.png"] .tab-icon-image
 {
   display: none !important;
 }
 
-/* ---- MEGABAR ---- */
+/* Removing Firefox UI/UX design team "improvements" */
 
-/* Disable Megabar Animation */
-#urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-background {
-  animation-name: none !important;
+#urlbar[breakout][breakout-extend] {
+  top: 5px !important;
+  left: 0px !important;
+  width: 100% !important;
+  padding: 0px !important;
+}
+[uidensity="compact"] #urlbar[breakout][breakout-extend] {
+  top: 3px !important;
+}
+[uidensity="touch"] #urlbar[breakout][breakout-extend] {
+  top: 4px !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+  height: var(--urlbar-height) !important;
+  padding: 0 !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-background {
   animation: none !important;
 }
 
-/* Prevent URL bar from changing size */
-#urlbar[breakout][breakout-extend]:not([open]) {
-  top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
-  left: 0 !important;
-  width: 100% !important;
-}
-
-#urlbar[breakout][breakout-extend]:not([open]) > #urlbar-input-container {
-  height: var(--urlbar-height) !important;
-  padding-block: 0px !important;
-  padding-inline: 0px !important;
-}
-
-#urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-background {
-  animation-name: none !important;
-}
-
-#urlbar[breakout][breakout-extend]:not([open]) > #urlbar-background {
+#urlbar[breakout][breakout-extend] > #urlbar-background {
   box-shadow: none !important;
 }
-
-/* Reduce spacing in urlbar results */
-.urlbarView-row-inner{ padding-block: 0px !important; }
