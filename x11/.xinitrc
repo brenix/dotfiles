@@ -22,9 +22,6 @@ xset +dpms
 # -- load xresources
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
-# -- enable numlock
-numlockx &
-
 # -- color calibration
 xcalib -o 0 -b 0 -gc 0.8 $HOME/.colors/asus-vg248qe.icm
 xcalib -o 1 -b 0 -gc 0.8 $HOME/.colors/asus-vg248qe.icm
