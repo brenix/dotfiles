@@ -33,11 +33,6 @@
       "command": "docker-langserver",
       "filetypes": ["dockerfile"]
     },
-    "golang": {
-      "command": "gopls",
-      "filetypes": ["go"],
-      "rootPatterns": ["go.mod"]
-    },
     "terraform": {
       "args": ["serve"],
       "command": "terraform-ls",
