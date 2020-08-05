@@ -1,5 +1,6 @@
 alias ..='cd ..'
 alias abs='asp'
+alias ave='aws-vault exec'
 alias cdu="cd-gitroot"
 alias cp='cp -i'
 alias gi="git-ignore"
