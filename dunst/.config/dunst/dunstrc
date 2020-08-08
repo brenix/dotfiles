@@ -1,5 +1,5 @@
 [global]
-font = SF Pro Display 12
+font = SF Pro Display, JoyPixels 12
 markup = yes
 plain_text = no
 format = "<b>%s</b>\n%b"
