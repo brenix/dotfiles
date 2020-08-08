@@ -10,7 +10,7 @@
   "diagnostic.errorSign": "",
   "diagnostic.refreshOnInsertMode": true,
   "diagnostic.signOffset": 9999999,
-  "diagnostic.virtualText": true,
+  "diagnostic.virtualText": false,
   "diagnostic.warningSign": "",
   "git.addGBlameToBufferVar": false,
   "git.addGBlameToVirtualText": false,
