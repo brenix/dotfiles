@@ -114,7 +114,7 @@ super + shift + p
 
 # browser
 super + d
-  firefox
+  google-chrome-unstable
 
 # spotify
 super + s
