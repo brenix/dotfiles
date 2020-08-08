@@ -38,8 +38,6 @@ Plug 'juliosueiras/vim-terraform-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'lifepillar/vim-colortemplate'
-Plug 'majutsushi/tagbar'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'moll/vim-bbye'
 Plug 'mzlogin/vim-markdown-toc'
@@ -57,16 +55,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'arcticicestudio/nord-vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'cormacrelf/vim-colors-github'
-Plug 'dylanaraps/wal.vim'
-Plug 'habamax/vim-colors-lessthan'
-Plug 'jacoborus/tender.vim'
-Plug 'jeffkreeftmeijer/vim-dim'
-Plug 'jsit/disco.vim'
-Plug 'morhetz/gruvbox'
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'rakr/vim-one'
 Plug 'sainnhe/gruvbox-material'
-Plug 'sainnhe/sonokai'
 
 call plug#end()
 
@@ -98,7 +87,6 @@ set completeopt-=preview       " Remove the horrendous preview window
 set completeopt=longest,menu   " Make completion popup menu work like ide
 set conceallevel=0             " Disable concealed text
 set copyindent                 " Copy the previous indentation on autoindent
-set cursorline                 " Highlight the current line for the cursor
 set encoding=utf-8             " Set encoding to UTF-8
 set expandtab                  " Expands tabs to spaces
 set formatoptions=tqonj        " Set vims text formatting options
@@ -108,6 +96,8 @@ set lazyredraw                 " Don’t update screen during macro and script e
 set linebreak                  " Avoid wrapping a line in the middle of a word
 set matchtime=1                " Reduce the time it takes to show matching brackets
 set nobackup                   " Dont create backup files
+set nocursorcolumn             " Disable cursorcolumn for performance
+set nocursorline               " Disable cursorline for performance
 set noerrorbells               " Disable bells
 set nojoinspaces               " Use one space, not two after punctuation
 set nospell                    " Disable spell checking
@@ -116,18 +106,20 @@ set novisualbell               " Disable visual bells
 set nowrap                     " Disable automatic wrapping
 set nowritebackup              " Dont write backup files
 set number                     " Show number ruler
+set re=1                       " Enable old regex engine for performance
 set ruler                      " Always show current positions along the bottom
 set shiftround                 " Round the indentation to the nearest multiple of shiftwidth
 set shortmess=aFc              " Avoid hit-enter prompts caused by file messages
 set showmatch                  " Show matching brackets
 set showtabline=2              " Show tabline
-set signcolumn=yes             " always show signcolumns
+set signcolumn=yes             " Always show signcolumns
 set smartcase                  " Ignore unless capital letters
 set smartindent                " Enable smart indentation
 set smarttab                   " Use shiftwidth and softtabstop
 set softtabstop=2              " Tab width
 set splitbelow                 " Open horizontal panes to the bottom
 set splitright                 " Open vertical panes to the right
+set synmaxcol=128              " Limit syntax highlighting for performance
 set switchbuf=useopen,split    " Set behavior when switching between buffers
 set tabstop=2                  " Tab = 2 spaces
 set timeout ttimeout           " Enable timeout and ttimeout options
@@ -310,16 +302,10 @@ vnoremap <leader>' :Commentary<CR>
 " Show diagnostics
 nnoremap <leader>d :<C-u>CocList diagnostics<CR>
 
-" Toggle tagbar
-nnoremap <leader>t :TagbarToggle<CR>
-
 " ----- Function keys
 
 " Rename function
 nnoremap <F2> <Plug>(coc-rename)
-
-" Add shortcut for toggling the tag bar
-nnoremap <F4> :TagbarToggle<CR>
 
 " Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
@@ -437,39 +423,6 @@ nnoremap <C-p> :call fzf#run({'source': 'find '. join(g:project_dirs).' -type d 
 
 " }}}
 
-" --- Plugin: majutsushi/tagbar {{{
-
-" Go configuration
-let g:tagbar_type_go = {
-	\ 'ctagstype' : 'go',
-	\ 'kinds'     : [
-		\ 'p:package',
-		\ 'i:imports:1',
-		\ 'c:constants',
-		\ 'v:variables',
-		\ 't:types',
-		\ 'n:interfaces',
-		\ 'w:fields',
-		\ 'e:embedded',
-		\ 'm:methods',
-		\ 'r:constructor',
-		\ 'f:functions'
-	\ ],
-	\ 'sro' : '.',
-	\ 'kind2scope' : {
-		\ 't' : 'ctype',
-		\ 'n' : 'ntype'
-	\ },
-	\ 'scope2kind' : {
-		\ 'ctype' : 't',
-		\ 'ntype' : 'n'
-	\ },
-	\ 'ctagsbin'  : 'gotags',
-	\ 'ctagsargs' : '-sort -silent'
-  \ }
-
-" }}}
-
 " --- Plugin: neoclide/coc {{{
 
 " Use tab to rotate between completion
@@ -483,7 +436,6 @@ let g:coc_status_warning_sign = '•'
 " Extensions
 let g:coc_global_extensions = [
       \'coc-css',
-      \'coc-dictionary',
       \'coc-git',
       \'coc-highlight',
       \'coc-html',
@@ -497,9 +449,6 @@ let g:coc_global_extensions = [
       \'coc-snippets',
       \'coc-syntax',
       \'coc-tabnine',
-      \'coc-tag',
-      \'coc-template',
-      \'coc-translator',
       \'coc-yaml',
       \'coc-yank'
       \]
@@ -650,10 +599,12 @@ let g:go_highlight_chan_whitespace_error = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_function_calls = 1
-let g:go_highlight_function_parameters = 1
+let g:go_highlight_function_parameters = 0
 let g:go_highlight_functions = 1
+let g:go_highlight_interfaces = 0
 let g:go_highlight_operators = 0
 let g:go_highlight_space_tab_error = 1
+let g:go_highlight_structs = 0
 let g:go_highlight_types = 1
 let g:go_highlight_variable_assignments = 1
 let g:go_highlight_variable_declarations = 1
