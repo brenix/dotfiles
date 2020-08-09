@@ -48,5 +48,6 @@ alias vm='virsh start win10'
 alias vv='nvim ~/.dotfiles/nvim/.config/nvim/init.vim'
 alias x='startx'
 alias xrefresh='xrdb load ~/.Xresources && xrdb -merge ~/.Xresources'
-if [[ "$OSTYPE" == "darwin"*  ]]; then alias u='brew update && brew upgrade && brew cleanup && brew cask upgrade'; fi
-if [[ "$OSTYPE" == "linux-gnu" ]]; then alias u='yay -Syu'; fi
+[[ "$OSTYPE" == "darwin"*  ]] && alias u='brew update && brew upgrade && brew cleanup && brew cask upgrade'
+[[ "$OSTYPE" == "linux-gnu" ]] && alias u='yay -Syu'
+(( $+commands[bat] )) && alias cat='bat' && alias less='bat'
