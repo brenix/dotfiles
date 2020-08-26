@@ -34,9 +34,7 @@
       "filetypes": ["dockerfile"]
     },
     "terraform": {
-      "command": "terraform-ls",
-      "trace.server": "verbose",
-      "args": ["serve"],
+      "command": "terraform-lsp",
       "filetypes": ["terraform", "tf"],
       "initializationOptions": {},
       "settings": {}
