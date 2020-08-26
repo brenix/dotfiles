@@ -3,13 +3,14 @@
 # -- prevent popping noise
 unload-module module-suspend-on-idle
 
-# -- noise suppression
-# load-module module-null-sink sink_name=mic_denoised_out
-# load-module module-ladspa-sink sink_name=mic_raw_in sink_master=mic_denoised_out label=noise_suppressor_mono plugin=/home/brenix/.config/pulse/plugins/librnnoise_ladspa.so control=95
-# load-module module-loopback source=alsa_input.usb-Kingston_HyperX_Cloud_Flight_Wireless_Headset-00.mono-fallback sink=mic_raw_in channels=1
+# -- disable timer-based scheduling
+load-module module-udev-detect tsched=0
 
 # -- low volume for microphone
 set-source-volume 1 75000
 
-# -- set default source
+# -- noise suppression using ladspa plugin
+# load-module module-null-sink sink_name=mic_denoised_out
+# load-module module-ladspa-sink sink_name=mic_raw_in sink_master=mic_denoised_out label=noise_suppressor_mono plugin=/home/brenix/.config/pulse/plugins/librnnoise_ladspa.so control=95
+# load-module module-loopback source=alsa_input.usb-Kingston_HyperX_Cloud_Flight_Wireless_Headset-00.mono-fallback sink=mic_raw_in channels=1
 # set-default-source mic_denoised_out.monitor

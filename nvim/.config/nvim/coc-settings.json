@@ -37,8 +37,8 @@
       "args": ["serve"],
       "command": "terraform-ls",
       "disableDiagnostics": false,
-      "filetypes": ["terraform"],
-      "initializationOptions": {}
+      "filetypes": ["terraform", "tf"],
+      "settings": {}
     }
   },
   "prettier.eslintIntegration": true,

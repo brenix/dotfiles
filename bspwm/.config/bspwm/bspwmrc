@@ -54,7 +54,7 @@ bspc rule -a zoom state=floating
 
 polybar main -r &
 dunst &
-picom -b
+# picom -b
 $HOME/.fehbg
 
 # vim: set ft=sh:
