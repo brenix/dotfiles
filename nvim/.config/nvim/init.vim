@@ -34,7 +34,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'hashivim/vim-terraform'
-" Plug 'juliosueiras/vim-terraform-completion'
+Plug 'juliosueiras/vim-terraform-completion'
 Plug 'juliosueiras/vim-terraform-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -449,7 +449,6 @@ let g:coc_global_extensions = [
       \'coc-sh',
       \'coc-snippets',
       \'coc-syntax',
-      \'coc-tabnine',
       \'coc-yaml',
       \'coc-yank'
       \]

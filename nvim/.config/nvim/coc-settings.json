@@ -34,10 +34,11 @@
       "filetypes": ["dockerfile"]
     },
     "terraform": {
-      "args": ["serve"],
       "command": "terraform-ls",
-      "disableDiagnostics": false,
+      "trace.server": "verbose",
+      "args": ["serve"],
       "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
       "settings": {}
     }
   },
