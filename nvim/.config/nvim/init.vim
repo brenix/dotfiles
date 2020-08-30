@@ -31,9 +31,9 @@ Plug 'baskerville/vim-sxhkdrc'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'hashivim/vim-terraform'
 Plug 'itchyny/lightline.vim'
 Plug 'jremmen/vim-ripgrep'
-Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
 Plug 'juliosueiras/vim-terraform-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -45,12 +45,14 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
+Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
+Plug 'wincent/terminus'
 
 " Colorschemes
 Plug 'arcticicestudio/nord-vim'
@@ -366,6 +368,13 @@ imap <C-h> <C-w>
 " Automatically center line upon searching
 nnoremap n nzzzv
 nnoremap N Nzzzv
+
+" }}}
+
+" --- Plugin: jremmen/vim-ripgrep {{{
+
+" Enable smart case mode
+let g:rg_command = 'rg --vimgrep -S'
 
 " }}}
 
