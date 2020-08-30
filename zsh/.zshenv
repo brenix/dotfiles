@@ -27,3 +27,4 @@ export MOZ_DISABLE_PANGO=1
 export PAGER="less -iMR"
 export VISUAL=nvim
 export ZSH_CACHE_DIR=$HOME/.cache
+export QT_SCALE_FACTOR_ROUNDING_POLICY=Round
