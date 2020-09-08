@@ -23,6 +23,7 @@ call plug#begin('~/.cache/nvim/plugged')
 Plug 'tpope/vim-rhubarb' " Dependency for tpope/fugitive
 
 " General plugins
+Plug 'AndrewRadev/switch.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'aesophor/base16-faded'
 Plug 'airblade/vim-rooter'
