@@ -156,7 +156,7 @@ super + v
 
 # mute
 XF86AudioMute
-	pactl set-sink-mute $(pacmd list-sinks | grep index | tail -c 2) toggle
+	inputs toggle
 
 # next/prev track (spotify)
 {XF86AudioNext, XF86AudioPrev}

@@ -47,7 +47,7 @@ module-margin-left = 1
 module-margin-right = 1
 modules-left = workspaces
 modules-center = spotify mpd
-modules-right = weather cpu temperature memory volume date time
+modules-right = weather cpu temperature memory webcam-input headset-input volume date time
 offset-x = 0
 offset-y = 0
 padding-left = 1
@@ -146,5 +146,21 @@ exec-if = ping openweathermap.org -c 1
 interval = 600
 label-font = 4
 click-left = "xdg-open 'https://www.google.com/search?q=weather'"
+
+[module/headset-input]
+type = custom/script
+interval = 3
+format-prefix = " "
+format = <label>
+exec = "inputs status alsa_input.usb-Kingston_HyperX_Cloud_Flight_Wireless_Headset-00.mono-fallback"
+click-left = "inputs toggle alsa_input.usb-Kingston_HyperX_Cloud_Flight_Wireless_Headset-00.mono-fallback"
+
+[module/webcam-input]
+type = custom/script
+interval = 3
+format-prefix = " "
+format = <label>
+exec = "inputs status alsa_input.usb-046d_HD_Pro_Webcam_C920_87984D5F-02.analog-stereo"
+click-left = "inputs toggle alsa_input.usb-046d_HD_Pro_Webcam_C920_87984D5F-02.analog-stereo"
 
 # vim: set ft=dosini:

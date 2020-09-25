@@ -207,7 +207,7 @@ user_pref("network.http.max-persistent-connections-per-server", 32);
 user_pref("network.http.max-urgent-start-excessive-connections-per-host", 6);
 
 // Enable WARP for jit
-user_pref("javascript.options.warp", false);
+user_pref("javascript.options.warp", true);
 
 ////////////////////////////////////////////////////
 //   Misc
