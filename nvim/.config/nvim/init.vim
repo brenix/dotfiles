@@ -99,6 +99,7 @@ set hidden                     " Ensure closing a buffer doesnt exit
 set lazyredraw                 " Don’t update screen during macro and script execution
 set linebreak                  " Avoid wrapping a line in the middle of a word
 set matchtime=1                " Reduce the time it takes to show matching brackets
+set mmp=50000                  " Increase memory limit
 set nobackup                   " Dont create backup files
 set nocursorcolumn             " Disable cursorcolumn for performance
 set nocursorline               " Disable cursorline for performance
@@ -123,7 +124,7 @@ set smarttab                   " Use shiftwidth and softtabstop
 set softtabstop=2              " Tab width
 set splitbelow                 " Open horizontal panes to the bottom
 set splitright                 " Open vertical panes to the right
-set synmaxcol=128              " Limit syntax highlighting for performance
+" set synmaxcol=128              " Limit syntax highlighting for performance
 set switchbuf=useopen,split    " Set behavior when switching between buffers
 set tabstop=2                  " Tab = 2 spaces
 set timeout ttimeout           " Enable timeout and ttimeout options
