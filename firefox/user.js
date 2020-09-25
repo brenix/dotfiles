@@ -181,9 +181,9 @@ user_pref("browser.cache.disk.parent_directory", "/run/user/1000/firefox");
 // user_pref("browser.cache.disk_cache_ssl", false);
 
 // Enable HTTP/3
-user_pref("network.http.http3.enabled", false);
+user_pref("network.http.http3.enabled", true);
 // Temporary fix for pages not loading
-user_pref("network.http.http3.default-qpack-table-size", 4096);
+// user_pref("network.http.http3.default-qpack-table-size", 4096);
 
 // DNS Caching
 user_pref("network.dnsCacheEntries", 10000);
@@ -205,6 +205,9 @@ user_pref("network.http.max-persistent-connections-per-server", 32);
 
 // Increase max urgent start excessive connections
 user_pref("network.http.max-urgent-start-excessive-connections-per-host", 6);
+
+// Enable WARP for jit
+user_pref("javascript.options.warp", false);
 
 ////////////////////////////////////////////////////
 //   Misc
