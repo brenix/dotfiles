@@ -114,7 +114,7 @@ super + shift + p
 
 # browser
 super + d
-  firefox
+  firefox-nightly
 
 # spotify
 super + s
@@ -152,7 +152,8 @@ super + v
 
 # volume up/down
 {XF86AudioRaiseVolume, XF86AudioLowerVolume}
-	pactl set-sink-volume $(pacmd list-sinks | grep index | tail -c 2) {'+5%', '-5%'}
+	playerctl {next, previous}
+	#pactl set-sink-volume $(pacmd list-sinks | grep index | tail -c 2) {'+5%', '-5%'} */
 
 # mute
 XF86AudioMute
