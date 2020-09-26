@@ -19,6 +19,10 @@ if has('nvim')
 endif
 call plug#begin('~/.cache/nvim/plugged')
 
+" Disable syntax support for these languages in favor of other packages
+" Must be defined before polyglot is enabled
+let g:polyglot_disabled = ['go', 'yaml']
+
 " Dependencies
 Plug 'tpope/vim-rhubarb' " Dependency for tpope/fugitive
 
@@ -428,10 +432,15 @@ else
 endif
 
 " Set list of directories to search for projects
-let g:project_dirs = ['~/work', '~/ida']
+let g:project_dirs = ['~/work', '~/.dotfiles']
 
 " Change working root directory
-nnoremap <C-p> :call fzf#run({'source': 'find '. join(g:project_dirs).' -type d -maxdepth 1', 'sink': 'lcd'})<cr>
+function! ChangeProject()
+  bufdo bd
+  call fzf#run({'source': 'find '. join(g:project_dirs).' -type d -maxdepth 1', 'sink': 'cd'})
+endfunction
+
+nnoremap <C-p> :call ChangeProject()<cr>
 
 " }}}
 
@@ -527,9 +536,6 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " --- Plugin: sheerun/vim-polyglot {{{
 
 " ----- Markdown
-
-" Disable syntax support for these languages in favor of other packages
-let g:polyglot_disabled = ['go', 'yaml']
 
 " Disable folding
 let g:vim_markdown_folding_disabled = 1
