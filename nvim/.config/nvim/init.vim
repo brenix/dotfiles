@@ -44,6 +44,7 @@ Plug 'juliosueiras/vim-terraform-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'majutsushi/tagbar'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'moll/vim-bbye'
 Plug 'mzlogin/vim-markdown-toc'
@@ -315,6 +316,9 @@ nnoremap <leader>d :<C-u>CocList diagnostics<CR>
 
 " Rename function
 nnoremap <F2> <Plug>(coc-rename)
+
+" Toggle tagbar
+nnoremap <F4> :TagbarToggle<CR>
 
 " Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>

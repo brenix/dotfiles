@@ -21,3 +21,6 @@ ssh-multi() {
   tmux select-pane -t 0
   tmux set-window-option synchronize-panes on > /dev/null
 }
+
+# Use ssh completion
+compdef ssh-multi='ssh'
