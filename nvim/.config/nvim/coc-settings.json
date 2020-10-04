@@ -22,7 +22,7 @@
   "git.changedSign.hlGroup": "GitGutterChange",
   "git.changedSign.text": "~",
   "git.enableGutters": true,
-  "git.realtimeGutters": false,
+  "git.realtimeGutters": true,
   "git.removedSign.hlGroup": "GitGutterDelete",
   "git.removedSign.text": "-",
   "git.topRemovedSign.hlGroup": "GitGutterDelete",

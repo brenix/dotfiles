@@ -27,7 +27,7 @@ let g:polyglot_disabled = ['go', 'yaml']
 Plug 'tpope/vim-rhubarb' " Dependency for tpope/fugitive
 
 " General plugins
-Plug 'AndrewRadev/switch.vim'
+Plug 'AndrewRadev/switch.vim' " Use 'gs' to toggle bools
 Plug 'Yggdroot/indentLine'
 Plug 'aesophor/base16-faded'
 Plug 'airblade/vim-rooter'
@@ -136,7 +136,7 @@ set timeout ttimeout           " Enable timeout and ttimeout options
 set timeoutlen=500             " Time in ms to wait for a mapped sequence to complete
 set title                      " Let vim set the terminal title
 set ttimeoutlen=10             " Time in ms to wait for a key sequence to complete
-set updatetime=300             " Redraw the status bar often
+set updatetime=100             " Redraw the status bar often
 set wildmenu                   " Enable wildmenu comand line completion
 set wildmode=longest,list,full " Bash-like tab completion in command bar
 
