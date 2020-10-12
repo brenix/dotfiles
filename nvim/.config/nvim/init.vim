@@ -21,7 +21,7 @@ call plug#begin('~/.cache/nvim/plugged')
 
 " Disable syntax support for these languages in favor of other packages
 " Must be defined before polyglot is enabled
-let g:polyglot_disabled = ['go', 'yaml']
+let g:polyglot_disabled = ['go.plugin', 'yaml.plugin']
 
 " Dependencies
 Plug 'tpope/vim-rhubarb' " Dependency for tpope/fugitive
