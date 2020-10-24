@@ -7,7 +7,7 @@ unload-module module-suspend-on-idle
 load-module module-udev-detect tsched=0
 
 # -- low volume for microphone
-#set-source-volume 1 75000
+set-source-volume 1 75000
 
 # -- noise suppression using ladspa plugin
 #load-module module-null-sink sink_name=mic_denoised_out
