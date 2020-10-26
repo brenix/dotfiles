@@ -183,19 +183,19 @@ augroup end
 " --- Colors {{{
 
 " Enable truecolor support in NVIM
-if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  set termguicolors
-endif
+" if (has("nvim"))
+"   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"   set termguicolors
+" endif
 
 " Enable syntax highlighting
 syntax enable
 
 " Use light background
-set background=light
+set background=dark
 
 " Selected colorscheme
-colorscheme github
+colorscheme iceberg
 
 " Set colorcolumn color
 hi ColorColumn ctermbg=0 ctermfg=7
@@ -396,7 +396,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'github',
+  \ 'colorscheme': 'xresources',
   \ 'active': {
   \   'left': [ [ 'cocstatus', 'currentfunction', 'filename', 'gitbranch', 'readonly', 'modified' ] ]
   \ },
