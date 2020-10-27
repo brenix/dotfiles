@@ -6,6 +6,7 @@ alias cp='cp -i'
 alias gi="git-ignore"
 alias grep='grep --color=auto'
 alias k='kubectl'
+alias kg='kubectl get'
 alias ktp='kubectl top pod'
 alias ktn='kubectl top node'
 alias l='ls -lhg'
