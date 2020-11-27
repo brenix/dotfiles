@@ -49,6 +49,8 @@ Plug 'mengelbrecht/lightline-bufferline'
 Plug 'moll/vim-bbye'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ojroques/vim-oscyank'
+Plug 'rhadley-recurly/vim-terragrunt'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 Plug 'stefandtw/quickfix-reflector.vim'
