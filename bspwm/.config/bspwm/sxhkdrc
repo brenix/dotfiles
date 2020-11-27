@@ -122,7 +122,7 @@ super + s
 
 # slack
 super + shift + s
-  slack
+  BROWSER=google-chrome-unstable slack
 
 # vscode
 super + c

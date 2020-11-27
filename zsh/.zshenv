@@ -1,4 +1,5 @@
 export BAT_THEME="base16"
+export BROWSER="google-chrome-unstable"
 export CLICOLOR=1
 export CORRECT_IGNORE_FILE='.*'
 export EDITOR=nvim

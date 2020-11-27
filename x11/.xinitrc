@@ -11,6 +11,9 @@ fi
 # -- ensure that gtk themes are applied uniformly in the desktop environment
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
+# -- set a fallback browser when xdg-open fails
+export BROWSER=google-chrome-unstable
+
 # -- set cursor
 xsetroot -cursor_name left_ptr &
 
