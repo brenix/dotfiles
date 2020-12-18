@@ -178,6 +178,9 @@ augroup mygroup
 
   " Automatically format shell scripts on save
   autocmd BufWritePre *.sh :normal migg=G`i
+
+  " Detect variant files as hcl
+  autocmd BufNewFile,BufRead *.variant set filetype=hcl
 augroup end
 
 " }}}
