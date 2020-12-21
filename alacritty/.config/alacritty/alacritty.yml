@@ -7,13 +7,13 @@ scrolling:
 
 font:
   normal:
-    family: xos4 Terminus
+    family: Hack Nerd Font Mono
     style: Regular
   bold:
-    family: xos4 Terminus
+    family: Hack Nerd Font Mono
     style: Regular
   italic:
-    family: xos4 Terminus
+    family: Hack Nerd Font Mono
     style: Italic
   size: 11
   offset:
@@ -28,7 +28,7 @@ draw_bold_text_with_bright_colors: true
 
 colors:
   primary:
-    background: "0x2E3440"
+    background: "0x2a313e"
     foreground: "0xD8DEE9"
   cursor:
     text: "0x2E3440"
@@ -52,11 +52,6 @@ colors:
     cyan: "0x8FBCBB"
     white: "0xECEFF4"
 
-visual_bell:
-  animation: EaseOutExpo
-  duration: 0
-  color: "0xffffff"
-
 background_opacity: 1.0
 
 mouse_bindings:
@@ -72,8 +67,6 @@ mouse:
 selection:
   semantic_escape_chars: ',│`|:"'' ()[]{}<>'
   save_to_clipboard: false
-
-dynamic_title: false
 
 window:
   padding:
