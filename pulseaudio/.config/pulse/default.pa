@@ -4,6 +4,7 @@
 unload-module module-suspend-on-idle
 
 # -- disable timer-based scheduling
+unload-module module-udev-detect
 load-module module-udev-detect tsched=0
 
 # -- low volume for microphone
