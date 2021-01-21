@@ -65,7 +65,7 @@ mouse:
     modifiers: None
 
 selection:
-  semantic_escape_chars: ',│`|:"'' ()[]{}<>\t'
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
   save_to_clipboard: false
 
 window:
