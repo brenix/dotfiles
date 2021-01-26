@@ -116,3 +116,7 @@ zinit light "mollifier/cd-gitroot"
 
 # spaceship
 zinit light "denysdovhan/spaceship-prompt"
+
+# asdf
+zinit ice wait lucid
+zinit light "asdf-vm/asdf"
