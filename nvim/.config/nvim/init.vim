@@ -644,6 +644,10 @@ let g:go_highlight_variable_declarations = 1
 
 " }}}
 
+" --- Plugin: Yggdroot/indentLine {{{
+let g:indentLine_setConceal = 0
+" }}}
+
 " --- Language Formatting {{{
 
 "----------------------------------------------
