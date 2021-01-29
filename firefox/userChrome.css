@@ -62,13 +62,6 @@
   display: none !important;
 }
 
-/* Hide new tab icon */
-
-.tabbrowser-tab[image="chrome://branding/content/icon32.png"] .tab-icon-image
-{
-  display: none !important;
-}
-
 /* Removing Firefox UI/UX design team "improvements" */
 
 #urlbar[breakout][breakout-extend] {
