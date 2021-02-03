@@ -114,7 +114,7 @@ super + shift + p
 
 # browser
 super + d
-  firefox-nightly
+  google-chrome-unstable
 
 # spotify
 super + s
@@ -122,7 +122,7 @@ super + s
 
 # slack
 super + shift + s
-  BROWSER=firefox-nightly slack
+  BROWSER=google-chrome-unstable slack
 
 # vscode
 super + c
