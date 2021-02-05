@@ -56,6 +56,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tmsvg/pear-tree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -644,6 +645,16 @@ let g:go_highlight_variable_declarations = 1
 
 " --- Plugin: Yggdroot/indentLine {{{
 let g:indentLine_setConceal = 0
+" }}}
+
+" --- Plugin: tmsvg/pear-tree {{{
+" Smart pairs
+let g:pear_tree_smart_openers = 1
+let g:pear_tree_smart_closers = 1
+let g:pear_tree_smart_backspace = 1
+
+" Prevent erasing the closing string
+let g:pear_tree_repeatable_expand = 0
 " }}}
 
 " --- Language Formatting {{{
