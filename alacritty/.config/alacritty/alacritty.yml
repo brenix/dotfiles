@@ -1,6 +1,5 @@
 import:
-  - $HOME/.config/alacritty/colors/iceberg.yml
-  # - $HOME/.config/alacritty/colors/gruvbox-material.yml
+  - /home/brenix/.config/alacritty/colors/iceberg.yml
 
 env:
   TERM: xterm-256color
@@ -29,32 +28,6 @@ font:
   use_thin_strokes: false
 
 draw_bold_text_with_bright_colors: true
-
-colors:
-  primary:
-    background: "0x161821"
-    foreground: "0xC6C8D1"
-  cursor:
-    text:   "0x161821"
-    cursor: "0xC6C8D1"
-  normal:
-    black:   "0x22262E"
-    red:     "0xE27878"
-    green:   "0xB4BE82"
-    yellow:  "0xE2A478"
-    blue:    "0x84A0C6"
-    magenta: "0xA093C7"
-    cyan:    "0x89B8C2"
-    white:   "0xC6C8D1"
-  bright:
-    black:   "0x6B7089"
-    red:     "0xE98989"
-    green:   "0xC0CA8E"
-    yellow:  "0xE9B189"
-    blue:    "0x91ACD1"
-    magenta: "0xADA0D3"
-    cyan:    "0x95C4CE"
-    white:   "0xD2D4DE"
 
 background_opacity: 0.95
 
