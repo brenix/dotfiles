@@ -94,7 +94,7 @@ kube_tmux() {
   fi
   KUBE_TMUX+="#[fg=${2:-white}]${KUBE_TMUX_NAMESPACE}"
 
-  echo "#[fg=blue,bg=black]KUBE: ${KUBE_TMUX}"
+  echo "#[fg=blue,bg=default]KUBE: ${KUBE_TMUX}"
 }
 
 kube_tmux "$@"

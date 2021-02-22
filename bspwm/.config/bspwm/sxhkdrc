@@ -94,7 +94,7 @@ super + Return
 
 # terminal (floating)
 super + shift + Return
-  bspc rule -a \* -o state=floating && st
+  bspc rule -a \* -o state=floating && alacritty
 
 # terminal (work)
 super + m
