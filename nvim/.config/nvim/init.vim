@@ -403,7 +403,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'faded',
+  \ 'colorscheme': 'xresources',
   \ 'active': {
   \   'left': [ [ 'cocstatus', 'currentfunction', 'filename', 'gitbranch', 'readonly', 'modified' ] ]
   \ },
