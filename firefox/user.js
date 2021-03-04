@@ -245,9 +245,6 @@ user_pref("general.warnOnAboutConfig", false);
 // Enable click to play for plugins
 user_pref("plugins.click_to_play", true);
 
-// Put tabs in the title bar (saves space)
-user_pref("browser.tabs.drawInTitlebar", true);
-
 // Enable WebRender
 user_pref("gfx.webrender.all", true);
 
