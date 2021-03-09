@@ -1,5 +1,5 @@
 import:
-  - /home/brenix/.config/alacritty/colors/gruvbox-dark.yml
+  - /home/brenix/.config/alacritty/colors/iceberg.yml
 
 env:
   TERM: xterm-256color
@@ -10,15 +10,15 @@ scrolling:
 
 font:
   normal:
-    family: DejaVuSansMono Nerd Font Mono
+    family: terminus
     style: Regular
   bold:
-    family: DejaVuSansMono Nerd Font Mono
+    family: terminus
     style: Regular
   italic:
-    family: DejaVuSansMono Nerd Font Mono
+    family: terminus
     style: Italic
-  size: 10.5
+  size: 8
   offset:
     x: 0
     y: -2

@@ -203,7 +203,7 @@ syntax enable
 set background=dark
 
 " Selected colorscheme
-colorscheme gruvbox
+colorscheme iceberg
 
 " Set colorcolumn color
 hi ColorColumn ctermbg=0 ctermfg=7
@@ -404,7 +404,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'gruvbox_material',
+  \ 'colorscheme': 'xresources',
   \ 'active': {
   \   'left': [ [ 'cocstatus', 'currentfunction', 'filename', 'gitbranch', 'readonly', 'modified' ] ]
   \ },
