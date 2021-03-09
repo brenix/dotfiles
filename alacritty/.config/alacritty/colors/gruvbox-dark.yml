@@ -1,0 +1,31 @@
+# Colors (Gruvbox dark)
+colors:
+  primary:
+    background: '#282828'
+    foreground: '#A89984'
+
+  #cursor:
+  #  text: '0x000000'
+  #  cursor: '0xffffff'
+
+  normal:
+    black:   '#202020'
+    red:     '#734541'
+    green:   '#5b6048'
+    yellow:  '#af865a'
+    blue:    '#535c5c'
+    magenta: '#775759'
+    cyan:    '#6d715e'
+    white:   '#A89984'
+
+  # Bright colors
+  bright:
+    #black: '#402e2e'
+    black:   '#454545'
+    red:     '#733a34'
+    green:   '#586039'
+    yellow:  '#8f6840'
+    blue:    '#444b4b'
+    magenta: '#614445'
+    cyan:    '#585c49'
+    white:   '#b0a390'

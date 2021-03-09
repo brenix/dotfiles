@@ -1,14 +1,14 @@
 configuration {
 	bw: 0;
-	color-active: "#161821, #606778, #161821, #1e2029, #e5e9f0";
-	color-normal: "#161821, #606778, #161821, #1e2029, #e5e9f0";
-	color-urgent: "#161821, #606778, #161821, #1e2029, #e5e9f0";
-	color-window: "#161821, #606778";
+	color-active: "#282828, #a89984, #282828, #8ec07c, #000000";
+	color-normal: "#282828, #a89984, #282828, #8ec07c, #000000";
+	color-urgent: "#282828, #a89984, #282828, #8ec07c, #000000";
+	color-window: "#282828, #a89984";
 	combi-hide-mode-prefix: true;
 	combi-modi: "window,run";
 	dpi: 91;
 	eh: 1;
-	font: "Terminus 10";
+	font: "DejaVuSansMono Nerd Font Mono 10";
 	hide-scrollbar: true;
 	line-margin: 1;
 	lines: 10;

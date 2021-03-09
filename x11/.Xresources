@@ -33,4 +33,4 @@ URxvt.cursorBlink:        1
 URxvt.cursorUnderline:    1
 
 ! -- colors
-#include ".xcolors.d/iceberg"
+#include ".xcolors.d/gruvbox-dark"

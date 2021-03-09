@@ -69,6 +69,7 @@ Plug 'cocopon/iceberg.vim'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/sonokai'
+Plug 'jasolisdev/gruvbox'
 
 call plug#end()
 
@@ -202,7 +203,7 @@ syntax enable
 set background=dark
 
 " Selected colorscheme
-colorscheme iceberg
+colorscheme gruvbox
 
 " Set colorcolumn color
 hi ColorColumn ctermbg=0 ctermfg=7
@@ -403,7 +404,7 @@ endfunction
 
 " Set lightline config
 let g:lightline = {
-  \ 'colorscheme': 'xresources',
+  \ 'colorscheme': 'gruvbox_material',
   \ 'active': {
   \   'left': [ [ 'cocstatus', 'currentfunction', 'filename', 'gitbranch', 'readonly', 'modified' ] ]
   \ },
