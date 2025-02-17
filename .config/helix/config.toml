@@ -1,0 +1,81 @@
+theme = "tokyonight"
+
+[editor]
+auto-pairs = false
+bufferline = "always"
+color-modes = true
+completion-replace = true
+gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
+idle-timeout = 1
+line-number = "absolute"
+rulers = [80]
+scrolloff = 5
+undercurl = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.file-picker]
+git-ignore = false
+hidden = false
+parents = false
+
+[editor.indent-guides]
+rainbow-option = "dim"
+render = true
+
+[editor.lsp]
+display-inlay-hints = false
+display-messages = true
+enable = true
+snippets = true
+
+[editor.soft-wrap]
+enable = false
+
+[editor.statusline]
+center = ["file-name"]
+left = ["mode", "spacer", "version-control", "spacer", "spinner"]
+right = ["diagnostics", "position-percentage", "file-type"]
+
+[editor.statusline.mode]
+insert = "INSERT"
+normal = "NORMAL"
+select = "SELECT"
+
+[keys.insert]
+C-space = "completion"
+esc = ["collapse_selection", "normal_mode"]
+
+[keys.normal]
+"$" = "goto_line_end"
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
+D = ["extend_to_line_end", "delete_selection"]
+G = "goto_file_end"
+S-tab = "goto_previous_buffer"
+"^" = "goto_first_nonwhitespace"
+esc = ["collapse_selection", "keep_primary_selection"]
+minus = "file_picker_in_current_buffer_directory"
+p = "paste_clipboard_after"
+tab = "goto_next_buffer"
+y = "yank_main_selection_to_clipboard"
+
+[keys.normal.space]
+Q = ":q!"
+W = ":w!"
+e = "file_picker_in_current_buffer_directory"
+f = ":format"
+l = ":toggle lsp.display-inlay-hints"
+minus = ":hsplit-new"
+n = ":new"
+q = ":q"
+space = "file_picker"
+t = ":toggle-option auto-format"
+v = ":vsplit-new"
+w = ":w"
+x = ":buffer-close"
