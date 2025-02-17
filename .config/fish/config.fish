@@ -68,6 +68,7 @@ status is-interactive; and begin
     # Interactive shell initialisation
     fzf --fish | source
     zoxide init fish | source
+    starship init fish | source
 
     set -gx PATH $PATH $HOME/.local/bin $HOME/.krew/bin $GOPATH/bin
     complete -c ssh-multi -w ssh

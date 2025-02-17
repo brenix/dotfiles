@@ -1,0 +1,49 @@
+add_newline = false
+format = "$username$hostname$kubernetes$directory$git_branch$git_commit$git_state$git_status\n$jobs$status$shlvl$character\n"
+
+[aws]
+format = "[$profile \\($region\\) ]($style)"
+
+[character]
+error_symbol = "[▶](bold red)"
+success_symbol = "[▶](bold green)"
+
+[directory]
+format = "[$path ]($style)"
+style = "blue"
+
+[fill]
+symbol = " "
+
+[git_branch]
+format = "[\\($branch]($style)"
+style = "magenta"
+
+[git_status]
+disabled = false
+format = "([:](overlay2)[$all_status$ahead_behind](red))[\\) ](magenta)"
+
+[hostname]
+disabled = true
+format = "[$hostname ]($style)"
+ssh_only = true
+style = "bright-black"
+
+[kubernetes]
+disabled = false
+format = "[\\[$context:$namespace\\]]($style) "
+style = "bold red"
+[[kubernetes.contexts]]
+context_pattern = ".*(dev|local).*"
+style = "cyan"
+
+[python]
+format = "[(($virtualenv)) ]($style)"
+style = "fg:magenta bold"
+
+[username]
+disabled = true
+format = "[$user@]($style)"
+show_always = false
+style_root = "bold red"
+style_user = "bright-black"
