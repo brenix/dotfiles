@@ -28,6 +28,7 @@ status is-interactive; and begin
 
     # Aliases
     alias bat 'bat --paging=never --style=plain --decorations=never'
+    alias dot 'git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
     alias e 'helix .'
     alias fd 'fd --hidden --no-ignore'
     alias g git
