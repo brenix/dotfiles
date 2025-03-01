@@ -1,0 +1,15 @@
+k9s:
+  liveViewAutoRefresh: true
+  logger:
+    buffer: 200000
+    sinceSeconds: -1
+    tail: 500
+  maxConnRetry: 3
+  refreshRate: 2
+  skipLatestRevCheck: true
+  ui:
+    enableMouse: true
+    headless: true
+    logoless: true
+    noIcons: true
+    skin: skin

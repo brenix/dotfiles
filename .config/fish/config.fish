@@ -66,7 +66,6 @@ status is-interactive; and begin
     alias vm 'virsh start windows'
     alias zad 'ls -d */ | xargs -I {} zoxide add {}'
 
-    # Interactive shell initialisation
     fzf --fish | source
     zoxide init fish | source
     starship init fish | source
@@ -74,8 +73,8 @@ status is-interactive; and begin
     set -gx PATH $PATH $HOME/.local/bin $HOME/.krew/bin $GOPATH/bin
     complete -c ssh-multi -w ssh
     bind \ce end-of-line
-    # bind ! bind_bang
-    # bind '$' bind_dollar
+    bind ! bind_bang
+    bind '$' bind_dollar
     bind -k nul 'zi && commandline --function repaint'
     set -gx fish_color_autosuggestion brblack
     set -gx fish_color_cancel -r
@@ -103,6 +102,7 @@ status is-interactive; and begin
     set -gx fish_pager_color_description yellow
     set -gx fish_pager_color_prefix white --bold --underline
     set -gx fish_pager_color_progress brwhite '--background=cyan'
+
     for file in ~/.config/fish/conf.local.d/*.fish
         source $file
     end

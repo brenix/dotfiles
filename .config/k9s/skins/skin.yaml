@@ -1,0 +1,87 @@
+k9s:
+  body:
+    bgColor: default
+    fgColor: '#b8b8ba'
+    logoColor: '#468b8b'
+  dialog:
+    bgColor: default
+    buttonBgColor: '#101011'
+    buttonFgColor: '#b8b8ba'
+    buttonFocusBgColor: '#468b8b'
+    buttonFocusFgColor: '#8976ae'
+    fgColor: '#b8b8ba'
+    fieldFgColor: '#b8b8ba'
+    labelFgColor: '#a277a3'
+  frame:
+    border:
+      fgColor: '#101011'
+      focusColor: '#27272a'
+    crumbs:
+      activeColor: '#101011'
+      bgColor: '#101011'
+      fgColor: '#101011'
+    menu:
+      fgColor: '#b8b8ba'
+      keyColor: '#468b8b'
+      numKeyColor: '#468b8b'
+    status:
+      addColor: '#b8b8ba'
+      completedColor: '#464649'
+      errorColor: '#bf678f'
+      highlightcolor: '#a277a3'
+      killColor: '#959081'
+      modifyColor: '#8976ae'
+      newColor: '#6188b3'
+    title:
+      bgColor: '#101011'
+      counterColor: '#4c8299'
+      fgColor: '#b8b8ba'
+      filterColor: '#6188b3'
+      highlightColor: '#a277a3'
+  info:
+    fgColor: '#b8b8ba'
+    sectionColor: '#468b8b'
+  prompt:
+    bgColor: '#101011'
+    fgColor: '#b8b8ba'
+    suggestColor: '#a277a3'
+  views:
+    charts:
+      bgColor: default
+      defaultChartColors:
+      - '#4c8299'
+      - '#6188b3'
+      defaultDialColors:
+      - '#4c8299'
+      - '#6188b3'
+    help:
+      bgColor: '#101011'
+      fgColor: '#b8b8ba'
+      indicator:
+        fgColor: '#6188b3'
+    logs:
+      bgColor: default
+      fgColor: '#b8b8ba'
+      indicator:
+        bgColor: '#101011'
+        fgColor: '#b8b8ba'
+    table:
+      bgColor: default
+      cursorBgColor: '#b8b8ba'
+      cursorFgColor: '#101011'
+      fgColor: '#b8b8ba'
+      header:
+        bgColor: default
+        fgColor: '#b8b8ba'
+        sorterColor: '#b8b8ba'
+      markColor: '#a277a3'
+    xray:
+      bgColor: default
+      cursorColor: '#27272a'
+      fgColor: '#b8b8ba'
+      graphicColor: '#4c8299'
+      showIcons: false
+    yaml:
+      colonColor: '#4c8299'
+      keyColor: '#6188b3'
+      valueColor: '#b8b8ba'

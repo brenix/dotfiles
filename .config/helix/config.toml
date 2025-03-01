@@ -1,4 +1,4 @@
-theme = "tokyonight"
+theme = "solarized_dark"
 
 [editor]
 auto-pairs = false
@@ -10,6 +10,7 @@ idle-timeout = 1
 line-number = "absolute"
 rulers = [80]
 scrolloff = 5
+true-color = true
 undercurl = true
 
 [editor.cursor-shape]
