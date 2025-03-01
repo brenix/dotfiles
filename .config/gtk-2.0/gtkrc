@@ -1,6 +1,6 @@
-gtk-cursor-theme-name = "Colloid"
+gtk-cursor-theme-name = "Colloid-cursors"
 gtk-cursor-theme-size = 32
-gtk-icon-theme-name = "Colloid-Blue"
+gtk-icon-theme-name = "Colloid-Dark"
 gtk-theme-name = "Colloid-Dark-Compact"
 gtk-xft-antialias=1
 gtk-xft-hinting=1
