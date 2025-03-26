@@ -1,1 +1,1 @@
-exec openbox-session
+exec dwm
