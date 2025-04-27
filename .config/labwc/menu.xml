@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu>
+<menu id="screenshot-menu" label="SCREENSHOT">
+  <item label="NOW">
+    <action name="Execute" command="gscreenshot" />
+  </item>
+  <item label="IN 3">
+    <action name="Execute" command="gscreenshot -d 3" />
+  </item>
+  <item label="IN 5">
+    <action name="Execute" command="gscreenshot -d 5" />
+  </item>
+</menu>
+
+<menu id="root-menu">
+  <item label="TERM">
+    <action name="Execute" command="alacritty" />
+  </item>
+  <item label="BROWSER">
+    <action name="Execute" command="firefox" />
+  </item>
+  <item label="DISCORD">
+    <action name="Execute" command="discord" />
+  </item>
+  <item label="SPOTIFY">
+    <action name="Execute" command="spotify" />
+  </item>
+  <separator />
+  <menu id="screenshot-menu"/>
+  <separator />
+  <item label="REBOOT">
+    <action name="Execute" command="reboot" />
+  </item>
+  <item label="POWEROFF">
+    <action name="Execute" command="shutdown now" />
+  </item>
+  <item label="LOGOUT">
+    <action name="Exit" />
+  </item>
+  <item label="RECONFIGURE">
+    <action name="Reconfigure" />
+  </item>
+</menu>
+</openbox_menu>

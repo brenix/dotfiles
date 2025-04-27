@@ -1,0 +1,353 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <core>
+    <decoration>server</decoration>
+    <gap>0</gap>
+    <adaptiveSync>false</adaptiveSync>
+    <allowTearing>false</allowTearing>
+    <reuseOutputMode>false</reuseOutputMode>
+  </core>
+  <placement>
+    <policy>center</policy>
+  </placement>
+  <theme>
+    <name></name>
+    <cornerRadius>0</cornerRadius>
+    <keepBorder>true</keepBorder>
+    <dropShadows>false</dropShadows>
+    <font place="ActiveWindow">
+      <name>Gohufont</name>
+      <size>11</size>
+      <slant>normal</slant>
+      <weight>normal</weight>
+    </font>
+    <font place="InactiveWindow">
+      <name>Gohufont</name>
+      <size>11</size>
+      <slant>normal</slant>
+      <weight>normal</weight>
+    </font>
+    <font place="MenuItem">
+      <name>Gohufont</name>
+      <size>11</size>
+      <slant>normal</slant>
+      <weight>normal</weight>
+    </font>
+    <font place="OnScreenDisplay">
+      <name>Gohufont</name>
+      <size>11</size>
+      <slant>normal</slant>
+      <weight>normal</weight>
+    </font>
+  </theme>
+  <windowSwitcher>
+    <show>true</show>
+    <preview>true</preview>
+    <outlines>true</outlines>
+    <allWorkspaces>false</allWorkspaces>
+    <fields>
+      <field>
+        <content>type</content>
+        <format></format>
+        <width>25%</width>
+      </field>
+      <field>
+        <content>trimmed_identifier</content>
+        <format></format>
+        <width>25%</width>
+      </field>
+      <field>
+        <content>title</content>
+        <format></format>
+        <width>50%</width>
+      </field>
+    </fields>
+  </windowSwitcher>
+  <resistance>
+    <screenEdgeStrength>20</screenEdgeStrength>
+    <windowEdgeStrength>20</windowEdgeStrength>
+  </resistance>
+  <resize>
+    <popupShow>Never</popupShow>
+  </resize>
+  <focus>
+    <followMouse>true</followMouse>
+    <followMouseRequiresMovement>true</followMouseRequiresMovement>
+    <raiseOnFocus>false</raiseOnFocus>
+  </focus>
+  <snapping>
+    <range>1</range>
+    <overlay>
+      <enabled>true</enabled>
+      <delay>
+        <inner>500</inner>
+        <outer>500</outer>
+      </delay>
+    </overlay>
+    <topMaximize>true</topMaximize>
+    <notifyClient>always</notifyClient>
+  </snapping>
+  <desktops>
+    <popupTime>1000</popupTime>
+    <names>
+      <name>Default</name>
+    </names>
+    <number>4</number>
+  </desktops>
+  <keyboard>
+    <numlock>true</numlock>
+    <layoutScope>global</layoutScope>
+    <repeatRate>45</repeatRate>
+    <repeatDelay>280</repeatDelay>
+    <keybind key="A-Tab" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="NextWindow">
+        
+      </action>
+    </keybind>
+    <keybind key="W-Return" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>alacritty</command>
+      </action>
+    </keybind>
+    <keybind key="W-Space" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>fuzzel</command>
+      </action>
+    </keybind>
+    <keybind key="W-d" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>firefox</command>
+      </action>
+    </keybind>
+    <keybind key="W-s" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>spotify</command>
+      </action>
+    </keybind>
+    <keybind key="W-v" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>pavucontrol</command>
+      </action>
+    </keybind>
+    <keybind key="W-w" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Close">
+        
+      </action>
+    </keybind>
+    <keybind key="W-z" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="ToggleShade">
+        
+      </action>
+    </keybind>
+    <keybind key="W-f" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="ToggleMaximize">
+        
+      </action>
+    </keybind>
+    <keybind key="W-1" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="W-2" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="GoToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="W-3" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="GoToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="W-4" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="GoToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-1" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="SendToDesktop">
+        <follow>false</follow>
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-2" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="SendToDesktop">
+        <follow>false</follow>
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-3" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="SendToDesktop">
+        <follow>false</follow>
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-4" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="SendToDesktop">
+        <follow>false</follow>
+        <to>4</to>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessUp" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>/nix/store/s7g1vbx1kfn7j49gh7sw431sbq0gfsbl-brightnessctl-0.5.1/bin/brightnessctl set 5%+</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>/nix/store/s7g1vbx1kfn7j49gh7sw431sbq0gfsbl-brightnessctl-0.5.1/bin/brightnessctl set 5%-</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMute" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMicMute" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>wpctl set-mute @DEFAULT_INPUT_SOURCE@ toggle</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioNext" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>playerctl -p spotify next</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPrev" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>playerctl -p spotify previous</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPlay" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>playerctl -p spotify play-pause</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioStop" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>playerctl -p spotify stop</command>
+      </action>
+    </keybind>
+    <keybind key="Print" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>grimblast --notify copysave area</command>
+      </action>
+    </keybind>
+    <keybind key="S-Print" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>grimblast --notify copy active</command>
+      </action>
+    </keybind>
+    <keybind key="C-Print" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>grimblast --notify copy screen</command>
+      </action>
+    </keybind>
+    <keybind key="W-Print" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>grimblast --notify copy window</command>
+      </action>
+    </keybind>
+    <keybind key="A-Print" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>grimblast --notify copy area</command>
+      </action>
+    </keybind>
+  </keyboard>
+  <mouse>
+    <doubleClickTime>500</doubleClickTime>
+    <scrollFactor>1.000000</scrollFactor>
+    <default/>
+    <context name="Frame">
+      <mousebind button="W-Left" direction="" action="Drag">
+        <action name="Move" />
+      </mousebind>
+      <mousebind button="W-Right" direction="" action="Drag">
+        <action name="Resize" />
+      </mousebind>
+    </context>
+    <context name="Root">
+      <mousebind button="Left" direction="" action="Press">
+        <action name="None" />
+      </mousebind>
+    </context>
+    <context name="Title">
+      <mousebind button="Right" direction="" action="Click">
+        <action name="None" />
+      </mousebind>
+    </context>
+    <context name="TitleBar">
+      <mousebind button="Right" direction="" action="Press">
+        <action name="ToggleShade" />
+      </mousebind>
+      <mousebind button="" direction="Up" action="Scroll">
+        <action name="Unshade" />
+      </mousebind>
+      <mousebind button="" direction="Down" action="Scroll">
+        <action name="Shade" />
+      </mousebind>
+    </context>
+  </mouse>
+  <touch deviceName="" mapToOutput="" />
+  <tablet>
+    <mapToOutput></mapToOutput>
+    <rotate>0</rotate>
+    <mouseEmulation>false</mouseEmulation>
+    <area>
+      <top>0.000000</top>
+      <left>0.000000</left>
+      <width>0.000000</width>
+      <height>0.000000</height>
+    </area>
+    <map button="Stylus" to="Right" />
+    <map button="Stylus2" to="Middle" />
+    <map button="Tip" to="Left" />
+  </tablet>
+  <libinput>
+    <device category="default">
+      <naturalScroll>true</naturalScroll>
+      <leftHanded></leftHanded>
+      <pointerSpeed></pointerSpeed>
+      <accelProfile>flat</accelProfile>
+      <tap>true</tap>
+      <tapButtonMap></tapButtonMap>
+      <tapAndDrag></tapAndDrag>
+      <dragLock></dragLock>
+      <middleEmulation></middleEmulation>
+      <disableWhileTyping></disableWhileTyping>
+      <clickMethod>clickFinger</clickMethod>
+      <sendEventsMode></sendEventsMode>
+      <calibrationMatrix></calibrationMatrix>
+    </device>
+  </libinput>
+  <windowRules>
+    <windowRule identifier="alacritty" title="" sandboxEngine="" sandboxAppId="" type="" matchOnce="">
+      <serverDecoration>true</serverDecoration>
+      <skipTaskbar></skipTaskbar>
+      <skipWindowSwitcher></skipWindowSwitcher>
+      <ignoreFocusRequest></ignoreFocusRequest>
+      <ignoreConfigureRequest></ignoreConfigureRequest>
+      <fixedPosition></fixedPosition>
+    </windowRule>
+  </windowRules>
+  <menu>
+    <ignoreButtonReleasePeriod>250</ignoreButtonReleasePeriod>
+  </menu>
+  <magnifier>
+    <width>400</width>
+    <height>400</height>
+    <initScale>2.000000</initScale>
+    <increment>0.200000</increment>
+    <useFilter>true</useFilter>
+  </magnifier>
+</labwc_config>

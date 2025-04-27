@@ -1,0 +1,158 @@
+@define-color black #101011;
+@define-color white #b8b8ba;
+@define-color grey #27272a;
+@define-color blue #6188b3;
+@define-color green #468b8b;
+@define-color red #bf678f;
+@define-color orange #808084;
+@define-color yellow #a277a3;
+@define-color cyan #4c8299;
+@define-color magenta #8976ae;
+
+* {
+  border: 0;
+  border-radius: 0;
+  padding: 0 0;
+  font-family: "Terminus";
+  font-size: 9pt;
+  min-height: 0;
+  color: white;
+}
+
+window#waybar {
+  border: 0px solid rgba(0, 0, 0, 0);
+  background-color: @black;
+}
+
+#workspaces * {
+  color: white;
+}
+
+#workspaces {
+  border-style: solid;
+  margin: 0 4px;
+  background-color: @black;
+}
+
+#workspaces button {
+  color: @black;
+}
+
+#workspaces button.active * {
+  color: @black;
+  background-color: @white;
+}
+
+#workspaces button.visible {
+  color: white;
+  background-color: @black;
+}
+
+/*
+#workspaces button.visible * {
+  color: @black;
+}
+*/
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#mode,
+#tray {
+  padding: 1px 8px;
+  border-style: solid;
+  background-color: @black;
+  opacity: 1;
+}
+
+#clock {
+  color: @white;
+}
+
+#backlight {
+  color: @white;
+}
+
+#battery {
+  color: @white;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#battery.charging {
+  color: @white;
+}
+
+@keyframes blink {
+  to {
+    color: @red;
+  }
+}
+
+#pulseaudio {
+  color: @white;
+}
+
+#pulseaudio.muted {
+  color: @grey;
+}
+
+#temperature {
+  color: @white;
+}
+
+#temperature.critical {
+  color: @red;
+}
+
+#cpu {
+  color: @white;
+}
+
+#cpu #cpu-icon {
+  color: @white;
+}
+
+#memory {
+  color: @white;
+}
+
+#network {
+  color: @white;
+}
+
+#spotify {
+  color: @white;
+}
+
+#mpd {
+  color: @white;
+}
+
+#network.disconnected {
+  color: @white;
+}
+
+#custom-power {
+  /* margin: 8px; */
+  padding: 1px;
+  transition: none;
+  color: @red;
+  background: @black;
+}
+
+#window {
+  border-style: hidden;
+}
