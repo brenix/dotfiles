@@ -16,25 +16,25 @@
     <keepBorder>true</keepBorder>
     <dropShadows>false</dropShadows>
     <font place="ActiveWindow">
-      <name>Gohufont</name>
+      <name>Gohu GohuFont</name>
       <size>11</size>
       <slant>normal</slant>
       <weight>normal</weight>
     </font>
     <font place="InactiveWindow">
-      <name>Gohufont</name>
+      <name>Gohu GohuFont</name>
       <size>11</size>
       <slant>normal</slant>
       <weight>normal</weight>
     </font>
     <font place="MenuItem">
-      <name>Gohufont</name>
+      <name>Gohu GohuFont</name>
       <size>11</size>
       <slant>normal</slant>
       <weight>normal</weight>
     </font>
     <font place="OnScreenDisplay">
-      <name>Gohufont</name>
+      <name>Gohu GohuFont</name>
       <size>11</size>
       <slant>normal</slant>
       <weight>normal</weight>
