@@ -1,0 +1,32 @@
+# Colors (Base16 Default Dark)
+
+# Default colors
+[colors.primary]
+background = '#101011'
+foreground = '#b8b8ba'
+
+[colors.cursor]
+text = '#101011'
+cursor = '#b8b8ba'
+
+# Normal colors
+[colors.normal]
+black   = '#101011'
+red     = '#bf678f'
+green   = '#468b8b'
+yellow  = '#a277a3'
+blue    = '#6188b3'
+magenta = '#8976ae'
+cyan    = '#4c8299'
+white   = '#b8b8ba'
+
+# Bright colors
+[colors.bright]
+black   = '#464649'
+red     = '#bf678f'
+green   = '#468b8b'
+yellow  = '#a277a3'
+blue    = '#6188b3'
+magenta = '#8976ae'
+cyan    = '#4c8299'
+white   = '#b8b8ba'
