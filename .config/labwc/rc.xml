@@ -16,7 +16,7 @@
     <keepBorder>true</keepBorder>
     <dropShadows>false</dropShadows>
     <titlebar>
-      <layout>:</layout>
+      <layout>:close</layout>
       <showTitle>true</showTitle>
     </titlebar>
     <font place="ActiveWindow">
@@ -33,19 +33,19 @@
     </font>
     <font place="MenuHeader">
       <name>Terminus</name>
-      <size>11</size>
+      <size>10</size>
       <slant>normal</slant>
       <weight>normal</weight>
     </font>
     <font place="MenuItem">
       <name>Terminus</name>
-      <size>11</size>
+      <size>10</size>
       <slant>normal</slant>
       <weight>normal</weight>
     </font>
     <font place="OnScreenDisplay">
       <name>Terminus</name>
-      <size>11</size>
+      <size>10</size>
       <slant>normal</slant>
       <weight>normal</weight>
     </font>

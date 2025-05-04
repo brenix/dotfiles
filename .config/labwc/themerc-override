@@ -24,6 +24,7 @@ window.inactive.label.text.color: #353539
 window.label.text.justify: center
 
 # window button width and spacing
+window.button.height: 10
 window.button.width: 15
 window.button.spacing: 0
 
