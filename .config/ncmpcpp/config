@@ -1,0 +1,10 @@
+mpd_host = localhost
+mpd_port = 6600
+mpd_crossfade_time = 2
+song_list_format = "{{%a - %t}|{%f}}{$R%l}"
+song_status_format = "{{%a{ $5//$9 %b{, %y}} $5//$9 }{%t$/b}}|{$b%f$/b}"
+song_library_format = {{%a - %t} (%b)}|{%f}
+now_playing_prefix = "$6"
+now_playing_suffix = "$/b$9"
+playlist_display_mode = classic
+autocenter_mode = yes

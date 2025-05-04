@@ -31,39 +31,43 @@ status is-interactive; and begin
     alias dot 'git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
     alias e 'helix .'
     alias fd 'fd --hidden --no-ignore'
-    alias g git
-    alias ga 'git add'
     alias gaa 'git add --all'
-    alias gb 'git branch'
+    alias ga 'git add'
     alias gba 'git branch --all'
-    alias gc 'git commit --verbose'
+    alias gb 'git branch'
     alias gca 'git commit --verbose --all'
+    alias gc 'git commit --verbose'
     alias gcl 'git clone --recurse-submodules'
     alias gco 'git checkout'
-    alias gd 'git diff'
     alias gdc 'git diff --cached'
+    alias gd 'git diff'
+    alias g git
     alias gl 'git pull --prune'
     alias glo 'git log --oneline --decorate --pretty=format:'\''%C(auto)%h %s (%Cgreen%an%C(auto))'\'''
     alias gmt 'go mod tidy'
-    alias gp 'git push'
-    alias gpf 'git push --force-with-lease'
     alias gpf! 'git push --force'
+    alias gpf 'git push --force-with-lease'
+    alias gp 'git push'
     alias gpv 'git push --verbose'
     alias grhh 'git reset --hard HEAD'
     alias grm 'git rebase -i (git symbolic-ref refs/remotes/origin/HEAD | sed '\''s@^refs/remotes/origin/@@'\'')'
     alias gsh 'git show --format=raw -m'
     alias gst 'git status'
     alias kubectl kubecolor
-    alias l 'ls -l'
     alias la 'ls -Al'
+    alias l 'ls -l'
     alias mkdir 'mkdir -p'
     alias mv 'mv -iv'
     alias rm 'rm -I'
+    alias r 'sudo pacman -Rnsc'
     alias sw 'git switch'
     alias u 'sudo pacman -Syu'
     alias v helix
+    alias vi helix
+    alias vim helix
     alias virsh 'virsh -c qemu:///system'
     alias vm 'virsh start windows'
+    alias x k9s
     alias zad 'ls -d */ | xargs -I {} zoxide add {}'
 
     fzf --fish | source

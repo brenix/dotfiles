@@ -1,4 +1,4 @@
-theme = "nord"
+theme = "oldschool"
 
 [editor]
 auto-pairs = false

@@ -15,30 +15,6 @@
     <cornerRadius>0</cornerRadius>
     <keepBorder>true</keepBorder>
     <dropShadows>false</dropShadows>
-    <font place="ActiveWindow">
-      <name>Gohu GohuFont</name>
-      <size>11</size>
-      <slant>normal</slant>
-      <weight>normal</weight>
-    </font>
-    <font place="InactiveWindow">
-      <name>Gohu GohuFont</name>
-      <size>11</size>
-      <slant>normal</slant>
-      <weight>normal</weight>
-    </font>
-    <font place="MenuItem">
-      <name>Gohu GohuFont</name>
-      <size>11</size>
-      <slant>normal</slant>
-      <weight>normal</weight>
-    </font>
-    <font place="OnScreenDisplay">
-      <name>Gohu GohuFont</name>
-      <size>11</size>
-      <slant>normal</slant>
-      <weight>normal</weight>
-    </font>
   </theme>
   <windowSwitcher>
     <show>true</show>

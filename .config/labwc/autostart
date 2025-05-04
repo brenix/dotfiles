@@ -1,2 +1,4 @@
 waypaper --restore &
-waybar &
+waybar &>/dev/null &
+kanshi &>/dev/null &
+
