@@ -8,13 +8,47 @@
     <reuseOutputMode>false</reuseOutputMode>
   </core>
   <placement>
-    <policy>center</policy>
+    <policy>cascade</policy>
   </placement>
   <theme>
     <name></name>
     <cornerRadius>0</cornerRadius>
     <keepBorder>true</keepBorder>
     <dropShadows>false</dropShadows>
+    <titlebar>
+      <layout>:</layout>
+      <showTitle>true</showTitle>
+    </titlebar>
+    <font place="ActiveWindow">
+      <name>Terminus</name>
+      <size>9</size>
+      <slant>normal</slant>
+      <weight>normal</weight>
+    </font>
+    <font place="InactiveWindow">
+      <name>Terminus</name>
+      <size>9</size>
+      <slant>normal</slant>
+      <weight>normal</weight>
+    </font>
+    <font place="MenuHeader">
+      <name>Terminus</name>
+      <size>11</size>
+      <slant>normal</slant>
+      <weight>normal</weight>
+    </font>
+    <font place="MenuItem">
+      <name>Terminus</name>
+      <size>11</size>
+      <slant>normal</slant>
+      <weight>normal</weight>
+    </font>
+    <font place="OnScreenDisplay">
+      <name>Terminus</name>
+      <size>11</size>
+      <slant>normal</slant>
+      <weight>normal</weight>
+    </font>
   </theme>
   <windowSwitcher>
     <show>true</show>
@@ -166,12 +200,12 @@
     </keybind>
     <keybind key="XF86MonBrightnessUp" layoutDependent="false" onRelease="false" allowWhenLocked="false">
       <action name="Execute">
-        <command>/nix/store/s7g1vbx1kfn7j49gh7sw431sbq0gfsbl-brightnessctl-0.5.1/bin/brightnessctl set 5%+</command>
+        <command>brightnessctl set 5%+</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessDown" layoutDependent="false" onRelease="false" allowWhenLocked="false">
       <action name="Execute">
-        <command>/nix/store/s7g1vbx1kfn7j49gh7sw431sbq0gfsbl-brightnessctl-0.5.1/bin/brightnessctl set 5%-</command>
+        <command>brightnessctl set 5%-</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume" layoutDependent="false" onRelease="false" allowWhenLocked="false">
