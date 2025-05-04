@@ -33,7 +33,7 @@
       "escape": true,
       "exec": "mpc current --format '{\"text\": \"%title%\", \"tooltip\": \"%name%\"}' ",
       "exec-if": "mpc status \"%state%\"",
-      "format": "{icon} {}",
+      "format": "{}",
       "format-icons": {
         "Paused": "",
         "Playing": "",
