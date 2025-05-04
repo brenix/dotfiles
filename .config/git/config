@@ -83,3 +83,6 @@
 
 [includeIf "gitdir:~/work/"]
 	path = "~/work/.gitconfig"
+
+[url "https://gitlab.archlinux.org/"]
+  insteadOf = git@gitlab.archlinux.org:
