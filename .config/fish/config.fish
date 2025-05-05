@@ -75,6 +75,7 @@ status is-interactive; and begin
     starship init fish | source
 
     set -gx PATH $PATH $HOME/.local/bin $HOME/.krew/bin $GOPATH/bin
+    set -gx GOPATH $HOME/.cache/go
     complete -c ssh-multi -w ssh
     bind \ce end-of-line
     bind ! bind_bang
