@@ -8,13 +8,13 @@
     <reuseOutputMode>false</reuseOutputMode>
   </core>
   <placement>
-    <policy>cascade</policy>
+    <policy>Cascade</policy>
   </placement>
   <theme>
-    <name></name>
+    <name>Adwaita</name>
     <cornerRadius>0</cornerRadius>
     <keepBorder>true</keepBorder>
-    <dropShadows>false</dropShadows>
+    <dropShadows>no</dropShadows>
     <titlebar>
       <layout>:close</layout>
       <showTitle>true</showTitle>
@@ -58,17 +58,17 @@
     <fields>
       <field>
         <content>type</content>
-        <format></format>
+        <format/>
         <width>25%</width>
       </field>
       <field>
         <content>trimmed_identifier</content>
-        <format></format>
+        <format/>
         <width>25%</width>
       </field>
       <field>
         <content>title</content>
-        <format></format>
+        <format/>
         <width>50%</width>
       </field>
     </fields>
@@ -280,37 +280,37 @@
     <default/>
     <context name="Frame">
       <mousebind button="W-Left" direction="" action="Drag">
-        <action name="Move" />
+        <action name="Move"/>
       </mousebind>
       <mousebind button="W-Right" direction="" action="Drag">
-        <action name="Resize" />
+        <action name="Resize"/>
       </mousebind>
     </context>
     <context name="Root">
       <mousebind button="Left" direction="" action="Press">
-        <action name="None" />
+        <action name="None"/>
       </mousebind>
     </context>
     <context name="Title">
       <mousebind button="Right" direction="" action="Click">
-        <action name="None" />
+        <action name="None"/>
       </mousebind>
     </context>
     <context name="TitleBar">
       <mousebind button="Right" direction="" action="Press">
-        <action name="ToggleShade" />
+        <action name="ToggleShade"/>
       </mousebind>
       <mousebind button="" direction="Up" action="Scroll">
-        <action name="Unshade" />
+        <action name="Unshade"/>
       </mousebind>
       <mousebind button="" direction="Down" action="Scroll">
-        <action name="Shade" />
+        <action name="Shade"/>
       </mousebind>
     </context>
   </mouse>
-  <touch deviceName="" mapToOutput="" />
+  <touch deviceName="" mapToOutput=""/>
   <tablet>
-    <mapToOutput></mapToOutput>
+    <mapToOutput/>
     <rotate>0</rotate>
     <mouseEmulation>false</mouseEmulation>
     <area>
@@ -319,35 +319,35 @@
       <width>0.000000</width>
       <height>0.000000</height>
     </area>
-    <map button="Stylus" to="Right" />
-    <map button="Stylus2" to="Middle" />
-    <map button="Tip" to="Left" />
+    <map button="Stylus" to="Right"/>
+    <map button="Stylus2" to="Middle"/>
+    <map button="Tip" to="Left"/>
   </tablet>
   <libinput>
     <device category="default">
-      <naturalScroll>true</naturalScroll>
-      <leftHanded></leftHanded>
-      <pointerSpeed></pointerSpeed>
+      <naturalScroll>yes</naturalScroll>
+      <leftHanded/>
+      <pointerSpeed/>
       <accelProfile>flat</accelProfile>
       <tap>true</tap>
-      <tapButtonMap></tapButtonMap>
-      <tapAndDrag></tapAndDrag>
-      <dragLock></dragLock>
-      <middleEmulation></middleEmulation>
-      <disableWhileTyping></disableWhileTyping>
+      <tapButtonMap/>
+      <tapAndDrag/>
+      <dragLock/>
+      <middleEmulation/>
+      <disableWhileTyping/>
       <clickMethod>clickFinger</clickMethod>
-      <sendEventsMode></sendEventsMode>
-      <calibrationMatrix></calibrationMatrix>
+      <sendEventsMode/>
+      <calibrationMatrix/>
     </device>
   </libinput>
   <windowRules>
     <windowRule identifier="alacritty" title="" sandboxEngine="" sandboxAppId="" type="" matchOnce="">
       <serverDecoration>true</serverDecoration>
-      <skipTaskbar></skipTaskbar>
-      <skipWindowSwitcher></skipWindowSwitcher>
-      <ignoreFocusRequest></ignoreFocusRequest>
-      <ignoreConfigureRequest></ignoreConfigureRequest>
-      <fixedPosition></fixedPosition>
+      <skipTaskbar/>
+      <skipWindowSwitcher/>
+      <ignoreFocusRequest/>
+      <ignoreConfigureRequest/>
+      <fixedPosition/>
     </windowRule>
   </windowRules>
   <menu>
