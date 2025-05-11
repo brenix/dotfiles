@@ -28,6 +28,7 @@ status is-interactive; and begin
 
     # Aliases
     alias bat 'bat --paging=never --style=plain --decorations=never'
+    alias diff 'diff --color=auto'
     alias dot 'git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
     alias e 'helix .'
     alias fd 'fd --hidden --no-ignore'
@@ -49,10 +50,12 @@ status is-interactive; and begin
     alias gpf 'git push --force-with-lease'
     alias gp 'git push'
     alias gpv 'git push --verbose'
+    alias grep 'grep --color=auto'
     alias grhh 'git reset --hard HEAD'
     alias grm 'git rebase -i (git symbolic-ref refs/remotes/origin/HEAD | sed '\''s@^refs/remotes/origin/@@'\'')'
     alias gsh 'git show --format=raw -m'
     alias gst 'git status'
+    alias ip 'ip -color=auto'
     alias kubectl kubecolor
     alias la 'ls -Al'
     alias l 'ls -l'
@@ -107,6 +110,9 @@ status is-interactive; and begin
     set -gx fish_pager_color_description yellow
     set -gx fish_pager_color_prefix white --bold --underline
     set -gx fish_pager_color_progress brwhite '--background=cyan'
+
+    set -xU MANPAGER 'less -R --use-color -Dd+r -Du+b'
+    set -xU MANROFFOPT '-P -c'
 
     for file in ~/.config/fish/conf.local.d/*.fish
         source $file
