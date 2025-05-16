@@ -1,5 +1,4 @@
-mpd_host = localhost
-mpd_port = 6600
+mpd_host = /run/user/1000/mpd/socket
 mpd_crossfade_time = 2
 song_list_format = "{{%a - %t}|{%f}}{$R%l}"
 song_status_format = "{{%a{ $5//$9 %b{, %y}} $5//$9 }{%t$/b}}|{$b%f$/b}"
