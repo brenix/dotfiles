@@ -46,6 +46,9 @@ insert = "INSERT"
 normal = "NORMAL"
 select = "SELECT"
 
+[editor.search]
+smart-case = false
+
 [keys.insert]
 C-space = "completion"
 esc = ["collapse_selection", "normal_mode"]
