@@ -76,7 +76,7 @@ status is-interactive; and begin
     zoxide init fish | source
     starship init fish | source
 
-    set -gx PATH $PATH $HOME/.local/bin $HOME/.krew/bin $GOPATH/bin
+    set -gx PATH $PATH $HOME/.local/bin $HOME/.krew/bin $GOPATH/bin $HOME/.bin
     set -gx GOPATH $HOME/.cache/go
     complete -c ssh-multi -w ssh
     bind \ce end-of-line
