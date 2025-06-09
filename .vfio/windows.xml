@@ -188,7 +188,7 @@
       <address type='pci' domain='0x0000' bus='0x00' slot='0x1f' function='0x2'/>
     </controller>
     <input type='evdev'>
-      <source dev='/dev/input/by-id/usb-Beijing_Jingyunmake_Technology_Co.__Ltd._G-Wolves_HSK_Pro_Receiver-N_ADC2149E82440365-event-mouse'/>
+      <source dev='/dev/input/by-id/usb-Beijing_Jingyunmake_Technology_Co.__Ltd._G-Wolves_HSK_Pro_Wireless_Mouse-N_ADC2149E82440365-event-mouse'/>
     </input>
     <input type='evdev'>
       <source dev='/dev/input/by-id/usb-Wooting_Wooting_60HE__ARM__A02B2305W052H07682-if01-event-kbd' grab='all' repeat='on'/>
