@@ -1,8 +1,11 @@
 super + Return
 	alacritty
 
+super + shift + Return
+	alacritty --class floating
+
 super + d
-	GDK_DPI_SCALE=0.85 firefox
+	GDK_DPI_SCALE=0.95 firefox
 
 super + w 
 	bspc node -{c,k}
