@@ -101,21 +101,21 @@ status is-interactive; and begin
     set -gx fish_color_escape brcyan
     set -gx fish_color_history_current --bold
     set -gx fish_color_host normal
-    set -gx fish_color_match --background=brblue
+    set -gx fish_color_match --background=blue
     set -gx fish_color_normal normal
     set -gx fish_color_operator cyan
-    set -gx fish_color_param brblue
+    set -gx fish_color_param blue
     set -gx fish_color_quote yellow
-    set -gx fish_color_redirection bryellow
-    set -gx fish_color_search_match bryellow '--background=brblack'
-    set -gx fish_color_selection white --bold '--background=brblack'
+    set -gx fish_color_redirection yellow
+    set -gx fish_color_search_match yellow '--background=black'
+    set -gx fish_color_selection white --bold '--background=black'
     set -gx fish_color_status red
-    set -gx fish_color_user brgreen
+    set -gx fish_color_user green
     set -gx fish_color_valid_path --underline
     set -gx fish_pager_color_completion normal
     set -gx fish_pager_color_description yellow
     set -gx fish_pager_color_prefix white --bold --underline
-    set -gx fish_pager_color_progress brwhite '--background=cyan'
+    set -gx fish_pager_color_progress white '--background=cyan'
 
     set -xU MANPAGER 'less -R --use-color -Dd+r -Du+b'
     set -xU MANROFFOPT '-P -c'
