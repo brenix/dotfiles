@@ -1,0 +1,51 @@
+term = xterm-256color
+window-decoration = none
+window-padding-x = 0
+window-padding-y = 0
+
+clipboard-read = "allow"
+copy-on-select = true
+
+font-size = 12
+cursor-style = block
+font-family = "Berkeley Mono"
+font-style-bold = false
+font-style-italic = false
+font-style-bold-italic = false
+# background-opacity = 0.9
+
+adjust-cell-width = -10%
+adjust-cell-height = -25%
+
+alpha-blending = native
+
+keybind = alt+k=text:\x18\x54
+keybind = alt+l=text:\x18\x4C
+keybind = alt+t=text:\x18\x6E
+keybind = alt+w=text:\x18\x78
+keybind = alt+p=text:\x3a\x47\x6f\x54\x6f\x46\x69\x6c\x65\x0a
+
+# theme = Nord
+
+# retina
+palette = 0=#363537
+palette = 1=#fc618d
+palette = 2=#7bd88f
+palette = 3=#fd9353
+palette = 4=#5ab0e6
+palette = 5=#948ae3
+palette = 6=#5ad4e6
+palette = 7=#8b888f
+palette = 8=#6b6a6c
+palette = 9=#fc618d
+palette = 10=#7bd88f
+palette = 11=#e6c64f
+palette = 12=#5ab0e6
+palette = 13=#948ae3
+palette = 14=#5ad4e6
+palette = 15=#dddddd
+background = 1c1c1c
+foreground = dddddd
+cursor-color = dddddd
+selection-background = f1e5b7
+selection-foreground = 1c1c1c

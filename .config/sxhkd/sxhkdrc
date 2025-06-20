@@ -1,5 +1,5 @@
 super + Return
-	alacritty
+	ghostty
 
 super + shift + Return
 	alacritty --class floating

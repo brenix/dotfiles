@@ -68,7 +68,7 @@ status is-interactive; and begin
     alias mkdir 'mkdir -p'
     alias mv 'mv -iv'
     alias rm 'rm -I'
-    alias r 'sudo pacman -Rnsc'
+    alias remove 'sudo pacman -Rnsc'
     alias sw 'git switch'
     alias u 'sudo pacman -Syu'
     alias v helix
@@ -92,13 +92,13 @@ status is-interactive; and begin
     bind -k nul 'zi && commandline --function repaint'
     set -gx fish_color_autosuggestion brblack
     set -gx fish_color_cancel -r
-    set -gx fish_color_command brgreen
-    set -gx fish_color_comment brmagenta
+    set -gx fish_color_command green
+    set -gx fish_color_comment magenta
     set -gx fish_color_cwd green
     set -gx fish_color_cwd_root red
-    set -gx fish_color_end brmagenta
-    set -gx fish_color_error brred
-    set -gx fish_color_escape brcyan
+    set -gx fish_color_end magenta
+    set -gx fish_color_error red
+    set -gx fish_color_escape cyan
     set -gx fish_color_history_current --bold
     set -gx fish_color_host normal
     set -gx fish_color_match --background=blue

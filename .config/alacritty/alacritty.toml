@@ -1,18 +1,18 @@
 [general]
-import = ["~/.config/alacritty/themes/kanagawa-dragon.toml"]
+import = ["~/.config/alacritty/themes/retina.toml"]
 
 [env]
 TERM = "xterm"
 WINIT_X11_SCALE_FACTOR = "1.0"
 
 [font]
-size = 12.0
-offset.y = -2
-# offset.x = -1
+size = 12.5
+offset.y = -5
+offset.x = -1
 
 [font.normal]
-family = "Gohu Gohufont"
-# family = "BerkeleyMono Nerd Font Mono"
+# family = "Gohu Gohufont"
+family = "BerkeleyMono Nerd Font Mono"
 style = "Regular"
 
 [font.bold]

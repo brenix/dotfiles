@@ -23,4 +23,4 @@ bspc rule -a pavucontrol state=floating
 
 pgrep -x polybar >/dev/null || polybar -r main &
 feh --bg-fill ~/.wallpapers/blacksquares.jpg &
-xgamma -gamma 1.1 &
+xgamma -gamma 1.05 &
