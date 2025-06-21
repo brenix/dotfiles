@@ -1,4 +1,4 @@
-term = xterm-256color
+# term = xterm-256color
 window-decoration = none
 window-padding-x = 0
 window-padding-y = 0
@@ -6,7 +6,7 @@ window-padding-y = 0
 clipboard-read = "allow"
 copy-on-select = true
 
-font-size = 12
+font-size = 11
 cursor-style = block
 font-family = "Berkeley Mono"
 font-style-bold = false
@@ -44,7 +44,7 @@ palette = 12=#5ab0e6
 palette = 13=#948ae3
 palette = 14=#5ad4e6
 palette = 15=#dddddd
-background = 1c1c1c
+background = 181818
 foreground = dddddd
 cursor-color = dddddd
 selection-background = f1e5b7

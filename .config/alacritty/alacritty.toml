@@ -2,12 +2,12 @@
 import = ["~/.config/alacritty/themes/retina.toml"]
 
 [env]
-TERM = "xterm"
-WINIT_X11_SCALE_FACTOR = "1.0"
+# TERM = "xterm-color"
+WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 12.5
-offset.y = -5
+size = 13.5
+offset.y = -4
 offset.x = -1
 
 [font.normal]
