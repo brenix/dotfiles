@@ -1,0 +1,4 @@
+inherits = "kanagawa-dragon"
+"ui.gutter" = {}
+"ui.linenr" = {}
+"ui.bufferline.background" = {}

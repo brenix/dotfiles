@@ -6,13 +6,13 @@ import = ["~/.config/alacritty/themes/retina.toml"]
 WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 13.5
-offset.y = -4
-offset.x = -1
+size = 11
+offset.y = -2
+# offset.x = -1
 
 [font.normal]
-# family = "Gohu Gohufont"
-family = "BerkeleyMono Nerd Font Mono"
+family = "Gohu Gohufont"
+# family = "BerkeleyMono Nerd Font Mono"
 style = "Regular"
 
 [font.bold]
