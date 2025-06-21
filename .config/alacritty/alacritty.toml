@@ -28,3 +28,14 @@ save_to_clipboard = true
 
 [window]
 padding = { x = 8, y = 6 }
+
+[[keyboard.bindings]]
+chars = "\u0018T"
+key = "K"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0018L"
+key = "L"
+mods = "Alt"
+
