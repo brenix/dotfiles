@@ -38,7 +38,7 @@ super + g
 	bspc node -s biggest.window
 
 super + f
-	bspc node -t \~{tiled,floating}
+	bspc node -t {tiled,floating}
 
 super {shift + f}
 	bspc node -t \~{fullscreen}
