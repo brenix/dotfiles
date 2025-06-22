@@ -4,6 +4,7 @@ pgrep -x sxhkd >/dev/null || sxhkd &
 
 bspc monitor DisplayPort-0 -d 1 2
 bspc monitor HDMI-A-0 -d 3 4
+bspc monitor eDP -d 1 2 3 4 5
 
 bspc config pointer_motion_interval 7ms
 bspc config remove_disabled_monitors true
