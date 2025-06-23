@@ -31,11 +31,11 @@ padding = { x = 0, y = 0 }
 
 [[keyboard.bindings]]
 chars = "\u0018T"
-key = "K"
+key = "O"
 mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u0018L"
-key = "L"
+key = "P"
 mods = "Alt"
 

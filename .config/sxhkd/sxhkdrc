@@ -10,6 +10,9 @@ super + d
 super + w 
 	bspc node -{c,k}
 
+super + s
+	spotify
+
 super + v
 	pavucontrol
 
