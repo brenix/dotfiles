@@ -1,18 +1,18 @@
 [general]
 import = ["~/.config/alacritty/themes/retina.toml"]
 
-[env]
-# TERM = "xterm-color"
-WINIT_X11_SCALE_FACTOR = "0.95"
+# [env]
+# WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 13.5
+size = 10
 offset.y = -5
 offset.x = -1
 
 [font.normal]
+family = "MonoLisa"
 # family = "Gohu Gohufont"
-family = "BerkeleyMono Nerd Font Mono"
+# family = "BerkeleyMono Nerd Font Mono"
 style = "Regular"
 
 [font.bold]

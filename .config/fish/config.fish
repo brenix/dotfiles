@@ -63,6 +63,7 @@ status is-interactive; and begin
     alias gst 'git status'
     alias ip 'ip -color=auto'
     alias kubectl kubecolor
+    alias ls 'lsd --group-directories-first'
     alias la 'ls -Al'
     alias l 'ls -l'
     alias mkdir 'mkdir -p'
@@ -83,8 +84,9 @@ status is-interactive; and begin
     zoxide init fish | source
     starship init fish | source
 
-    set -gx PATH $PATH $HOME/.local/bin $HOME/.krew/bin $GOPATH/bin $HOME/.bin
     set -gx GOPATH $HOME/.cache/go
+    set -gx GOBIN $GOPATH/bin
+    set -gx PATH $PATH $HOME/.local/bin $HOME/.krew/bin $GOPATH/bin $HOME/.bin
     complete -c ssh-multi -w ssh
     bind \ce end-of-line
     bind ! bind_bang

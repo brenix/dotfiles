@@ -5,7 +5,7 @@ super + shift + Return
 	alacritty --class floating
 
 super + d
-	firefox
+	google-chrome-beta
 
 super + w 
 	bspc node -{c,k}
