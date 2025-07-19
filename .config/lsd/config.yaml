@@ -1,4 +1,9 @@
 icons:
   when: never
 
+blocks:
+  - permission
+  - date
+  - name
+
 date: "+%Y-%m-%d"
