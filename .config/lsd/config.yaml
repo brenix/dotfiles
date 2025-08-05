@@ -3,9 +3,9 @@ icons:
 
 blocks:
   - permission
-  - user
-  - size
-  # - date
+  # - user
+  # - size
+  - date
   - name
 
 date: "+%Y-%m-%d"
