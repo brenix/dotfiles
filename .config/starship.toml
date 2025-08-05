@@ -24,7 +24,7 @@ disabled = false
 format = "([:](overlay2)[$all_status$ahead_behind](red))[\\) ](magenta)"
 
 [hostname]
-disabled = true
+disabled = false
 format = "[$hostname ]($style)"
 ssh_only = true
 style = "bright-black"
@@ -42,7 +42,7 @@ format = "[(($virtualenv)) ]($style)"
 style = "fg:magenta bold"
 
 [username]
-disabled = true
+disabled = false
 format = "[$user@]($style)"
 show_always = false
 style_root = "bold red"
