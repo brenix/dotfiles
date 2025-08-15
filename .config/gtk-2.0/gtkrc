@@ -1,9 +1,9 @@
 gtk-cursor-theme-name=Colloid-dark-cursors
 gtk-cursor-theme-size=32
 gtk-icon-theme-name=Tokyonight-Moon
-gtk-theme-name=Tokyonight-Dark
+gtk-theme-name=Colloid-Compact
 gtk-xft-antialias=1
-gtk-xft-hinting=1
+gtk-xft-hinting=0
 gtk-xft-hintstyle=hintnone
 gtk-xft-rgba="rgb"
-
+gtk-font-name=Inter 11

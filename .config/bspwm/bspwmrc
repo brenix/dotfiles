@@ -18,12 +18,12 @@ bspc config gapless_monocle true
 bspc config focus_follows_pointer true
 
 # retina
-# bspc config normal_border_color "#202020"
-# bspc config focused_border_color "#454545"
+bspc config normal_border_color "#202020"
+bspc config focused_border_color "#454545"
 
 # tokyonight
-bspc config normal_border_color "#32344a"
-bspc config focused_border_color "#444b6a"
+# bspc config normal_border_color "#32344a"
+# bspc config focused_border_color "#444b6a"
 
 bspc rule -a "*:floating" state=floating
 bspc rule -a pavucontrol state=floating
