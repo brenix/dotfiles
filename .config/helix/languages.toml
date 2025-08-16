@@ -1,3 +1,6 @@
+[language-server.uwu-colors]
+command = "uwu_colors"
+
 [language-server.yaml-language-server.config]
 yaml.completion = true
 yaml.validation = true
@@ -55,6 +58,10 @@ auto-format = true
 [language.formatter]
 command = "shfmt"
 args = ["-i", "2", "-ci"]
+
+[[language]]
+name = "fish"
+language-servers = ["fish-lsp", "uwu-colors"]
 
 [[language]]
 name = "go"
