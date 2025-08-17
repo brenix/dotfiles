@@ -5,14 +5,14 @@ import = ["~/.config/alacritty/themes/retina.toml"]
 # WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 14
+size = 9
 offset.y = -2
 # offset.x = -1
 
 [font.normal]
 # family = "MonoLisa"
-# family = "Gohu Gohufont"
-family = "cmvnd uushi"
+# family = "GohuFont 14 Nerd Font Mono"
+family = "Gohu GohuFont"
 # family = "Misc Dash"
 # family = "Terminus"
 # family = "SourceCodeVF"

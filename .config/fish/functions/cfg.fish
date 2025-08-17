@@ -1,6 +1,6 @@
 # https://www.atlassian.com/git/tutorials/dotfiles
 function cfg
-    command git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $argv
+    command git --git-dir=$HOME/.cfg/ --work-tree=$HOME $argv
 end
 
 # Prevent default completions for the `cfg` command. It will
