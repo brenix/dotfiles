@@ -5,7 +5,7 @@ import = ["~/.config/alacritty/themes/retina.toml"]
 # WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 9
+size = 11
 offset.y = -2
 # offset.x = -1
 

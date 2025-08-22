@@ -31,7 +31,9 @@ status is-interactive; and begin
     abbr --add -- kl 'kubectl logs'
     abbr --add -- kvs kubectl-view-secret
     abbr --add -- kvsec kubectl-view-secret
+    abbr --add -- mr 'mise run'
     abbr --add -- replace ambr
+    abbr --add -- , 'mise exec'
 
     # Aliases
     alias bat 'bat --paging=never --style=plain --decorations=never'
@@ -80,11 +82,22 @@ status is-interactive; and begin
     alias x k9s
     alias zad 'ls -d */ | xargs -I {} zoxide add {}'
 
-    fzf --fish | source
-    set -gx FZF_DEFAULT_OPTS "--ansi --color=bg:-1,bg+:#333333,spinner:6,hl:7,fg:7,header:6,info:7,pointer:1,marker:0,prompt:2,hl+:2"
+    if command -q fzf
+        fzf --fish | source
+        set -gx FZF_DEFAULT_OPTS "--ansi --color=bg:-1,bg+:#333333,spinner:6,hl:7,fg:7,header:6,info:7,pointer:1,marker:0,prompt:2,hl+:2"
+    end
 
-    zoxide init fish | source
-    starship init fish | source
+    if command -q zoxide
+        zoxide init fish | source
+    end
+
+    if command -q starship
+        starship init fish | source
+    end
+
+    if command -q mise
+        mise activate fish | source
+    end
 
     set -gx GOPATH $HOME/.cache/go
     set -gx GOBIN $GOPATH/bin
