@@ -29,6 +29,7 @@ bspc rule -a "*:floating" state=floating
 bspc rule -a pavucontrol state=floating
 
 pgrep -x polybar >/dev/null || polybar -r main &
-~/.fehbg &
+xsetroot -solid "#333333"
+# ~/.fehbg &
 xgamma -gamma 1.08 &
 export GDK_DPI_SCALE=0.9

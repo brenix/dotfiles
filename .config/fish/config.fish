@@ -29,8 +29,8 @@ status is-interactive; and begin
     abbr --add -- kgss 'kubectl get statefulset'
     abbr --add -- kk 'kubectl get pod'
     abbr --add -- kl 'kubectl logs'
-    abbr --add -- kvs kubectl-view-secret
-    abbr --add -- kvsec kubectl-view-secret
+    abbr --add -- kvs kubectl view-secret
+    abbr --add -- kvsec kubectl view-secret
     abbr --add -- mr 'mise run'
     abbr --add -- replace ambr
     abbr --add -- , 'mise exec'
