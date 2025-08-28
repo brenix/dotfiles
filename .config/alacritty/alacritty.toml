@@ -1,18 +1,19 @@
 [general]
-import = ["~/.config/alacritty/themes/retina.toml"]
+import = ["~/.config/alacritty/themes/gruvbox_material_hard_dark.toml"]
 
 # [env]
 # WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 11
-offset.y = -2
+size = 12
+offset.y = -6
 # offset.x = -1
 
 [font.normal]
 # family = "MonoLisa"
 # family = "GohuFont 14 Nerd Font Mono"
-family = "Gohu GohuFont"
+# family = "Gohu GohuFont"
+family = "TX-02 SemiCondensed"
 # family = "Misc Dash"
 # family = "Terminus"
 # family = "SourceCodeVF"
