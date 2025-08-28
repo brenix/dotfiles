@@ -1,4 +1,4 @@
-theme = "gruvbox-material-dark-hard"
+theme = "retina"
 
 [editor]
 auto-pairs = false

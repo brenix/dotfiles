@@ -1,0 +1,8 @@
+[settings]
+experimental = true
+
+[tools]
+krew = "latest"
+kubecolor = "latest"
+kubectl = "latest"
+usage = "latest"
