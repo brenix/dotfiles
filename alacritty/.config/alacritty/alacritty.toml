@@ -5,15 +5,15 @@ import = ["~/.config/alacritty/themes/retina.toml"]
 # WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 12
-offset.y = -6
+size = 14
+offset.y = -2
 # offset.x = -1
 
 [font.normal]
 # family = "MonoLisa"
 # family = "GohuFont 14 Nerd Font Mono"
-# family = "Gohu GohuFont"
-family = "TX-02 SemiCondensed"
+family = "Gohu GohuFont"
+# family = "TX-02 SemiCondensed"
 # family = "Misc Dash"
 # family = "Terminus"
 # family = "SourceCodeVF"
