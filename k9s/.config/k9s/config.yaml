@@ -12,4 +12,4 @@ k9s:
     headless: true
     logoless: true
     noIcons: true
-    skin: gruvbox-material-dark-hard
+    skin: retina

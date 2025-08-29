@@ -1,0 +1,87 @@
+k9s:
+  body:
+    bgColor: default
+    fgColor: '#dddddd'
+    logoColor: '#7bd88f'
+  dialog:
+    bgColor: default
+    buttonBgColor: '#1c1c1c'
+    buttonFgColor: '#dddddd'
+    buttonFocusBgColor: '#7bd88f'
+    buttonFocusFgColor: '#948ae3'
+    fgColor: '#dddddd'
+    fieldFgColor: '#dddddd'
+    labelFgColor: '#e6c64f'
+  frame:
+    border:
+      fgColor: '#1c1c1c'
+      focusColor: '#363537'
+    crumbs:
+      activeColor: '#1c1c1c'
+      bgColor: '#1c1c1c'
+      fgColor: '#1c1c1c'
+    menu:
+      fgColor: '#dddddd'
+      keyColor: '#7bd88f'
+      numKeyColor: '#7bd88f'
+    status:
+      addColor: '#dddddd'
+      completedColor: '#767576'
+      errorColor: '#fc618d'
+      highlightcolor: '#e6c64f'
+      killColor: '#69676c'
+      modifyColor: '#948ae3'
+      newColor: '#5ab0e6'
+    title:
+      bgColor: '#1c1c1c'
+      counterColor: '#5ad4e6'
+      fgColor: '#dddddd'
+      filterColor: '#5ab0e6'
+      highlightColor: '#e6c64f'
+  info:
+    fgColor: '#dddddd'
+    sectionColor: '#7bd88f'
+  prompt:
+    bgColor: '#1c1c1c'
+    fgColor: '#dddddd'
+    suggestColor: '#e6c64f'
+  views:
+    charts:
+      bgColor: default
+      defaultChartColors:
+      - '#5ad4e6'
+      - '#5ab0e6'
+      defaultDialColors:
+      - '#5ad4e6'
+      - '#5ab0e6'
+    help:
+      bgColor: '#1c1c1c'
+      fgColor: '#dddddd'
+      indicator:
+        fgColor: '#5ab0e6'
+    logs:
+      bgColor: default
+      fgColor: '#dddddd'
+      indicator:
+        bgColor: '#1c1c1c'
+        fgColor: '#dddddd'
+    table:
+      bgColor: default
+      cursorBgColor: '#dddddd'
+      cursorFgColor: '#1c1c1c'
+      fgColor: '#dddddd'
+      header:
+        bgColor: default
+        fgColor: '#dddddd'
+        sorterColor: '#dddddd'
+      markColor: '#e6c64f'
+    xray:
+      bgColor: default
+      cursorColor: '#363537'
+      fgColor: '#dddddd'
+      graphicColor: '#5ad4e6'
+      showIcons: false
+    yaml:
+      colonColor: '#5ad4e6'
+      keyColor: '#5ab0e6'
+      valueColor: '#dddddd'
