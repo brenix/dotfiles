@@ -71,9 +71,7 @@ status is-interactive; and begin
     alias mkdir 'mkdir -p'
     alias mv 'mv -iv'
     alias rm 'rm -I'
-    alias remove 'sudo pacman -Rnsc'
     alias sw 'git switch'
-    alias u 'sudo pacman -Syu'
     alias v helix
     alias vi helix
     alias vim helix
