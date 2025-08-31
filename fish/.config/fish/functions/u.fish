@@ -1,7 +1,7 @@
 function u
-    if type -q mise
-        mise up
-    end
+    # if type -q mise
+    #     mise up
+    # end
     if type -q pacman
         sudo pacman -Syu
     else if type -q apt
