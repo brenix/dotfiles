@@ -10,15 +10,8 @@ offset.y = -2
 # offset.x = -1
 
 [font.normal]
-# family = "MonoLisa"
-# family = "GohuFont 14 Nerd Font Mono"
 family = "Gohu GohuFont"
-# family = "TX-02 SemiCondensed"
-# family = "Misc Dash"
-# family = "Terminus"
-# family = "SourceCodeVF"
-# family = "BerkeleyMono Nerd Font Mono"
-# family = "JetBrainsMono Nerd Font Mono"
+# family = "TX-02 Condensed"
 style = "Regular"
 
 [font.bold]
