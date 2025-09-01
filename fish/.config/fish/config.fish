@@ -5,6 +5,13 @@ if status is-login
     end
 end
 
+# Automatically start Wayland on TTY1
+# if status is-login
+#     if test -z "$WAYLAND_DISPLAY" -a "$XDG_VTNR" = 1
+#         exec river
+#     end
+# end
+
 status is-interactive; and begin
     # Abbreviations
     abbr --add -- bw rbw
