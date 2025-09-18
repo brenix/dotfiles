@@ -1,16 +1,16 @@
 # Automatically start X on TTY1
-if status is-login
-    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-        exec startx -- -keeptty
-    end
-end
-
-# Automatically start Wayland on TTY1
 # if status is-login
-#     if test -z "$WAYLAND_DISPLAY" -a "$XDG_VTNR" = 1
-#         exec river
+#     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+#         exec startx -- -keeptty
 #     end
 # end
+
+# Automatically start Wayland on TTY1
+if status is-login
+    if test -z "$wayland_display" -a "$xdg_vtnr" = 1
+        niri-session
+    end
+end
 
 status is-interactive; and begin
     # Abbreviations
