@@ -1,73 +1,16 @@
 [
   {
-    "backlight": {
-      "format": " {percent}%"
-    },
-    "battery": {
-      "format": "{icon} {capacity}%",
-      "format-alt": "{time}",
-      "format-charging": "  {capacity}%",
-      "format-icons": [
-        "󰁻 ",
-        "󰁽 ",
-        "󰁿 ",
-        "󰂁 ",
-        "󰂂 "
-      ],
-      "states": {
-        "critical": 15,
-        "good": 80,
-        "warning": 50
-      }
-    },
-    "clock": {
-      "format": "󰃰 {:%Y-%m-%d %I:%M %p}",
-      "interval": 1
-    },
-    "cpu": {
-      "format": "  {usage}%",
-      "interval": 1,
-      "tooltip": false
-    },
-    "custom/mpd": {
-      "escape": true,
-      "exec": "mpc current --format '{\"text\": \"%title%\", \"tooltip\": \"%name%\"}' ",
-      "exec-if": "mpc status \"%state%\"",
-      "format": "{}",
-      "format-icons": {
-        "Paused": "",
-        "Playing": "",
-        "Stopped": ""
-      },
-      "interval": 1,
-      "max-length": 100,
-      "on-click": "mpc toggle",
-      "return-type": "json"
-    },
-    "custom/spotify": {
-      "exec": "playerctl metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"alt\": \"{{status}}\", \"tooltip\": \"{{title}} ({{artist}} - {{album}})\"}' ",
-      "exec-if": "playerctl -p spotify status",
-      "format": "{icon} {}",
-      "format-icons": {
-        "Paused": "",
-        "Playing": "",
-        "Stopped": ""
-      },
-      "interval": 1,
-      "max-length": 30,
-      "on-click": "playerctl play-pause",
-      "return-type": "json"
-    },
-    "height": 19,
-    "layer": "top",
+    // -- BAR SETTINGS
+    "height": 14,
+    "layer": "bottom",
+    "position": "top",
     "margin": "0 0 0 0",
-    "memory": {
-      "format": "  {used:0.1f}GiB",
-      "interval": 30,
-      "tooltip-format": "{used:0.1f}GiB/{total:0.1f}GiB"
-    },
+    "modules-left": [
+      "niri/workspaces"
+    ],
     "modules-center": [
-      "custom/mpd"
+      "custom/mpd",
+      "custom/spotify"
     ],
     "modules-right": [
       "cpu",
@@ -79,39 +22,68 @@
       "clock",
       "tray"
     ],
+    "reload_style_on_change": true,
+    // -- MODULES
+    "backlight": {
+      "format": "BACKLIGHT: {percent}%"
+    },
+    "battery": {
+      "format": "BAT: {capacity}%",
+    },
+    "clock": {
+      "format": "DATE: {:%Y-%m-%d %I:%M %p}",
+      "interval": 1
+    },
+    "cpu": {
+      "format": "CPU: {usage}%",
+      "interval": 1,
+      "tooltip": false
+    },
+    "custom/mpd": {
+      "escape": true,
+      "exec": "mpc current --format '{\"text\": \"%title%\", \"tooltip\": \"%name%\"}' ",
+      "exec-if": "mpc status \"%state%\"",
+      "format": "{}",
+      "interval": 1,
+      "max-length": 100,
+      "on-click": "mpc toggle",
+      "return-type": "json"
+    },
+    "custom/spotify": {
+      "exec": "playerctl metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"alt\": \"{{status}}\", \"tooltip\": \"{{title}} ({{artist}} - {{album}})\"}' ",
+      "exec-if": "playerctl -p spotify status",
+      "format": "{}",
+      "interval": 1,
+      "max-length": 30,
+      "on-click": "playerctl play-pause",
+      "return-type": "json"
+    },
+    "memory": {
+      "format": "MEM: {used:0.1f}GiB",
+      "interval": 30,
+      "tooltip-format": "{used:0.1f}GiB/{total:0.1f}GiB"
+    },
     "network": {
-      "format-disconnected": " 󱚵  Disconnected",
-      "format-ethernet": " 󰈀  Wired",
-      "format-wifi": " {essid}",
+      "format-disconnected": "NET: <span color=\"#fc618d\">Disconnected</span>",
+      "format-ethernet": "NET: {ipaddr}",
+      "format-wifi": "NET: {ipaddr} ({essid})",
       "interval": 1,
       "tooltip-format": "{ipaddr}/{cidr}"
     },
-    "position": "top",
+    "niri/workspaces": {
+      "current-only": false,
+      "format": "{index}",
+      "disable-click": true,
+      "disable-markup": true
+    },
     "pulseaudio": {
-      "format": "{icon} {volume}%",
-      "format-bluetooth": " {icon} {volume}%",
-      "format-icons": {
-        "default": [
-          "",
-          ""
-        ],
-        "headphone": "  ",
-        "headset": "  "
-      },
-      "format-muted": "  ",
+      "format": "VOL: {volume}%",
+      "format-muted": "VOL: <span color=\"#1c1c1c\">Muted</span>",
       "scroll-step": 2
     },
     "temperature": {
       "critical-threshold": 80,
-      "format": "{icon} {temperatureC}°C",
-      "format-critical": "{icon} {temperatureC}°C",
-      "format-icons": [
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "format": "TEMP: {temperatureC}°C",
       "hwmon-path": [
         "/sys/class/hwmon/hwmon4/temp1_input",
         "/sys/class/hwmon/hwmon1/temp1_input"
@@ -121,8 +93,8 @@
       "tooltip": false
     },
     "tray": {
-      "icon-size": 16,
-      "spacing": 8
+      "icon-size": 12,
+      "spacing": 6
     }
   }
 ]

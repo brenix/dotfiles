@@ -1,158 +1,78 @@
-@define-color black #101011;
-@define-color white #b8b8ba;
-@define-color grey #27272a;
-@define-color blue #6188b3;
-@define-color green #468b8b;
-@define-color red #bf678f;
-@define-color orange #808084;
-@define-color yellow #a277a3;
-@define-color cyan #4c8299;
-@define-color magenta #8976ae;
-
 * {
   border: 0;
   border-radius: 0;
   padding: 0 0;
   font-family: "Terminus";
-  font-size: 9pt;
+  font-size: 10px;
   min-height: 0;
-  color: white;
+}
+
+#backlight,
+#battery,
+#clock,
+#cpu,
+#pulseaudio,
+#tags,
+#language,
+#memory,
+#network,
+#window,
+#workspaces,
+#temperature,
+#pulseaudio,
+#taskbar,
+#workspaces,
+#custom-mpd,
+#custom-spotify {
+  background: #181818;
+  color: #dddddd;
 }
 
 window#waybar {
-  border: 0px solid rgba(0, 0, 0, 0);
-  background-color: @black;
+  background-color: #181818;
+  color: #dddddd;
 }
 
-#workspaces * {
-  color: white;
+
+.modules-left {
+  background-color: #181818;
+  padding: 0px 0px 0px 0px;
 }
 
-#workspaces {
-  border-style: solid;
-  margin: 0 4px;
-  background-color: @black;
+
+.modules-right {
+  background-color: #181818;
+  padding: 0px 5px 0px 0px;
+}
+
+.modules-right>widget>* {
+  margin: 0 10px 0 0;
 }
 
 #workspaces button {
-  color: @black;
+  padding: 0px 6px 0px 6px;
+  min-width: 1px;
 }
 
-#workspaces button.active * {
-  color: @black;
-  background-color: @white;
+#workspaces button.empty {
+  color: #dddddd;
 }
 
 #workspaces button.visible {
-  color: white;
-  background-color: @black;
+  padding: 0px 6px 0px 6px;
+  min-width: 1px;
+  color: #ea6962;
 }
 
-/*
-#workspaces button.visible * {
-  color: @black;
-}
-*/
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#mode,
-#tray {
-  padding: 1px 8px;
-  border-style: solid;
-  background-color: @black;
-  opacity: 1;
+#workspaces button.focused {
+  padding: 0px 6px 0px 6px;
+  padding: 0px 6px 0px 6px;
+  background-color: #686868;
+  color: #dddddd;
 }
 
-#clock {
-  color: @white;
-}
-
-#backlight {
-  color: @white;
-}
-
-#battery {
-  color: @white;
-}
-
-#battery.critical:not(.charging) {
-  color: @red;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#battery.charging {
-  color: @white;
-}
-
-@keyframes blink {
-  to {
-    color: @red;
-  }
-}
-
-#pulseaudio {
-  color: @white;
-}
-
-#pulseaudio.muted {
-  color: @grey;
-}
-
-#temperature {
-  color: @white;
-}
-
-#temperature.critical {
-  color: @red;
-}
-
-#cpu {
-  color: @white;
-}
-
-#cpu #cpu-icon {
-  color: @white;
-}
-
-#memory {
-  color: @white;
-}
-
-#network {
-  color: @white;
-}
-
-#spotify {
-  color: @white;
-}
-
-#mpd {
-  color: @white;
-}
-
-#network.disconnected {
-  color: @white;
-}
-
-#custom-power {
-  /* margin: 8px; */
-  padding: 1px;
-  transition: none;
-  color: @red;
-  background: @black;
-}
-
-#window {
-  border-style: hidden;
+#workspaces button.active {
+  padding: 0px 6px 0px 6px;
+  background-color: #686868;
+  color: #dddddd;
 }
