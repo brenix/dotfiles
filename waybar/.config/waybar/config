@@ -58,25 +58,7 @@
       "on-click": "playerctl play-pause",
       "return-type": "json"
     },
-    "height": 12,
-    "hyprland/workspaces": {
-      "active-only": false,
-      "format": "{name}",
-      "format-icons": {
-        "1": " 󰲌 ",
-        "2": "  ",
-        "3": " 󰎞 ",
-        "4": "  ",
-        "5": "  ",
-        "6": " 󰺵 ",
-        "7": "  ",
-        "default": "  ",
-        "focused": "  ",
-        "urgent": "  "
-      },
-      "on-click": "activate",
-      "sort-by-number": true
-    },
+    "height": 19,
     "layer": "top",
     "margin": "0 0 0 0",
     "memory": {
@@ -87,11 +69,7 @@
     "modules-center": [
       "custom/mpd"
     ],
-    "modules-left": [
-      "hyprland/workspaces"
-    ],
     "modules-right": [
-      "pulseaudio",
       "cpu",
       "memory",
       "temperature",
@@ -114,8 +92,8 @@
       "format-bluetooth": " {icon} {volume}%",
       "format-icons": {
         "default": [
-          "  ",
-          "  "
+          "",
+          ""
         ],
         "headphone": "  ",
         "headset": "  "
