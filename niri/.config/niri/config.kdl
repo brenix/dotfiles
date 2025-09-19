@@ -1,8 +1,12 @@
+output "eDP-1" {
+    scale 1.0
+}
+
 input {
     keyboard {
         xkb {
             layout "us"
-            // options "caps:swapescape"
+            options "caps:swapescape"
         }
         repeat-delay 200
         repeat-rate 45
@@ -71,6 +75,10 @@ binds {
     XF86AudioPause                      allow-when-locked=true { spawn-sh "playerctl play-pause"; }
     XF86AudioPlay                       allow-when-locked=true { spawn-sh "playerctl play-pause"; }
     XF86AudioPrev                       allow-when-locked=true { spawn-sh "playerctl previous"; }
+
+    // ─── Backlight Controls ───
+    XF86MonBrightnessUp                 allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set +5%"; }
+    XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set 5%-"; }
 
     // ─── Window Movement and Focus ───
     MOD+W                               { close-window; }
