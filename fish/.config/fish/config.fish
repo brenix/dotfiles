@@ -6,11 +6,11 @@
 # end
 
 # Automatically start Wayland on TTY1
-if status is-login
-    if test -z "$WAYLAND_DISPLAY" -a "$XDG_VTNR" = 1
-        niri-session
-    end
-end
+# if status is-login
+#     if test -z "$WAYLAND_DISPLAY" -a "$XDG_VTNR" = 1
+#         niri-session
+#     end
+# end
 
 status is-interactive; and begin
     # Abbreviations
