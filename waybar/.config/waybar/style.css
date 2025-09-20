@@ -1,52 +1,39 @@
+@define-color foreground #dedede;
+@define-color foreground-inactive #aaaaaa;
+@define-color background #181818;
+
 * {
   border: 0;
   border-radius: 0;
-  padding: 0 0;
+  margin: 0;
+  padding: 0;
   font-family: "Terminus";
   font-size: 10px;
   min-height: 0;
 }
 
+#waybar {
+  color: @foreground;
+  background-color: @background;
+}
+
 #backlight,
 #battery,
-#clock,
 #cpu,
-#pulseaudio,
-#tags,
-#language,
 #memory,
 #network,
-#window,
-#workspaces,
 #temperature,
-#pulseaudio,
-#taskbar,
-#workspaces,
-#custom-mpd,
-#custom-spotify {
-  background: #181818;
-  color: #dddddd;
+#wireplumber,
+#tray {
+  padding-right: 1em;
 }
-
-window#waybar {
-  background-color: #181818;
-  color: #dddddd;
-}
-
 
 .modules-left {
-  background-color: #181818;
   padding: 0px 0px 0px 0px;
 }
 
-
 .modules-right {
-  background-color: #181818;
   padding: 0px 5px 0px 0px;
-}
-
-.modules-right>widget>* {
-  margin: 0 10px 0 0;
 }
 
 #workspaces button {
@@ -55,7 +42,7 @@ window#waybar {
 }
 
 #workspaces button.empty {
-  color: #dddddd;
+  color: @foreground;
 }
 
 #workspaces button.visible {
@@ -68,11 +55,9 @@ window#waybar {
   padding: 0px 6px 0px 6px;
   padding: 0px 6px 0px 6px;
   background-color: #686868;
-  color: #dddddd;
 }
 
 #workspaces button.active {
   padding: 0px 6px 0px 6px;
   background-color: #686868;
-  color: #dddddd;
 }

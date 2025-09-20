@@ -1,101 +1,98 @@
 [
   {
-    // -- BAR SETTINGS
-    "height": 14,
-    "layer": "bottom",
+    "height": 20,
+    "spacing": 5,
+    "layer": "top",
     "position": "top",
-    "margin": "0 0 0 0",
-    "modules-left": [
-      "niri/workspaces"
-    ],
-    "modules-center": [
-      "custom/mpd",
-      "custom/spotify"
-    ],
-    "modules-right": [
-      "cpu",
-      "memory",
-      "temperature",
-      "backlight",
-      "battery",
-      "network",
-      "clock",
-      "tray"
-    ],
+
+    "modules-left": ["niri/workspaces"],
+    "modules-center": ["custom/mpd", "clock"],
+    "modules-right": ["temperature","cpu","memory","backlight","battery","wireplumber","tray"],
     "reload_style_on_change": true,
-    // -- MODULES
+
     "backlight": {
       "format": "BACKLIGHT: {percent}%"
     },
+
     "battery": {
-      "format": "BAT: {capacity}%",
+      "bat": "BAT1",
+      "interval": 60,
+      "format": "{icon}  {capacity}%",
+      "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
     },
+
     "clock": {
-      "format": "DATE: {:%Y-%m-%d %I:%M %p}",
-      "interval": 1
+      "format": "{:%I:%M %p}",
+      "tooltip-format": "{:%m-%d-%Y}",
+      "interval": 5
     },
+
     "cpu": {
-      "format": "CPU: {usage}%",
+      "format": "\uf4bc {usage}%",
       "interval": 1,
       "tooltip": false
     },
-    "custom/mpd": {
-      "escape": true,
-      "exec": "mpc current --format '{\"text\": \"%title%\", \"tooltip\": \"%name%\"}' ",
-      "exec-if": "mpc status \"%state%\"",
-      "format": "{}",
-      "interval": 1,
-      "max-length": 100,
-      "on-click": "mpc toggle",
-      "return-type": "json"
-    },
-    "custom/spotify": {
-      "exec": "playerctl metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"alt\": \"{{status}}\", \"tooltip\": \"{{title}} ({{artist}} - {{album}})\"}' ",
-      "exec-if": "playerctl -p spotify status",
-      "format": "{}",
-      "interval": 1,
-      "max-length": 30,
-      "on-click": "playerctl play-pause",
-      "return-type": "json"
-    },
+
     "memory": {
-      "format": "MEM: {used:0.1f}GiB",
       "interval": 30,
-      "tooltip-format": "{used:0.1f}GiB/{total:0.1f}GiB"
+      "format": "\uf4bc {used:0.1f}G"
     },
+
     "network": {
-      "format-disconnected": "NET: <span color=\"#fc618d\">Disconnected</span>",
-      "format-ethernet": "NET: {ipaddr}",
-      "format-wifi": "NET: {ipaddr} ({essid})",
-      "interval": 1,
-      "tooltip-format": "{ipaddr}/{cidr}"
+      "format": "",
+      "format-ethernet": "\udb83\udc9d",
+      "format-wifi": "{icon}",
+      "format-disconnected": "\udb83\udc9c",
+      "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+      "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+      "tooltip-format-ethernet": "{ifname}",
+      "tooltip-format-disconnected": "Disconnected",
     },
+
     "niri/workspaces": {
       "current-only": false,
       "format": "{index}",
       "disable-click": true,
       "disable-markup": true
     },
-    "pulseaudio": {
-      "format": "VOL: {volume}%",
-      "format-muted": "VOL: <span color=\"#1c1c1c\">Muted</span>",
-      "scroll-step": 2
+
+    "wireplumber": {
+      "format": "\udb81\udd7e {volume}%",
+      "max-volume": 100,
+      "scroll-step": 5
     },
+
     "temperature": {
-      "critical-threshold": 80,
-      "format": "TEMP: {temperatureC}°C",
+      "format": "\udb80\ude10 {temperatureC}°C",
       "hwmon-path": [
-        "/sys/class/hwmon/hwmon4/temp1_input",
-        "/sys/class/hwmon/hwmon1/temp1_input"
+        "/sys/class/hwmon/hwmon5/temp1_input",
       ],
       "interval": 1,
       "thermal-zone": 1,
       "tooltip": false
     },
+
     "tray": {
       "icon-size": 12,
-      "spacing": 6
-    }
+      "spacing": 12
+    },
+
+    "custom/mpd": {
+      "escape": true,
+      "exec": "mpc current --format '{\"text\": \"%title%\", \"tooltip\": \"%name%\"}' ",
+      "exec-if": "mpc status \"%state%\"",
+      "format": "{icon} {text} | ",
+      "format-icons": {
+        "playing": "\udb81\udc0a",
+        "paused": "\udb80\udfe4",
+        "stopped": ""
+      },
+      "interval": 1,
+      "max-length": 100,
+      "on-click": "mpc toggle",
+      "return-type": "json",
+      "escape": true
+    },
   }
 ]
 
