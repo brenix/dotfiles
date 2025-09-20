@@ -156,10 +156,10 @@ binds {
     MOD+F                               { expand-column-to-available-width; }
     MOD+C                               { center-column; }
     MOD+CTRL+C                          { center-visible-columns; }
-    MOD+MINUS                           { set-column-width "-10%"; }
-    MOD+EQUAL                           { set-column-width "+10%"; }
-    MOD+SHIFT+MINUS                     { set-window-height "-10%"; }
-    MOD+SHIFT+EQUAL                     { set-window-height "+10%"; }
+    MOD+MINUS                           { set-column-width "-3%"; }
+    MOD+EQUAL                           { set-column-width "+3%"; }
+    MOD+SHIFT+MINUS                     { set-window-height "-3%"; }
+    MOD+SHIFT+EQUAL                     { set-window-height "+3%"; }
 
     // ─── Modes ───
     MOD+T                               { toggle-window-floating; }
@@ -181,7 +181,14 @@ binds {
 
 window-rule {
   match title="Brave"
-  open-maximized true
+  // open-maximized true
+  default-column-width { proportion 0.66; }
+}
+
+window-rule {
+  match app-id="Alacritty"
+  // open-maximized true
+  default-column-width { proportion 0.33; }
 }
 
 environment {

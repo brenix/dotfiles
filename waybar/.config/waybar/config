@@ -6,8 +6,8 @@
     "position": "top",
 
     "modules-left": ["niri/workspaces"],
-    "modules-center": ["custom/mpd", "clock"],
-    "modules-right": ["temperature","cpu","memory","backlight","battery","wireplumber","tray"],
+    "modules-center": ["custom/mpd"],
+    "modules-right": ["temperature","cpu","memory","backlight","battery","wireplumber","network","clock","tray"],
     "reload_style_on_change": true,
 
     "backlight": {
@@ -22,30 +22,30 @@
     },
 
     "clock": {
-      "format": "{:%I:%M %p}",
+      "format": "\uf4ab  {:%I:%M %p}",
       "tooltip-format": "{:%m-%d-%Y}",
       "interval": 5
     },
 
     "cpu": {
-      "format": "\uf4bc {usage}%",
+      "format": "\uf4bc  {usage}%",
       "interval": 1,
       "tooltip": false
     },
 
     "memory": {
       "interval": 30,
-      "format": "\uf4bc {used:0.1f}G"
+      "format": "\uefc5  {used:0.1f}G"
     },
 
     "network": {
       "format": "",
-      "format-ethernet": "\udb83\udc9d",
-      "format-wifi": "{icon}",
-      "format-disconnected": "\udb83\udc9c",
+      "format-ethernet": "\udb83\udc9d  lan",
+      "format-wifi": "{icon}  {essid}",
+      "format-disconnected": "",
       "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
       "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-      "tooltip-format-ethernet": "{ifname}",
+      "tooltip-format-ethernet": "{ifname} {ipaddr}/{cidr}",
       "tooltip-format-disconnected": "Disconnected",
     },
 
@@ -57,13 +57,13 @@
     },
 
     "wireplumber": {
-      "format": "\udb81\udd7e {volume}%",
+      "format": "\udb81\udd7e  {volume}%",
       "max-volume": 100,
       "scroll-step": 5
     },
 
     "temperature": {
-      "format": "\udb80\ude10 {temperatureC}°C",
+      "format": "\udb80\ude10  {temperatureC}°C",
       "hwmon-path": [
         "/sys/class/hwmon/hwmon5/temp1_input",
       ],
@@ -81,11 +81,11 @@
       "escape": true,
       "exec": "mpc current --format '{\"text\": \"%title%\", \"tooltip\": \"%name%\"}' ",
       "exec-if": "mpc status \"%state%\"",
-      "format": "{icon} {text} | ",
+      "format": "{icon} {text}",
       "format-icons": {
-        "playing": "\udb81\udc0a",
-        "paused": "\udb80\udfe4",
-        "stopped": ""
+        "Playing": "\uf500",
+        "Paused": "\udb80\udfe7",
+        "Stopped": ""
       },
       "interval": 1,
       "max-length": 100,
