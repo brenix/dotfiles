@@ -26,19 +26,20 @@ input {
     }
 
     focus-follows-mouse
-    workspace-auto-back-and-forth
 }
 
 
 layout {
-    gaps 16
-    center-focused-column "never" // dont autocenter focused column
+    gaps 10
+    center-focused-column "never"
 
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
     }
+
+    default-column-width { proportion 0.5; }
 
     focus-ring {
         width 1
@@ -53,11 +54,17 @@ layout {
         color "#0007"
     }
 
-    struts {}
+    struts {
+        left -5
+        right -5
+        top -5
+        bottom -5
+    }
+
 }
 
-prefer-no-csd // disable program decorations
-screenshot-path null // disable screenshot saving
+prefer-no-csd
+screenshot-path null
 
 binds {
     MOD+RETURN                          { spawn-sh "alacritty"; }
@@ -165,7 +172,7 @@ binds {
     MOD+T                               { toggle-window-floating; }
     MOD+SHIFT+F                         { fullscreen-window; }
     MOD+SHIFT+T                         { toggle-column-tabbed-display; }
-
+    MOD+SHIFT+P                         { power-off-monitors; }
     // ─── Screenshots ───
     CTRL+SHIFT+1                        { screenshot; }
     CTRL+SHIFT+2                        { screenshot-screen; }
@@ -179,17 +186,13 @@ binds {
     MOD+O                               repeat=false { toggle-overview; }
 }
 
-window-rule {
-  match title="Brave"
-  // open-maximized true
-  default-column-width { proportion 0.66; }
-}
 
 window-rule {
-  match app-id="Alacritty"
-  // open-maximized true
-  default-column-width { proportion 0.33; }
+	match app-id="firefox" title="^Picture-in-Picture$"
+	match app-id="brave" title="^Picture-in-Picture$"
+	open-floating true
 }
+
 
 environment {
     DISPLAY ":1"
