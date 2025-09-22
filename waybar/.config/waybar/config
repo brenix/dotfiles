@@ -11,7 +11,8 @@
     "reload_style_on_change": true,
 
     "backlight": {
-      "format": "BACKLIGHT: {percent}%"
+      "format": "{icon} {percent}%",
+      "format-icons": ["\udb80\udcde", "\udb80\udcda"],
     },
 
     "battery": {
