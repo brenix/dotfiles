@@ -70,7 +70,7 @@ binds {
     MOD+RETURN                          { spawn-sh "alacritty"; }
     MOD+D                               { spawn-sh "brave"; }
     MOD+SPACE                           { spawn-sh "fuzzel"; }
-    MOD+V                               { spawn-sh "pavucontrol"; }
+    MOD+V                               { spawn-sh "alacritty -e wiremix"; }
     MOD+S                               { spawn-sh "spotify --enable-features=UseOzonePlatform --ozone-platform=wayland"; }
 
     // ─── Audio Controls ───
