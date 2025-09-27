@@ -28,3 +28,5 @@ function ssh-multi
         echo 'Neither tmux or zellij are running!'
     end
 end
+
+complete -c ssh-multi -w ssh

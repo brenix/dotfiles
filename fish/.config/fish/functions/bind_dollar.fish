@@ -6,3 +6,5 @@ function bind_dollar
             commandline -i '$'
     end
 end
+
+bind '$' bind_dollar

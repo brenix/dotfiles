@@ -5,15 +5,8 @@
 #     end
 # end
 
-# Automatically start Wayland on TTY1
-# if status is-login
-#     if test -z "$WAYLAND_DISPLAY" -a "$XDG_VTNR" = 1
-#         niri-session
-#     end
-# end
-
 status is-interactive; and begin
-    # Abbreviations
+    # -- Abbreviations
     abbr --add -- bw rbw
     abbr --add -- calc qalc
     abbr --add -- cat bat
@@ -42,7 +35,7 @@ status is-interactive; and begin
     abbr --add -- replace ambr
     abbr --add -- , 'mise exec'
 
-    # Aliases
+    # -- Aliases
     alias bat 'bat --paging=never --style=plain --decorations=never'
     alias diff 'diff --color=auto'
     alias e 'helix .'
@@ -87,6 +80,7 @@ status is-interactive; and begin
     alias x k9s
     alias zad 'ls -d */ | xargs -I {} zoxide add {}'
 
+    # -- CLI tools
     if command -q fzf
         fzf --fish | source
         set -gx FZF_DEFAULT_OPTS "--ansi --color=bg:-1,bg+:#333333,spinner:6,hl:7,fg:7,header:6,info:7,pointer:1,marker:0,prompt:2,hl+:2"
@@ -104,14 +98,18 @@ status is-interactive; and begin
         mise activate fish | source
     end
 
+    # -- Environment
     set -gx GOPATH $HOME/.cache/go
     set -gx GOBIN $GOPATH/bin
     set -gx PATH $PATH $HOME/.local/bin $HOME/.krew/bin $GOPATH/bin $HOME/.bin
-    complete -c ssh-multi -w ssh
+    set -xU MANPAGER 'less -R --use-color -Dd+r -Du+b'
+    set -xU MANROFFOPT '-P -c'
+
+    # -- Bindings
     bind \ce end-of-line
-    bind ! bind_bang
-    bind '$' bind_dollar
     bind -k nul 'zi && commandline --function repaint'
+
+    # -- Colors
     set -gx fish_color_autosuggestion brblack
     set -gx fish_color_cancel -r
     set -gx fish_color_command green
@@ -139,9 +137,7 @@ status is-interactive; and begin
     set -gx fish_pager_color_prefix white --bold --underline
     set -gx fish_pager_color_progress white '--background=cyan'
 
-    set -xU MANPAGER 'less -R --use-color -Dd+r -Du+b'
-    set -xU MANROFFOPT '-P -c'
-
+    # -- Source additional configuration
     for file in ~/.config/fish/conf.local.d/*.fish
         source $file
     end
