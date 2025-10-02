@@ -107,7 +107,7 @@ status is-interactive; and begin
 
     # -- Bindings
     bind \ce end-of-line
-    bind -k nul 'zi && commandline --function repaint'
+    bind nul 'zi && commandline --function repaint'
 
     # -- Colors
     set -gx fish_color_autosuggestion brblack
