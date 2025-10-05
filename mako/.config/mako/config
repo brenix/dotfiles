@@ -4,13 +4,13 @@ sort=-time
 output=DP-1
 layer=overlay
 anchor=top-center
-background-color=#101011
+background-color=#2e3440
 width=350
 height=125
 margin=5
 padding=0,5,10
 border-size=1
-border-color=#565657
+border-color=#373e4d
 border-radius=0
 icons=0
 max-icon-size=32
@@ -18,7 +18,7 @@ default-timeout=10000
 ignore-timeout=1
 
 [urgency=normal]
-border-color=#565657
+border-color=#373e4d
 
 [urgency=high]
 border-color=#bf678f
