@@ -43,7 +43,7 @@ layout {
 
     focus-ring {
         width 1
-        active-color "#e6c64f"
+        active-color "#999999"
         inactive-color "#353535"
     }
 
@@ -208,3 +208,4 @@ hotkey-overlay {
 }
 
 spawn-at-startup "waybar"
+spawn-at-startup "swww-daemon"

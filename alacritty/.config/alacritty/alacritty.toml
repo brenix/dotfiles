@@ -1,17 +1,17 @@
 [general]
-import = ["~/.config/alacritty/themes/retina.toml"]
+import = ["~/.config/alacritty/themes/nord.toml"]
 
 # [env]
 # WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 14
-offset.y = -2
+size = 13
+offset.y = -5
 # offset.x = -1
 
 [font.normal]
-family = "Gohu GohuFont"
-# family = "TX-02 Condensed"
+# family = "Gohu GohuFont"
+family = "TX-02"
 style = "Regular"
 
 [font.bold]

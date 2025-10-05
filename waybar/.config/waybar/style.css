@@ -1,14 +1,20 @@
-@define-color foreground #dedede;
-@define-color foreground-inactive #aaaaaa;
-@define-color background #181818;
+/* -- RETINA -- */
+/* @define-color foreground #dedede; */
+/* @define-color foreground-inactive #aaaaaa; */
+/* @define-color background #181818; */
+
+/* -- NORD -- */
+@define-color foreground #D8DEE9;
+@define-color foreground-inactive #E5E9F0;
+@define-color background #2E3440;
 
 * {
   border: 0;
   border-radius: 0;
   margin: 0;
   padding: 0;
-  font-family: "Terminus";
-  font-size: 10px;
+  font-family: "TX-02";
+  font-size: 14px;
   min-height: 0;
 }
 
@@ -48,16 +54,18 @@
 #workspaces button.visible {
   padding: 0px 6px 0px 6px;
   min-width: 1px;
-  color: #ea6962;
+  color: #BF616A;
 }
 
 #workspaces button.focused {
   padding: 0px 6px 0px 6px;
   padding: 0px 6px 0px 6px;
-  background-color: #686868;
+  background-color: @foreground;
+  color: @background;
 }
 
 #workspaces button.active {
   padding: 0px 6px 0px 6px;
-  background-color: #686868;
+  background-color: @foreground;
+  color: @background;
 }

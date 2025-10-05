@@ -1,9 +1,12 @@
 icons:
   when: never
 
+color:
+  when: auto
+
 blocks:
   - permission
-  # - user
+  - user
   # - size
   - date
   - name

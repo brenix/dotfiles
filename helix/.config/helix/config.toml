@@ -1,4 +1,4 @@
-theme = "retina"
+theme = "nord"
 
 [editor]
 auto-pairs = false
