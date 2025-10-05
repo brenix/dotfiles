@@ -30,7 +30,8 @@ input {
 
 
 layout {
-    gaps 10
+    gaps 12
+    always-center-single-column
     center-focused-column "never"
 
     preset-column-widths {
@@ -55,10 +56,10 @@ layout {
     }
 
     struts {
-        left -5
-        right -5
-        top -5
-        bottom -5
+        left -3
+        right -3
+        top -3
+        bottom -3
     }
 
 }
