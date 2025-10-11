@@ -1,5 +1,7 @@
 [general]
-import = ["~/.config/alacritty/themes/nord.toml"]
+import = ["./themes/wallust.toml"]
+live_config_reload = true
+working_directory = "None"
 
 # [env]
 # WINIT_X11_SCALE_FACTOR = "1"

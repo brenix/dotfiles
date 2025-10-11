@@ -1,0 +1,87 @@
+k9s:
+  body:
+    bgColor: default
+    fgColor: '{{foreground}}'
+    logoColor: '{{color2}}'
+  dialog:
+    bgColor: default
+    buttonBgColor: '{{background}}'
+    buttonFgColor: '{{foreground}}'
+    buttonFocusBgColor: '{{color2}}'
+    buttonFocusFgColor: '{{color5}}'
+    fgColor: '{{foreground}}'
+    fieldFgColor: '{{foreground}}'
+    labelFgColor: '{{color3}}'
+  frame:
+    border:
+      fgColor: '{{background}}'
+      focusColor: '{{color8}}'
+    crumbs:
+      activeColor: '{{background}}'
+      bgColor: '{{background}}'
+      fgColor: '{{background}}'
+    menu:
+      fgColor: '{{foreground}}'
+      keyColor: '{{color2}}'
+      numKeyColor: '{{color2}}'
+    status:
+      addColor: '{{foreground}}'
+      completedColor: '{{color0}}'
+      errorColor: '{{color1}}'
+      highlightcolor: '{{color3}}'
+      killColor: '{{color14}}'
+      modifyColor: '{{color5}}'
+      newColor: '{{color4}}'
+    title:
+      bgColor: '{{background}}'
+      counterColor: '{{color6}}'
+      fgColor: '{{foreground}}'
+      filterColor: '{{color4}}'
+      highlightColor: '{{color3}}'
+  info:
+    fgColor: '{{foreground}}'
+    sectionColor: '{{color2}}'
+  prompt:
+    bgColor: '{{background}}'
+    fgColor: '{{foreground}}'
+    suggestColor: '{{color3}}'
+  views:
+    charts:
+      bgColor: default
+      defaultChartColors:
+      - '{{color6}}'
+      - '{{color4}}'
+      defaultDialColors:
+      - '{{color6}}'
+      - '{{color4}}'
+    help:
+      bgColor: '{{background}}'
+      fgColor: '{{foreground}}'
+      indicator:
+        fgColor: '{{color4}}'
+    logs:
+      bgColor: default
+      fgColor: '{{foreground}}'
+      indicator:
+        bgColor: '{{background}}'
+        fgColor: '{{foreground}}'
+    table:
+      bgColor: default
+      cursorBgColor: '{{foreground}}'
+      cursorFgColor: '{{background}}'
+      fgColor: '{{foreground}}'
+      header:
+        bgColor: default
+        fgColor: '{{foreground}}'
+        sorterColor: '{{foreground}}'
+      markColor: '{{color3}}'
+    xray:
+      bgColor: default
+      cursorColor: '{{color8}}'
+      fgColor: '{{foreground}}'
+      graphicColor: '{{color6}}'
+      showIcons: false
+    yaml:
+      colonColor: '{{color6}}'
+      keyColor: '{{color4}}'
+      valueColor: '{{foreground}}'

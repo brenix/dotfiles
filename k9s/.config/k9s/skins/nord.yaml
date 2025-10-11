@@ -34,6 +34,10 @@ k9s:
   info:
     fgColor: *nord8
     sectionColor: *nord4
+  prompt:
+    bgColor: *nord0
+    fgColor: *nord4
+    suggestColor: *nord13
   # Dialog styles.
   dialog:
     fgColor: *nord4
@@ -94,7 +98,7 @@ k9s:
       bgColor: *nord0
       cursorFgColor: *nord0
       cursorBgColor: *nord0
-      markColor: *nord4
+      markColor: *nord13
       # Header row styles.
       header:
         fgColor: *nord4

@@ -1,12 +1,4 @@
-/* -- RETINA -- */
-/* @define-color foreground #dedede; */
-/* @define-color foreground-inactive #aaaaaa; */
-/* @define-color background #181818; */
-
-/* -- NORD -- */
-@define-color foreground #D8DEE9;
-@define-color foreground-inactive #E5E9F0;
-@define-color background #2E3440;
+@import url("colors.css");
 
 * {
   border: 0;
@@ -54,7 +46,7 @@
 #workspaces button.visible {
   padding: 0px 6px 0px 6px;
   min-width: 1px;
-  color: #BF616A;
+  color: @color1;
 }
 
 #workspaces button.focused {
