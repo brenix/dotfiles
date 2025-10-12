@@ -45,7 +45,11 @@ layout {
     focus-ring {
         width 1
         active-color "#999999"
-        inactive-color "#353535"
+    }
+
+    insert-hint {
+        off
+        color "#999999"
     }
 
     shadow {
@@ -72,6 +76,7 @@ binds {
     MOD+D                               { spawn-sh "brave"; }
     MOD+SPACE                           { spawn-sh "fuzzel"; }
     MOD+V                               { spawn-sh "alacritty -e wiremix"; }
+    MOD+SHIFT+V                         { spawn-sh "thunar"; }
     MOD+S                               { spawn-sh "spotify --enable-features=UseOzonePlatform --ozone-platform=wayland"; }
 
     // ─── Audio Controls ───
