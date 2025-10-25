@@ -1,0 +1,178 @@
+# Retina Helix Theme
+# Based on VSCode theme "Retina" by RafaCMur
+
+attributes = "{{color4}}"
+constant = "{{color5}}"
+"constant.character.escape" = "{{color5}}"
+"constant.numeric" = "{{color5}}"
+constructor = "{{color2}}"
+debug = "{{foreground}}"
+"diff.delta" = "{{color3}}"
+"diff.minus" = "{{color1}}"
+"diff.plus" = "{{color10}}"
+error = "{{color1}}"
+function = "{{color10}}"
+hint = "{{color5}}"
+info = "{{color4}}"
+keyword = "{{color1}}"
+label = "{{color5}}"
+"markup.heading" = "{{color3}}"
+"markup.link.text" = "{{color1}}"
+"markup.list" = "{{foreground}}"
+"markup.quote" = "#6b6a6c"
+"markup.raw" = "#fd9353"
+namespace = "{{color4}}"
+operator = "{{color1}}"
+special = "#fd9353"
+string = "{{color3}}"
+type = "{{color4}}"
+"ui.text" = "{{foreground}}"
+"ui.text.focus" = "{{foreground}}"
+variable = "{{foreground}}"
+"variable.other.member" = "{{color1}}"
+warning = "#fd9353"
+
+# Modifiers for syntax elements
+[comment]
+fg = "{{color8}}"
+modifiers = ["italic"]
+
+[diagnostic]
+modifiers = ["underlined"]
+
+["diagnostic.error".underline]
+style = "curl"
+
+["diagnostic.hint".underline]
+style = "curl"
+
+["diagnostic.info".underline]
+style = "curl"
+
+["diagnostic.warning".underline]
+style = "curl"
+
+# Markup styling
+["markup.bold"]
+fg = "{{color3}}"
+modifiers = ["bold"]
+
+["markup.italic"]
+fg = "{{color5}}"
+modifiers = ["italic"]
+
+["markup.link.url"]
+fg = "{{color10}}"
+modifiers = ["underlined"]
+
+["markup.strikethrough"]
+modifiers = ["crossed_out"]
+
+# UI elements
+["ui.background"]
+fg = "{{foreground}}"
+bg = "{{background}}"
+
+["ui.bufferline"]
+bg = "{{background}}"
+fg = "{{color8}}"
+
+["ui.bufferline.active"]
+bg = "{{background}}"
+fg = "{{color3}}"
+modifiers = ["bold"]
+
+["ui.bufferline.modified"]
+bg = "{{background}}"
+fg = "{{color3}}"
+# No direct 'underline' for modified in Helix, but `activeModifiedBorder` is
+
+["ui.cursor"]
+fg = "{{foreground}}"
+modifiers = ["reversed"]
+
+["ui.cursor.insert"]
+fg = "{{foreground}}"
+modifiers = ["underlined"]
+
+["ui.cursor.match"]
+fg = "{{color3}}"
+modifiers = ["underlined"]
+
+["ui.cursor.select"]
+fg = "{{color3}}"
+modifiers = ["underlined"]
+
+["ui.cursorline.primary"]
+bg = "{{foreground}}0c"
+fg = "{{foreground}}"
+
+["ui.gutter"]
+bg = "{{background}}"
+
+["ui.help"]
+bg = "#363537"
+fg = "#bab6c0"
+
+["ui.linenr"]
+bg = "{{background}}"
+fg = "#525053"
+
+["ui.linenr.selected"]
+bg = "{{background}}0c"
+fg = "#bab6c0"
+modifiers = ["bold"]
+
+["ui.menu"]
+bg = "#363537"
+fg = "#bab6c0"
+
+["ui.menu.scroll"]
+bg = "#363537"
+fg = "{{color8}}"
+
+["ui.menu.selected"]
+bg = "#6b6a6c"
+fg = "{{foreground}}"
+
+["ui.popup"]
+bg = "#363537"
+
+["ui.selection"]
+bg = "#444852"
+
+["ui.selection.primary"]
+bg = "#414550"
+
+["ui.statusline"]
+bg = "#191919"
+fg = "#6b6a6c"
+
+["ui.statusline.inactive"]
+bg = "#191919"
+fg = "#6b6a6c"
+
+["ui.statusline.insert"]
+bg = "{{color10}}"
+fg = "{{background}}"
+
+["ui.statusline.normal"]
+bg = "{{color1}}"
+fg = "{{background}}"
+
+["ui.statusline.select"]
+bg = "{{color5}}"
+fg = "{{background}}"
+
+["ui.virtual.indent-guide"]
+fg = "#363537"
+
+["ui.virtual.ruler"]
+bg = "#525053"
+
+["ui.virtual.whitespace"]
+fg = "#525053"
+
+["ui.window"]
+bg = "{{background}}"
+

@@ -1,0 +1,178 @@
+# Retina Helix Theme
+# Based on VSCode theme "Retina" by RafaCMur
+
+attributes = "#7DAEA3"
+constant = "#D3869B"
+"constant.character.escape" = "#D3869B"
+"constant.numeric" = "#D3869B"
+constructor = "#A9B665"
+debug = "#D4BE98"
+"diff.delta" = "#D8A657"
+"diff.minus" = "#EA6962"
+"diff.plus" = "#A9B665"
+error = "#EA6962"
+function = "#A9B665"
+hint = "#D3869B"
+info = "#7DAEA3"
+keyword = "#EA6962"
+label = "#D3869B"
+"markup.heading" = "#D8A657"
+"markup.link.text" = "#EA6962"
+"markup.list" = "#D4BE98"
+"markup.quote" = "#6b6a6c"
+"markup.raw" = "#fd9353"
+namespace = "#7DAEA3"
+operator = "#EA6962"
+special = "#fd9353"
+string = "#D8A657"
+type = "#7DAEA3"
+"ui.text" = "#D4BE98"
+"ui.text.focus" = "#D4BE98"
+variable = "#D4BE98"
+"variable.other.member" = "#EA6962"
+warning = "#fd9353"
+
+# Modifiers for syntax elements
+[comment]
+fg = "#3C3836"
+modifiers = ["italic"]
+
+[diagnostic]
+modifiers = ["underlined"]
+
+["diagnostic.error".underline]
+style = "curl"
+
+["diagnostic.hint".underline]
+style = "curl"
+
+["diagnostic.info".underline]
+style = "curl"
+
+["diagnostic.warning".underline]
+style = "curl"
+
+# Markup styling
+["markup.bold"]
+fg = "#D8A657"
+modifiers = ["bold"]
+
+["markup.italic"]
+fg = "#D3869B"
+modifiers = ["italic"]
+
+["markup.link.url"]
+fg = "#A9B665"
+modifiers = ["underlined"]
+
+["markup.strikethrough"]
+modifiers = ["crossed_out"]
+
+# UI elements
+["ui.background"]
+fg = "#D4BE98"
+bg = "#282828"
+
+["ui.bufferline"]
+bg = "#282828"
+fg = "#3C3836"
+
+["ui.bufferline.active"]
+bg = "#282828"
+fg = "#D8A657"
+modifiers = ["bold"]
+
+["ui.bufferline.modified"]
+bg = "#282828"
+fg = "#D8A657"
+# No direct 'underline' for modified in Helix, but `activeModifiedBorder` is
+
+["ui.cursor"]
+fg = "#D4BE98"
+modifiers = ["reversed"]
+
+["ui.cursor.insert"]
+fg = "#D4BE98"
+modifiers = ["underlined"]
+
+["ui.cursor.match"]
+fg = "#D8A657"
+modifiers = ["underlined"]
+
+["ui.cursor.select"]
+fg = "#D8A657"
+modifiers = ["underlined"]
+
+["ui.cursorline.primary"]
+bg = "#D4BE980c"
+fg = "#D4BE98"
+
+["ui.gutter"]
+bg = "#282828"
+
+["ui.help"]
+bg = "#363537"
+fg = "#bab6c0"
+
+["ui.linenr"]
+bg = "#282828"
+fg = "#525053"
+
+["ui.linenr.selected"]
+bg = "#2828280c"
+fg = "#bab6c0"
+modifiers = ["bold"]
+
+["ui.menu"]
+bg = "#363537"
+fg = "#bab6c0"
+
+["ui.menu.scroll"]
+bg = "#363537"
+fg = "#3C3836"
+
+["ui.menu.selected"]
+bg = "#6b6a6c"
+fg = "#D4BE98"
+
+["ui.popup"]
+bg = "#363537"
+
+["ui.selection"]
+bg = "#444852"
+
+["ui.selection.primary"]
+bg = "#414550"
+
+["ui.statusline"]
+bg = "#191919"
+fg = "#6b6a6c"
+
+["ui.statusline.inactive"]
+bg = "#191919"
+fg = "#6b6a6c"
+
+["ui.statusline.insert"]
+bg = "#A9B665"
+fg = "#282828"
+
+["ui.statusline.normal"]
+bg = "#EA6962"
+fg = "#282828"
+
+["ui.statusline.select"]
+bg = "#D3869B"
+fg = "#282828"
+
+["ui.virtual.indent-guide"]
+fg = "#363537"
+
+["ui.virtual.ruler"]
+bg = "#525053"
+
+["ui.virtual.whitespace"]
+fg = "#525053"
+
+["ui.window"]
+bg = "#282828"
+

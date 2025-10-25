@@ -38,6 +38,6 @@ gtk3 = { src = 'gtk.css', dst = '~/.config/gtk-3.0/colors.css' }
 gtk4 = { src = 'gtk.css', dst = '~/.config/gtk-4.0/colors.css' }
 fuzzel = { src = 'fuzzel.ini', dst = '~/.config/fuzzel/colors.ini' }
 # mako = { src = 'mako', dst = '~/.config/mako/config' }
-# helix = { src = 'helix.toml', dst = '~/.config/helix/themes/wallust.toml' }
+helix = { src = 'helix.toml', dst = '~/.config/helix/themes/wallust.toml' }
 niri = { src = 'niri.kdl', dst = '~/.config/niri/colors.kdl' }
 k9s = { src = 'k9s.yaml', dst = '~/.config/k9s/skins/wallust.yaml' }
