@@ -6,9 +6,9 @@ color:
 
 blocks:
   - permission
-  - user
+  # - user
   # - size
-  - date
+  # - date
   - name
 
 date: "+%Y-%m-%d"

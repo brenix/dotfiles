@@ -104,9 +104,9 @@ map_to_gtk_theme() {
       ;;
     "solarized")
       if [[ "$variation" == "light" ]]; then
-        echo "Osaka-Light-Solarized"
+        echo "NumixSolarizedLightBlue"
       else
-        echo "Osaka-Dark-Solarized"
+        echo "NumixSolarizedDarkBlue"
       fi
       ;;
     "rose-pine")
@@ -182,12 +182,11 @@ map_to_icon_theme() {
         echo "Colloid-Nord-Dark"
       fi
       ;;
-    "solarized")
-      # everforest for osaka (solarized) as requested
+    "solarized" | "selenized")
       if [[ "$variation" == "light" ]]; then
-        echo "Colloid-Everforest-Light"
+        echo "Colloid-Grey-Light"
       else
-        echo "Colloid-Everforest-Dark"
+        echo "Colloid-Grey"
       fi
       ;;
     "rose-pine" | "tokyo-night")
@@ -270,7 +269,7 @@ map_to_wallust_theme() {
         echo "Rosé-Pine"
       fi
       ;;
-    "solarized")
+    "solarized" | "selenized")
       if [[ "$variation" == "light" ]]; then
         echo "Solarized-Light"
       else
@@ -324,9 +323,9 @@ detect_theme_from_wallpaper() {
   local variation
   variation=$(basename "$theme_dir" | tr '[:upper:]' '[:lower:]')
 
-  # Special case: 'osaka' should be treated as 'solarized'
+  # Special case: 'osaka' should be treated as 'selenized'
   if [[ "$theme_name" == "osaka" ]]; then
-    theme_name="solarized"
+    theme_name="selenized"
   fi
 
   log_debug "Detected theme: $theme_name, variation: $variation"

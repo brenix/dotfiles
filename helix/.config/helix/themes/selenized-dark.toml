@@ -1,0 +1,153 @@
+# Selenized Dark theme for Helix
+# Based on the Selenized Dark color palette
+# Using a complete, non-inheriting structure to ensure validity.
+
+"name" = "selenized_dark"
+
+# --- Syntax Highlighting ---
+# Mapped based on the Selenized Vim theme's color choices
+
+# Constants, Strings, Literals
+"constant" = "cyan"
+"constant.builtin" = { fg = "cyan", modifiers = ["bold"] }
+"constant.builtin.boolean" = "cyan"
+"constant.character.escape" = { fg = "br_red", modifiers = ["bold"] }
+"constant.numeric" = "cyan"
+"string" = "cyan"
+"string.regex" = "orange"
+"string.special" = "magenta"
+
+# Functions & Methods
+"function" = "blue"
+"function.builtin" = { fg = "blue", modifiers = ["bold"] }
+"function.method" = "blue"
+"function.macro" = "magenta"
+"function.special" = "magenta"
+"constructor" = "green"
+
+# Keywords (Statement in Selenized Vim)
+"keyword" = "yellow"
+"keyword.control" = "yellow"
+"keyword.directive" = "orange"
+"keyword.function" = "yellow"
+"keyword.operator" = "yellow"
+"keyword.return" = "yellow"
+"keyword.storage" = "green"
+
+# Punctuation
+"punctuation" = "fg_0"
+"punctuation.bracket" = "fg_0"
+"punctuation.delimiter" = "fg_0"
+
+# Types
+"type" = "green"
+"type.builtin" = { fg = "green", modifiers = ["bold"] }
+
+# Variables & Attributes
+"variable" = "fg_0"
+"variable.builtin" = { fg = "cyan", modifiers = ["bold"] }
+"variable.other.member" = "fg_0"
+"variable.parameter" = "blue"
+"attribute" = "violet"
+
+# Misc.
+"label" = "yellow"
+"namespace" = "violet"
+"operator" = "yellow"
+"special" = "red"
+"tag" = "green"
+"comment" = { fg = "dim_0", modifiers = ["italic"] }
+
+# --- Diagnostics ---
+"diagnostic" = { underline = { color = "orange", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"error" = "red"
+"diagnostic.hint" = { underline = { color = "dim_0", style = "curl" } }
+"hint" = "dim_0"
+"diagnostic.info" = { underline = { color = "blue", style = "curl" } }
+"info" = "blue"
+"diagnostic.warning" = { underline = { color = "orange", style = "curl" } }
+"warning" = "orange"
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# --- Diffs ---
+"diff.delta" = "yellow"
+"diff.minus" = "red"
+"diff.plus" = "green"
+
+# --- Markup (Markdown, etc.) ---
+"markup.heading" = { fg = "blue", modifiers = ["bold"] }
+"markup.list" = "yellow"
+"markup.bold" = { fg = "br_yellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "magenta", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "yellow", modifiers = ["underlined"] }
+"markup.link.text" = "red"
+"markup.quote" = "cyan"
+"markup.raw" = "green"
+
+
+# --- EDITOR UI COLORS ---
+# Based on the 'nord' theme structure to ensure all keys are present
+
+"ui.background" = { bg = "bg_0" }
+"ui.text" = "fg_0"
+"ui.window" = "bg_1" # Border for floating windows
+
+# Popups and Menus (Completion, Hover)
+"ui.menu" = { fg = "fg_0", bg = "bg_1" }
+"ui.menu.selected" = { fg = "fg_1", bg = "bg_2" }
+"ui.menu.scroll" = { fg = "fg_1", bg = "bg_2" }
+"ui.popup" = { bg = "bg_1" }
+"ui.popup.info" = { bg = "bg_1" }
+"ui.help" = { fg = "fg_0", bg = "bg_1" }
+"ui.text.focus" = { fg = "fg_1", bg = "bg_2" } # e.g., picker selection
+
+# Gutter (Line Numbers)
+"ui.gutter" = "bg_1"
+"ui.linenr" = { fg = "dim_0", bg = "bg_1" }
+"ui.linenr.selected" = { fg = "fg_1", modifiers = ["bold"] }
+
+# Cursor & Selection
+"ui.cursor" = { fg = "bg_0", bg = "fg_1" }
+"ui.cursor.primary" = { fg = "bg_0", bg = "fg_1" }
+"ui.cursor.select" = { fg = "bg_0", bg = "cyan" }
+"ui.cursorline" = { bg = "bg_1" } # Renamed from .primary
+"ui.cursorline.primary" = { bg = "bg_1" }
+"ui.cursor.match" = { fg = "br_yellow", bg = "bg_2", modifiers = ["bold"] }
+
+# This is the required key that caused the error
+"ui.selection" = { bg = "bg_2" }
+"ui.highlight" = { bg = "bg_2" } # Generic highlight (e.g., search)
+
+# Statusline
+"ui.statusline" = { fg = "fg_1", bg = "bg_2" }
+"ui.statusline.inactive" = { fg = "dim_0", bg = "bg_1" }
+"ui.statusline.insert" = { fg = "bg_0", bg = "green", modifiers = ["bold"] }
+"ui.statusline.normal" = { fg = "bg_0", bg = "blue", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "bg_0", bg = "yellow", modifiers = ["bold"] }
+"ui.statusline.separator" = "bg_2"
+
+# Virtual/Invisible Text
+"ui.virtual.indent-guide" = "bg_2"
+"ui.virtual.inlay-hint" = { fg = "dim_0", modifiers = ["italic"] }
+"ui.virtual.jump-label" = { fg = "red", modifiers = ["bold"] }
+"ui.virtual.ruler" = { bg = "bg_1" }
+"ui.virtual.whitespace" = "dim_0"
+"ui.virtual.wrap" = "dim_0"
+
+
+[palette]
+# Selenized Dark Primary Colors
+bg_0     = "#103c48" # Background
+bg_1     = "#184956" # Lighter Background/Menu/CursorLine
+bg_2     = "#2d5b69" # Selection/MatchParen/StatusLine inactive
+dim_0    = "#72898f" # Comments/NonText/LineNr inactive
+fg_0     = "#adbcbc" # Default Foreground
+fg_1     = "#cad8d9" # Bright Foreground/CursorLineNr
+
+# Selenized Dark Accent Colors (standard names)
+red      = "#fa5750"
+green    = "#75b938"
+

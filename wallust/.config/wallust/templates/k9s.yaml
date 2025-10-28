@@ -26,7 +26,7 @@ k9s:
       numKeyColor: '{{color2}}'
     status:
       addColor: '{{foreground}}'
-      completedColor: '{{color0}}'
+      completedColor: '{{color8}}'
       errorColor: '{{color1}}'
       highlightcolor: '{{color3}}'
       killColor: '{{color14}}'
