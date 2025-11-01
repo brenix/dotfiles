@@ -7,13 +7,13 @@ working_directory = "None"
 # WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 13
-offset.y = -2
-# offset.x = -1
+size = 11.5
+offset.y = -6
+offset.x = -1
 
 [font.normal]
-family = "Gohu GohuFont"
-# family = "TX-02"
+# family = "Gohu GohuFont"
+family = "MonoLisa"
 style = "Regular"
 
 [font.bold]
