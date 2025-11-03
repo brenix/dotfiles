@@ -1,4 +1,2 @@
-waypaper --restore &
 waybar &>/dev/null &
-kanshi &>/dev/null &
-
+swww-daemon &>/dev/null &

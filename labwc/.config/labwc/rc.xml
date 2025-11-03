@@ -21,13 +21,13 @@
     </titlebar>
     <font place="ActiveWindow">
       <name>Terminus</name>
-      <size>9</size>
+      <size>10</size>
       <slant>normal</slant>
       <weight>normal</weight>
     </font>
     <font place="InactiveWindow">
       <name>Terminus</name>
-      <size>9</size>
+      <size>10</size>
       <slant>normal</slant>
       <weight>normal</weight>
     </font>
@@ -126,7 +126,7 @@
     </keybind>
     <keybind key="W-d" layoutDependent="false" onRelease="false" allowWhenLocked="false">
       <action name="Execute">
-        <command>firefox</command>
+        <command>brave</command>
       </action>
     </keybind>
     <keybind key="W-s" layoutDependent="false" onRelease="false" allowWhenLocked="false">
@@ -136,7 +136,7 @@
     </keybind>
     <keybind key="W-v" layoutDependent="false" onRelease="false" allowWhenLocked="false">
       <action name="Execute">
-        <command>pavucontrol</command>
+        <command>alacritty -e wiremix</command>
       </action>
     </keybind>
     <keybind key="W-w" layoutDependent="false" onRelease="false" allowWhenLocked="false">
@@ -275,9 +275,10 @@
     </keybind>
   </keyboard>
   <mouse>
-    <doubleClickTime>500</doubleClickTime>
+    <doubleClickTime>300</doubleClickTime>
     <scrollFactor>1.000000</scrollFactor>
     <default/>
+    <!-- Currently broken - does not seem to be needed anymore
     <context name="Frame">
       <mousebind button="W-Left" direction="" action="Drag">
         <action name="Move"/>
@@ -286,6 +287,7 @@
         <action name="Resize"/>
       </mousebind>
     </context>
+    -->
     <context name="Root">
       <mousebind button="Left" direction="" action="Press">
         <action name="None"/>

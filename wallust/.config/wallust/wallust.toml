@@ -41,3 +41,4 @@ fuzzel = { src = 'fuzzel.ini', dst = '~/.config/fuzzel/colors.ini' }
 helix = { src = 'helix.toml', dst = '~/.config/helix/themes/wallust.toml' }
 niri = { src = 'niri.kdl', dst = '~/.config/niri/colors.kdl' }
 k9s = { src = 'k9s.yaml', dst = '~/.config/k9s/skins/wallust.yaml' }
+labwc = { src = 'labwc', dst = '~/.config/labwc/themerc-override' }
