@@ -1,28 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <openbox_menu>
-<menu id="root-menu">
-  <item label="TERM">
-    <action name="Execute" command="alacritty" />
-  </item>
-  <item label="BROWSER">
-    <action name="Execute" command="brave" />
-  </item>
-  <item label="SPOTIFY">
-    <action name="Execute" command="spotify" />
-  </item>
-  <separator />
-  <item label="REBOOT">
-    <action name="Execute" command="reboot" />
-  </item>
-  <item label="POWEROFF">
-    <action name="Execute" command="shutdown now" />
-  </item>
-  <item label="LOGOUT">
-    <action name="Exit" />
-  </item>
-  <item label="RECONFIGURE">
-    <action name="Reconfigure" />
-  </item>
-</menu>
+  <menu id="root-menu">
+    <item label="TERM">
+      <action name="Execute" command="alacritty" />
+    </item>
+    <item label="BROWSER">
+      <action name="Execute" command="brave" />
+    </item>
+    <item label="SPOTIFY">
+      <action name="Execute" command="spotify" />
+    </item>
+    <separator />
+    <menu id="vfio" label="VFIO">
+      <item label="DISPLAY-SINGLE">
+        <action name="Execute" command="kanshictl switch vfio" />
+      </item>
+      <item label="DISPLAY-DUAL">
+        <action name="Execute" command="kanshictl switch dual" />
+      </item>
+      <item label="START-VM">
+        <action name="Execute" command="kanshictl switch vfio" />
+        <action name="Execute" command="virsh start windows" />
+      </item>
+    </menu>
+    <separator />
+    <item label="REBOOT">
+      <action name="Execute" command="reboot" />
+    </item>
+    <item label="POWEROFF">
+      <action name="Execute" command="shutdown now" />
+    </item>
+    <item label="LOGOUT">
+      <action name="Exit" />
+    </item>
+    <item label="RECONFIGURE">
+      <action name="Reconfigure" />
+    </item>
+  </menu>
 </openbox_menu>
