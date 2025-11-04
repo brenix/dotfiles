@@ -116,7 +116,7 @@
     </keybind>
     <keybind key="W-Return" layoutDependent="false" onRelease="false" allowWhenLocked="false">
       <action name="Execute">
-        <command>alacritty</command>
+        <command>foot</command>
       </action>
     </keybind>
     <keybind key="W-Space" layoutDependent="false" onRelease="false" allowWhenLocked="false">
@@ -136,7 +136,7 @@
     </keybind>
     <keybind key="W-v" layoutDependent="false" onRelease="false" allowWhenLocked="false">
       <action name="Execute">
-        <command>alacritty -e wiremix</command>
+        <command>foot wiremix</command>
       </action>
     </keybind>
     <keybind key="W-w" layoutDependent="false" onRelease="false" allowWhenLocked="false">

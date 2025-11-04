@@ -3,7 +3,7 @@
 <openbox_menu>
   <menu id="root-menu">
     <item label="TERM">
-      <action name="Execute" command="alacritty" />
+      <action name="Execute" command="foot" />
     </item>
     <item label="BROWSER">
       <action name="Execute" command="brave" />

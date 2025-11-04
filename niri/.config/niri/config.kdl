@@ -72,10 +72,10 @@ prefer-no-csd
 screenshot-path null
 
 binds {
-    MOD+RETURN                          { spawn-sh "alacritty"; }
+    MOD+RETURN                          { spawn-sh "foot"; }
     MOD+D                               { spawn-sh "brave"; }
     MOD+SPACE                           { spawn-sh "fuzzel"; }
-    MOD+V                               { spawn-sh "alacritty -e wiremix"; }
+    MOD+V                               { spawn-sh "foot wiremix"; }
     MOD+SHIFT+V                         { spawn-sh "thunar"; }
     MOD+S                               { spawn-sh "spotify --enable-features=UseOzonePlatform --ozone-platform=wayland"; }
 
