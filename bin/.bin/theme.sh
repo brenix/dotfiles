@@ -102,7 +102,7 @@ map_to_gtk_theme() {
         echo "Colloid-Dark-Nord"
       fi
       ;;
-    "solarized")
+    "solarized" | "selenized")
       if [[ "$variation" == "light" ]]; then
         echo "NumixSolarizedLightBlue"
       else
@@ -271,9 +271,9 @@ map_to_wallust_theme() {
       ;;
     "solarized" | "selenized")
       if [[ "$variation" == "light" ]]; then
-        echo "Solarized-Light"
+        echo "Selenized-Light"
       else
-        echo "Solarized-Dark"
+        echo "Selenized-Dark"
       fi
       ;;
     "tokyo-night")
@@ -429,6 +429,8 @@ Net/IconThemeName "%s"
 
 update_gtk_settings() {
   local -r gtk_theme="$1"
+
+  log_debug "Setting gtk theme to ${gtk_theme}"
 
   # Set the GTK theme using gsettings
   gsettings set org.gnome.desktop.interface gtk-theme "$gtk_theme" 2>/dev/null || {

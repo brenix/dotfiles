@@ -13,8 +13,8 @@ on-touch=invoke-default-action
 
 # [ STYLE OPTIONS ]
 font=Terminus 11
-background-color=#103C48
-text-color=#ADBCBC
+background-color={{background}}
+text-color={{foreground}}
 
 width=320
 height=240
@@ -23,7 +23,7 @@ margin=10
 outer-margin=0
 padding=16
 
-border-color=#58A3FF
+border-color={{color12}}
 border-size=2
 border-radius=0
 
@@ -46,10 +46,10 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#0E3641
-background-color=#DEEDFF
-text-color=#ADBCBC
-progress-color=source #4695F7
+border-color={{background | darken(0.1)}}
+background-color={{color12 | lighten(0.8)}}
+text-color={{foreground}}
+progress-color=source {{color4}}
 outer-margin=0, 0, 30, 0
 margin=10
 padding=2
@@ -64,10 +64,10 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#0E3641
-background-color=#FA5750
-text-color=#ADBCBC
-progress-color=source #4695F7
+border-color={{background | darken(0.1)}}
+background-color={{color1}}
+text-color={{foreground}}
+progress-color=source {{color4}}
 outer-margin=0, 0, 30, 0
 margin=10
 padding=2
@@ -85,10 +85,10 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#0E3641
-background-color=#FA5750
-text-color=#ADBCBC
-progress-color=source #75B938
+border-color={{background | darken(0.1)}}
+background-color={{color1}}
+text-color={{foreground}}
+progress-color=source {{color2}}
 outer-margin=0, 0, 30, 0
 margin=10
 padding=2
@@ -103,10 +103,10 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#0E3641
-background-color=#FBF3D8
-text-color=#ADBCBC
-progress-color=source #DBB32D
+border-color={{background | darken(0.1)}}
+background-color={{color11 | lighten(0.8)}}
+text-color={{foreground}}
+progress-color=source {{color3}}
 outer-margin=0, 0, 30, 0
 margin=10
 padding=2
@@ -124,9 +124,9 @@ layer=overlay
 
 # Critical
 [urgency=critical]
-border-color=#FA5750
-background-color=#103C48
-text-color=#ADBCBC
+border-color={{color1}}
+background-color={{background}}
+text-color={{foreground}}
 default-timeout=0
 
 # Hidden

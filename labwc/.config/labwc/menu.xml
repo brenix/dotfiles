@@ -3,7 +3,7 @@
 <openbox_menu>
   <menu id="root-menu">
     <item label="TERM">
-      <action name="Execute" command="foot" />
+      <action name="Execute" command="footclient -w 1024x768" />
     </item>
     <item label="BROWSER">
       <action name="Execute" command="brave" />
@@ -21,7 +21,7 @@
       </item>
       <item label="START-VM">
         <action name="Execute" command="kanshictl switch vfio" />
-        <action name="Execute" command="virsh start windows" />
+        <action name="Execute" command="virsh -c qemu:///system start windows" />
       </item>
     </menu>
     <separator />

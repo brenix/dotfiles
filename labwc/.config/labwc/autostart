@@ -1,3 +1,4 @@
 waybar &>/dev/null &
 swww-daemon &>/dev/null &
 kanshi &>/dev/null &
+foot --server &>/dev/null &

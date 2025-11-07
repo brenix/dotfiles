@@ -116,7 +116,7 @@
     </keybind>
     <keybind key="W-Return" layoutDependent="false" onRelease="false" allowWhenLocked="false">
       <action name="Execute">
-        <command>foot</command>
+        <command>footclient -w 1024x768</command>
       </action>
     </keybind>
     <keybind key="W-Space" layoutDependent="false" onRelease="false" allowWhenLocked="false">
