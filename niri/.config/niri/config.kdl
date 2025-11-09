@@ -1,3 +1,5 @@
+workspace "browser"
+
 output "eDP-1" {
     scale 1.0
 }
@@ -72,10 +74,10 @@ prefer-no-csd
 screenshot-path null
 
 binds {
-    MOD+RETURN                          { spawn-sh "foot"; }
+    MOD+RETURN                          { spawn-sh "footclient"; }
     MOD+D                               { spawn-sh "brave"; }
     MOD+SPACE                           { spawn-sh "fuzzel"; }
-    MOD+V                               { spawn-sh "foot wiremix"; }
+    MOD+V                               { spawn-sh "footclient wiremix"; }
     MOD+SHIFT+V                         { spawn-sh "thunar"; }
     MOD+S                               { spawn-sh "spotify --enable-features=UseOzonePlatform --ozone-platform=wayland"; }
     MOD+P                               { spawn-sh "~/.bin/fuzzel-playlist.sh"; }
@@ -174,10 +176,18 @@ binds {
     MOD+EQUAL                           { set-column-width "+3%"; }
     MOD+SHIFT+MINUS                     { set-window-height "-3%"; }
     MOD+SHIFT+EQUAL                     { set-window-height "+3%"; }
+    MOD+BRACKETLEFT                     { consume-or-expel-window-left; }
+    MOD+BRACKETRIGHT                    { consume-or-expel-window-right; }
+    MOD+COMMA                           { consume-window-into-column; }
+    MOD+PERIOD                          { expel-window-from-column; }
+    MOD+R                               { switch-preset-column-width; }
+    MOD+SHIFT+R                         { switch-preset-window-height; }
+    MOD+CTRL+R                          { reset-window-height; }
 
     // ─── Modes ───
     MOD+T                               { toggle-window-floating; }
     MOD+SHIFT+F                         { fullscreen-window; }
+    MOD+CTRL+F                          { expand-column-to-available-width; }
     MOD+SHIFT+T                         { toggle-column-tabbed-display; }
     MOD+SHIFT+P                         { power-off-monitors; }
     // ─── Screenshots ───
@@ -204,6 +214,7 @@ window-rule {
 	match app-id="brave"
 	// default-column-width { proportion 1.0; }
 	open-maximized true
+	open-on-workspace "browser"
 }
 
 environment {
@@ -221,3 +232,4 @@ hotkey-overlay {
 
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
+spawn-sh-at-startup "foot --server"
