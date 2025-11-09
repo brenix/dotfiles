@@ -200,6 +200,11 @@ window-rule {
 	open-floating true
 }
 
+window-rule {
+	match app-id="brave"
+	// default-column-width { proportion 1.0; }
+	open-maximized true
+}
 
 environment {
     DISPLAY ":1"
