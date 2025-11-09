@@ -139,6 +139,11 @@
         <command>foot wiremix</command>
       </action>
     </keybind>
+    <keybind key="W-p" layoutDependent="false" onRelease="false" allowWhenLocked="false">
+      <action name="Execute">
+        <command>~/.bin/fuzzel-playlist.sh</command>
+      </action>
+    </keybind>
     <keybind key="W-w" layoutDependent="false" onRelease="false" allowWhenLocked="false">
       <action name="Close">
         
