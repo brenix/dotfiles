@@ -4,6 +4,13 @@
 #         exec startx -- -keeptty
 #     end
 # end
+#
+
+if status is-login; and test (tty) = /dev/tty1
+    if uwsm check may-start
+        exec uwsm start default
+    end
+end
 
 status is-interactive; and begin
     # -- Abbreviations
