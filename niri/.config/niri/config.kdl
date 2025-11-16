@@ -75,7 +75,7 @@ screenshot-path null
 
 binds {
     MOD+RETURN                          { spawn-sh "footclient"; }
-    MOD+D                               { spawn-sh "brave"; }
+    MOD+D                               { spawn-sh "firefox-beta"; }
     MOD+SPACE                           { spawn-sh "fuzzel"; }
     MOD+V                               { spawn-sh "footclient wiremix"; }
     MOD+SHIFT+V                         { spawn-sh "thunar"; }
@@ -206,12 +206,12 @@ binds {
 
 window-rule {
 	match app-id="firefox" title="^Picture-in-Picture$"
-	match app-id="brave" title="^Picture-in-Picture$"
+	match app-id="firefox" title="^Picture-in-Picture$"
 	open-floating true
 }
 
 window-rule {
-	match app-id="brave"
+	match app-id="firefox"
 	// default-column-width { proportion 1.0; }
 	open-maximized true
 	open-on-workspace "browser"
