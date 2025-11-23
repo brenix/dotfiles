@@ -6,4 +6,4 @@ gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle=hintslight
 gtk-xft-rgba="rgb"
-gtk-font-name=Inter 11
+gtk-font-name=Verdana 10

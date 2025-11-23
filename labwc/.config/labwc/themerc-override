@@ -8,19 +8,19 @@ padding.height: 2
 titlebar.height: 10
 
 # window border
-window.active.border.color: #2D5B69
-window.inactive.border.color: #184956
+window.active.border.color: #3C3836
+window.inactive.border.color: #3C3836
 
 # ToggleKeybinds status indicator
-window.active.indicator.toggled-keybind.color: #FA5750
+window.active.indicator.toggled-keybind.color: #EA6962
 
 # window titlebar background
-window.active.title.bg.color: #0B2A32
-window.inactive.title.bg.color: #28505A
+window.active.title.bg.color: #1C1C1C
+window.inactive.title.bg.color: #3E3E3E
 
 # window titlebar text
-window.active.label.text.color: #ADBCBC
-window.inactive.label.text.color: #798484
+window.active.label.text.color: #D4BE98
+window.inactive.label.text.color: #94856A
 window.label.text.justify: center
 
 # window button width and spacing
@@ -32,8 +32,8 @@ window.button.spacing: 0
 window.button.hover.bg.shape: rectangle
 
 # window buttons
-window.active.button.unpressed.image.color: #ADBCBC
-window.inactive.button.unpressed.image.color: #ADBCBC
+window.active.button.unpressed.image.color: #D4BE98
+window.inactive.button.unpressed.image.color: #D4BE98
 
 # window drop-shadows
 window.active.shadow.size: 60
@@ -51,25 +51,25 @@ menu.overlap.x: 0
 menu.overlap.y: 0
 menu.width.min: 50
 menu.width.max: 200
-menu.items.bg.color: #103C48
-menu.items.text.color: #ADBCBC
-menu.items.active.bg.color: #4695F7
-menu.items.active.text.color: #103C48
+menu.items.bg.color: #282828
+menu.items.text.color: #D4BE98
+menu.items.active.bg.color: #7DAEA3
+menu.items.active.text.color: #282828
 menu.items.padding.x: 3
 menu.items.padding.y: 1
 menu.separator.width: 1
 menu.separator.padding.width: 6
 menu.separator.padding.height: 1
-menu.separator.color: #2D5B69
-menu.title.bg.color: #103C48
-menu.title.text.color: #ADBCBC
+menu.separator.color: #3C3836
+menu.title.bg.color: #282828
+menu.title.text.color: #D4BE98
 menu.title.text.justify: Center
 
 # on screen display (window-cycle dialog)
-osd.bg.color: #103C48
-osd.border.color: #184956
+osd.bg.color: #282828
+osd.border.color: #3C3836
 osd.border.width: 1
-osd.label.text.color: #ADBCBC
+osd.label.text.color: #D4BE98
 
 # width can be set as percent (of screen width)
 # example 50% or 75% instead of 600, max 100%

@@ -1,4 +1,5 @@
-theme = "selenized-dark"
+# theme = "selenized-dark"
+theme = "gruvbox-material"
 
 [editor]
 auto-pairs = false

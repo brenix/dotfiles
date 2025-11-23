@@ -1,3 +1,4 @@
+workspace "term"
 workspace "browser"
 
 output "eDP-1" {
@@ -74,10 +75,10 @@ prefer-no-csd
 screenshot-path null
 
 binds {
-    MOD+RETURN                          { spawn-sh "footclient"; }
+    MOD+RETURN                          { spawn-sh "foot"; }
     MOD+D                               { spawn-sh "firefox-beta"; }
     MOD+SPACE                           { spawn-sh "fuzzel"; }
-    MOD+V                               { spawn-sh "footclient wiremix"; }
+    MOD+V                               { spawn-sh "foot wiremix"; }
     MOD+SHIFT+V                         { spawn-sh "thunar"; }
     MOD+S                               { spawn-sh "spotify --enable-features=UseOzonePlatform --ozone-platform=wayland"; }
     MOD+P                               { spawn-sh "~/.bin/fuzzel-playlist.sh"; }
@@ -205,13 +206,18 @@ binds {
 
 
 window-rule {
-	match app-id="firefox" title="^Picture-in-Picture$"
-	match app-id="firefox" title="^Picture-in-Picture$"
+	match app-id="Firefox Beta" title="^Picture-in-Picture$"
+	match app-id="Firefox Beta" title="^Picture-in-Picture$"
 	open-floating true
 }
 
 window-rule {
-	match app-id="firefox"
+	match app-id="foot"
+	open-on-workspace "term"
+}
+
+window-rule {
+	match app-id="Firefox Beta"
 	// default-column-width { proportion 1.0; }
 	open-maximized true
 	open-on-workspace "browser"
@@ -232,4 +238,4 @@ hotkey-overlay {
 
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
-spawn-sh-at-startup "foot --server"
+// spawn-sh-at-startup "foot --server"
