@@ -1,40 +1,40 @@
 # Retina Helix Theme
 # Based on VSCode theme "Retina" by RafaCMur
 
-attributes = "#7DAEA3"
-constant = "#D3869B"
-"constant.character.escape" = "#D3869B"
-"constant.numeric" = "#D3869B"
-constructor = "#A9B665"
-debug = "#D4BE98"
-"diff.delta" = "#D8A657"
-"diff.minus" = "#EA6962"
-"diff.plus" = "#A9B665"
-error = "#EA6962"
-function = "#A9B665"
-hint = "#D3869B"
-info = "#7DAEA3"
-keyword = "#EA6962"
-label = "#D3869B"
-"markup.heading" = "#D8A657"
-"markup.link.text" = "#EA6962"
-"markup.list" = "#D4BE98"
+attributes = "#89B4FA"
+constant = "#F5C2E7"
+"constant.character.escape" = "#F5C2E7"
+"constant.numeric" = "#F5C2E7"
+constructor = "#A6E3A1"
+debug = "#CDD6F4"
+"diff.delta" = "#F9E2AF"
+"diff.minus" = "#F38BA8"
+"diff.plus" = "#A6E3A1"
+error = "#F38BA8"
+function = "#A6E3A1"
+hint = "#F5C2E7"
+info = "#89B4FA"
+keyword = "#F38BA8"
+label = "#F5C2E7"
+"markup.heading" = "#F9E2AF"
+"markup.link.text" = "#F38BA8"
+"markup.list" = "#CDD6F4"
 "markup.quote" = "#6b6a6c"
 "markup.raw" = "#fd9353"
-namespace = "#7DAEA3"
-operator = "#EA6962"
+namespace = "#89B4FA"
+operator = "#F38BA8"
 special = "#fd9353"
-string = "#D8A657"
-type = "#7DAEA3"
-"ui.text" = "#D4BE98"
-"ui.text.focus" = "#D4BE98"
-variable = "#D4BE98"
-"variable.other.member" = "#EA6962"
+string = "#F9E2AF"
+type = "#89B4FA"
+"ui.text" = "#CDD6F4"
+"ui.text.focus" = "#CDD6F4"
+variable = "#CDD6F4"
+"variable.other.member" = "#F38BA8"
 warning = "#fd9353"
 
 # Modifiers for syntax elements
 [comment]
-fg = "#3C3836"
+fg = "#585B70"
 modifiers = ["italic"]
 
 [diagnostic]
@@ -54,15 +54,15 @@ style = "curl"
 
 # Markup styling
 ["markup.bold"]
-fg = "#D8A657"
+fg = "#F9E2AF"
 modifiers = ["bold"]
 
 ["markup.italic"]
-fg = "#D3869B"
+fg = "#F5C2E7"
 modifiers = ["italic"]
 
 ["markup.link.url"]
-fg = "#A9B665"
+fg = "#A6E3A1"
 modifiers = ["underlined"]
 
 ["markup.strikethrough"]
@@ -70,56 +70,56 @@ modifiers = ["crossed_out"]
 
 # UI elements
 ["ui.background"]
-fg = "#D4BE98"
-bg = "#282828"
+fg = "#CDD6F4"
+bg = "#1E1E2E"
 
 ["ui.bufferline"]
-bg = "#282828"
-fg = "#3C3836"
+bg = "#1E1E2E"
+fg = "#585B70"
 
 ["ui.bufferline.active"]
-bg = "#282828"
-fg = "#D8A657"
+bg = "#1E1E2E"
+fg = "#F9E2AF"
 modifiers = ["bold"]
 
 ["ui.bufferline.modified"]
-bg = "#282828"
-fg = "#D8A657"
+bg = "#1E1E2E"
+fg = "#F9E2AF"
 # No direct 'underline' for modified in Helix, but `activeModifiedBorder` is
 
 ["ui.cursor"]
-fg = "#D4BE98"
+fg = "#CDD6F4"
 modifiers = ["reversed"]
 
 ["ui.cursor.insert"]
-fg = "#D4BE98"
+fg = "#CDD6F4"
 modifiers = ["underlined"]
 
 ["ui.cursor.match"]
-fg = "#D8A657"
+fg = "#F9E2AF"
 modifiers = ["underlined"]
 
 ["ui.cursor.select"]
-fg = "#D8A657"
+fg = "#F9E2AF"
 modifiers = ["underlined"]
 
 ["ui.cursorline.primary"]
-bg = "#D4BE980c"
-fg = "#D4BE98"
+bg = "#CDD6F40c"
+fg = "#CDD6F4"
 
 ["ui.gutter"]
-bg = "#282828"
+bg = "#1E1E2E"
 
 ["ui.help"]
 bg = "#363537"
 fg = "#bab6c0"
 
 ["ui.linenr"]
-bg = "#282828"
+bg = "#1E1E2E"
 fg = "#525053"
 
 ["ui.linenr.selected"]
-bg = "#2828280c"
+bg = "#1E1E2E0c"
 fg = "#bab6c0"
 modifiers = ["bold"]
 
@@ -129,11 +129,11 @@ fg = "#bab6c0"
 
 ["ui.menu.scroll"]
 bg = "#363537"
-fg = "#3C3836"
+fg = "#585B70"
 
 ["ui.menu.selected"]
 bg = "#6b6a6c"
-fg = "#D4BE98"
+fg = "#CDD6F4"
 
 ["ui.popup"]
 bg = "#363537"
@@ -153,16 +153,16 @@ bg = "#191919"
 fg = "#6b6a6c"
 
 ["ui.statusline.insert"]
-bg = "#A9B665"
-fg = "#282828"
+bg = "#A6E3A1"
+fg = "#1E1E2E"
 
 ["ui.statusline.normal"]
-bg = "#EA6962"
-fg = "#282828"
+bg = "#F38BA8"
+fg = "#1E1E2E"
 
 ["ui.statusline.select"]
-bg = "#D3869B"
-fg = "#282828"
+bg = "#F5C2E7"
+fg = "#1E1E2E"
 
 ["ui.virtual.indent-guide"]
 fg = "#363537"
@@ -174,5 +174,5 @@ bg = "#525053"
 fg = "#525053"
 
 ["ui.window"]
-bg = "#282828"
+bg = "#1E1E2E"
 
