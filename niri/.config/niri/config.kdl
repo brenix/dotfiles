@@ -76,7 +76,7 @@ screenshot-path null
 
 binds {
     MOD+RETURN                          { spawn-sh "foot"; }
-    MOD+D                               { spawn-sh "firefox-beta"; }
+    MOD+D                               { spawn-sh "brave"; }
     MOD+SPACE                           { spawn-sh "fuzzel"; }
     MOD+V                               { spawn-sh "foot wiremix"; }
     MOD+SHIFT+V                         { spawn-sh "thunar"; }
