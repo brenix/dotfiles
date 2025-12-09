@@ -7,9 +7,7 @@
 #
 
 if status is-login; and test (tty) = /dev/tty1
-    if uwsm check may-start
-        exec uwsm start default
-    end
+    dbus-run-session niri --session
 end
 
 status is-interactive; and begin
@@ -45,7 +43,7 @@ status is-interactive; and begin
     # -- Aliases
     alias bat 'bat --paging=never --style=plain --decorations=never'
     alias diff 'diff --color=auto'
-    alias e 'helix .'
+    alias e 'hx .'
     alias fd 'fd --hidden --no-ignore'
     alias gaa 'git add --all'
     alias ga 'git add'
@@ -77,12 +75,12 @@ status is-interactive; and begin
     alias l 'ls -l'
     alias mkdir 'mkdir -p'
     alias mv 'mv -iv'
-    alias remove 'sudo pacman -Rnsc'
+    alias remove 'sudo xbps-remove -R'
     alias rm 'rm -I'
     alias sw 'git switch'
-    alias v helix
-    alias vi helix
-    alias vim helix
+    alias v hx
+    alias vi hx
+    alias vim hx
     alias virsh 'virsh -c qemu:///system'
     alias vm 'virsh start windows'
     alias x k9s

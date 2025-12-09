@@ -33,7 +33,7 @@
 	gpgsign = true
 
 [core]
-	editor = "helix"
+	editor = "hx"
 	whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol"
 
 [delta]

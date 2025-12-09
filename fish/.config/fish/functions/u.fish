@@ -4,6 +4,8 @@ function u
     # end
     if type -q pacman
         sudo pacman -Syu
+    else if type -q xbps-install
+        sudo xbps-install -Su
     else if type -q apt
         sudo apt update
         sudo apt upgrade -y

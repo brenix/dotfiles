@@ -11,5 +11,7 @@ doppler = "latest"
 dyff = "latest"
 "github:dalance/amber" = "latest"
 "github:joshmedeski/sesh" = "latest"
+"http:wallust" = { version = "3.4.0", url = "https://codeberg.org/explosion-mental/wallust/releases/download/3.4.0/wallust-3.3.0-x86_64-unknown-linux-musl.tar.gz" }
+krew = "latest"
 kubecolor = "latest"
 usage = "latest"
