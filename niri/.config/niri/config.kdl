@@ -33,6 +33,7 @@ input {
 
 
 layout {
+    background-color "transparent"
     gaps 12
     always-center-single-column
     center-focused-column "on-overflow"
@@ -71,12 +72,18 @@ layout {
 
 }
 
+overview {
+  workspace-shadow {
+    off
+  }
+}
+
 prefer-no-csd
 screenshot-path null
 
 binds {
     MOD+RETURN                          { spawn-sh "foot"; }
-    MOD+D                               { spawn-sh "brave"; }
+    MOD+D                               { spawn-sh "helium-browser"; }
     MOD+SPACE                           { spawn-sh "fuzzel"; }
     MOD+V                               { spawn-sh "foot wiremix"; }
     MOD+SHIFT+V                         { spawn-sh "thunar"; }
@@ -206,9 +213,8 @@ binds {
 
 
 window-rule {
-	match app-id="Firefox Beta" title="^Picture-in-Picture$"
-	match app-id="Firefox Beta" title="^Picture-in-Picture$"
-	open-floating true
+   // Clips window contents to the rounded corner boundaries.
+  clip-to-geometry true
 }
 
 window-rule {
@@ -217,19 +223,30 @@ window-rule {
 }
 
 window-rule {
-	match app-id="Firefox Beta"
+	match app-id="helium|firefox|chromium"
 	// default-column-width { proportion 1.0; }
 	open-maximized true
 	open-on-workspace "browser"
 }
 
+// Set the regular wallpaper on the backdrop.
+layer-rule {
+  match namespace="^swww*"
+  place-within-backdrop true
+}
+
 environment {
     DISPLAY ":1"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    QT_QPA_PLATFORMTHEME_QT6 "gtk3"
     QT_QPA_PLATFORM "wayland"
     QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
-    XDG_SESSION_TYPE "wayland"
+    TERMINAL "foot"
     XDG_CURRENT_DESKTOP "niri"
+    XDG_SESSION_TYPE "wayland"
+    NO_AT_BRIDGE "1"
+    GTK_A11Y "none"
 }
 
 hotkey-overlay {
@@ -238,4 +255,4 @@ hotkey-overlay {
 
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
-// spawn-sh-at-startup "foot --server"
+spawn-at-startup "swayidle" "-w" "timeout" "601" "\"niri msg action power-off-monitors\"" "resume" "\"niri msg action power-on-monitors\""
