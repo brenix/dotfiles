@@ -1,10 +1,12 @@
 function bind_dollar
-    switch (commandline -t)[-1]
-        case "!"
-            commandline -f backward-delete-char history-token-search-backward
+    switch (commandline --current-token)[-1]
+        case "*!\\"
+            commandline --insert '$'
+        case "!" "*!"
+            echo $history[1] | read --list --tokenize last_cmdline
+            commandline --current-token -- (string escape --no-quoted -- $last_cmdline[-1])
+            commandline --function repaint
         case "*"
-            commandline -i '$'
+            commandline --insert '$'
     end
 end
-
-bind '$' bind_dollar
