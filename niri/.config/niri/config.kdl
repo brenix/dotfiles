@@ -255,5 +255,5 @@ hotkey-overlay {
 
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
-spawn-sh-at-startup "swayidle -w timeout 300 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors'"
+spawn-sh-at-startup "swayidle -w timeout 600 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors'"
 
