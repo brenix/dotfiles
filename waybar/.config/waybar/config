@@ -80,8 +80,8 @@
 
     "custom/mpd": {
       "escape": true,
-      "exec": "mpc current --format '{\"text\": \"%title%\", \"tooltip\": \"%name%\"}' ",
-      "exec-if": "mpc status \"%state%\"",
+      "exec": "mpc --host=/run/user/1000/mpd/socket current --format '{\"text\": \"%title%\", \"tooltip\": \"%name%\"}' ",
+      "exec-if": "mpc --host=/run/user/1000/mpd/socket status \"%state%\"",
       "format": "{icon} {text}",
       "format-icons": {
         "Playing": "\uf500",
