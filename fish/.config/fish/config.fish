@@ -2,7 +2,7 @@ if status is-login; and test (tty) = /dev/tty1
     set -l distro (grep -Po '(?<=^ID=).*' /etc/os-release | string trim -c '"')
     switch $distro
         case arch cachyos
-            if type -q uswm
+            if type -q uwsm
                 if uwsm check may-start
                     exec uwsm start default
                 end
