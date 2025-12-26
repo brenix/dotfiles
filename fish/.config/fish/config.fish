@@ -1,14 +1,18 @@
-# Automatically start X on TTY1
-# if status is-login
-#     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-#         exec startx -- -keeptty
-#     end
-# end
-#
-
 if status is-login; and test (tty) = /dev/tty1
-    if uwsm check may-start
-        exec uwsm start default
+    set -l distro (grep -Po '(?<=^ID=).*' /etc/os-release | string trim -c '"')
+    switch $distro
+        case arch cachyos
+            if type -q uswm
+                if uwsm check may-start
+                    exec uwsm start default
+                end
+            else if type -q startx
+                exec startx -- -keeptty
+            end
+        case void
+            if type -q dbus-run-session
+                dbus-run-session niri --session
+            end
     end
 end
 
@@ -45,7 +49,6 @@ status is-interactive; and begin
     # -- Aliases
     alias bat 'bat --paging=never --style=plain --decorations=never'
     alias diff 'diff --color=auto'
-    alias e 'helix .'
     alias fd 'fd --hidden --no-ignore'
     alias gaa 'git add --all'
     alias ga 'git add'
@@ -77,32 +80,31 @@ status is-interactive; and begin
     alias l 'ls -l'
     alias mkdir 'mkdir -p'
     alias mv 'mv -iv'
-    alias remove 'sudo pacman -Rnsc'
     alias rm 'rm -I'
     alias sw 'git switch'
-    alias v helix
-    alias vi helix
-    alias vim helix
+    alias v hx
+    alias vi hx
+    alias vim hx
     alias virsh 'virsh -c qemu:///system'
     alias vm 'virsh start windows'
     alias x k9s
     alias zad 'ls -d */ | xargs -I {} zoxide add {}'
 
     # -- CLI tools
-    if command -q fzf
+    if type -q fzf
         fzf --fish | source
         set -gx FZF_DEFAULT_OPTS "--ansi --color=bg:-1,bg+:-1,spinner:6,hl:7,fg:7,header:6,info:7,pointer:1,marker:0,prompt:2,hl+:2"
     end
 
-    if command -q zoxide
+    if type -q zoxide
         zoxide init fish | source
     end
 
-    if command -q starship
+    if type -q starship
         starship init fish | source
     end
 
-    if command -q mise
+    if type -q mise
         mise activate fish | source
     end
 
