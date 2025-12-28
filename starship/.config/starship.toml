@@ -34,8 +34,8 @@ disabled = false
 format = "[\\[$context:$namespace\\]]($style) "
 style = "bold red"
 [[kubernetes.contexts]]
-context_pattern = ".*(dev|local).*"
-style = "blue"
+context_pattern = ".*(dev|local|main).*"
+style = "green"
 
 [python]
 format = "[(($virtualenv)) ]($style)"

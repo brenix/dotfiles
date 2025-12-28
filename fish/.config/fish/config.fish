@@ -21,7 +21,6 @@ status is-interactive; and begin
     abbr --add -- bw rbw
     abbr --add -- calc qalc
     abbr --add -- cat bat
-    abbr --add -- curl curlie
     abbr --add -- k kubectl
     abbr --add -- kdd 'kubectl describe deployment'
     abbr --add -- kdno 'kubectl describe node'
