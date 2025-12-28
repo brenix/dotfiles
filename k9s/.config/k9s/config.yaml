@@ -1,3 +1,4 @@
+---
 k9s:
   liveViewAutoRefresh: true
   logger:
@@ -12,4 +13,4 @@ k9s:
     headless: true
     logoless: true
     noIcons: true
-    skin: wallust
+    skin: catppuccin
