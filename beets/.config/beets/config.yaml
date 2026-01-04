@@ -1,0 +1,39 @@
+---
+directory: /mnt/main/media/music
+library: /mnt/main/media/music/beets.db
+asciify_paths: yes
+item_fields:
+  multidisc: 1 if disctotal > 1 else 0
+paths:
+  default: Albums/%asciify{$albumartist}/$year - %asciify{$album}%aunique{}/%if{$multidisc,$disc-}$track-%asciify{$title}
+  singleton: Singles/$genre/$artist - $title
+  comp: Compilations/$album%aunique{}/$track $title
+  albumtype_soundtrack: Soundtracks/%asciify{$album}/$track-%asciify{$title}
+plugins: musicbrainz inline permissions lastgenre
+import:
+  move: yes
+  incremental: yes
+  resume: ask
+  quiet_fallback: asis
+  default_action: asis
+permissions:
+  file: 644
+  dir: 755
+lastgenre:
+  auto: yes
+  count: 1
+  force: yes
+  keep_existing: no
+  source: artist
+  whitelist: /mnt/main/media/music/genres.txt
+replace:
+  '[\\/]': _
+  '^\.': _
+  '[\x00-\x1f]': _
+  '[<>:"\?\*\|]': _
+  '\.$': _
+  '\s+$': ''
+  '^\s+': ''
+  '[\u2010-\u2015]': '-'
+  '^-': _
+  '[…]': '...'
