@@ -48,5 +48,5 @@ progressbar_color = "black"
 progressbar_elapsed_color = "green"
 song_columns_list_format = "(40)[cyan]{A|f} (40)[green]{tE} (20)[cyan]{bE}"
 song_library_format = {{%A - %t} (%b)}|{%f}
-song_list_format = "{%A - }{%t}$R{%l}"
+song_list_format = "{%A - }{%t}$R{[%l]}"
 song_status_format = "{{%A{ $5//$9 }}{%t$/b}}|{$b%f$/b}"
