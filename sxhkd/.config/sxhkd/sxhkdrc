@@ -5,7 +5,7 @@ super + shift + Return
 	alacritty --class floating
 
 super + d
-	helium-browser
+	firefox
 
 super + w 
 	bspc node -{c,k}
