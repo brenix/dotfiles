@@ -76,13 +76,17 @@ status is-interactive; and begin
     alias gst 'git status'
     alias ip 'ip -color=auto'
     alias kubectl kubecolor
-    alias ls 'lsd --group-directories-first'
+    alias ls 'eza --group-directories-first --icons --git --git-repos --no-user --no-time --no-filesize'
     alias la 'ls -Al'
     alias l 'ls -l'
     alias mkdir 'mkdir -p'
     alias mv 'mv -iv'
     alias rm 'rm -I'
     alias sw 'git switch'
+    alias wts 'wt switch'
+    alias wtr 'wt remove'
+    alias wtl 'wt select'
+    alias wtm 'wt merge'
     alias v hx
     alias vi hx
     alias vim hx

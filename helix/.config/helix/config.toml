@@ -1,5 +1,4 @@
-# theme = "selenized-dark"
-theme = "wallust"
+theme = "catppuccin"
 
 [editor]
 auto-pairs = false

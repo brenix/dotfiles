@@ -1,14 +1,17 @@
+---
 icons:
   when: never
+  theme: fancy
 
 color:
   when: auto
+  theme: default
 
 blocks:
-  - permission
-  # - user
-  # - size
-  # - date
-  - name
+- permission
+- user
+- size
+- date
+- name
 
 date: "+%Y-%m-%d"
