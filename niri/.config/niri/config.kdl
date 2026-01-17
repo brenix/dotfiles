@@ -256,6 +256,10 @@ hotkey-overlay {
     skip-at-startup
 }
 
+// debug {
+//     render-drm-device "/dev/dri/renderD129"
+// }
+
 spawn-at-startup "waybar"
 spawn-at-startup "kanshi"
 spawn-at-startup "swww-daemon"
