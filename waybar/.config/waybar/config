@@ -36,7 +36,7 @@
 
     "memory": {
       "interval": 30,
-      "format": "\uefc5  {used:0.1f}G"
+      "format": "\ue266  {used:0.1f}G"
     },
 
     "network": {

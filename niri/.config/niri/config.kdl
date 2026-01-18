@@ -25,6 +25,7 @@ input {
 
     mouse {
         accel-profile "flat"
+        accel-speed 0
         middle-emulation
     }
 
@@ -225,12 +226,12 @@ window-rule {
 // 	open-on-workspace "term"
 // }
 
-window-rule {
-	match app-id="helium|firefox|chromium"
-	// default-column-width { proportion 1.0; }
-	open-maximized true
-	open-on-workspace "browser"
-}
+// window-rule {
+// 	match app-id="helium|firefox|chromium"
+// 	// default-column-width { proportion 1.0; }
+// 	open-maximized true
+// 	open-on-workspace "browser"
+// }
 
 // Set the regular wallpaper on the backdrop.
 layer-rule {
