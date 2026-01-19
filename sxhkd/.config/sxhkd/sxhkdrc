@@ -19,6 +19,9 @@ super + v
 super + space
 	rofi -show run
 
+super + shift + p
+	$HOME/.bin/rofi-playlist.sh
+
 super + Escape
 	pkill -USR1 -x sxhkd
 

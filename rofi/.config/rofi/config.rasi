@@ -6,6 +6,9 @@ configuration {
     fixed-num-lines: false;
     font: "Terminus 12";
     show-icons: false;
+    matching: "fuzzy";
+    sort: true;
+    sorting-method: "fzf";
 }
 
 * {
@@ -38,7 +41,6 @@ prompt {
 }
 
 listview {
-    lines:        10;
     columns:      1;
     fixed-height: false;
     border:       0px;
