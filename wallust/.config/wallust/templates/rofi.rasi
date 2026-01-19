@@ -1,0 +1,31 @@
+* {
+    /* Base Colors */
+    background:                  rgba({{background | rgb}}, 95%);
+    foreground:                  rgba({{foreground | rgb}}, 100%);
+    border-color:                rgba({{color8 | rgb}}, 100%);
+    
+    /* Functional Colors */
+    normal-background:           transparent;
+    normal-foreground:           @foreground;
+    
+    /* Selection (Accent) */
+    selected-normal-background:  rgba({{color4 | rgb}}, 100%);
+    selected-normal-foreground:  rgba({{background | rgb}}, 100%);
+
+    /* Alternate Rows (Set to transparent for a clean flat look) */
+    alternate-normal-background: transparent;
+    alternate-normal-foreground: @foreground;
+
+    /* Urgent State (Usually Red) */
+    urgent-background:           rgba({{color1 | rgb}}, 100%);
+    urgent-foreground:           rgba({{foreground | rgb}}, 100%);
+    selected-urgent-background:  rgba({{color9 | rgb}}, 100%);
+    
+    /* Active State (Usually Green or Cyan) */
+    active-background:           rgba({{color2 | rgb}}, 100%);
+    active-foreground:           rgba({{background | rgb}}, 100%);
+    selected-active-background:  rgba({{color10 | rgb}}, 100%);
+
+    /* Required for transparency to work correctly in Rofi */
+    background-color:            transparent;
+}

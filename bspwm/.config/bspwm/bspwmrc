@@ -34,4 +34,5 @@ polybar -r secondary &
 $HOME/.fehbg &
 
 # -- Misc
+pgrep -x picom >/dev/null || picom -b
 # xgamma -gamma 1.08 &

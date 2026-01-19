@@ -44,3 +44,4 @@ polybar = { src = 'polybar.ini', target = '~/.config/polybar/wallust.ini' }
 k9s = { src = 'k9s.yaml', dst = '~/.config/k9s/skins/wallust.yaml' }
 labwc = { src = 'labwc', dst = '~/.config/labwc/themerc-override' }
 foot = { src = 'foot.ini', dst = '~/.config/foot/theme.ini' }
+rofi = { src = 'rofi.rasi', dst = '~/.config/rofi/wallust.rasi' }

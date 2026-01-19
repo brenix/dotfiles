@@ -1,0 +1,62 @@
+@import "wallust"
+
+configuration {
+    display-run: ">";
+    modes: "window,drun,run";
+    fixed-num-lines: false;
+    font: "Terminus 12";
+    show-icons: false;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+    /* Use the background/foreground from your wallust import */
+    background-color: transparent;
+    text-color:       @foreground;
+}
+
+window {
+    width:            30%;
+    border:           1px;
+    border-color:     @border-color;
+    background-color: @background;
+}
+
+mainbox {
+    children: [inputbar, listview];
+}
+
+inputbar {
+    children: [prompt, entry];
+    padding:  2px;
+}
+
+prompt {
+    padding: 0px 4px 0px 0px;
+}
+
+listview {
+    lines:        10;
+    columns:      1;
+    fixed-height: false;
+    border:       0px;
+    scrollbar:    false;
+}
+
+element {
+    padding: 0px 4px;
+}
+
+element selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    highlight:        none;
+    vertical-align:   0.5;
+}
