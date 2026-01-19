@@ -19,7 +19,7 @@ super + v
 super + space
 	rofi -show run
 
-super + shift + p
+super + p
 	$HOME/.bin/rofi-playlist.sh
 
 super + Escape
@@ -29,7 +29,7 @@ super + shift + space
 	bspc node -t {floating,tiled}
 
 Print
-   flameshot
+   flameshot gui
 
 super + shift + {q,r}
 	bspc {quit,wm -r}
