@@ -55,9 +55,6 @@ super + ctrl + {m,x,y,z}
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
-
 super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 

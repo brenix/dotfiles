@@ -3,8 +3,8 @@ import = ["./themes/wallust.toml"]
 live_config_reload = true
 working_directory = "None"
 
-# [env]
-# WINIT_X11_SCALE_FACTOR = "1"
+[env]
+WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
 size = 14
@@ -12,7 +12,7 @@ offset.y = -1
 # offset.x = -1
 
 [font.normal]
-family = "Gohu GohuFont"
+family = "GohuFont"
 style = "Regular"
 
 [font.bold]
