@@ -22,8 +22,10 @@ status is-interactive; and begin
     abbr --add -- bw rbw
     abbr --add -- calc qalc
     abbr --add -- cat bat
-    abbr --add -- ds 'kanshictl switch vfio'
-    abbr --add -- de 'kanshictl switch dual'
+    # abbr --add -- ds 'kanshictl switch vfio'
+    # abbr --add -- de 'kanshictl switch dual'
+    abbr --add -- ds 'xrandr --output HDMI-A-0 --off'
+    abbr --add -- de 'xrandr --output HDMI-A-0 --auto --right-of DisplayPort-0; sleep 1; bspc desktop 3 -m HDMI-A-0; bspc desktop 4 -m HDMI-A-0'
     abbr --add -- k kubectl
     abbr --add -- kdd 'kubectl describe deployment'
     abbr --add -- kdno 'kubectl describe node'
