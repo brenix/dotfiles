@@ -11,7 +11,7 @@ super + w
 	bspc node -{c,k}
 
 super + s
-	spotify
+	spotify --force-device-scale-factor=1
 
 super + v
 	alacritty -e wiremix
