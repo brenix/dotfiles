@@ -1,0 +1,35 @@
+[global]
+monitor = 0
+follow = keyboard
+origin = top-right
+offset = (2, 20)
+font = "Terminus 10"
+alignment = left
+stack_duplicates = true
+hide_duplicate_count = false
+format = "<b>%a</b>\n%s\n%b"
+frame_color = "{{color8}}"
+frame_width = 1
+highlight = "{{color5}}"
+separator_color= "{{foreground}}"
+
+[experimental]
+per_monitor_dpi = false
+
+[urgency_low]
+timeout = 2
+background = "{{background | darken(0.1)}}ee"
+foreground = "{{foreground}}"
+frame_color = "{{color4}}"
+
+[urgency_normal]
+timeout = 3
+background = "{{background | darken(0.1)}}80"
+foreground = "{{foreground}}"
+frame_color = "{{color6}}"
+
+[urgency_critical]
+timeout = 4
+background = "{{background | darken(0.1)}}ee"
+foreground = "{{foreground}}"
+frame_color = "{{color9}}"
