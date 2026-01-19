@@ -20,7 +20,7 @@ URxvt*transparent: false
 URxvt*cursorBlink: true
 URxvt*urgentOnBell: true
 URxvt*letterSpace: -2
-URxvt*font: xft:Terminus:size=9
+URxvt*font: xft:Gohu GohuFont:size=14
 
 Xcursor.theme: Colloid-dark-cursors
 Xcursor.size: 22

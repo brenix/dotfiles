@@ -5,7 +5,7 @@ super + shift + Return
 	alacritty --class floating
 
 super + d
-	brave
+	helium-browser
 
 super + w 
 	bspc node -{c,k}
@@ -14,7 +14,7 @@ super + s
 	spotify
 
 super + v
-	pavucontrol
+	alacritty -e wiremix
 
 super + space
 	rofi -show run
@@ -93,5 +93,32 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-{XF86MonBrightnessUp,XF86MonBrightnessDown}
-	light -{A,U} 10
+XF86MonBrightnessUp
+	brightnessctl --class=backlight set +5%
+
+XF86MonBrightnessDown
+	brightnessctl --class=backlight set 5%-
+
+XF86AudioRaiseVolume
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+
+
+XF86AudioLowerVolume
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-
+
+XF86AudioMute
+	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+XF86AudioMicMute
+	wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+
+XF86AudioNext
+	playerctl next
+
+XF86AudioPause
+	playerctl play-pause
+
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioPrev
+	playerctl previous

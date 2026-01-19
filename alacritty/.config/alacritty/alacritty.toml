@@ -7,13 +7,12 @@ working_directory = "None"
 # WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 10
-offset.y = -2
+size = 14
+offset.y = -1
 # offset.x = -1
 
 [font.normal]
-family = "Terminus"
-# family = "MonoLisa"
+family = "Gohu GohuFont"
 style = "Regular"
 
 [font.bold]
@@ -28,7 +27,8 @@ bindings = [
 save_to_clipboard = true
 
 [window]
-padding = { x = 0, y = 3 }
+opacity = 0.75
+padding = { x = 0, y = 0 }
 
 [[keyboard.bindings]]
 chars = "\u0018T"
