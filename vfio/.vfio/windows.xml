@@ -33,8 +33,8 @@
     <vcpupin vcpu='13' cpuset='30'/>
     <vcpupin vcpu='14' cpuset='15'/>
     <vcpupin vcpu='15' cpuset='31'/>
-    <emulatorpin cpuset='0-7,16-23'/>
-    <iothreadpin iothread='1' cpuset='0-7,16-23'/>
+    <emulatorpin cpuset='0,16'/>
+    <iothreadpin iothread='1' cpuset='1,17'/>
   </cputune>
   <resource>
     <partition>/machine</partition>
@@ -94,6 +94,7 @@
     <vmport state='off'/>
     <smm state='on'/>
     <ioapic driver='kvm'/>
+    <ps2 state='off'/>
   </features>
   <cpu mode='host-passthrough' check='none' migratable='off'>
     <topology sockets='1' dies='1' clusters='1' cores='8' threads='2'/>
@@ -101,6 +102,7 @@
     <feature policy='require' name='topoext'/>
     <feature policy='disable' name='svm'/>
     <feature policy='disable' name='smep'/>
+    <feature policy='require' name='invtsc'/>
   </cpu>
   <clock offset='localtime'>
     <timer name='rtc' tickpolicy='catchup'/>
@@ -118,7 +120,7 @@
   <devices>
     <emulator>/usr/bin/qemu-system-x86_64</emulator>
     <disk type='block' device='disk'>
-      <driver name='qemu' type='raw' cache='none' io='threads' iothread='1'/>
+      <driver name='qemu' type='raw' cache='none' io='io_uring' iothread='1'/>
       <source dev='/dev/disk/by-id/ata-Samsung_SSD_870_EVO_1TB_S625NJ0R432717H-part2'/>
       <target dev='vda' bus='virtio'/>
       <address type='pci' domain='0x0000' bus='0x09' slot='0x00' function='0x0'/>
@@ -187,11 +189,6 @@
     <controller type='sata' index='0'>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x1f' function='0x2'/>
     </controller>
-    <input type='evdev'>
-      <source dev='/dev/input/by-id/usb-Beijing_Jingyunmake_Technology_Co.__Ltd._G-Wolves_HSK_Pro_Wireless_Mouse-N_ADC2149E82440365-event-mouse'/>
-    </input>
-    <input type='mouse' bus='ps2'/>
-    <input type='keyboard' bus='ps2'/>
     <input type='mouse' bus='virtio'>
       <address type='pci' domain='0x0000' bus='0x07' slot='0x00' function='0x0'/>
     </input>
@@ -252,7 +249,9 @@
   </devices>
   <qemu:commandline>
     <qemu:arg value='-fw_cfg'/>
-    <qemu:arg value='opt/ovmf/X-PciMmio64Mb,string=65536'/>
+    <qemu:arg value='name=opt/ovmf/X-PciMmio64Mb,string=65536'/>
+    <qemu:arg value='-object'/>
+    <qemu:arg value='input-linux,id=mouse1,evdev=/dev/input/by-id/usb-Beijing_Jingyunmake_Technology_Co.__Ltd._G-Wolves_HSK_Pro_Wireless_Mouse-N_ADC2149E82440365-event-mouse'/>
     <qemu:arg value='-object'/>
     <qemu:arg value='input-linux,id=kbd1,evdev=/dev/input/by-id/usb-NuPhy_NuPhy_Air60_HE_74497A152605-event-kbd,grab_all=on,repeat=on,grab-toggle=scrolllock'/>
   </qemu:commandline>
