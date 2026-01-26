@@ -23,8 +23,6 @@ bspc config focused_border_color "#6c7086"
 bspc rule -a "*:floating" state=floating
 bspc rule -a pavucontrol state=floating
 
-xrdb -merge ~/.Xresources &
-
 # -- Bar
 killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
