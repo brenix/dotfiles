@@ -17,8 +17,8 @@ bspc config borderless_monocle true
 bspc config gapless_monocle true
 bspc config focus_follows_pointer true
 
-bspc config normal_border_color "#313244"
-bspc config focused_border_color "#6c7086"
+bspc config normal_border_color "#3b4252"
+bspc config focused_border_color "#4c566a"
 
 bspc rule -a "*:floating" state=floating
 bspc rule -a pavucontrol state=floating
@@ -34,6 +34,6 @@ polybar -r secondary &
 $HOME/.fehbg &
 
 # -- Misc
-pgrep -x picom >/dev/null || picom -b
+# pgrep -x picom >/dev/null || picom -b
 dunst &
 # xgamma -gamma 1.08 &

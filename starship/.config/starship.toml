@@ -5,8 +5,8 @@ format = "$username$hostname$kubernetes$directory$git_branch$git_commit$git_stat
 format = "[$profile \\($region\\) ]($style)"
 
 [character]
-error_symbol = "[▶](bold red)"
-success_symbol = "[▶](bold green)"
+error_symbol = "[\\$](bold red)"
+success_symbol = "[\\$](bold green)"
 
 [directory]
 format = "[$path ]($style)"

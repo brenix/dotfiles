@@ -7,12 +7,12 @@ working_directory = "None"
 WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 14
-offset.y = -1
+size = 12
+offset.y = -2
 # offset.x = -1
 
 [font.normal]
-family = "GohuFont"
+family = "Monego Nerd Font Fix"
 style = "Regular"
 
 [font.bold]
@@ -27,7 +27,7 @@ bindings = [
 save_to_clipboard = true
 
 [window]
-opacity = 0.75
+#opacity = 0.75
 padding = { x = 0, y = 0 }
 
 [[keyboard.bindings]]
