@@ -6,8 +6,8 @@
       <libosinfo:os id="http://microsoft.com/win/11"/>
     </libosinfo:libosinfo>
   </metadata>
-  <memory unit='KiB'>33554432</memory>
-  <currentMemory unit='KiB'>33554432</currentMemory>
+  <memory unit='KiB'>16777216</memory>
+  <currentMemory unit='KiB'>16777216</currentMemory>
   <memoryBacking>
     <hugepages>
       <page size='1048576' unit='KiB'/>
@@ -15,30 +15,28 @@
     <nosharepages/>
     <locked/>
   </memoryBacking>
-  <vcpu placement='static'>16</vcpu>
+  <vcpu placement='static'>14</vcpu>
   <iothreads>1</iothreads>
   <iothreadids>
     <iothread id='1'/>
   </iothreadids>
   <cputune>
-    <vcpupin vcpu='0' cpuset='8'/>
-    <vcpupin vcpu='1' cpuset='24'/>
-    <vcpupin vcpu='2' cpuset='9'/>
-    <vcpupin vcpu='3' cpuset='25'/>
-    <vcpupin vcpu='4' cpuset='10'/>
-    <vcpupin vcpu='5' cpuset='26'/>
-    <vcpupin vcpu='6' cpuset='11'/>
-    <vcpupin vcpu='7' cpuset='27'/>
-    <vcpupin vcpu='8' cpuset='12'/>
-    <vcpupin vcpu='9' cpuset='28'/>
-    <vcpupin vcpu='10' cpuset='13'/>
-    <vcpupin vcpu='11' cpuset='29'/>
-    <vcpupin vcpu='12' cpuset='14'/>
-    <vcpupin vcpu='13' cpuset='30'/>
-    <vcpupin vcpu='14' cpuset='15'/>
-    <vcpupin vcpu='15' cpuset='31'/>
-    <emulatorpin cpuset='0,16'/>
-    <iothreadpin iothread='1' cpuset='1,17'/>
+    <vcpupin vcpu='0' cpuset='9'/>
+    <vcpupin vcpu='1' cpuset='25'/>
+    <vcpupin vcpu='2' cpuset='10'/>
+    <vcpupin vcpu='3' cpuset='26'/>
+    <vcpupin vcpu='4' cpuset='11'/>
+    <vcpupin vcpu='5' cpuset='27'/>
+    <vcpupin vcpu='6' cpuset='12'/>
+    <vcpupin vcpu='7' cpuset='28'/>
+    <vcpupin vcpu='8' cpuset='13'/>
+    <vcpupin vcpu='9' cpuset='29'/>
+    <vcpupin vcpu='10' cpuset='14'/>
+    <vcpupin vcpu='11' cpuset='30'/>
+    <vcpupin vcpu='12' cpuset='15'/>
+    <vcpupin vcpu='13' cpuset='31'/>
+    <emulatorpin cpuset='8,24'/>
+    <iothreadpin iothread='1' cpuset='8,24'/>
   </cputune>
   <resource>
     <partition>/machine</partition>
@@ -103,7 +101,7 @@
     <ps2 state='off'/>
   </features>
   <cpu mode='host-passthrough' check='none' migratable='off'>
-    <topology sockets='1' dies='1' clusters='1' cores='8' threads='2'/>
+    <topology sockets='1' dies='1' clusters='1' cores='7' threads='2'/>
     <cache mode='passthrough'/>
     <feature policy='require' name='topoext'/>
     <feature policy='disable' name='svm'/>
@@ -215,32 +213,26 @@
       </backend>
     </tpm>
     <sound model='ich9'>
+      <codec type='micro'/>
+      <audio id='1'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x1b' function='0x0'/>
     </sound>
     <audio id='1' type='pipewire' runtimeDir='/run/user/1000'>
-      <input name='qemuinput'/>
-      <output name='qemuoutput'/>
+      <input mixingEngine='no' name='qemuinput'/>
+      <output mixingEngine='no' name='qemuoutput'/>
     </audio>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <source>
-        <address domain='0x0000' bus='0x0b' slot='0x00' function='0x0'/>
+        <address domain='0x0000' bus='0x0e' slot='0x00' function='0x0'/>
       </source>
-      <boot order='2'/>
-      <address type='pci' domain='0x0000' bus='0x02' slot='0x00' function='0x0' multifunction='on'/>
+      <address type='pci' domain='0x0000' bus='0x02' slot='0x00' function='0x0'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <source>
-        <address domain='0x0000' bus='0x0b' slot='0x00' function='0x1'/>
+        <address domain='0x0000' bus='0x0e' slot='0x00' function='0x1'/>
       </source>
       <rom bar='off'/>
-      <address type='pci' domain='0x0000' bus='0x02' slot='0x00' function='0x1'/>
-    </hostdev>
-    <hostdev mode='subsystem' type='pci' managed='yes'>
-      <source>
-        <address domain='0x0000' bus='0x10' slot='0x00' function='0x3'/>
-      </source>
-      <rom bar='off'/>
-      <address type='pci' domain='0x0000' bus='0x0a' slot='0x00' function='0x0'/>
+      <address type='pci' domain='0x0000' bus='0x06' slot='0x00' function='0x0'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <source>
@@ -248,6 +240,13 @@
       </source>
       <rom bar='off'/>
       <address type='pci' domain='0x0000' bus='0x03' slot='0x00' function='0x0'/>
+    </hostdev>
+    <hostdev mode='subsystem' type='pci' managed='yes'>
+      <source>
+        <address domain='0x0000' bus='0x10' slot='0x00' function='0x3'/>
+      </source>
+      <rom bar='off'/>
+      <address type='pci' domain='0x0000' bus='0x0a' slot='0x00' function='0x0'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <source>
@@ -270,7 +269,7 @@
     <qemu:arg value='input-linux,id=mouse1,evdev=/dev/input/by-id/usb-Beijing_Jingyunmake_Technology_Co.__Ltd._G-Wolves_HSK_Pro_Wireless_Mouse-N_ADC2149E82440365-event-mouse'/>
     <qemu:arg value='-object'/>
     <qemu:arg value='input-linux,id=kbd1,evdev=/dev/input/by-id/usb-NuPhy_NuPhy_Air60_HE_74497A152605-event-kbd,grab_all=on,repeat=on,grab-toggle=scrolllock'/>
-    <qemu:env name='PIPEWIRE_LATENCY' value='128/48000'/>
+    <qemu:env name='PIPEWIRE_LATENCY' value='256/32000'/>
   </qemu:commandline>
 </domain>
 
