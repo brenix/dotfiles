@@ -15,28 +15,30 @@
     <nosharepages/>
     <locked/>
   </memoryBacking>
-  <vcpu placement='static'>14</vcpu>
+  <vcpu placement='static'>16</vcpu>
   <iothreads>1</iothreads>
   <iothreadids>
     <iothread id='1'/>
   </iothreadids>
   <cputune>
-    <vcpupin vcpu='0' cpuset='9'/>
-    <vcpupin vcpu='1' cpuset='25'/>
-    <vcpupin vcpu='2' cpuset='10'/>
-    <vcpupin vcpu='3' cpuset='26'/>
-    <vcpupin vcpu='4' cpuset='11'/>
-    <vcpupin vcpu='5' cpuset='27'/>
-    <vcpupin vcpu='6' cpuset='12'/>
-    <vcpupin vcpu='7' cpuset='28'/>
-    <vcpupin vcpu='8' cpuset='13'/>
-    <vcpupin vcpu='9' cpuset='29'/>
-    <vcpupin vcpu='10' cpuset='14'/>
-    <vcpupin vcpu='11' cpuset='30'/>
-    <vcpupin vcpu='12' cpuset='15'/>
-    <vcpupin vcpu='13' cpuset='31'/>
-    <emulatorpin cpuset='8,24'/>
-    <iothreadpin iothread='1' cpuset='8,24'/>
+    <vcpupin vcpu='0' cpuset='8'/>
+    <vcpupin vcpu='1' cpuset='24'/>
+    <vcpupin vcpu='2' cpuset='9'/>
+    <vcpupin vcpu='3' cpuset='25'/>
+    <vcpupin vcpu='4' cpuset='10'/>
+    <vcpupin vcpu='5' cpuset='26'/>
+    <vcpupin vcpu='6' cpuset='11'/>
+    <vcpupin vcpu='7' cpuset='27'/>
+    <vcpupin vcpu='8' cpuset='12'/>
+    <vcpupin vcpu='9' cpuset='28'/>
+    <vcpupin vcpu='10' cpuset='13'/>
+    <vcpupin vcpu='11' cpuset='29'/>
+    <vcpupin vcpu='12' cpuset='14'/>
+    <vcpupin vcpu='13' cpuset='30'/>
+    <vcpupin vcpu='14' cpuset='15'/>
+    <vcpupin vcpu='15' cpuset='31'/>
+    <emulatorpin cpuset='0,7,16,23'/>
+    <iothreadpin iothread='1' cpuset='0,7,16,23'/>
   </cputune>
   <resource>
     <partition>/machine</partition>
@@ -65,6 +67,7 @@
     </firmware>
     <loader readonly='yes' secure='yes' type='pflash' format='raw'>/usr/share/edk2/x64/OVMF_CODE.secboot.4m.fd</loader>
     <nvram template='/usr/share/edk2/x64/OVMF_VARS.4m.fd' templateFormat='raw' format='raw'>/var/lib/libvirt/qemu/nvram/windows_VARS.fd</nvram>
+    <boot dev='hd'/>
     <bootmenu enable='no'/>
     <smbios mode='sysinfo'/>
   </os>
@@ -101,11 +104,10 @@
     <ps2 state='off'/>
   </features>
   <cpu mode='host-passthrough' check='none' migratable='off'>
-    <topology sockets='1' dies='1' clusters='1' cores='7' threads='2'/>
+    <topology sockets='1' dies='1' clusters='1' cores='8' threads='2'/>
     <cache mode='passthrough'/>
     <feature policy='require' name='topoext'/>
     <feature policy='disable' name='svm'/>
-    <feature policy='require' name='invtsc'/>
     <feature policy='disable' name='smep'/>
     <feature policy='disable' name='smap'/>
     <feature policy='disable' name='mpx'/>
@@ -120,7 +122,6 @@
     <timer name='pit' tickpolicy='delay'/>
     <timer name='hpet' present='no'/>
     <timer name='hypervclock' present='yes'/>
-    <timer name='tsc' present='yes' mode='native'/>
   </clock>
   <on_poweroff>destroy</on_poweroff>
   <on_reboot>restart</on_reboot>
@@ -136,13 +137,6 @@
       <source dev='/dev/disk/by-id/ata-Samsung_SSD_870_EVO_1TB_S625NJ0R432717H-part2'/>
       <target dev='vda' bus='virtio'/>
       <address type='pci' domain='0x0000' bus='0x09' slot='0x00' function='0x0'/>
-    </disk>
-    <disk type='file' device='cdrom'>
-      <driver name='qemu' type='raw'/>
-      <target dev='sda' bus='sata'/>
-      <readonly/>
-      <boot order='1'/>
-      <address type='drive' controller='0' bus='0' target='0' unit='0'/>
     </disk>
     <controller type='usb' index='0' model='qemu-xhci' ports='15'>
       <address type='pci' domain='0x0000' bus='0x01' slot='0x00' function='0x0'/>

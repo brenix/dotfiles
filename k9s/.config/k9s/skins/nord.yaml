@@ -1,3 +1,4 @@
+---
 # Nord theme skin for k9s
 #
 # Install by putting this file in $XDG_CONFIG_HOME/k9s/skin.yml (usually it's ~/.config/k9s/skin.yml).
@@ -9,7 +10,7 @@
 nord0: &nord0 "#2E3440" #black
 nord1: &nord1 "#3B4252" #lighter black
 nord3: &nord3 "#434C5E"
-nord5: &nord5 "#4C566A" 
+nord5: &nord5 "#4C566A"
 
 # Snow Storm
 nord4: &nord4 "#D8DEE9" #white
@@ -22,7 +23,6 @@ nord10: &nord10 "#5E81AC" #dark blue
 nord11: &nord11 "#BF616A" #red
 nord13: &nord13 "#EBCB8B" #yellow
 nord14: &nord14 "#A3BE8C" #green
-
 
 k9s:
   # General K9s styles
@@ -87,11 +87,11 @@ k9s:
       dialBgColor: *nord0
       chartBgColor: *nord0
       defaultDialColors:
-        - *nord8
-        - *nord11
+      - *nord8
+      - *nord11
       defaultChartColors:
-        - *nord8
-        - *nord11
+      - *nord8
+      - *nord11
     # TableView attributes.
     table:
       fgColor: *nord4

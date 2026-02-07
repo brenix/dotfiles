@@ -13,4 +13,4 @@ k9s:
     headless: true
     logoless: true
     noIcons: true
-    skin: catppuccin
+    skin: nord

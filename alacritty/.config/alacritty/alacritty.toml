@@ -27,7 +27,7 @@ bindings = [
 save_to_clipboard = true
 
 [window]
-#opacity = 0.75
+opacity = 0.75
 padding = { x = 0, y = 0 }
 
 [[keyboard.bindings]]
