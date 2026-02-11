@@ -7,7 +7,7 @@
 # https://www.nordtheme.com/docs/colors-and-palettes
 
 # Polar Night
-nord0: &nord0 "#2E3440" #black
+nord0: &nord0 "#22262f" #black
 nord1: &nord1 "#3B4252" #lighter black
 nord3: &nord3 "#434C5E"
 nord5: &nord5 "#4C566A"

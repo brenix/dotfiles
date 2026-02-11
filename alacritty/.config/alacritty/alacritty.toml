@@ -1,5 +1,5 @@
 [general]
-import = ["./themes/wallust.toml"]
+import = ["./themes/nord.toml"]
 live_config_reload = true
 working_directory = "None"
 
@@ -27,7 +27,7 @@ bindings = [
 save_to_clipboard = true
 
 [window]
-opacity = 0.75
+opacity = 0.95
 padding = { x = 0, y = 0 }
 
 [[keyboard.bindings]]
