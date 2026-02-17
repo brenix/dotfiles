@@ -69,19 +69,11 @@
       <reset state='on'/>
       <vendor_id state='on' value='AuthenticAMD'/>
       <frequencies state='on'/>
-      <reenlightenment state='on'/>
+      <reenlightenment state='off'/>
       <tlbflush state='on'/>
-      <ipi state='on'/>
       <evmcs state='off'/>
       <avic state='on'/>
     </hyperv>
-    <kvm>
-      <hidden state='on'/>
-      <hint-dedicated state='on'/>
-      <poll-control state='on'/>
-      <pv-ipi state='off'/>
-      <dirty-ring state='on' size='4096'/>
-    </kvm>
     <vmport state='off'/>
     <smm state='off'/>
     <ioapic driver='kvm'/>
@@ -90,19 +82,8 @@
   <cpu mode='host-passthrough' check='none' migratable='off'>
     <topology sockets='1' dies='1' clusters='1' cores='8' threads='2'/>
     <cache mode='passthrough'/>
-    <maxphysaddr mode='passthrough' limit='40'/>
     <feature policy='require' name='topoext'/>
     <feature policy='require' name='invtsc'/>
-    <feature policy='disable' name='svm'/>
-    <feature policy='disable' name='smep'/>
-    <feature policy='disable' name='smap'/>
-    <feature policy='disable' name='mpx'/>
-    <feature policy='disable' name='pku'/>
-    <feature policy='disable' name='spec-ctrl'/>
-    <feature policy='disable' name='ssbd'/>
-    <feature policy='disable' name='virt-ssbd'/>
-    <feature policy='disable' name='stibp'/>
-    <feature policy='disable' name='vmx'/>
   </cpu>
   <clock offset='localtime'>
     <timer name='rtc' tickpolicy='catchup'/>
@@ -231,7 +212,7 @@
     <qemu:arg value='input-linux,id=mouse1,evdev=/dev/input/by-id/usb-Beijing_Jingyunmake_Technology_Co.__Ltd._G-Wolves_HSK_Pro_Wireless_Mouse-N_ADC2149E82440365-event-mouse'/>
     <qemu:arg value='-object'/>
     <qemu:arg value='input-linux,id=kbd1,evdev=/dev/input/by-id/usb-NuPhy_NuPhy_Air60_HE_74497A152605-event-kbd,grab_all=on,repeat=on,grab-toggle=scrolllock'/>
-    <qemu:env name='PIPEWIRE_LATENCY' value='256/32000'/>
+    <qemu:env name='PIPEWIRE_LATENCY' value='512/48000'/>
   </qemu:commandline>
 </domain>
 
