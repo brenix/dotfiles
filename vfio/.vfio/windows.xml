@@ -69,8 +69,9 @@
       <reset state='on'/>
       <vendor_id state='on' value='AuthenticAMD'/>
       <frequencies state='on'/>
-      <reenlightenment state='off'/>
+      <reenlightenment state='on'/>
       <tlbflush state='on'/>
+      <ipi state='on'/>
       <evmcs state='off'/>
       <avic state='on'/>
     </hyperv>
@@ -84,9 +85,12 @@
     <cache mode='passthrough'/>
     <feature policy='require' name='topoext'/>
     <feature policy='require' name='invtsc'/>
+    <feature policy='require' name='pdpe1gb'/>
+    <feature policy='disable' name='svm'/>
+    <feature policy='disable' name='monitor'/>
   </cpu>
   <clock offset='localtime'>
-    <timer name='rtc' tickpolicy='catchup'/>
+    <timer name='rtc' tickpolicy='catchup' track='guest'/>
     <timer name='pit' present='yes' tickpolicy='discard'/>
     <timer name='hpet' present='no'/>
     <timer name='hypervclock' present='yes'/>
