@@ -639,8 +639,8 @@ user_pref("browser.urlbar.pocket.featureGate", false);    // FF116+
 user_pref("browser.urlbar.suggest.engines", false);
 
 // Disable location bar suggestion types (history, bookmarks, open tabs, etc.).
-user_pref("browser.urlbar.suggest.history", false);
-user_pref("browser.urlbar.suggest.bookmark", false);
+user_pref("browser.urlbar.suggest.history", true);
+user_pref("browser.urlbar.suggest.bookmark", true);
 user_pref("browser.urlbar.suggest.openpage", false);
 user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("browser.urlbar.suggest.weather", false);
@@ -1086,6 +1086,9 @@ user_pref("identity.fxaccounts.enabled", true);
 
 // Don't close the bookmark menu when opening a bookmark in a new tab. [default: true]
 user_pref("browser.bookmarks.openInTabClosesMenu", false);
+
+// Disable the "Import bookmarks" bar buttom
+user_pref("browser.bookmarks.addedImportButton", false);
 
 // Disable "More from Mozilla" section in Preferences. [default: true]
 user_pref("browser.preferences.moreFromMozilla", false);
