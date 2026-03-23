@@ -213,7 +213,7 @@
     <qemu:arg value='-fw_cfg'/>
     <qemu:arg value='name=opt/ovmf/X-PciMmio64Mb,string=65536'/>
     <qemu:arg value='-object'/>
-    <qemu:arg value='input-linux,id=mouse1,evdev=/dev/input/by-id/usb-Beijing_Jingyunmake_Technology_Co.__Ltd._G-Wolves_HSK_Pro_Wireless_Mouse-N_ADC2149E82440365-event-mouse'/>
+    <qemu:arg value='input-linux,id=mouse1,evdev=/dev/input/by-id/usb-Beijing_Jingyunmake_Technology_Co.__Ltd._G-Wolves_HSK_Pro_Receiver-N_ADC2149E82440365-event-mouse'/>
     <qemu:arg value='-object'/>
     <qemu:arg value='input-linux,id=kbd1,evdev=/dev/input/by-id/usb-NuPhy_NuPhy_Air60_HE_74497A152605-event-kbd,grab_all=on,repeat=on,grab-toggle=scrolllock'/>
     <qemu:env name='PIPEWIRE_LATENCY' value='512/48000'/>
