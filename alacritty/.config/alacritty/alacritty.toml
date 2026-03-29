@@ -7,12 +7,12 @@ working_directory = "None"
 WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 12
-offset.y = -2
+size = 11
+offset.y = -1
 # offset.x = -1
 
 [font.normal]
-family = "Monego Nerd Font Fix"
+family = "GohuFont"
 style = "Regular"
 
 [font.bold]
