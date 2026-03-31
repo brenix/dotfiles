@@ -46,3 +46,4 @@ labwc = { src = 'labwc', dst = '~/.config/labwc/themerc-override' }
 foot = { src = 'foot.ini', dst = '~/.config/foot/theme.ini' }
 rofi = { src = 'rofi.rasi', dst = '~/.config/rofi/wallust.rasi' }
 dunst = { src = 'dunstrc', dst = '~/.config/dunst/dunstrc' }
+mango = { src = 'mango.conf', dst = '~/.config/mango/colors.conf' }

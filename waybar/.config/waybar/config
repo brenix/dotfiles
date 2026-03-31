@@ -5,7 +5,7 @@
     "layer": "top",
     "position": "top",
 
-    "modules-left": ["niri/workspaces"],
+    "modules-left": ["ext/workspaces", "dwl/window"],
     "modules-center": ["custom/mpd"],
     "modules-right": ["temperature","cpu","memory","backlight","battery","wireplumber","network","clock","tray"],
     "reload_style_on_change": true,
@@ -32,6 +32,10 @@
       "format": "\uf4bc  {usage}%",
       "interval": 1,
       "tooltip": false
+    },
+
+    "dwl/window": {
+        "format": "[{layout}]"
     },
 
     "memory": {
@@ -93,6 +97,14 @@
       "on-click": "mpc toggle",
       "return-type": "json",
       "escape": true
+    },
+
+    "ext/workspaces": {
+        "format": "{icon}",
+        "ignore-hidden": true,
+        "on-click": "activate",
+        "on-click-right": "deactivate",
+        "sort-by-id": true
     },
   }
 ]
