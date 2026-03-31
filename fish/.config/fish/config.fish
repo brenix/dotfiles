@@ -49,6 +49,7 @@ status is-interactive; and begin
     abbr --add -- mr 'mise run'
     abbr --add -- replace ambr
     abbr --add -- , 'mise exec'
+    abbr --add -- monkeytype bluekeys
 
     # -- Aliases
     alias bat 'bat --paging=never --style=plain --decorations=never'
