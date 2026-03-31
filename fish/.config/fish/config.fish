@@ -12,7 +12,7 @@ if status is-login; and test (tty) = /dev/tty1
             end
         case void
             if type -q dbus-run-session
-                dbus-run-session niri --session
+                dbus-run-session mango
             end
     end
 end
