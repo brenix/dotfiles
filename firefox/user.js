@@ -127,8 +127,11 @@ user_pref("browser.cache.disk.enable", false);
 // Max I/O lag on shutdown before cache is dropped (seconds). [default: 2]
 user_pref("browser.cache.max_shutdown_io_lag", 1);
 
+// Set max size for memory cache. [default: auto-detected]
+user_pref("browser.cache.memory.capacity", 512000);
+
 // Max size of a single memory cache entry (KB). [default: 5120]
-user_pref("browser.cache.memory.max_entry_size", 8192);
+user_pref("browser.cache.memory.max_entry_size", -1);
 
 // Force media cache to memory in Private Browsing. [default: false]
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
@@ -161,13 +164,16 @@ user_pref("gfx.font_rendering.wordcache.charlimit", 64);
 user_pref("gfx.font_rendering.wordcache.maxentries", 20000);
 
 // Enable WebRender layer compositor for smoother compositing. [default: false]
-user_pref("gfx.webrender.layer-compositor", true);
+user_pref("gfx.webrender.layer-compositor", false);
 
 // Enable all WebRender features including the compositor. [default: false]
 user_pref("gfx.webrender.all", true);
 
 // Force GPU layer acceleration. [default: false]
 user_pref("layers.acceleration.force-enabled", true);
+
+// Uncap FPS limit. [default: -1]
+user_pref("layout.frame_rate", 0);
 
 // Image decode chunk size (bytes) — larger = fewer decoding pauses. [default: 4096]
 user_pref("image.mem.decode_bytes_at_a_time", 32768);
@@ -264,10 +270,10 @@ user_pref("network.tcp.keepalive.idle_time", 300);
 user_pref("network.http.speculative-parallel-limit", 0);
 
 // Disable speculative connections from the location bar. [default: true]
-user_pref("browser.urlbar.speculativeConnect.enabled", false);
+user_pref("browser.urlbar.speculativeConnect.enabled", true);
 
 // Disable speculative connections from bookmarks/history hover. [default: true]
-user_pref("browser.places.speculativeConnect.enabled", false);
+user_pref("browser.places.speculativeConnect.enabled", true);
 
 // Cross-origin referer trimming: 0=full URI, 1=+path, 2=origin only. [default: 0]
 user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
@@ -426,7 +432,7 @@ user_pref("privacy.query_stripping.enabled", true);
 user_pref("privacy.query_stripping.strip_list", "__hsfp __hssc __hstc __s _bhlid _branch_match_id _branch_referrer _gl _hsenc _kx _openstat at_recipient_id at_recipient_list bbeml bsft_clkid bsft_uid dclid et_rid fb_action_ids fb_comment_id fbclid gclid guce_referrer guce_referrer_sig hsCtaTracking irclickid mc_eid ml_subscriber ml_subscriber_hash msclkid mtm_cid oft_c oft_ck oft_d oft_id oft_ids oft_k oft_lk oft_sk oly_anon_id oly_enc_id pk_cid rb_clickid s_cid sc_customer sc_eh sc_uid sms_click sms_source sms_uph srsltid ss_email_id syclid ttclid twclid unicorn_click_id vero_conv vero_id vgo_ee wbraid wickedid yclid ymclid ysclid");
 
 // Enable fingerprinting protection (FPP). [default: false FF114+]
-user_pref("privacy.fingerprintingProtection", true);
+user_pref("privacy.fingerprintingProtection", false);
 
 // Enable FPP in Private Browsing. [default: true]
 user_pref("privacy.fingerprintingProtection.pbmode", true);
@@ -464,25 +470,25 @@ user_pref("dom.push.userAgentID", "");
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 // The settings below fully disable malware/phishing protection and are NOT recommended.
 // Uncomment only if you have an alternative solution (e.g. DNS-based blocking).
-// user_pref("browser.safebrowsing.malware.enabled", false);
-// user_pref("browser.safebrowsing.phishing.enabled", false);
-// user_pref("browser.safebrowsing.passwords.enabled", false);
-// user_pref("browser.safebrowsing.downloads.enabled", false);
-// user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
-// user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
-// user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false);
-// user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false);
-// user_pref("browser.safebrowsing.provider.google.updateURL", "");
-// user_pref("browser.safebrowsing.provider.google.gethashURL", "");
-// user_pref("browser.safebrowsing.provider.google4.updateURL", "");
-// user_pref("browser.safebrowsing.provider.google4.gethashURL", "");
-// user_pref("browser.safebrowsing.provider.google.reportURL", "");
-// user_pref("browser.safebrowsing.provider.google4.reportURL", "");
-// user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", false);
-// user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
-// user_pref("browser.safebrowsing.provider.mozilla.gethashURL", "");
-// user_pref("browser.safebrowsing.provider.mozilla.updateURL", "");
-// user_pref("browser.safebrowsing.blockedURIs.enabled", false);
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false);
+user_pref("browser.safebrowsing.passwords.enabled", false);
+user_pref("browser.safebrowsing.downloads.enabled", false);
+user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
+user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false);
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false);
+user_pref("browser.safebrowsing.provider.google.updateURL", "");
+user_pref("browser.safebrowsing.provider.google.gethashURL", "");
+user_pref("browser.safebrowsing.provider.google4.updateURL", "");
+user_pref("browser.safebrowsing.provider.google4.gethashURL", "");
+user_pref("browser.safebrowsing.provider.google.reportURL", "");
+user_pref("browser.safebrowsing.provider.google4.reportURL", "");
+user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", false);
+user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
+user_pref("browser.safebrowsing.provider.mozilla.gethashURL", "");
+user_pref("browser.safebrowsing.provider.mozilla.updateURL", "");
+user_pref("browser.safebrowsing.blockedURIs.enabled", false);
 
 /******************************************************************************
  * FINGERPRINTING
@@ -490,7 +496,7 @@ user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 
 // Enable Resist Fingerprinting (RFP) — comprehensive spoofing of browser attributes. [default: false]
 // Note: can break some sites (canvas, fonts, window size, locale, timezone).
-user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting", false);
 
 // Prevent sites from reading the extension list via mozAddonManager API. [default: false]
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
@@ -535,56 +541,6 @@ user_pref("dom.textMetrics.fontBoundingBox.enabled", false);
 // Disable coloring of visited links (prevents history sniffing via CSS). [default: true]
 user_pref("layout.css.visited_links_enabled", false);
 
-// --- Optional Hardening (commented out — likely to break sites) ---
-
-// Disable WebGL (breaks WebGL content: maps, 3D, games). [default: false]
-// user_pref("webgl.disabled", true);
-// user_pref("webgl.enable-webgl2", false);
-
-// Disable WebGPU (breaks GPU-accelerated web apps). [default: false]
-// user_pref("dom.webgpu.enabled", false);
-
-// Disable Web Audio API (breaks sites with audio, music players, games). [default: true]
-// user_pref("dom.webaudio.enabled", false);
-
-// Disable Gamepad API (breaks browser games). [default: true]
-// user_pref("dom.gamepad.enabled", false);
-
-// Disable Touch Events API (breaks touch-based sites on touch devices). [default: 2]
-// user_pref("dom.w3c_touch_events.enabled", 0);
-
-// Disable Media Devices API (breaks camera/mic access in-browser). [default: true]
-// user_pref("media.navigator.enabled", false);
-
-// Disable Speech Synthesis API (breaks TTS-reliant sites). [default: true]
-// user_pref("media.webspeech.synth.enabled", false);
-
-// Disable Device Sensor API (breaks some mobile/PWA sites). [default: true]
-// user_pref("device.sensors.enabled", false);
-
-// Disable asm.js (may break some JS-heavy apps). [default: true]
-// user_pref("javascript.options.asmjs", false);
-
-// Disable JIT compiler — significant performance hit; breaks many sites. [default: true]
-// user_pref("javascript.options.ion", false);
-// user_pref("javascript.options.baselinejit", false);
-// user_pref("javascript.options.wasm_baselinejit", false);
-
-// Disable WebAssembly (breaks WASM-based apps: Figma, Google Meet, etc.). [default: true]
-// user_pref("javascript.options.wasm", false);
-
-// Disable MathML rendering (breaks math-heavy sites). [default: false]
-// user_pref("mathml.disabled", true);
-
-// Disable SVG rendering (breaks nearly all modern websites). [default: false]
-// user_pref("svg.disabled", true);
-
-// Disable Graphite font engine. [default: true]
-// user_pref("gfx.font_rendering.graphite.enabled", false);
-
-// Disable SVG OpenType fonts. [default: true]
-// user_pref("gfx.font_rendering.opentype_svg.enabled", false);
-
 /******************************************************************************
  * URL BAR & SEARCH
  ******************************************************************************/
@@ -593,6 +549,12 @@ user_pref("layout.css.visited_links_enabled", false);
 user_pref("browser.urlbar.quicksuggest.enabled", false);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
 user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
+
+// Show search suggestions before browsing history in address bar results. [default: true]
+user_pref("browser.urlbar.showSearchSuggestionsFirst", false);
+
+// Show search suggestions in private windows. [default: false]
+user_pref("browser.search.suggest.enabled.private", true);
 
 // Don't trim https:// from URL bar display. [default: false]
 user_pref("browser.urlbar.trimURLs", false);
@@ -641,13 +603,13 @@ user_pref("browser.urlbar.suggest.engines", false);
 // Disable location bar suggestion types (history, bookmarks, open tabs, etc.).
 user_pref("browser.urlbar.suggest.history", true);
 user_pref("browser.urlbar.suggest.bookmark", true);
-user_pref("browser.urlbar.suggest.openpage", false);
+user_pref("browser.urlbar.suggest.openpage", true);
 user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("browser.urlbar.suggest.weather", false);
 user_pref("browser.urlbar.suggest.fakespot", false);
 
 // Disable URL bar autocomplete (autofill from history). [default: true]
-user_pref("browser.urlbar.autoFill", false);
+user_pref("browser.urlbar.autoFill", true);
 
 // Don't show the active search term in the URL bar after searching. [default: true]
 user_pref("browser.urlbar.showSearchTerms.enabled", false);
@@ -781,13 +743,13 @@ user_pref("extensions.screenshots.disabled", true);
 
 // Default permission policy: 0=always ask, 1=allow, 2=block.
 user_pref("permissions.default.geo", 1);
-user_pref("permissions.default.camera", 2);
-user_pref("permissions.default.microphone", 2);
+user_pref("permissions.default.camera", 0);
+user_pref("permissions.default.microphone", 0);
 user_pref("permissions.default.desktop-notification", 0);
-user_pref("permissions.default.xr", 2);
+user_pref("permissions.default.xr", 0);
 
 // Use BeaconDB instead of Google for geolocation when permission is granted. [default: Google URL]
-user_pref("geo.provider.network.url", "https://beacondb.net/v1/geolocate");
+user_pref("geo.provider.network.url", "https://api.beacondb.net/v1/geolocate");
 
 // Enable/Disable geolocation API entirely. [default: true]
 user_pref("geo.enabled", true);
@@ -1120,11 +1082,10 @@ user_pref("clipboard.autocopy", false);
 user_pref("layout.spellcheckDefault", 0);
 
 // Disable browsing and download history. [default: true]
-user_pref("places.history.enabled", false);
+user_pref("places.history.enabled", true);
 
 // Disable favicons in history and bookmarks. [default: true]
-user_pref("browser.chrome.site_icons", true);
-user_pref("browser.shell.shortcutFavicons", true);
+user_pref("browser.chrome.site_icons", false);
 
 // Disable Windows taskbar jump list integration (Windows). [default: true]
 user_pref("toolkit.winRegisterApplicationRestart", false);
