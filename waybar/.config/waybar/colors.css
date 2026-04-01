@@ -9,7 +9,7 @@ waybar = { src = "waybar.css", dst = "~/.config/waybar/colors.css" }
  */
 
 @define-color cursor #D8DEE9;
-@define-color background #2E3440;
+@define-color background #20242D;
 @define-color foreground #D8DEE9;
 @define-color color0  #3B4252;
 @define-color color1  #BF616A;
