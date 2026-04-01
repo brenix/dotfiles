@@ -7,7 +7,7 @@
 
     "modules-left": ["ext/workspaces", "dwl/window"],
     "modules-center": ["custom/mpd"],
-    "modules-right": ["temperature","cpu","memory","backlight","battery","wireplumber","network","clock","tray"],
+    "modules-right": ["wireplumber","cpu","battery","temperature","memory","clock","tray"],
     "reload_style_on_change": true,
 
     "backlight": {
@@ -40,7 +40,7 @@
 
     "memory": {
       "interval": 30,
-      "format": "\ue266  {used:0.1f}G"
+      "format": "\uf5ba  {used:0.1f}G"
     },
 
     "network": {
