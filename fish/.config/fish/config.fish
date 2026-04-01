@@ -1,7 +1,7 @@
 if status is-login; and test (tty) = /dev/tty1
     set -l distro (grep -Po '(?<=^ID=).*' /etc/os-release | string trim -c '"')
     switch $distro
-        case arch cachyos
+        case arch
             # if type -q uwsm
             #     if uwsm check may-start
             #         exec uwsm start default
@@ -10,7 +10,7 @@ if status is-login; and test (tty) = /dev/tty1
             if type -q startx
                 exec startx -- -keeptty
             end
-        case void
+        case cachyos void
             if type -q dbus-run-session
                 dbus-run-session mango
             end
@@ -22,10 +22,10 @@ status is-interactive; and begin
     abbr --add -- bw rbw
     abbr --add -- calc qalc
     abbr --add -- cat bat
-    # abbr --add -- ds 'kanshictl switch vfio'
-    # abbr --add -- de 'kanshictl switch dual'
-    abbr --add -- ds 'xrandr --output HDMI-A-0 --off'
-    abbr --add -- de 'xrandr --output HDMI-A-0 --auto --right-of DisplayPort-0; sleep 1; bspc desktop 3 -m HDMI-A-0; bspc desktop 4 -m HDMI-A-0'
+    abbr --add -- ds 'kanshictl switch vfio'
+    abbr --add -- de 'kanshictl switch dual'
+    # abbr --add -- ds 'xrandr --output HDMI-A-0 --off'
+    # abbr --add -- de 'xrandr --output HDMI-A-0 --auto --right-of DisplayPort-0; sleep 1; bspc desktop 3 -m HDMI-A-0; bspc desktop 4 -m HDMI-A-0'
     abbr --add -- k kubectl
     abbr --add -- kdd 'kubectl describe deployment'
     abbr --add -- kdno 'kubectl describe node'
