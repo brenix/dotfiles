@@ -12,7 +12,7 @@ if status is-login; and test (tty) = /dev/tty1
             end
         case cachyos void
             if type -q dbus-run-session
-                dbus-run-session mango
+                exec dbus-run-session mango
             end
     end
 end
