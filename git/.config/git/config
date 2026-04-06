@@ -35,8 +35,16 @@
 [core]
 	editor = "hx"
 	whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol"
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[merge]
+	conflictStyle = zdiff3
 
 [delta]
+	navigate = true  # use n and N to move between diff sections
 	enable = true
 	light = false
 	side-by-side = false
