@@ -8,11 +8,11 @@ WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
 size = 12
-offset.y = -3
+offset.y = -1
 # offset.x = -1
 
 [font.normal]
-family = "Monego Nerd Font Fix"
+family = "MonaspiceNe Nerd Font Mono"
 style = "Regular"
 
 [font.bold]
@@ -27,7 +27,7 @@ bindings = [
 save_to_clipboard = true
 
 [window]
-opacity = 0.95
+# opacity = 0.95
 padding = { x = 0, y = 0 }
 
 [[keyboard.bindings]]
