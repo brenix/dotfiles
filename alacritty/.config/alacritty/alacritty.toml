@@ -12,7 +12,7 @@ offset.y = -1
 # offset.x = -1
 
 [font.normal]
-family = "MonaspiceNe Nerd Font Mono"
+family = "MonaspiceNe Nerd Font Propo"
 style = "Regular"
 
 [font.bold]
