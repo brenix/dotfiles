@@ -69,3 +69,15 @@ auto-format = true
 [language.formatter]
 command = "deno"
 args = ["fmt", "-", "--ext", "md"]
+
+[language-server.cuelsp]
+command = "cue"
+args = ["lsp", "serve"]
+
+[[language]]
+name = "cue"
+language-servers = [ "cuelsp" ]
+file-types = ["cue"]
+auto-format = true
+comment-token = "//"
+indent = { tab-width = 2, unit = "\t" }
