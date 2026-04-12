@@ -106,7 +106,7 @@
   <devices>
     <emulator>/usr/bin/qemu-system-x86_64</emulator>
     <disk type='block' device='disk'>
-      <driver name='qemu' type='raw' cache='none' io='io_uring' iothread='1'/>
+      <driver name='qemu' type='raw' cache='none' io='native' iothread='1'/>
       <source dev='/dev/disk/by-id/ata-Samsung_SSD_870_EVO_1TB_S625NJ0R432717H-part2'/>
       <target dev='sda' bus='virtio'/>
       <address type='pci' domain='0x0000' bus='0x01' slot='0x00' function='0x0'/>

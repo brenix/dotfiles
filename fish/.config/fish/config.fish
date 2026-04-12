@@ -11,8 +11,11 @@ if status is-login; and test (tty) = /dev/tty1
                 exec startx -- -keeptty
             end
         case cachyos void
-            if type -q dbus-run-session
-                exec dbus-run-session mango
+            # Point to the existing bus managed by turnstile
+            set -gx DBUS_SESSION_BUS_ADDRESS "unix:path=$XDG_RUNTIME_DIR/bus"
+
+            if type -q mango
+                exec mango
             end
     end
 end
@@ -88,6 +91,7 @@ status is-interactive; and begin
     alias mv 'mv -iv'
     alias rm 'rm -I'
     alias sw 'git switch'
+    alias usv 'SVDIR=$HOME/.config/service sv'
     alias wts 'wt switch'
     alias wtr 'wt remove'
     alias wtl 'wt select'
