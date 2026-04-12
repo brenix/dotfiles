@@ -1,0 +1,37 @@
+[[themes]]
+name = "wallust"
+
+[themes.palette]
+background = "{{background}}"
+foreground = "{{foreground}}"
+black = "{{color0}}"
+red = "{{color1}}"
+green = "{{color2}}"
+yellow = "{{color3}}"
+blue = "{{color4}}"
+magenta = "{{color5}}"
+cyan = "{{color6}}"
+white = "{{color7}}"
+bright_black = "{{color8}}"
+bright_red = "{{color9}}"
+bright_green = "{{color10}}"
+bright_yellow = "{{color11}}"
+bright_blue = "{{color12}}"
+bright_magenta = "{{color13}}"
+bright_cyan = "{{color14}}"
+bright_white = "{{color15}}"
+
+[themes.component_style]
+selection = { bg = "{{color8}}", modifiers = ["Bold"] }
+block_title = { fg = "{{color2}}", modifiers = ["Bold"] }
+playback_track = { fg = "{{foreground}}", modifiers = ["Bold"] }
+playback_album = { fg = "{{color4}}" }
+playback_metadata = { fg = "{{color7}}" }
+playback_progress_bar = { bg = "{{color8}}", fg = "{{color2}}" }
+current_playing = { fg = "{{color2}}", modifiers = ["Bold"] }
+page_desc = { fg = "{{color5}}", modifiers = ["Bold"] }
+table_header = { fg = "{{color2}}", modifiers = ["Bold"] }
+border = { fg = "{{color8}}" }
+playback_status = { fg = "{{color2}}", modifiers = ["Bold"] }
+playback_artists = { fg = "{{color6}}", modifiers = ["Bold"] }
+playlist_desc = { fg = "{{color7}}" }

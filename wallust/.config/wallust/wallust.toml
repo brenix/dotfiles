@@ -48,3 +48,4 @@ rofi = { src = 'rofi.rasi', dst = '~/.config/rofi/wallust.rasi' }
 dunst = { src = 'dunstrc', dst = '~/.config/dunst/dunstrc' }
 mango = { src = 'mango.conf', dst = '~/.config/mango/colors.conf' }
 ghostty = { src = 'ghostty', dst = '~/.config/ghostty/themes/wallust' }
+spotify-player = { src = 'spotify-player.toml', dst = '~/.config/spotify-player/theme.toml' }
