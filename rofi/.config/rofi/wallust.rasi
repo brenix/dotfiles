@@ -1,30 +1,30 @@
 * {
     /* Base Colors */
-    background:                  rgba(255,252,240, 95%);
-    foreground:                  rgba(16,15,15, 100%);
-    border-color:                rgba(28,27,26, 100%);
+    background:                  rgba(250,244,237, 95%);
+    foreground:                  rgba(87,82,121, 100%);
+    border-color:                rgba(152,147,165, 100%);
     
     /* Functional Colors */
     normal-background:           transparent;
     normal-foreground:           @foreground;
     
     /* Selection (Accent) */
-    selected-normal-background:  rgba(32,94,166, 100%);
-    selected-normal-foreground:  rgba(255,252,240, 100%);
+    selected-normal-background:  rgba(40,105,131, 100%);
+    selected-normal-foreground:  rgba(250,244,237, 100%);
 
     /* Alternate Rows (Set to transparent for a clean flat look) */
     alternate-normal-background: transparent;
     alternate-normal-foreground: @foreground;
 
     /* Urgent State (Usually Red) */
-    urgent-background:           rgba(175,48,41, 100%);
-    urgent-foreground:           rgba(16,15,15, 100%);
-    selected-urgent-background:  rgba(209,77,65, 100%);
+    urgent-background:           rgba(180,99,122, 100%);
+    urgent-foreground:           rgba(87,82,121, 100%);
+    selected-urgent-background:  rgba(180,99,122, 100%);
     
     /* Active State (Usually Green or Cyan) */
-    active-background:           rgba(102,128,11, 100%);
-    active-foreground:           rgba(255,252,240, 100%);
-    selected-active-background:  rgba(135,154,57, 100%);
+    active-background:           rgba(86,148,159, 100%);
+    active-foreground:           rgba(250,244,237, 100%);
+    selected-active-background:  rgba(86,148,159, 100%);
 
     /* Required for transparency to work correctly in Rofi */
     background-color:            transparent;

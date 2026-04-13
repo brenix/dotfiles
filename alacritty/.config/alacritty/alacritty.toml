@@ -12,7 +12,7 @@ offset.y = -2
 # offset.x = -1
 
 [font.normal]
-family = "CommitMono"
+family = "CommitMono Nerd Font"
 style = "Regular"
 
 [font.bold]
