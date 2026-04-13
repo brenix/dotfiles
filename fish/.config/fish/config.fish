@@ -83,8 +83,7 @@ status is-interactive; and begin
     alias gst 'git status'
     alias ip 'ip -color=auto'
     alias kubectl kubecolor
-    # alias ls 'eza --group-directories-first --icons --git --git-repos --no-user --no-time --no-filesize'
-    alias ls 'lsd --group-directories-first'
+    alias ls 'ls --color=always --group-directories-first'
     alias la 'ls -Al'
     alias l 'ls -l'
     alias mkdir 'mkdir -p'
