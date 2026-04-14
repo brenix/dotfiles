@@ -13,8 +13,8 @@ on-touch=invoke-default-action
 
 # [ STYLE OPTIONS ]
 font=Terminus 11
-background-color=#FAF4ED
-text-color=#575279
+background-color=#F6F5F4
+text-color=#242424
 
 width=320
 height=240
@@ -23,7 +23,7 @@ margin=10
 outer-margin=0
 padding=16
 
-border-color=#286983
+border-color=#3D3D3D
 border-size=2
 border-radius=0
 
@@ -46,10 +46,10 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#E1DCD5
-background-color=#D4E1E6
-text-color=#575279
-progress-color=source #286983
+border-color=#DDDDDC
+background-color=#D8D8D8
+text-color=#242424
+progress-color=source #3D3D3D
 outer-margin=0, 0, 30, 0
 margin=10
 padding=2
@@ -64,10 +64,10 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#E1DCD5
-background-color=#B4637A
-text-color=#575279
-progress-color=source #286983
+border-color=#DDDDDC
+background-color=#5C5C5C
+text-color=#242424
+progress-color=source #3D3D3D
 outer-margin=0, 0, 30, 0
 margin=10
 padding=2
@@ -85,10 +85,10 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#E1DCD5
-background-color=#B4637A
-text-color=#575279
-progress-color=source #56949F
+border-color=#DDDDDC
+background-color=#5C5C5C
+text-color=#242424
+progress-color=source #4A4A4A
 outer-margin=0, 0, 30, 0
 margin=10
 padding=2
@@ -103,10 +103,10 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#E1DCD5
-background-color=#FBEBD6
-text-color=#575279
-progress-color=source #EA9D34
+border-color=#DDDDDC
+background-color=#E0E0E0
+text-color=#242424
+progress-color=source #666666
 outer-margin=0, 0, 30, 0
 margin=10
 padding=2
@@ -124,9 +124,9 @@ layer=overlay
 
 # Critical
 [urgency=critical]
-border-color=#B4637A
-background-color=#FAF4ED
-text-color=#575279
+border-color=#5C5C5C
+background-color=#F6F5F4
+text-color=#242424
 default-timeout=0
 
 # Hidden
