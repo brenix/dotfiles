@@ -1,4 +1,4 @@
-theme = "modus_operandi_t"
+theme = "zenburn_t"
 
 [editor]
 auto-pairs = false
