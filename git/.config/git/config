@@ -38,24 +38,21 @@
 	pager = delta
 
 [interactive]
-	diffFilter = delta --color-only
+	diffFilter = "delta"
 
 [merge]
 	conflictStyle = zdiff3
 
 [delta]
-	navigate = true  # use n and N to move between diff sections
 	enable = true
 	light = false
 	side-by-side = false
-
-[delta "options"]
 	color-only = true
-	minus-emph-style = "black #f7b9b9"
-	minus-style = "black #9f7777"
-	plus-emph-style = "black #e1ffe6"
-	plus-style = "black #98ad9c"
-	syntax-theme = "catppuccin"
+	syntax-theme = "ansi"
+	minus-style = "normal #3d1f1f"
+	minus-emph-style = "normal bold #5c2c2c"
+	plus-style = "normal #1f3a1f"
+	plus-emph-style = "normal bold #2e572e"
 
 [diff "sopsdiffer"]
 	textconv = "sops -d"

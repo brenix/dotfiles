@@ -114,18 +114,10 @@ status is-interactive; and begin
         zoxide init fish | source
     end
 
-    if type -q starship
-        starship init fish | source
-    end
-
-    if type -q mise
-        mise activate fish | source
-    end
-
     # -- Environment
     set -gx GOPATH $HOME/.cache/go
     set -gx GOBIN $GOPATH/bin
-    set -gx PATH $PATH $HOME/.local/bin $HOME/.krew/bin $GOPATH/bin $HOME/.bin
+    fish_add_path $HOME/.local/bin $HOME/.krew/bin $GOPATH/bin $HOME/.bin
     set -xU MANPAGER 'less -R --use-color -Dd+r -Du+b'
     set -xU MANROFFOPT '-P -c'
 
