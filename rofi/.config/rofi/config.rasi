@@ -4,7 +4,7 @@ configuration {
     display-run: ">";
     modes: "window,drun,run";
     fixed-num-lines: false;
-    font: "GeistMono Nerd Font 12";
+    font: "GeistMono Nerd Font 11";
     show-icons: false;
     matching: "fuzzy";
     sort: true;
