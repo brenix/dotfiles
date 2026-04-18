@@ -12,7 +12,7 @@ on-button-right=dismiss
 on-touch=invoke-default-action
 
 # [ STYLE OPTIONS ]
-font=Terminus 11
+font=GeistMono Nerd Font 11
 background-color={{background}}
 text-color={{foreground}}
 
