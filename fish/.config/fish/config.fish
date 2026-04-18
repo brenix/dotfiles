@@ -1,22 +1,21 @@
 if status is-login; and test (tty) = /dev/tty1
     set -l distro (grep -Po '(?<=^ID=).*' /etc/os-release | string trim -c '"')
     switch $distro
-        case arch
-            # if type -q uwsm
-            #     if uwsm check may-start
-            #         exec uwsm start default
-            #     end
-            # else if type -q startx
-            if type -q startx
-                exec startx -- -keeptty
-            end
-        case cachyos void
+        case void
             # Point to the existing bus managed by turnstile
             set -gx DBUS_SESSION_BUS_ADDRESS "unix:path=$XDG_RUNTIME_DIR/bus"
 
             if type -q mango
                 exec mango
             end
+        case arch cachyos
+            # if type -q uwsm
+            #     if uwsm check may-start
+            #         exec uwsm start default
+            #     end
+            # else if type -q startx
+            #     exec startx -- -keeptty
+            # end
     end
 end
 
@@ -104,25 +103,12 @@ status is-interactive; and begin
     alias x k9s
     alias zad 'ls -d */ | xargs -I {} zoxide add {}'
 
-    # -- CLI tools
-    if type -q fzf
-        fzf --fish | source
-        set -gx FZF_DEFAULT_OPTS "--ansi --color=bg:-1,bg+:-1,spinner:6,hl:7,fg:7,header:6,info:7,pointer:1,marker:0,prompt:2,hl+:2"
-    end
-
-    if type -q zoxide
-        zoxide init fish | source
-    end
-
     # -- Environment
     set -gx GOPATH $HOME/.cache/go
     set -gx GOBIN $GOPATH/bin
     fish_add_path $HOME/.local/bin $HOME/.krew/bin $GOPATH/bin $HOME/.bin
     set -xU MANPAGER 'less -R --use-color -Dd+r -Du+b'
     set -xU MANROFFOPT '-P -c'
-
-    # -- Bindings
-    bind \ce end-of-line
 
     # -- Colors
     set -gx fish_color_autosuggestion brblack
@@ -152,13 +138,15 @@ status is-interactive; and begin
     set -gx fish_pager_color_prefix white --bold --underline
     set -gx fish_pager_color_progress white '--background=cyan'
 
-    # -- Source additional configuration
-    for file in ~/.config/fish/conf.local.d/*.fish
-        source $file
-    end
-
+    # -- Bindings
+    bind \ce end-of-line
     function fish_user_key_bindings
         bind ! bind_bang
         bind '$' bind_dollar
+    end
+
+    # -- Source additional configuration
+    for file in ~/.config/fish/conf.local.d/*.fish
+        source $file
     end
 end
