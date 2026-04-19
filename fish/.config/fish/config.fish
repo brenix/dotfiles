@@ -1,23 +1,23 @@
-if status is-login; and test (tty) = /dev/tty1
-    set -l distro (grep -Po '(?<=^ID=).*' /etc/os-release | string trim -c '"')
-    switch $distro
-        case void
-            # Point to the existing bus managed by turnstile
-            set -gx DBUS_SESSION_BUS_ADDRESS "unix:path=$XDG_RUNTIME_DIR/bus"
+# if status is-login; and test (tty) = /dev/tty1
+#     set -l distro (grep -Po '(?<=^ID=).*' /etc/os-release | string trim -c '"')
+#     switch $distro
+#         case void
+#             # Point to the existing bus managed by turnstile
+#             set -gx DBUS_SESSION_BUS_ADDRESS "unix:path=$XDG_RUNTIME_DIR/bus"
 
-            if type -q mango
-                exec mango
-            end
-        case arch cachyos
-            # if type -q uwsm
-            #     if uwsm check may-start
-            #         exec uwsm start default
-            #     end
-            # else if type -q startx
-            #     exec startx -- -keeptty
-            # end
-    end
-end
+#             if type -q mango
+#                 exec mango
+#             end
+#         case arch cachyos
+#             # if type -q uwsm
+#             #     if uwsm check may-start
+#             #         exec uwsm start default
+#             #     end
+#             # else if type -q startx
+#             #     exec startx -- -keeptty
+#             # end
+#     end
+# end
 
 status is-interactive; and begin
     # -- Abbreviations
