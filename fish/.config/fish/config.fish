@@ -24,6 +24,7 @@ status is-interactive; and begin
     abbr --add -- bw rbw
     abbr --add -- calc qalc
     abbr --add -- cat bat
+    abbr --add -- da doas
     abbr --add -- ds 'kanshictl switch vfio'
     abbr --add -- de 'kanshictl switch dual'
     # abbr --add -- ds 'xrandr --output HDMI-A-0 --off'
