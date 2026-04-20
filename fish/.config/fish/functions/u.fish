@@ -6,6 +6,8 @@ function u
         sudo pacman -Syu
     else if type -q xbps-install
         sudo xbps-install -Su
+    else if type -q pkg
+        doas pkg update && doas pkg upgrade
     else if type -q apt
         sudo apt update
         sudo apt upgrade -y
