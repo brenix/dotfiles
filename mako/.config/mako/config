@@ -13,8 +13,8 @@ on-touch=invoke-default-action
 
 # [ STYLE OPTIONS ]
 font=GeistMono Nerd Font 11
-background-color=#3A3A3A
-text-color=#DCDCCC
+background-color=#181616
+text-color=#C5C9C5
 
 width=320
 height=240
@@ -23,7 +23,7 @@ margin=10
 outer-margin=0
 padding=16
 
-border-color=#D7D7AF
+border-color=#7FB4CA
 border-size=2
 border-radius=0
 
@@ -46,10 +46,10 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#343434
-background-color=#F7F7EF
-text-color=#DCDCCC
-progress-color=source #C3BF97
+border-color=#161414
+background-color=#E5F0F4
+text-color=#C5C9C5
+progress-color=source #8BA4B0
 outer-margin=0, 0, 30, 0
 margin=10
 padding=2
@@ -64,10 +64,10 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#343434
-background-color=#CC9393
-text-color=#DCDCCC
-progress-color=source #C3BF97
+border-color=#161414
+background-color=#C4746E
+text-color=#C5C9C5
+progress-color=source #8BA4B0
 outer-margin=0, 0, 30, 0
 margin=10
 padding=2
@@ -85,10 +85,10 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#343434
-background-color=#CC9393
-text-color=#DCDCCC
-progress-color=source #EFEF87
+border-color=#161414
+background-color=#C4746E
+text-color=#C5C9C5
+progress-color=source #8A9A7B
 outer-margin=0, 0, 30, 0
 margin=10
 padding=2
@@ -103,10 +103,10 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#343434
-background-color=#FFF5EF
-text-color=#DCDCCC
-progress-color=source #FFD7A7
+border-color=#161414
+background-color=#FAF3E6
+text-color=#C5C9C5
+progress-color=source #C4B28A
 outer-margin=0, 0, 30, 0
 margin=10
 padding=2
@@ -124,9 +124,9 @@ layer=overlay
 
 # Critical
 [urgency=critical]
-border-color=#CC9393
-background-color=#3A3A3A
-text-color=#DCDCCC
+border-color=#C4746E
+background-color=#181616
+text-color=#C5C9C5
 default-timeout=0
 
 # Hidden
