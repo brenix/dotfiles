@@ -26,7 +26,7 @@ k9s:
       numKeyColor: '#8A9A7B'
     status:
       addColor: '#C5C9C5'
-      completedColor: '#A6A69C'
+      completedColor: '#454549'
       errorColor: '#C4746E'
       highlightcolor: '#C4B28A'
       killColor: '#7AA89F'
