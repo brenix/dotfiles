@@ -1,87 +1,87 @@
 k9s:
   body:
     bgColor: default
-    fgColor: '#C5C9C5'
-    logoColor: '#8A9A7B'
+    fgColor: '#C0CAF5'
+    logoColor: '#9ECE6A'
   dialog:
     bgColor: default
-    buttonBgColor: '#181616'
-    buttonFgColor: '#C5C9C5'
-    buttonFocusBgColor: '#8A9A7B'
-    buttonFocusFgColor: '#A292A3'
-    fgColor: '#C5C9C5'
-    fieldFgColor: '#C5C9C5'
-    labelFgColor: '#C4B28A'
+    buttonBgColor: '#1A1B26'
+    buttonFgColor: '#C0CAF5'
+    buttonFocusBgColor: '#9ECE6A'
+    buttonFocusFgColor: '#BB9AF7'
+    fgColor: '#C0CAF5'
+    fieldFgColor: '#C0CAF5'
+    labelFgColor: '#E0AF68'
   frame:
     border:
-      fgColor: '#181616'
-      focusColor: '#A6A69C'
+      fgColor: '#1A1B26'
+      focusColor: '#414868'
     crumbs:
-      activeColor: '#181616'
-      bgColor: '#181616'
-      fgColor: '#181616'
+      activeColor: '#1A1B26'
+      bgColor: '#1A1B26'
+      fgColor: '#1A1B26'
     menu:
-      fgColor: '#C5C9C5'
-      keyColor: '#8A9A7B'
-      numKeyColor: '#8A9A7B'
+      fgColor: '#C0CAF5'
+      keyColor: '#9ECE6A'
+      numKeyColor: '#9ECE6A'
     status:
-      addColor: '#C5C9C5'
-      completedColor: '#454549'
-      errorColor: '#C4746E'
-      highlightcolor: '#C4B28A'
-      killColor: '#7AA89F'
-      modifyColor: '#A292A3'
-      newColor: '#8BA4B0'
+      addColor: '#C0CAF5'
+      completedColor: '#414868'
+      errorColor: '#F7768E'
+      highlightcolor: '#E0AF68'
+      killColor: '#7DCFFF'
+      modifyColor: '#BB9AF7'
+      newColor: '#7AA2F7'
     title:
-      bgColor: '#181616'
-      counterColor: '#8EA4A2'
-      fgColor: '#C5C9C5'
-      filterColor: '#8BA4B0'
-      highlightColor: '#C4B28A'
+      bgColor: '#1A1B26'
+      counterColor: '#7DCFFF'
+      fgColor: '#C0CAF5'
+      filterColor: '#7AA2F7'
+      highlightColor: '#E0AF68'
   info:
-    fgColor: '#C5C9C5'
-    sectionColor: '#8A9A7B'
+    fgColor: '#C0CAF5'
+    sectionColor: '#9ECE6A'
   prompt:
-    bgColor: '#181616'
-    fgColor: '#C5C9C5'
-    suggestColor: '#C4B28A'
+    bgColor: '#1A1B26'
+    fgColor: '#C0CAF5'
+    suggestColor: '#E0AF68'
   views:
     charts:
       bgColor: default
       defaultChartColors:
-      - '#8EA4A2'
-      - '#8BA4B0'
+      - '#7DCFFF'
+      - '#7AA2F7'
       defaultDialColors:
-      - '#8EA4A2'
-      - '#8BA4B0'
+      - '#7DCFFF'
+      - '#7AA2F7'
     help:
-      bgColor: '#181616'
-      fgColor: '#C5C9C5'
+      bgColor: '#1A1B26'
+      fgColor: '#C0CAF5'
       indicator:
-        fgColor: '#8BA4B0'
+        fgColor: '#7AA2F7'
     logs:
       bgColor: default
-      fgColor: '#C5C9C5'
+      fgColor: '#C0CAF5'
       indicator:
-        bgColor: '#181616'
-        fgColor: '#C5C9C5'
+        bgColor: '#1A1B26'
+        fgColor: '#C0CAF5'
     table:
       bgColor: default
-      cursorBgColor: '#C5C9C5'
-      cursorFgColor: '#181616'
-      fgColor: '#C5C9C5'
+      cursorBgColor: '#C0CAF5'
+      cursorFgColor: '#1A1B26'
+      fgColor: '#C0CAF5'
       header:
         bgColor: default
-        fgColor: '#C5C9C5'
-        sorterColor: '#C5C9C5'
-      markColor: '#C4B28A'
+        fgColor: '#C0CAF5'
+        sorterColor: '#C0CAF5'
+      markColor: '#E0AF68'
     xray:
       bgColor: default
-      cursorColor: '#A6A69C'
-      fgColor: '#C5C9C5'
-      graphicColor: '#8EA4A2'
+      cursorColor: '#414868'
+      fgColor: '#C0CAF5'
+      graphicColor: '#7DCFFF'
       showIcons: false
     yaml:
-      colonColor: '#8EA4A2'
-      keyColor: '#8BA4B0'
-      valueColor: '#C5C9C5'
+      colonColor: '#7DCFFF'
+      keyColor: '#7AA2F7'
+      valueColor: '#C0CAF5'
