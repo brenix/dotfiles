@@ -40,7 +40,7 @@
 
     "memory": {
       "interval": 30,
-      "format": "\uf5ba  {used:0.1f}G"
+      "format": "\uefc5  {used:0.1f}G"
     },
 
     "network": {
