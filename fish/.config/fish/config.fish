@@ -87,7 +87,7 @@ status is-interactive; and begin
     # -- Environment
     set -gx GOPATH $HOME/.cache/go
     set -gx GOBIN $GOPATH/bin
-    fish_add_path $HOME/.local/bin $HOME/.krew/bin $GOBIN $HOME/.bin
+    fish_add_path $HOME/.local/bin $HOME/.krew/bin $GOBIN $HOME/.bin $HOME/.cargo/bin
     set -xU MANPAGER 'less -R --use-color -Dd+r -Du+b'
     set -xU MANROFFOPT '-P -c'
 
