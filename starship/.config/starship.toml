@@ -1,14 +1,17 @@
 add_newline = false
-format = "$username$hostname$kubernetes$directory$git_branch$git_commit$git_state$git_status\n$jobs$status$shlvl$character\n"
+format = "$username$hostname$kubernetes$directory$git_branch$git_commit$git_state$git_status$jobs$status$shlvl$character\n"
 
 [aws]
 format = "[$profile \\($region\\) ]($style)"
 
 [character]
-error_symbol = "[\\$](bold red)"
-success_symbol = "[\\$](bold green)"
+error_symbol = "[>](bold red)"
+success_symbol = "[>](bold red)"
+# error_symbol = "[\\$](bold red)"
+# success_symbol = "[\\$](bold green)"
 
 [directory]
+disabled = true
 format = "[$path ]($style)"
 style = "blue"
 
@@ -30,12 +33,12 @@ ssh_only = true
 style = "bright-black"
 
 [kubernetes]
-disabled = false
+disabled = true
 format = "[\\[$context:$namespace\\]]($style) "
 style = "bold red"
 [[kubernetes.contexts]]
 context_pattern = ".*(dev|local|main).*"
-style = "green"
+style = "white"
 
 [python]
 format = "[(($virtualenv)) ]($style)"
