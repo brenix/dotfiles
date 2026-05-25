@@ -63,7 +63,7 @@ status is-interactive; and begin
     alias ip 'ip -color=auto'
     alias kubectl kubecolor
     # alias ls 'ls --color=auto --group-directories-first'
-    alias ls 'eza --group-directories-first --git --color=never'
+    alias ls 'eza --group-directories-first --git --color=auto'
     alias la 'ls -Al'
     alias l 'ls -l'
     alias ll 'ls -l'

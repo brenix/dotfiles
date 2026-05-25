@@ -11,7 +11,7 @@ success_symbol = "[>](bold red)"
 # success_symbol = "[\\$](bold green)"
 
 [directory]
-disabled = true
+disabled = false
 format = "[$path ]($style)"
 style = "blue"
 
