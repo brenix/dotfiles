@@ -1,37 +1,37 @@
-attributes = "#7DAEA3"
-constant = "#D3869B"
-"constant.character.escape" = "#D3869B"
-"constant.numeric" = "#D3869B"
-constructor = "#A9B665"
-debug = "#D4BE98"
-"diff.delta" = "#D8A657"
-"diff.minus" = "#EA6962"
-"diff.plus" = "#A9B665"
-error = "#EA6962"
-function = "#A9B665"
-hint = "#D3869B"
-info = "#7DAEA3"
-keyword = "#EA6962"
-label = "#D3869B"
-"markup.heading" = "#D8A657"
-"markup.link.text" = "#EA6962"
-"markup.list" = "#D4BE98"
-"markup.quote" = "#3C3836" 
-"markup.raw" = "#D8A657" 
-namespace = "#7DAEA3"
-operator = "#EA6962"
-special = "#D8A657" 
-string = "#D8A657"
-type = "#7DAEA3"
-"ui.text" = "#D4BE98"
-"ui.text.focus" = "#D4BE98"
-variable = "#D4BE98"
-"variable.other.member" = "#EA6962"
-warning = "#D8A657" 
+attributes = "#7AA2F7"
+constant = "#BB9AF7"
+"constant.character.escape" = "#BB9AF7"
+"constant.numeric" = "#BB9AF7"
+constructor = "#9ECE6A"
+debug = "#C0CAF5"
+"diff.delta" = "#E0AF68"
+"diff.minus" = "#F7768E"
+"diff.plus" = "#9ECE6A"
+error = "#F7768E"
+function = "#9ECE6A"
+hint = "#BB9AF7"
+info = "#7AA2F7"
+keyword = "#F7768E"
+label = "#BB9AF7"
+"markup.heading" = "#E0AF68"
+"markup.link.text" = "#F7768E"
+"markup.list" = "#C0CAF5"
+"markup.quote" = "#414868" 
+"markup.raw" = "#E0AF68" 
+namespace = "#7AA2F7"
+operator = "#F7768E"
+special = "#E0AF68" 
+string = "#E0AF68"
+type = "#7AA2F7"
+"ui.text" = "#C0CAF5"
+"ui.text.focus" = "#C0CAF5"
+variable = "#C0CAF5"
+"variable.other.member" = "#F7768E"
+warning = "#E0AF68" 
 
 # Modifiers for syntax elements
 [comment]
-fg = "#3C3836"
+fg = "#414868"
 modifiers = ["italic"]
 
 [diagnostic]
@@ -51,15 +51,15 @@ style = "curl"
 
 # Markup styling
 ["markup.bold"]
-fg = "#D8A657"
+fg = "#E0AF68"
 modifiers = ["bold"]
 
 ["markup.italic"]
-fg = "#D3869B"
+fg = "#BB9AF7"
 modifiers = ["italic"]
 
 ["markup.link.url"]
-fg = "#A9B665"
+fg = "#9ECE6A"
 modifiers = ["underlined"]
 
 ["markup.strikethrough"]
@@ -67,107 +67,107 @@ modifiers = ["crossed_out"]
 
 # UI elements
 ["ui.background"]
-fg = "#D4BE98"
-bg = "#282828"
+fg = "#C0CAF5"
+bg = "#1A1B26"
 
 ["ui.bufferline"]
-bg = "#282828"
-fg = "#3C3836"
+bg = "#1A1B26"
+fg = "#414868"
 
 ["ui.bufferline.active"]
-bg = "#282828"
-fg = "#D8A657"
+bg = "#1A1B26"
+fg = "#E0AF68"
 modifiers = ["bold"]
 
 ["ui.bufferline.modified"]
-bg = "#282828"
-fg = "#D8A657"
+bg = "#1A1B26"
+fg = "#E0AF68"
 
 ["ui.cursor"]
-fg = "#D4BE98"
+fg = "#C0CAF5"
 modifiers = ["reversed"]
 
 ["ui.cursor.insert"]
-fg = "#D4BE98"
+fg = "#C0CAF5"
 modifiers = ["underlined"]
 
 ["ui.cursor.match"]
-fg = "#D8A657"
+fg = "#E0AF68"
 modifiers = ["underlined"]
 
 ["ui.cursor.select"]
-fg = "#D8A657"
+fg = "#E0AF68"
 modifiers = ["underlined"]
 
 ["ui.cursorline.primary"]
-bg = "#3C3836"
-fg = "#D4BE98"
+bg = "#414868"
+fg = "#C0CAF5"
 
 ["ui.gutter"]
-bg = "#282828"
+bg = "#1A1B26"
 
 ["ui.help"]
-bg = "#3C3836" 
-fg = "#D4BE98" 
+bg = "#414868" 
+fg = "#A9B1D6" 
 
 ["ui.linenr"]
-bg = "#282828"
-fg = "#3C3836" 
+bg = "#1A1B26"
+fg = "#414868" 
 
 ["ui.linenr.selected"]
-bg = "#3C3836"
-fg = "#D4BE98" 
+bg = "#414868"
+fg = "#A9B1D6" 
 modifiers = ["bold"]
 
 ["ui.menu"]
-bg = "#3C3836" 
-fg = "#D4BE98"
+bg = "#414868" 
+fg = "#A9B1D6"
 
 ["ui.menu.scroll"]
-bg = "#3C3836"
-fg = "#3C3836"
+bg = "#414868"
+fg = "#414868"
 
 ["ui.menu.selected"]
-bg = "#3C3836" 
-fg = "#D4BE98"
+bg = "#414868" 
+fg = "#C0CAF5"
 
 ["ui.popup"]
-bg = "#3C3836"
+bg = "#414868"
 
 ["ui.selection"]
-bg = "#3C3836" 
+bg = "#414868" 
 
 ["ui.selection.primary"]
-bg = "#3C3836" 
+bg = "#414868" 
 
 ["ui.statusline"]
-bg = "#3C3836" 
-fg = "#3C3836" 
+bg = "#414868" 
+fg = "#414868" 
 
 ["ui.statusline.inactive"]
-bg = "#3C3836"
-fg = "#3C3836"
+bg = "#414868"
+fg = "#414868"
 
 ["ui.statusline.insert"]
-bg = "#A9B665"
-fg = "#282828"
+bg = "#9ECE6A"
+fg = "#1A1B26"
 
 ["ui.statusline.normal"]
-bg = "#EA6962"
-fg = "#282828"
+bg = "#F7768E"
+fg = "#1A1B26"
 
 ["ui.statusline.select"]
-bg = "#D3869B"
-fg = "#282828"
+bg = "#BB9AF7"
+fg = "#1A1B26"
 
 ["ui.virtual.indent-guide"]
-fg = "#3C3836"
+fg = "#414868"
 
 ["ui.virtual.ruler"]
-bg = "#3C3836"
+bg = "#414868"
 
 ["ui.virtual.whitespace"]
-fg = "#3C3836"
+fg = "#414868"
 
 ["ui.window"]
-bg = "#282828"
+bg = "#1A1B26"
