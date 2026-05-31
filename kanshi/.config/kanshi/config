@@ -1,6 +1,6 @@
 profile dual {
 	output DP-1 enable mode 5120x2880 scale 2 position 0,0
-	output HDMI-A-1 enable mode 5120x2880 scale 2 position 5120,0
+	output HDMI-A-1 enable mode 3840x2160 scale 1.5
 }
 
 profile vfio {

@@ -1085,10 +1085,10 @@ user_pref("layout.spellcheckDefault", 0);
 user_pref("places.history.enabled", true);
 
 // Disable favicons in history and bookmarks. [default: true]
-user_pref("browser.chrome.site_icons", false);
+user_pref("browser.chrome.site_icons", true);
 
 // Disable Windows taskbar jump list integration (Windows). [default: true]
 user_pref("toolkit.winRegisterApplicationRestart", false);
 
 // Disable favicon in Windows shortcuts (Windows). [default: true]
-user_pref("browser.shell.shortcutFavicons", false);
+user_pref("browser.shell.shortcutFavicons", true);
