@@ -1,4 +1,4 @@
-theme = "wallust"
+theme = "kaolin-dark"
 
 [editor]
 auto-pairs = false
