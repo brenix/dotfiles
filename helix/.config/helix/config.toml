@@ -1,4 +1,4 @@
-theme = "kaolin-dark"
+theme = "catppuccin"
 
 [editor]
 auto-pairs = false
