@@ -28,24 +28,24 @@ k9s:
   # General K9s styles
   body:
     fgColor: *nord4
-    bgColor: *nord0
+    bgColor: default
     logoColor: *nord10
   # ClusterInfoView styles.
   info:
     fgColor: *nord8
     sectionColor: *nord4
   prompt:
-    bgColor: *nord0
+    bgColor: default
     fgColor: *nord4
     suggestColor: *nord13
   # Dialog styles.
   dialog:
     fgColor: *nord4
-    bgColor: *nord0
+    bgColor: default
     buttonFgColor: *nord4
-    buttonBgColor: *nord1
+    buttonBgColor: default
     buttonFocusFgColor: *nord4
-    buttonFocusBgColor: *nord1
+    buttonFocusBgColor: default
     labelFgColor: *nord8
     fieldFgColor: *nord11
   frame:
@@ -61,8 +61,8 @@ k9s:
     # CrumbView attributes for history navigation.
     crumbs:
       fgColor: *nord4
-      bgColor: *nord0
-      activeColor: *nord1
+      bgColor: default
+      activeColor: default
     # Resource status and update styles
     status:
       newColor: *nord8
@@ -76,16 +76,16 @@ k9s:
     # Border title styles.
     title:
       fgColor: *nord4
-      bgColor: *nord0
+      bgColor: default
       highlightColor: *nord8
       counterColor: *nord8
       filterColor: *nord13
   views:
     # Charts skins...
     charts:
-      bgColor: *nord0
-      dialBgColor: *nord0
-      chartBgColor: *nord0
+      bgColor: default
+      dialBgColor: default
+      chartBgColor: default
       defaultDialColors:
       - *nord8
       - *nord11
@@ -95,19 +95,19 @@ k9s:
     # TableView attributes.
     table:
       fgColor: *nord4
-      bgColor: *nord0
+      bgColor: default
       cursorFgColor: *nord0
-      cursorBgColor: *nord0
+      cursorBgColor: default
       markColor: *nord13
       # Header row styles.
       header:
         fgColor: *nord4
-        bgColor: *nord0
+        bgColor: default
         sorterColor: *nord8
     # Xray view attributes.
     xray:
       fgColor: *nord4
-      bgColor: *nord0
+      bgColor: default
       cursorColor: *nord8
       cursorTextColor: *nord4
       graphicColor: *nord8
@@ -119,7 +119,7 @@ k9s:
     # Logs styles.
     logs:
       fgColor: *nord4
-      bgColor: *nord0
+      bgColor: default
       indicator:
         fgColor: *nord4
-        bgColor: *nord0
+        bgColor: default
