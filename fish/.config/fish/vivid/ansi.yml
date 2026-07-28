@@ -1,0 +1,142 @@
+# ansi: filetype colors expressed in the terminal's 16-color ANSI palette, so
+# the ls colors follow the active ghostty scheme. The per-category assignments
+# follow Nord's semantics (source -> teal, media -> magenta, office -> green,
+# etc.), but every color resolves from the terminal palette rather than a fixed
+# hex value.
+#
+# Notes:
+#   - No background colors: we can't know the palette's background, and they
+#     risk unreadable text. The few background-dependent types fall back to a
+#     foreground + font-style.
+#   - normal_text is left unset so uncolored filenames use the default
+#     foreground rather than being dimmed.
+
+colors:
+  black: "ansi:black"
+  red: "ansi:red"
+  green: "ansi:green"
+  yellow: "ansi:yellow"
+  blue: "ansi:blue"
+  magenta: "ansi:magenta"
+  cyan: "ansi:cyan"
+  white: "ansi:white"
+  bright_black: "ansi:bright_black"
+  bright_red: "ansi:bright_red"
+  bright_green: "ansi:bright_green"
+  bright_yellow: "ansi:bright_yellow"
+  bright_blue: "ansi:bright_blue"
+  bright_magenta: "ansi:bright_magenta"
+  bright_cyan: "ansi:bright_cyan"
+  bright_white: "ansi:bright_white"
+
+core:
+  normal_text: {}
+
+  reset_to_normal:
+    font-style: regular
+
+  # File Types
+  regular_file:
+    foreground: white
+
+  directory:
+    foreground: blue
+    font-style: bold
+
+  multi_hard_link:
+    foreground: cyan
+    font-style: underline
+
+  symlink:
+    foreground: cyan
+
+  broken_symlink:
+    foreground: red
+
+  missing_symlink_target:   # Nord uses a red background; drop bg -> red bold
+    foreground: red
+    font-style: bold
+
+  fifo:
+    foreground: bright_cyan
+    font-style: [bold, underline]
+
+  character_device:
+    foreground: yellow
+
+  block_device:
+    foreground: yellow
+    font-style: underline
+
+  door:
+    foreground: yellow
+    font-style: italic
+
+  socket:
+    foreground: yellow
+    font-style: bold
+
+  # File Permissions
+  executable_file:
+    foreground: bright_cyan
+    font-style: bold
+
+  file_with_capability:
+    foreground: white
+    font-style: [bold, underline]
+
+  setuid:
+    foreground: white
+    font-style: [bold, underline]
+
+  setgid:
+    foreground: white
+    font-style: [bold, underline]
+
+  sticky:                   # Nord uses a blue background; drop bg -> blue underline
+    foreground: blue
+    font-style: underline
+
+  other_writable:
+    foreground: blue
+    font-style: bold
+
+  sticky_other_writable:
+    foreground: blue
+    font-style: [bold, underline]
+
+# Document Types
+archives:
+  foreground: red
+  font-style: bold
+
+executable:
+  foreground: bright_cyan
+  font-style: bold
+
+markup:
+  foreground: yellow
+  web:
+    foreground: yellow
+
+media:
+  foreground: magenta
+  fonts:
+    foreground: white
+
+office:
+  foreground: green
+
+programming:
+  source:
+    foreground: bright_cyan
+  tooling:
+    foreground: cyan
+
+text:
+  foreground: white
+  configuration:
+    foreground: bright_yellow
+
+unimportant:
+  foreground: bright_black
