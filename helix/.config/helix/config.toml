@@ -1,4 +1,4 @@
-theme = "wallust"
+theme = "gruvbox_material"
 
 [editor]
 auto-pairs = false

@@ -70,7 +70,7 @@
     "temperature": {
       "format": "\udb80\ude10  {temperatureC}°C",
       "hwmon-path": [
-        "/sys/class/hwmon/hwmon5/temp1_input",
+        "/sys/class/hwmon/hwmon3/temp1_input",
       ],
       "interval": 1,
       "thermal-zone": 1,
