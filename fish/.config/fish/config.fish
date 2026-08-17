@@ -74,7 +74,7 @@ status is-interactive; and begin
     alias usv 'SVDIR=$HOME/.config/service sv'
     alias wts 'wt switch'
     alias wtr 'wt remove'
-    alias wtl 'wt select'
+    alias wtl 'wt list'
     alias wtm 'wt merge'
     alias v hx
     alias vi hx
