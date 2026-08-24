@@ -37,6 +37,7 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format '%F{yellow}%d%f'
 
 # -- Aliases
+alias ..='cd ..'
 alias bat='bat --paging=never --style=plain --decorations=never'
 alias bw='rbw'
 alias calc='qalc'
@@ -122,6 +123,19 @@ alias kvsec='kubectl view-secret'
 # -- Keybindings
 bindkey -e
 bindkey '^E' end-of-line
+
+# ctrl+left/right
+autoload -Uz forward-word-match backward-word-match
+zle -N fish-forward-word forward-word-match
+zle -N fish-backward-word backward-word-match
+zstyle ':zle:fish-*-word' word-style whitespace
+zstyle ':zle:fish-*-word' skip-whitespace-first true
+bindkey '^[[1;5C' fish-forward-word   # ghostty, kitty, iterm2, tmux
+bindkey '^[[1;5D' fish-backward-word
+bindkey '^[[5C' fish-forward-word     # older xterm
+bindkey '^[[5D' fish-backward-word
+bindkey '^[Oc' fish-forward-word      # rxvt
+bindkey '^[Od' fish-backward-word
 
 # zsh-history-substring-search is deferred, so queue the bindings behind it.
 if (( $+functions[zsh-defer] )); then
