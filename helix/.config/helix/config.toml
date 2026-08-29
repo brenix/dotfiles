@@ -1,4 +1,4 @@
-theme = "gruvbox_material"
+theme = "nord"
 
 [editor]
 auto-pairs = false
