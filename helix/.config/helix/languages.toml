@@ -1,19 +1,16 @@
-[language-server.uwu-colors]
-command = "uwu_colors"
-
 [[language]]
-auto-format = true
 name = "yaml"
-
-[language.formatter]
-args = ["--quiet", "-conf", "/home/brenix/.config/yamlfmt/.yamlfmt.yaml", "-"]
-command = "yamlfmt"
+scope = "source.yaml"
+file-types = ["yaml", "yml"]
+auto-format = true
+formatter = { command = "oxfmt", args = ["--stdin-filepath", "%{buffer_name}"] }
 
 [language-server.yaml-language-server.config]
 yaml.completion = true
 yaml.validation = true
 yaml.hover = true
-# yaml.schemaStore.enable = true # Uncomment if you want to enable schema store
+
+# yaml.schemaStore.enable = true
 
 [language-server.yaml-language-server.config.yaml.schemas]
 "http://json.schemastore.org/chart" = "Chart.{yml,yaml}"
@@ -33,42 +30,104 @@ yaml.hover = true
 
 [[language]]
 name = "bash"
+scope = "source.shell"
+file-types = ["sh", "bash", ".bash_login", ".bash_logout", ".bash_profile", ".bashrc"]
 auto-format = true
-
-[language.formatter]
-command = "shfmt"
-args = ["-i", "2", "-ci"]
+formatter = { command = "shfmt", args = ["-i", "2", "-ci"] }
 
 [[language]]
 name = "fish"
+scope = "source.fish"
+file-types = ["fish"]
 language-servers = ["fish-lsp", "uwu-colors"]
 
 [[language]]
 name = "go"
+scope = "source.go"
+file-types = ["go"]
 auto-format = true
-
-[language.formatter]
-command = "goimports"
-args = ["-local", "github.com/core"]
+formatter = { command = "goimports", args = ["-local", "github.com/core"] }
 
 [language.indent]
 tab-width = 2
 unit = "\t"
 
 [[language]]
-name = "json"
+name = "javascript"
+scope = "source.js"
+file-types = ["js", "jsx", "mjs", "cjs"]
 auto-format = true
+formatter = { command = "oxfmt", args = ["--stdin-filepath", "%{buffer_name}"] }
 
-[language.formatter]
-command = "fixjson"
+[[language]]
+name = "typescript"
+scope = "source.ts"
+file-types = ["ts"]
+auto-format = true
+formatter = { command = "oxfmt", args = ["--stdin-filepath", "%{buffer_name}"] }
+
+[[language]]
+name = "tsx"
+scope = "source.tsx"
+file-types = ["tsx"]
+auto-format = true
+formatter = { command = "oxfmt", args = ["--stdin-filepath", "%{buffer_name}"] }
+
+[[language]]
+name = "json"
+scope = "source.json"
+file-types = ["json"]
+auto-format = true
+formatter = { command = "oxfmt", args = ["--stdin-filepath", "%{buffer_name}"] }
+
+[[language]]
+name = "json5"
+scope = "source.json5"
+file-types = ["json5"]
+auto-format = true
+formatter = { command = "oxfmt", args = ["--stdin-filepath", "%{buffer_name}"] }
+
+[[language]]
+name = "css"
+scope = "source.css"
+file-types = ["css"]
+auto-format = true
+formatter = { command = "oxfmt", args = ["--stdin-filepath", "%{buffer_name}"] }
+
+[[language]]
+name = "toml"
+scope = "source.toml"
+file-types = ["toml"]
+auto-format = true
+formatter = { command = "oxfmt", args = ["--stdin-filepath", "%{buffer_name}"] }
+
+[[language]]
+name = "yaml"
+scope = "source.yaml"
+file-types = ["yaml", "yml"]
+auto-format = true
+formatter = { command = "oxfmt", args = ["--stdin-filepath", "%{buffer_name}"] }
+
+[[language]]
+name = "html"
+scope = "text.html.basic"
+file-types = ["html"]
+auto-format = true
+formatter = { command = "oxfmt", args = ["--stdin-filepath", "%{buffer_name}"] }
 
 [[language]]
 name = "markdown"
+scope = "source.md"
+file-types = ["md", "markdown"]
 auto-format = true
+formatter = { command = "oxfmt", args = ["--stdin-filepath", "%{buffer_name}"] }
 
-[language.formatter]
-command = "deno"
-args = ["fmt", "-", "--ext", "md"]
+[[language]]
+name = "mdx"
+scope = "source.mdx"
+file-types = ["mdx"]
+auto-format = true
+formatter = { command = "oxfmt", args = ["--stdin-filepath", "%{buffer_name}"] }
 
 [language-server.cuelsp]
 command = "cue"
@@ -76,8 +135,9 @@ args = ["lsp", "serve"]
 
 [[language]]
 name = "cue"
-language-servers = [ "cuelsp" ]
+scope = "source.cue"
 file-types = ["cue"]
+language-servers = ["cuelsp"]
 auto-format = true
 comment-token = "//"
 indent = { tab-width = 2, unit = "\t" }
