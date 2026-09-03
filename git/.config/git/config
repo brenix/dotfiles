@@ -9,6 +9,7 @@
 
 [branch]
 	autosetuprebase = "always"
+	sort = "committerdate"
 
 [color]
 	ui = true

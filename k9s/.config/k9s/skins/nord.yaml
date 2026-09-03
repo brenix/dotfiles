@@ -72,7 +72,7 @@ k9s:
       errorColor: *nord11
       highlightcolor: *nord8
       killColor: *nord14
-      completedColor: *nord5
+      completedColor: *nord10
     # Border title styles.
     title:
       fgColor: *nord4
@@ -87,11 +87,11 @@ k9s:
       dialBgColor: default
       chartBgColor: default
       defaultDialColors:
-      - *nord8
-      - *nord11
+        - *nord8
+        - *nord11
       defaultChartColors:
-      - *nord8
-      - *nord11
+        - *nord8
+        - *nord11
     # TableView attributes.
     table:
       fgColor: *nord4

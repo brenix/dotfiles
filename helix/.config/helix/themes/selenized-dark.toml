@@ -140,14 +140,14 @@
 
 [palette]
 # Selenized Dark Primary Colors
-bg_0     = "#103c48" # Background
-bg_1     = "#184956" # Lighter Background/Menu/CursorLine
-bg_2     = "#2d5b69" # Selection/MatchParen/StatusLine inactive
-dim_0    = "#72898f" # Comments/NonText/LineNr inactive
-fg_0     = "#adbcbc" # Default Foreground
-fg_1     = "#cad8d9" # Bright Foreground/CursorLineNr
+bg_0 = "#103c48" # Background
+bg_1 = "#184956" # Lighter Background/Menu/CursorLine
+bg_2 = "#2d5b69" # Selection/MatchParen/StatusLine inactive
+dim_0 = "#72898f" # Comments/NonText/LineNr inactive
+fg_0 = "#adbcbc" # Default Foreground
+fg_1 = "#cad8d9" # Bright Foreground/CursorLineNr
 
 # Selenized Dark Accent Colors (standard names)
-red      = "#fa5750"
-green    = "#75b938"
+red = "#fa5750"
+green = "#75b938"
 

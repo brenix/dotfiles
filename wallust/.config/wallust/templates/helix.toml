@@ -16,18 +16,18 @@ label = "{{color5}}"
 "markup.heading" = "{{color3}}"
 "markup.link.text" = "{{color1}}"
 "markup.list" = "{{foreground}}"
-"markup.quote" = "{{color8}}" 
-"markup.raw" = "{{color11}}" 
+"markup.quote" = "{{color8}}"
+"markup.raw" = "{{color11}}"
 namespace = "{{color4}}"
 operator = "{{color1}}"
-special = "{{color11}}" 
+special = "{{color11}}"
 string = "{{color3}}"
 type = "{{color4}}"
 "ui.text" = "{{foreground}}"
 "ui.text.focus" = "{{foreground}}"
 variable = "{{foreground}}"
 "variable.other.member" = "{{color1}}"
-warning = "{{color11}}" 
+warning = "{{color11}}"
 
 # Modifiers for syntax elements
 [comment]
@@ -107,20 +107,20 @@ fg = "{{foreground}}"
 bg = "{{background}}"
 
 ["ui.help"]
-bg = "{{color0}}" 
-fg = "{{color7}}" 
+bg = "{{color0}}"
+fg = "{{color7}}"
 
 ["ui.linenr"]
 bg = "{{background}}"
-fg = "{{color8}}" 
+fg = "{{color8}}"
 
 ["ui.linenr.selected"]
 bg = "{{color0}}"
-fg = "{{color7}}" 
+fg = "{{color7}}"
 modifiers = ["bold"]
 
 ["ui.menu"]
-bg = "{{color0}}" 
+bg = "{{color0}}"
 fg = "{{color7}}"
 
 ["ui.menu.scroll"]
@@ -128,21 +128,21 @@ bg = "{{color0}}"
 fg = "{{color8}}"
 
 ["ui.menu.selected"]
-bg = "{{color8}}" 
+bg = "{{color8}}"
 fg = "{{foreground}}"
 
 ["ui.popup"]
 bg = "{{color0}}"
 
 ["ui.selection"]
-bg = "{{color8}}" 
+bg = "{{color8}}"
 
 ["ui.selection.primary"]
-bg = "{{color8}}" 
+bg = "{{color8}}"
 
 ["ui.statusline"]
-bg = "{{color0}}" 
-fg = "{{color8}}" 
+bg = "{{color0}}"
+fg = "{{color8}}"
 
 ["ui.statusline.inactive"]
 bg = "{{color0}}"

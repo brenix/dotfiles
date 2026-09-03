@@ -19,9 +19,7 @@ style = "Regular"
 style = "Regular"
 
 [mouse]
-bindings = [
-{ mouse = "Right", action = "PasteSelection" }
-]
+bindings = [{ mouse = "Right", action = "PasteSelection" }]
 
 [selection]
 save_to_clipboard = true

@@ -429,7 +429,10 @@ user_pref("permissions.isolateBy.userContext", true);
 
 // Strip tracking query parameters from URLs (e.g. fbclid, gclid). [default: false FF101+]
 user_pref("privacy.query_stripping.enabled", true);
-user_pref("privacy.query_stripping.strip_list", "__hsfp __hssc __hstc __s _bhlid _branch_match_id _branch_referrer _gl _hsenc _kx _openstat at_recipient_id at_recipient_list bbeml bsft_clkid bsft_uid dclid et_rid fb_action_ids fb_comment_id fbclid gclid guce_referrer guce_referrer_sig hsCtaTracking irclickid mc_eid ml_subscriber ml_subscriber_hash msclkid mtm_cid oft_c oft_ck oft_d oft_id oft_ids oft_k oft_lk oft_sk oly_anon_id oly_enc_id pk_cid rb_clickid s_cid sc_customer sc_eh sc_uid sms_click sms_source sms_uph srsltid ss_email_id syclid ttclid twclid unicorn_click_id vero_conv vero_id vgo_ee wbraid wickedid yclid ymclid ysclid");
+user_pref(
+  "privacy.query_stripping.strip_list",
+  "__hsfp __hssc __hstc __s _bhlid _branch_match_id _branch_referrer _gl _hsenc _kx _openstat at_recipient_id at_recipient_list bbeml bsft_clkid bsft_uid dclid et_rid fb_action_ids fb_comment_id fbclid gclid guce_referrer guce_referrer_sig hsCtaTracking irclickid mc_eid ml_subscriber ml_subscriber_hash msclkid mtm_cid oft_c oft_ck oft_d oft_id oft_ids oft_k oft_lk oft_sk oly_anon_id oly_enc_id pk_cid rb_clickid s_cid sc_customer sc_eh sc_uid sms_click sms_source sms_uph srsltid ss_email_id syclid ttclid twclid unicorn_click_id vero_conv vero_id vgo_ee wbraid wickedid yclid ymclid ysclid",
+);
 
 // Enable fingerprinting protection (FPP). [default: false FF114+]
 user_pref("privacy.fingerprintingProtection", false);
@@ -584,18 +587,18 @@ user_pref("browser.urlbar.merino.enabled", false);
 
 // Disable all feature-gated contextual URL bar suggestions.
 user_pref("browser.urlbar.addons.featureGate", false);
-user_pref("browser.urlbar.amp.featureGate", false);      // adMarketplace FF141+
-user_pref("browser.urlbar.fakespot.featureGate", false);  // FF130+
-user_pref("browser.urlbar.mdn.featureGate", false);       // FF117+
-user_pref("browser.urlbar.weather.featureGate", false);   // FF108+
+user_pref("browser.urlbar.amp.featureGate", false); // adMarketplace FF141+
+user_pref("browser.urlbar.fakespot.featureGate", false); // FF130+
+user_pref("browser.urlbar.mdn.featureGate", false); // FF117+
+user_pref("browser.urlbar.weather.featureGate", false); // FF108+
 user_pref("browser.urlbar.wikipedia.featureGate", false); // FF141+
-user_pref("browser.urlbar.yelp.featureGate", false);      // FF124+
+user_pref("browser.urlbar.yelp.featureGate", false); // FF124+
 user_pref("browser.urlbar.yelpRealtime.featureGate", false);
 user_pref("browser.urlbar.importantDates.featureGate", false);
 user_pref("browser.urlbar.market.featureGate", false);
 user_pref("browser.urlbar.clipboard.featureGate", false); // FF118+
 user_pref("browser.urlbar.recentsearches.featureGate", false); // FF120+
-user_pref("browser.urlbar.pocket.featureGate", false);    // FF116+
+user_pref("browser.urlbar.pocket.featureGate", false); // FF116+
 
 // Disable tab-to-search for installed engines. [default: true]
 user_pref("browser.urlbar.suggest.engines", false);
@@ -755,11 +758,11 @@ user_pref("geo.provider.network.url", "https://api.beacondb.net/v1/geolocate");
 user_pref("geo.enabled", true);
 
 // Disable OS-level geolocation providers.
-user_pref("geo.provider.ms-windows-location", false);    // Windows
-user_pref("geo.provider.use_corelocation", false);       // macOS
-user_pref("geo.provider.use_gpsd", false);               // Linux
+user_pref("geo.provider.ms-windows-location", false); // Windows
+user_pref("geo.provider.use_corelocation", false); // macOS
+user_pref("geo.provider.use_gpsd", false); // Linux
 user_pref("geo.provider.geoclue.always_high_accuracy", false); // Linux
-user_pref("geo.provider.use_geoclue", false);            // Linux FF102+
+user_pref("geo.provider.use_geoclue", false); // Linux FF102+
 
 // Disable region auto-detection. [default: true FF78+/FF79+]
 user_pref("browser.region.network.url", "");
@@ -880,7 +883,7 @@ user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.newProfilePing.enabled", false);
 user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 user_pref("toolkit.telemetry.updatePing.enabled", false);
-user_pref("toolkit.telemetry.bhrPing.enabled", false);        // Background Hang Reporter FF57+
+user_pref("toolkit.telemetry.bhrPing.enabled", false); // Background Hang Reporter FF57+
 user_pref("toolkit.telemetry.firstShutdownPing.enabled", false); // FF57+
 
 // Disable telemetry coverage sampling. [default: false]

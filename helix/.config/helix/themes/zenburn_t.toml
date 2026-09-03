@@ -6,13 +6,13 @@ inherits = "zenburn"
 # --- Statusline / top bar ---
 # Built-in statusbg = "#313633" has a green tint; replace with neutral gray.
 # ui.statusline.inactive uses #88b090 (bright green) which is jarring.
-"ui.statusline"          = { bg = "statusbg", fg = "#ccdc90" }
+"ui.statusline" = { bg = "statusbg", fg = "#ccdc90" }
 "ui.statusline.inactive" = { fg = "#7f7f7f", bg = "statusbg" }
 
 # --- Bufferline (bufferline = "always") ---
 # Completely absent from the built-in theme.
-"ui.bufferline"            = { fg = "#808080", bg = "statusbg" }
-"ui.bufferline.active"     = { fg = "#dcdccc", bg = "#3f3f3f", modifiers = ["bold"] }
+"ui.bufferline" = { fg = "#808080", bg = "statusbg" }
+"ui.bufferline.active" = { fg = "#dcdccc", bg = "#3f3f3f", modifiers = ["bold"] }
 "ui.bufferline.background" = { bg = "statusbg" }
 
 # --- Line number gutter ---
@@ -29,10 +29,10 @@ inherits = "zenburn"
 # --- Documentation comments ---
 # Built-in sets fg = "black" with no bg — invisible on dark backgrounds.
 "comment.block.documentation" = { fg = "#7f9f7f" }
-"comment.line.documentation"  = { fg = "#7f9f7f" }
+"comment.line.documentation" = { fg = "#7f9f7f" }
 
 [palette]
 # Override the greenish tints with neutral grays
 statusbg = "#323232"
-uibg     = "#2a2a2a"
+uibg = "#2a2a2a"
 

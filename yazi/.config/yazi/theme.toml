@@ -1,10 +1,10 @@
 [manager]
-hovered       = { bg = "blue", bold = false }
+hovered = { bg = "blue", bold = false }
 border_symbol = "│"
 
 [indicator]
 padding = { open = "█", close = "█" }
 
 [status]
-sep_left  = { open = "", close = "" }
+sep_left = { open = "", close = "" }
 sep_right = { open = "", close = "" }

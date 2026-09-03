@@ -85,6 +85,7 @@ status is-interactive; and begin
     alias zad 'ls -d */ | xargs -I {} zoxide add {}'
 
     # -- Environment
+    set -gx EDITOR hx
     set -gx GOPATH $HOME/.cache/go
     set -gx GOBIN $GOPATH/bin
     fish_add_path $HOME/.local/bin $HOME/.krew/bin $GOBIN $HOME/.bin $HOME/.cargo/bin

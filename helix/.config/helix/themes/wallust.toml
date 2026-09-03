@@ -16,18 +16,18 @@ label = "#B48EAD"
 "markup.heading" = "#EBCB8B"
 "markup.link.text" = "#BF616A"
 "markup.list" = "#D8DEE9"
-"markup.quote" = "#4C566A" 
-"markup.raw" = "#EBCB8B" 
+"markup.quote" = "#4C566A"
+"markup.raw" = "#EBCB8B"
 namespace = "#81A1C1"
 operator = "#BF616A"
-special = "#EBCB8B" 
+special = "#EBCB8B"
 string = "#EBCB8B"
 type = "#81A1C1"
 "ui.text" = "#D8DEE9"
 "ui.text.focus" = "#D8DEE9"
 variable = "#D8DEE9"
 "variable.other.member" = "#BF616A"
-warning = "#EBCB8B" 
+warning = "#EBCB8B"
 
 # Modifiers for syntax elements
 [comment]
@@ -107,20 +107,20 @@ fg = "#D8DEE9"
 bg = "#2E3440"
 
 ["ui.help"]
-bg = "#3B4252" 
-fg = "#E5E9F0" 
+bg = "#3B4252"
+fg = "#E5E9F0"
 
 ["ui.linenr"]
 bg = "#2E3440"
-fg = "#4C566A" 
+fg = "#4C566A"
 
 ["ui.linenr.selected"]
 bg = "#3B4252"
-fg = "#E5E9F0" 
+fg = "#E5E9F0"
 modifiers = ["bold"]
 
 ["ui.menu"]
-bg = "#3B4252" 
+bg = "#3B4252"
 fg = "#E5E9F0"
 
 ["ui.menu.scroll"]
@@ -128,21 +128,21 @@ bg = "#3B4252"
 fg = "#4C566A"
 
 ["ui.menu.selected"]
-bg = "#4C566A" 
+bg = "#4C566A"
 fg = "#D8DEE9"
 
 ["ui.popup"]
 bg = "#3B4252"
 
 ["ui.selection"]
-bg = "#4C566A" 
+bg = "#4C566A"
 
 ["ui.selection.primary"]
-bg = "#4C566A" 
+bg = "#4C566A"
 
 ["ui.statusline"]
-bg = "#3B4252" 
-fg = "#4C566A" 
+bg = "#3B4252"
+fg = "#4C566A"
 
 ["ui.statusline.inactive"]
 bg = "#3B4252"
