@@ -5,7 +5,7 @@
     "layer": "top",
     "position": "top",
 
-    "modules-left": ["ext/workspaces", "dwl/window"],
+    "modules-left": ["ext/workspaces"],
     "modules-center": ["custom/mpd"],
     "modules-right": ["wireplumber","cpu","battery","temperature","memory","clock","tray"],
     "reload_style_on_change": true,
