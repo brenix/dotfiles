@@ -8,7 +8,7 @@ waybar = { src = "waybar.css", dst = "~/.config/waybar/colors.css" }
 @import url("colors.css");
  */
 
-@define-color cursor #D0D0D0;
+@define-color cursor #E4C9AF;
 /* @define-color background #141414; */
 @define-color background #1C1C1C;
 @define-color foreground #D0D0D0;
