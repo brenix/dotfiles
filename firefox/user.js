@@ -100,6 +100,9 @@ user_pref("browser.warnOnQuitShortcut", false);
 // Enable "context properties" for content (e.g. contextual menus). [default: false]
 user_pref("svc.context-properties.content.enabled", true);
 
+// Disable nova ui
+// user_pref("browser.nova.enabled", false);
+
 // --- GNOME Theme (firefox-gnome-theme) ---
 user_pref("gnomeTheme.activeTabContrast", true);
 user_pref("gnomeTheme.hideSingleTab", false);
