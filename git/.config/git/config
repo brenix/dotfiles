@@ -21,7 +21,7 @@
 
 [color "diff"]
 	frag = "magenta bold"
-	meta = "white bold"
+	meta = "bold"
 	new = "green bold"
 	old = "red bold"
 
@@ -46,14 +46,9 @@
 
 [delta]
 	enable = true
-	light = false
 	side-by-side = false
 	color-only = true
 	syntax-theme = "ansi"
-	minus-style = "normal #3d1f1f"
-	minus-emph-style = "normal bold #5c2c2c"
-	plus-style = "normal #1f3a1f"
-	plus-emph-style = "normal bold #2e572e"
 
 [diff "sopsdiffer"]
 	textconv = "sops -d"

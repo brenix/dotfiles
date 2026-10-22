@@ -22,7 +22,7 @@ setopt INTERACTIVE_COMMENTS
 # -- Colours
 (( $+commands[vivid] )) && export LS_COLORS="$(vivid generate ~/.config/vivid/ansi.yml)"
 
-export FZF_DEFAULT_OPTS="--ansi --color=bg:-1,bg+:-1,spinner:6,hl:7,fg:7,header:6,info:7,pointer:1,marker:0,prompt:2,hl+:2"
+export FZF_DEFAULT_OPTS="--ansi --color=bg:-1,bg+:-1,fg:-1,hl:4,info:8,spinner:6,header:6,pointer:1,marker:5,prompt:2,hl+:2"
 
 # -- Completions
 # Anything generating completions must come after this.
