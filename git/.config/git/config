@@ -49,6 +49,10 @@
 	side-by-side = false
 	color-only = true
 	syntax-theme = "ansi"
+	minus-style = "red"
+	minus-emph-style = "red bold reverse"
+	plus-style = "green"
+	plus-emph-style = "green bold reverse"
 
 [diff "sopsdiffer"]
 	textconv = "sops -d"
