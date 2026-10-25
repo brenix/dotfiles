@@ -8,10 +8,25 @@ waybar = { src = "waybar.css", dst = "~/.config/waybar/colors.css" }
 @import url("colors.css");
  */
 
+{# Perceived luminance of the background, scaled to 0-255000 (weights 299/587/114) #}
+{% set lum = (background | red | int) * 299 + (background | green | int) * 587 + (background | blue | int) * 114 %}
+{% set is_light = lum > 128000 %}
+
+/* detected luminance: {{ lum }} ({{ "light" if is_light else "dark" }} theme) */
+
+{% if not is_light %}
+/* --- DARK THEME --- */
+@define-color background {{background | darken(0.15)}};
+@define-color foreground {{color15}};
+{% else %}
+/* --- LIGHT THEME --- */
+/* Bar stays dark: use the theme's dark foreground as the background */
+@define-color background {{foreground | darken(0.7) | blend("#222222")}};
+/* Use the theme's light background as the text color */
+@define-color foreground {{background}};
+{% endif %}
+
 @define-color cursor {{cursor}};
-/* @define-color background {{background | darken(0.3)}}; */
-@define-color background {{background}};
-@define-color foreground {{foreground}};
 @define-color color0  {{color0 }};
 @define-color color1  {{color1 }};
 @define-color color2  {{color2 }};
