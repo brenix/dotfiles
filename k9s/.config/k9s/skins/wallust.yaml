@@ -5,7 +5,7 @@ k9s:
     logoColor: "#A7C080"
   dialog:
     bgColor: default
-    buttonBgColor: "#272E33"
+    buttonBgColor: "#2D353B"
     buttonFgColor: "#D3C6AA"
     buttonFocusBgColor: "#A7C080"
     buttonFocusFgColor: "#D699B6"
@@ -14,26 +14,26 @@ k9s:
     labelFgColor: "#DBBC7F"
   frame:
     border:
-      fgColor: "#272E33"
-      focusColor: "#5C6A72"
+      fgColor: "#2D353B"
+      focusColor: "#475258"
     crumbs:
-      activeColor: "#272E33"
-      bgColor: "#272E33"
-      fgColor: "#272E33"
+      activeColor: "#2D353B"
+      bgColor: "#2D353B"
+      fgColor: "#2D353B"
     menu:
       fgColor: "#D3C6AA"
       keyColor: "#A7C080"
       numKeyColor: "#A7C080"
     status:
       addColor: "#D3C6AA"
-      completedColor: "#5C6A72"
+      completedColor: "#475258"
       errorColor: "#E67E80"
       highlightcolor: "#DBBC7F"
-      killColor: "#35A77C"
+      killColor: "#83C092"
       modifyColor: "#D699B6"
       newColor: "#7FBBB3"
     title:
-      bgColor: "#272E33"
+      bgColor: "#2D353B"
       counterColor: "#83C092"
       fgColor: "#D3C6AA"
       filterColor: "#7FBBB3"
@@ -42,7 +42,7 @@ k9s:
     fgColor: "#D3C6AA"
     sectionColor: "#A7C080"
   prompt:
-    bgColor: "#272E33"
+    bgColor: "#2D353B"
     fgColor: "#D3C6AA"
     suggestColor: "#DBBC7F"
   views:
@@ -55,7 +55,7 @@ k9s:
         - "#83C092"
         - "#7FBBB3"
     help:
-      bgColor: "#272E33"
+      bgColor: "#2D353B"
       fgColor: "#D3C6AA"
       indicator:
         fgColor: "#7FBBB3"
@@ -63,12 +63,12 @@ k9s:
       bgColor: default
       fgColor: "#D3C6AA"
       indicator:
-        bgColor: "#272E33"
+        bgColor: "#2D353B"
         fgColor: "#D3C6AA"
     table:
       bgColor: default
       cursorBgColor: "#D3C6AA"
-      cursorFgColor: "#272E33"
+      cursorFgColor: "#2D353B"
       fgColor: "#D3C6AA"
       header:
         bgColor: default
@@ -77,7 +77,7 @@ k9s:
       markColor: "#DBBC7F"
     xray:
       bgColor: default
-      cursorColor: "#5C6A72"
+      cursorColor: "#475258"
       fgColor: "#D3C6AA"
       graphicColor: "#83C092"
       showIcons: false

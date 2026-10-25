@@ -13,7 +13,7 @@ on-touch=invoke-default-action
 
 # [ STYLE OPTIONS ]
 font=GeistMono Nerd Font 11
-background-color=#272E33
+background-color=#2D353B
 text-color=#D3C6AA
 
 width=320
@@ -23,7 +23,7 @@ margin=10
 outer-margin=0
 padding=16
 
-border-color=#3A94C5
+border-color=#7FBBB3
 border-size=2
 border-radius=0
 
@@ -46,8 +46,8 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#23292E
-background-color=#D8EAF3
+border-color=#283035
+background-color=#E5F1F0
 text-color=#D3C6AA
 progress-color=source #7FBBB3
 outer-margin=0, 0, 30, 0
@@ -64,7 +64,7 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#23292E
+border-color=#283035
 background-color=#E67E80
 text-color=#D3C6AA
 progress-color=source #7FBBB3
@@ -85,7 +85,7 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#23292E
+border-color=#283035
 background-color=#E67E80
 text-color=#D3C6AA
 progress-color=source #A7C080
@@ -103,8 +103,8 @@ text-alignment=center
 width=200
 height=60
 border-size=20
-border-color=#23292E
-background-color=#F9ECCC
+border-color=#283035
+background-color=#F8F2E5
 text-color=#D3C6AA
 progress-color=source #DBBC7F
 outer-margin=0, 0, 30, 0
@@ -125,7 +125,7 @@ layer=overlay
 # Critical
 [urgency=critical]
 border-color=#E67E80
-background-color=#272E33
+background-color=#2D353B
 text-color=#D3C6AA
 default-timeout=0
 

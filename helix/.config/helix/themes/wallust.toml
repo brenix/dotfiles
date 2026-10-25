@@ -6,9 +6,9 @@ constructor = "#A7C080"
 debug = "#D3C6AA"
 "diff.delta" = "#DBBC7F"
 "diff.minus" = "#E67E80"
-"diff.plus" = "#8DA101"
+"diff.plus" = "#A7C080"
 error = "#E67E80"
-function = "#8DA101"
+function = "#A7C080"
 hint = "#D699B6"
 info = "#7FBBB3"
 keyword = "#E67E80"
@@ -16,22 +16,22 @@ label = "#D699B6"
 "markup.heading" = "#DBBC7F"
 "markup.link.text" = "#E67E80"
 "markup.list" = "#D3C6AA"
-"markup.quote" = "#5C6A72"
-"markup.raw" = "#DFA000"
+"markup.quote" = "#475258"
+"markup.raw" = "#DBBC7F"
 namespace = "#7FBBB3"
 operator = "#E67E80"
-special = "#DFA000"
+special = "#DBBC7F"
 string = "#DBBC7F"
 type = "#7FBBB3"
 "ui.text" = "#D3C6AA"
 "ui.text.focus" = "#D3C6AA"
 variable = "#D3C6AA"
 "variable.other.member" = "#E67E80"
-warning = "#DFA000"
+warning = "#DBBC7F"
 
 # Modifiers for syntax elements
 [comment]
-fg = "#5C6A72"
+fg = "#475258"
 modifiers = ["italic"]
 
 [diagnostic]
@@ -59,7 +59,7 @@ fg = "#D699B6"
 modifiers = ["italic"]
 
 ["markup.link.url"]
-fg = "#8DA101"
+fg = "#A7C080"
 modifiers = ["underlined"]
 
 ["markup.strikethrough"]
@@ -68,19 +68,19 @@ modifiers = ["crossed_out"]
 # UI elements
 ["ui.background"]
 fg = "#D3C6AA"
-bg = "#272E33"
+bg = "#2D353B"
 
 ["ui.bufferline"]
-bg = "#272E33"
-fg = "#5C6A72"
+bg = "#2D353B"
+fg = "#475258"
 
 ["ui.bufferline.active"]
-bg = "#272E33"
+bg = "#2D353B"
 fg = "#DBBC7F"
 modifiers = ["bold"]
 
 ["ui.bufferline.modified"]
-bg = "#272E33"
+bg = "#2D353B"
 fg = "#DBBC7F"
 
 ["ui.cursor"]
@@ -100,74 +100,74 @@ fg = "#DBBC7F"
 modifiers = ["underlined"]
 
 ["ui.cursorline.primary"]
-bg = "#2E383C"
+bg = "#475258"
 fg = "#D3C6AA"
 
 ["ui.gutter"]
-bg = "#272E33"
+bg = "#2D353B"
 
 ["ui.help"]
-bg = "#2E383C"
+bg = "#475258"
 fg = "#D3C6AA"
 
 ["ui.linenr"]
-bg = "#272E33"
-fg = "#5C6A72"
+bg = "#2D353B"
+fg = "#475258"
 
 ["ui.linenr.selected"]
-bg = "#2E383C"
+bg = "#475258"
 fg = "#D3C6AA"
 modifiers = ["bold"]
 
 ["ui.menu"]
-bg = "#2E383C"
+bg = "#475258"
 fg = "#D3C6AA"
 
 ["ui.menu.scroll"]
-bg = "#2E383C"
-fg = "#5C6A72"
+bg = "#475258"
+fg = "#475258"
 
 ["ui.menu.selected"]
-bg = "#5C6A72"
+bg = "#475258"
 fg = "#D3C6AA"
 
 ["ui.popup"]
-bg = "#2E383C"
+bg = "#475258"
 
 ["ui.selection"]
-bg = "#5C6A72"
+bg = "#475258"
 
 ["ui.selection.primary"]
-bg = "#5C6A72"
+bg = "#475258"
 
 ["ui.statusline"]
-bg = "#2E383C"
-fg = "#5C6A72"
+bg = "#475258"
+fg = "#475258"
 
 ["ui.statusline.inactive"]
-bg = "#2E383C"
-fg = "#5C6A72"
+bg = "#475258"
+fg = "#475258"
 
 ["ui.statusline.insert"]
-bg = "#8DA101"
-fg = "#272E33"
+bg = "#A7C080"
+fg = "#2D353B"
 
 ["ui.statusline.normal"]
 bg = "#E67E80"
-fg = "#272E33"
+fg = "#2D353B"
 
 ["ui.statusline.select"]
 bg = "#D699B6"
-fg = "#272E33"
+fg = "#2D353B"
 
 ["ui.virtual.indent-guide"]
-fg = "#2E383C"
+fg = "#475258"
 
 ["ui.virtual.ruler"]
-bg = "#2E383C"
+bg = "#475258"
 
 ["ui.virtual.whitespace"]
-fg = "#5C6A72"
+fg = "#475258"
 
 ["ui.window"]
-bg = "#272E33"
+bg = "#2D353B"
