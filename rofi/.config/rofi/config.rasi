@@ -4,8 +4,8 @@ configuration {
     display-run: ">";
     modes: "window,drun,run";
     fixed-num-lines: false;
-    font: "Monaco Nerd Font Mono 9";
-    show-icons: false;
+    font: "Nordwand Mono Medium 9";
+    show-icons: true;
     matching: "fuzzy";
     sort: true;
     sorting-method: "fzf";
@@ -48,7 +48,7 @@ listview {
 }
 
 element {
-    padding: 0px 4px;
+    padding: 0px;
 }
 
 element selected {
