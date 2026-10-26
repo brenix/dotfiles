@@ -2,7 +2,7 @@
     /* Base Colors */
     background:                  rgba(45,53,59, 95%);
     foreground:                  rgba(211,198,170, 100%);
-    border-color:                rgba(71,82,88, 100%);
+    border-color:                rgba(133,146,137, 100%);
     
     /* Functional Colors */
     normal-background:           transparent;
